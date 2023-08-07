@@ -9,17 +9,19 @@ Cada reloj en la página tendrá una descripción breve y detallada que incluir�
 
 Además, el sitio contará con un canal de conversación para ofrecer un trato personalizado a los clientes y resolver sus dudas. También se utilizarán canales en redes sociales como Facebook e Instagram para redirigir a los clientes a nuestra página y aumentar la visibilidad del negocio.
 
+Nuestro público objetivo serán personas de 20 a 70 años interesadas en productos de última tecnología que les permitan mejorar su calidad de vida. Las mismas pueden practicar disciplinas deportivas o no.
+
+
 ### Referentes
-
+Páginas que nos inspiraron por los productos que ofrecen:
 https://garmin.com.ar/
-
 https://www.stylestore.com.ar/
-
 https://www.suunto.com/es-ar/
 
+Páginas que nos inspiraron por la estética que presentan:
 https://cerveceriadecolima.com/
-
 https://www.stickylemon.nl/
+
 
 ### Integrantes
 
