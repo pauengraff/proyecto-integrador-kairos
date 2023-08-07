@@ -14,6 +14,7 @@ Nuestro público objetivo serán personas de 20 a 70 años interesadas en produc
 
 ### Referentes
 Páginas que nos inspiraron por los productos que ofrecen:
+
 https://garmin.com.ar/
 
 https://www.stylestore.com.ar/
@@ -21,6 +22,7 @@ https://www.stylestore.com.ar/
 https://www.suunto.com/es-ar/
 
 Páginas que nos inspiraron por la estética que presentan:
+
 https://cerveceriadecolima.com/
 
 https://www.stickylemon.nl/
