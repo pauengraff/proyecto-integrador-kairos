@@ -36,7 +36,7 @@ Santiago Nahuel: Soy de Buenos Aires, tengo 23 años, me apasionan la música y 
 
 Jeremías Zanandrea: Tengo 19 años, soy de Entre Ríos (Gualeguaychú), y soy fan de Messi
 
-Francisco Rodriguez: Marplatense, 22 años y me apasiona el surf y correr.
+Francisco Rodriguez: Marplatense, 22 años y me apasiona el surf y correr. Trabajo con mis marcas 24/7, soy fanatico de crear cosas y la programacion me interesa mucho porque creo que es una gran herramienta.
 
 Paula Correa Engraff: vivo en Chos Malal, Neuquén. Tengo 32 años, un hijo y soy diseñadora gráfica. Actualmente trabajo en el área de Prensa de la Municipalidad y también doy clases en un secundario. Cuando tengo tiempo libre me gusta ver a mis amigas y compartir unos mates.
 
