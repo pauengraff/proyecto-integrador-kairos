@@ -44,3 +44,8 @@ Analía Frigerio: Soy de Buenos Aires, tengo 46 años y trabajo hace 20 años en
 Dado que tengo habilidad en lo que se refiere a lógica y a encontrar soluciones me recomendaron este curso.
 Busco nuevas experiencias que me permitan crecer profesionalmente, siendo consciente de la necesidad del mercado.
 Me gusta leer, aprender temas nuevos, disfrutar con mi familia y las vacaciones en la playa.
+
+
+### Tablero de trabajo
+https://trello.com/b/faeByGML/grupo-8
+
