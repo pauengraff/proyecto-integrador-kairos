@@ -46,10 +46,7 @@ Busco nuevas experiencias que me permitan crecer profesionalmente, siendo consci
 Me gusta leer, aprender temas nuevos, disfrutar con mi familia y las vacaciones en la playa.
 
 
-<<<<<<< HEAD
 
-=======
 ### Tablero de trabajo
 https://trello.com/b/faeByGML/grupo-8
->>>>>>> ddd249dd0194b2c8298d68dbf01516e282707973
 
