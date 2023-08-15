@@ -1,0 +1,16 @@
+{
+  "name": "trabajo-final",
+  "version": "1.0.0",
+  "description": "Kairos se enfocará en la venta de relojes de media y alta gama, dirigido a un segmento específico de usuarios con necesidades no satisfechas por la oferta general. Para lograrlo, se ofrecerá un producto de buena estética y calidad. Aparte, se desarrollará una página web visual y fácil de navegar, que destaque por satisfacer las necesidades y comodidad de los clientes.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
