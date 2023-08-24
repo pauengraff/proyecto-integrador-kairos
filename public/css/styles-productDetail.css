@@ -21,3 +21,62 @@ main {
     display: flex;
     flex-wrap: wrap;
 }
+
+.productDetail article {
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.productPhoto {
+    width: 100%;
+    margin: 10px 30px;
+}
+
+.productLogo {
+    width: 60px;
+    margin-bottom: 10px;
+}
+
+.productNumber {
+    margin-bottom: 10px;
+    font-weight: normal;
+}
+
+.productName {
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+
+.productPrice {
+    border-top: 3px solid #d9d9d9;
+    font-size: 26px;
+    margin-bottom: 5px;
+}
+
+.productPricePay {
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+
+.productPriceOff {
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.buttonBuy {
+    background-color: #001C3B;
+    color: white;
+    padding: 8px 50px;
+    font-weight: bold;
+    font-family: "Roboto";
+    font-size: 16px;
+    border: none;
+    margin-bottom: 20px;
+}
+
+.textDescription {
+    font-size: 12px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
