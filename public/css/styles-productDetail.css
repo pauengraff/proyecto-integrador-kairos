@@ -30,7 +30,8 @@ main {
 
 .productPhoto {
     width: 100%;
-    margin: 10px 30px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .productLogo {
@@ -52,6 +53,7 @@ main {
     border-top: 3px solid #d9d9d9;
     font-size: 26px;
     margin-bottom: 5px;
+    padding-top: 20px;
 }
 
 .productPricePay {
@@ -72,11 +74,35 @@ main {
     font-family: "Roboto";
     font-size: 16px;
     border: none;
-    margin-bottom: 20px;
+    display: flex;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 40px;
 }
 
 .textDescription {
     font-size: 12px;
     margin-top: 5px;
     margin-bottom: 10px;
+}
+
+@media (min-width: 728px){
+    /* tablet */
+.productPhoto {
+    width: 40%;
+}
+.productText {
+    width: 40%;
+}
+.productDetail-d {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+}
+
+@media (min-width: 1280px){
+    /* desktop */
 }
