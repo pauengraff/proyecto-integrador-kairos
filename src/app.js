@@ -10,6 +10,9 @@ app.listen(PORT, () => {
     console.log(`Se prendió en el puerto ${PORT}`);
 });
 
-app.get('/', (req, res) => {
+/*app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'views/index.html'));
+});*/
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'views/login.html'));
 });
