@@ -13,3 +13,37 @@
 .cart-icon{
     padding-right: 8px;
 }
+.article{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    margin: auto;
+    
+}
+.images{
+    width: 25%;
+    padding: 10px;
+}
+.button-discount{
+    display: flex;
+    background-color: #001C3B;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    margin: auto;
+}
+.ticket{
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    flex-direction: column;
+    padding-right: 70px;
+    
+}
+.sub-ticket{
+    padding: 10px;
+}
+.total{
+    padding: 10px;
+}
