@@ -50,3 +50,14 @@ Me gusta leer, aprender temas nuevos, disfrutar con mi familia y las vacaciones 
 ### Tablero de trabajo
 https://trello.com/b/faeByGML/grupo-8
 
+
+### Elementos de diseño
+Colores
+- Azul: #001C3B // CMYK 86 75 58 77 // RGB 0 28 59
+- Beige: #B0A386 // CMYK 33 32 53 1 // RGB 176 163 134
+- Gris: #D9D9D9
+
+Tipografía
+https://www.dafont.com/es/augustus.font
+
+
