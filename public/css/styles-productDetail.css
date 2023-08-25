@@ -29,7 +29,7 @@ main {
 }
 
 .productPhoto {
-    width: 100%;
+    width: 90%;
     margin-left: auto;
     margin-right: auto;
 }
@@ -83,7 +83,7 @@ main {
 .textDescription {
     font-size: 12px;
     margin-top: 5px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 @media (min-width: 728px){
@@ -97,9 +97,27 @@ main {
 .productDetail-d {
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
+}
+.buttonBuy {
+    margin-left: 0;
+}
+.productDescription-d {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.description {
+    width: 45%;
+    margin-bottom: 0;
+}
+.specifications {
+    width: 45%;
+    margin-top: 0;
 }
 }
 
