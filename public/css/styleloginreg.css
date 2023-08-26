@@ -1,0 +1,102 @@
+*{
+    box-sizing: border-box;
+}
+.color-azul{
+    color:  #001C3B;
+}
+  
+.color-beige{
+    color:  #B0A386;
+}
+.color-gris{
+    color:  #D9D9D9;
+}
+.color-blanco{
+    color:  white;
+}
+
+.bg-azul{
+    background: #001C3B;
+}
+
+.border-rad-5{
+    border-radius: 10%;
+}
+
+.fz-30{
+    font-size: 30px;
+}
+.fz-18{
+    font-size: 18px;
+}
+
+.w-60{
+    width: 60%
+}
+.w-30{
+    width: 30%
+}
+.w-100{
+    width: 100%
+}
+.ta-center{
+    text-align: center;
+}
+.ta-left{
+    text-align: left;
+}
+
+.mg-b{
+    margin-bottom: 10px;
+}
+
+.mg-top-30{
+    margin-top: 30;
+}
+.mg-top-50{
+    margin-top: 50;
+}
+
+.formato-total{
+    width: 50%;
+    padding: 15px;
+    border: #001C3B solid 5px;
+    text-align: center;
+    margin: auto;
+}
+
+.formato-form{
+    padding: 10px, 50px;
+    width: 60%;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 10px;
+
+}
+.formato-form label{
+    display:block; 
+    width: 100%;
+    text-align: left;
+}
+
+.formato-form input{
+    display:block;    
+    width: 100%;
+    text-align: center;
+}
+.formato-form select{
+    display:block;   
+}
+.disp-block{
+    display: block;
+}
+    
+@media (max-width:769px){
+    .formato-total{
+        width: 90%;
+    }
+    .formato-form{
+        width: 80%;
+    }
+    
+}

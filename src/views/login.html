@@ -1,12 +1,44 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/styles.css">
-    <title>Document</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com%22%3E"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/styleloginreg.css">
+    <link rel="stylesheet" href="/css/normalize.css">
+
+    <title>Kairos Login</title>
 </head>
-<body>
+
+<body class="ta-center">
+    <header class="mg-top-30">
+        <img class="w-60 " src="/images/kairos-logo-un-color-azul.png" >
+    </header>
+    <main class="w-100 ta-center">
+        <h1 class="ta-center color-azul fz-30">Bienvenidos</h1>
+        <form class="ta-center"action="/login">
+            <div class="mg-b border-rad-5">
+            <label  for="usuario"></label>
+            <input type="email" name="usuario" id="usuario" placeholder="Ingresa tu mail">
+        </div>
+        <div class="mg-b">
+            <label for="contrasena"></label>
+            <input  type="password" name="contrasena" id="contrasena" placeholder="Ingresa tu contraseña">
+        </input>
+        </div>
+        <div >
+            <button class="border-rad-10 bg-azul w-30 color-blanco">Ingresar</button>
+        </div>
+
+    </form>
+    <nav> 
+        <a class="ta-center color-azul" href="">Olvidaste tu contraseña</a>
+    </nav>
+
+    </main>
     
 </body>
 </html>
