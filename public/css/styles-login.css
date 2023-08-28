@@ -12,33 +12,25 @@ body{
     font-family: 'Roboto', sans-serif; 
 }
 
+
+.form-login{
+    position: relative;
+}
+
 .form-body{
+    position: relative;
     width: 400px;
-    min-width: 300px;
     border-radius: 10px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     border: solid 2px #001C3B;
-    margin:10px;
+    margin:auto;
 }
 
 .form-body img{
     width: 150px;
     display: block;
     margin: 20px auto; 
-}
-
-.user-icon{
-    position: absolute;
-    left:2px;
-}
-.lock-icon{
-    position: absolute;
-}
-
-.relative{
-    position: relative;
-    display: block;
 }
 
 .text{
@@ -49,12 +41,19 @@ body{
     margin-bottom: 25px;
 }
 
+.form-body p {
+    height: 40px;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+}
+
 .form-body input{
     display: block;
     margin: auto;
     height: 40px;
     width: 50;
-    padding-left: 20px;
+    padding: 12px 0px 12px 30px;
     color: #001C3B;
     border: 3px solid#001C3B;
     border-radius: 20px;
@@ -62,6 +61,14 @@ body{
     border-top-right-radius: 20px;
     font-size: 1rem;
     outline:none;
+}
+
+.form-body i{
+    position: absolute;
+    bottom: 13px;
+    margin-left: 100px;
+    color: #001C3B;
+    
 }
 
 .form-body input[type ="password"] {
@@ -83,4 +90,10 @@ body{
     background-color: #001C3B;
     color: white;
     border-radius: 20px;
+}
+
+@media (max-width:481px){
+    .form-body{
+        border: none;
+    }
 }
