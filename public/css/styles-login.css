@@ -1,0 +1,99 @@
+*{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: 'Roboto', sans-serif; 
+}
+
+
+.form-login{
+    position: relative;
+}
+
+.form-body{
+    position: relative;
+    width: 400px;
+    border-radius: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border: solid 2px #001C3B;
+    margin:auto;
+}
+
+.form-body img{
+    width: 150px;
+    display: block;
+    margin: 20px auto; 
+}
+
+.text{
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #001C3B;
+    margin-bottom: 25px;
+}
+
+.form-body p {
+    height: 40px;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+}
+
+.form-body input{
+    display: block;
+    margin: auto;
+    height: 40px;
+    width: 50;
+    padding: 12px 0px 12px 30px;
+    color: #001C3B;
+    border: 3px solid#001C3B;
+    border-radius: 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    font-size: 1rem;
+    outline:none;
+}
+
+.form-body i{
+    position: absolute;
+    bottom: 13px;
+    margin-left: 100px;
+    color: #001C3B;
+    
+}
+
+.form-body input[type ="password"] {
+    margin-top: 20px;
+}
+
+::placeholder {
+    font-size: 1rem;
+    color: #001C3B;
+}
+
+.form-body button{
+    display: block;
+    margin: auto;
+    margin-top: 25px;
+    margin-bottom: 30px;
+    height: 40px;
+    width: 30%;
+    background-color: #001C3B;
+    color: white;
+    border-radius: 20px;
+}
+
+@media (max-width:481px){
+    .form-body{
+        border: none;
+    }
+}
