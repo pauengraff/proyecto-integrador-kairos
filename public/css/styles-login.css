@@ -5,7 +5,7 @@ body{
     align-items: center;
     justify-content: center;
     height: 100vh;
-    font-family: 'Roboto', sans-serif; 
+    font-family: 'Roboto'; 
 }
 
 
@@ -16,23 +16,22 @@ body{
 .form-body{
     position: relative;
     width: 400px;
-    border-radius: 10px;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    border: solid 2px #001C3B;
-    margin:auto;
+    border: solid 3px #001C3B;
+    margin: auto;
 }
 
 .form-body img{
-    width: 150px;
+    width: 200px;
     display: block;
-    margin: 20px auto; 
+    margin: 20px auto;
+    margin-bottom: 5px;
+    margin-top: 50px;
 }
 
 .text{
     text-align: center;
-    font-size: 1.5rem;
-    font-weight: 600;
+    font-size: 20px;
+    font-weight: bold;
     color: #001C3B;
     margin-bottom: 25px;
 }
@@ -41,7 +40,7 @@ body{
     height: 40px;
     text-align: center;
     text-decoration: none;
-    color: black;
+    color: #001C3B;
 }
 
 .form-body input{
@@ -51,11 +50,8 @@ body{
     width: 50;
     padding: 12px 0px 12px 30px;
     color: #001C3B;
-    border: 3px solid#001C3B;
-    border-radius: 20px;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-    font-size: 1rem;
+    border: 3px solid #001C3B;
+    font-size: 16px;
     outline:none;
 }
 
@@ -72,20 +68,27 @@ body{
 }
 
 ::placeholder {
-    font-size: 1rem;
-    color: #001C3B;
+    font-size: 16px;
+    color: gray;
 }
 
 .form-body button{
     display: block;
     margin: auto;
     margin-top: 25px;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
     height: 40px;
     width: 30%;
     background-color: #001C3B;
     color: white;
-    border-radius: 20px;
+    border: none;
+    font-size: 14px;
+}
+
+.link {
+    text-decoration: none;
+    color: #001C3B;
+    font-size: 12px;
 }
 
 @media (max-width:481px){
