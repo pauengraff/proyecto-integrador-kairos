@@ -2,56 +2,42 @@
 <head>
     
     <%- include("partials/head") %>
-    <link rel="stylesheet" href="/css/styles-register.css">
+    <link rel="stylesheet" href="/css/styles-productAdd.css">
     
 
-    <title>Kairos Register</title>
+    <title>Kairos Add Products</title>
 </head>
 
-<body class="ta-center formato-total">
-    <header class="mg-top-30">
-        <img class="w-200px mb-5" src="/images/kairos-logo-un-color-azul.png" >
-    </header>
-    <main class="w-100 ta-center">
-        <h1 class="ta-center color-azul fz-20">Cargar y modificar productos</h1>
+<body>
 
-        <form class="ta-center mg-top-50  "action="/login">
-            <div class="mg-b border-rad-5 formato-form ">
-                <input  type="text" name="nombreproducto" id="nombreproducto" placeholder="Producto">
-            </div>
-            <div class="mg-b border-rad-5 formato-form">
-                <input type="text" name="descripcion" id="descripcion" placeholder="Descripcion">
-            </div>
-            <div class="mg-b border-rad-5 formato-form">
-                <input type="file" name="imagen" accept=".jpg" placeholder="Imagen">
-            </div>
-
-            <div class="mg-b border-rad-5 formato-form">
-                <input type="categoria" name="categoria" id="categoria" placeholder="Categoria">
-            </div>
-
-            <div class="mg-b border-rad-5 formato-form">
-                <input type="colores" name="colores" id="colores" placeholder="Colores">
-            </div>
-
-            <div class="mg-b border-rad-5 formato-form">
-                <input type="precio" name="precio" id="precio" placeholder="precio">
-            
-            
-
+    <form action="" method="post">
+        <div class="form-body">
+            <img src="/images/kairos-logo-un-color-azul.png" alt="kairos-logo-un-color-azul">
+            <p class="text">Cargar y modificar productos</p>
         
-            <nav> 
-                <button class="form-button">Modificar Producto</button>
-            </nav>
-
-            <nav> 
-                <button class="form-button">Cargar Producto</button>
-            </nav>
+        <div class="form-register">
+            <input  type="text" name="nombreproducto" id="nombreproducto" placeholder="Producto">
+        </div>
+        <div class="form-register">
+            <input type="text" name="descripcion" id="descripcion" placeholder="Descripcion">
+        </div>
+        <div class="form-register">
+            <input type="file" name="imagen" accept=".jpg" placeholder="Imagen">
+        </div>
+        <div class="form-register">
+            <input type="categoria" name="categoria" id="categoria" placeholder="Categoria">            
+        </div>
+        <div class="form-register">
+            <input type="colores" name="colores" id="colores" placeholder="Colores">
+        </div>
+        <div class="form-register">
+            <input type="precio" name="precio" id="precio" placeholder="precio">
+        </div>
+    
+        <button>Modificar Producto</button>
+        <button>Cargar Producto</button>
 
     </form>
-    
-
-    </main>
     
 </body>
 </html>
