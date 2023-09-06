@@ -1,12 +1,43 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agregar productos</title>
+    
+    <%- include("partials/head") %>
+    <link rel="stylesheet" href="/css/styles-productAdd.css">
+    
+
+    <title>Kairos Add Products</title>
 </head>
+
 <body>
-    <h2>Pagina formulario agregar o modificar productos</h2>
+
+    <form action="" method="post">
+        <div class="form-body">
+            <img src="/images/kairos-logo-un-color-azul.png" alt="kairos-logo-un-color-azul">
+            <p class="text">Cargar y modificar productos</p>
+        
+        <div class="form-register">
+            <input  type="text" name="nombreproducto" id="nombreproducto" placeholder="Producto">
+        </div>
+        <div class="form-register">
+            <input type="text" name="descripcion" id="descripcion" placeholder="Descripcion">
+        </div>
+        <div class="form-register">
+            <input type="file" name="imagen" accept=".jpg" placeholder="Imagen">
+        </div>
+        <div class="form-register">
+            <input type="categoria" name="categoria" id="categoria" placeholder="Categoria">            
+        </div>
+        <div class="form-register">
+            <input type="colores" name="colores" id="colores" placeholder="Colores">
+        </div>
+        <div class="form-register">
+            <input type="precio" name="precio" id="precio" placeholder="precio">
+        </div>
+    
+        <button>Modificar Producto</button>
+        <button>Cargar Producto</button>
+
+    </form>
     
 </body>
 </html>
