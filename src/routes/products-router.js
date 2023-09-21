@@ -32,20 +32,18 @@ router.get("/Cart", productsController.productCart);
 /*** CREATE ONE PRODUCT ***/
 router.get("/add", productsController.add);
 router.post("/", upload.single("image"), productsController.store);
-// "image" viene del form // Flta ver como subir dos fotos para el logo del producto
+// "image" viene del form // Falta ver como subir dos fotos para el logo del producto
 
 /*** GET ONE PRODUCT BY ID ***/
 router.get("/:id/", productsController.detailById);
 
-/*
-/products/ :id /edit (GET)
-Formulario de edición de productos
+/*** EDIT ONE PRODUCT ***/
+//Formulario de edición de productos
+router.get("/edit/:id", productsController.edit);
+//Acción de edición (a donde se envía el formulario):
+router.put("/:id", productsController.update);
 
-/products/ :id (PUT)
-Acción de edición (a donde se envía el formulario):
-
-/products/ :id (DELETE)
-Acción de borrado
-*/
+/*** DELETE ONE PRODUCT***/
+router.delete("/:id", productsController.destroy);
 
 module.exports = router;
