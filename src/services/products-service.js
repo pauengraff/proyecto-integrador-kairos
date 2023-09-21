@@ -1,4 +1,3 @@
-const { product } = require("prelude-ls");
 const db = require("../data/db");
 
 const productServices = {
