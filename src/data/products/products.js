@@ -35,7 +35,6 @@ module.exports = {
     this.saveProducts(products); //
   },
 
-  /*
   update: function (id, product) {
     console.log(`Updating product ${product.name}`);
     //cargo todos los productos
@@ -43,11 +42,20 @@ module.exports = {
     // busco producto por id
     const productToEdit = products.find((product) => product.id == id);
     // piso las propiedades
-    productToEdit.name = product.name;
-    productToEdit.description = product.description;
+
+    Object.assign(productToEdit, product); //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign
+
+    /*productToEdit.name = product.name;
+    productToEdit.marca = product.marca;
+    productToEdit.sku = product.sku;
+    productToEdit.color = product.color;
     productToEdit.price = product.price;
+    productToEdit.delivery = product.delivery;
+    productToEdit.promotion = product.promotion;
     productToEdit.discount = product.discount;
+    productToEdit.description = product.description;
     productToEdit.category = product.category;
+    productToEdit.specs = product.specs;*/
 
     // guardo los productos
     this.saveProducts(products);
@@ -59,5 +67,5 @@ module.exports = {
     const products = this.getProducts();
     const nonDeletedProducts = products.filter((product) => product.id != id);
     this.saveProducts(nonDeletedProducts);
-  },*/
+  },
 };
