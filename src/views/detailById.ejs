@@ -28,9 +28,9 @@
             <h5 class="productPriceOff">
               <%= product.discount %> % OFF en 1 pago!
                 <button class="buttonBuy">LO QUIERO</button>
-                <a href="/products/edit/<%= product.id %>" class="buttonBuy">EDITAR PRODUCTO</a>
-                <form action="/products/<%= product.id %>?_method=delete" method="POST" class="buttonBuy">
-                  <button type="submit" class="buttonBuy">ELIMINAR</button>
+                <a href="/products/edit/<%= product.id %>" class="button">EDITAR PRODUCTO</a>
+                <form action="/products/<%= product.id %>?_method=delete" method="POST" class="button">
+                  <button type="submit">ELIMINAR</button>
                 </form>
 
             </h5>
