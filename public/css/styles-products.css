@@ -11,6 +11,7 @@ main {
 }
 
 .productDetail {
+  width: 80vw;
   padding: 8px;
   display: flex;
   flex-wrap: wrap;
@@ -23,7 +24,7 @@ main {
 }
 
 .productPhoto {
-  width: 90%;
+  width: 30%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -39,6 +40,7 @@ main {
 }
 
 .productName {
+  border: solid red dotted;
   font-size: 26px;
   margin-bottom: 20px;
 }

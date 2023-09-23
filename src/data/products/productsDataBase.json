@@ -17,23 +17,6 @@
     "specs": "Carga Solar, 60 hs de bateria, 16 modos de deporte, Body de Aluminio"
   },
   {
-    "id": 2,
-    "name": "Quatix 9wqq",
-    "marca": "Garmin",
-    "sku": "010-50000-61",
-    "description": "Funciona a veces",
-    "category": "sport",
-    "stock": true,
-    "color": "black",
-    "price": 15000,
-    "delivery": "free",
-    "promotion": "3 cuotas sin interes",
-    "discount": 20,
-    "logo": "default-logo.jpg",
-    "image": "default-image.jpeg",
-    "specs": "Carga a cuerda la bateria dura durando"
-  },
-  {
     "id": "a6bc021f-b02f-4986-9444-a4e40561856f",
     "name": "Fenix 5",
     "marca": "Garmin",
@@ -64,10 +47,11 @@
     "logo": "default-logo.jpg",
     "description": "El mejor reloj para trail de larga duracion ",
     "category": "sports",
-    "image": "image-1694804289942.jpg"
+    "image": "image-1694804289942.jpg",
+    "specs": "Carga a cuerda la bateria dura durando"
   },
   {
-    "id": "0c421611-e4fa-4559-94f3-9735fda4bc56",
+    "id": 3,
     "name": "P8",
     "marca": "COLMI",
     "sku": "100",
@@ -80,7 +64,8 @@
     "logo": "default-logo.jpg",
     "description": "Reloj economico ",
     "category": "outdoor",
-    "image": "image-1694804448137.jpg"
+    "image": "image-1694804448137.jpg",
+    "specs": "Carga a cuerda la bateria dura durando"
   },
   {
     "id": "c0bb5ff4-1dd0-4424-aa2f-2b376b3b5ec6",
@@ -98,5 +83,22 @@
     "category": "outdoor",
     "specs": "Reloj Outdoor de alta calidad",
     "image": "image-1694804801750.jpg"
+  },
+  {
+    "id": "92f89435-8a31-49a8-ba91-e21fad38bb6f",
+    "name": "GARMIN 2",
+    "marca": "GARMIN",
+    "sku": "",
+    "stock": "true",
+    "color": "BLANCO",
+    "price": 0,
+    "delivery": "free",
+    "promotion": "Sin promo",
+    "discount": 10,
+    "logo": "default-logo.jpg",
+    "description": "GARMIN1",
+    "category": "sports",
+    "specs": "Garmin2",
+    "image": "default-image.jpeg"
   }
 ]

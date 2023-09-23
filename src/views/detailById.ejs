@@ -1,48 +1,55 @@
 <!doctype html>
 <html lang="es">
-  <head>
-    <%- include("partials/head") %>
+
+<head>
+  <%- include("partials/head") %>
     <link rel="stylesheet" href="/css/styles-productDetail.css" />
 
     <title>Kairos</title>
-  </head>
+</head>
 
-  <%- include("partials/header") %>
+<%- include("partials/header") %>
 
   <body>
     <main>
       <section class="productDetail">
         <article class="productDetail-d">
-          <img
-            class="productPhoto"
-            src="/images/<%= product.image %>"
-            alt="Image"
-          />
+          <img class="productPhoto" src="/images/<%= product.image %>" alt="Image" />
           <div class="productText">
-            <img
-              class="productLogo"
-              src="/images/<%= product.logo %>"
-              alt="Logo"
-            />
-            <h6 class="productNumber">SKU: <%= product.sku %></h6>
-            <h1 class="productName"><%= product.name %></h1>
-            <h1 class="productPrice">$<%= product.price %></h1>
+            <img class="productLogo" src="/images/<%= product.logo %>" alt="Logo" />
+            <h6 class="productNumber">SKU: <%= product.sku %>
+            </h6>
+            <h1 class="productName">
+              <%= product.name %>
+            </h1>
+            <h1 class="productPrice">$<%= product.price %>
+            </h1>
             <h5 class="productPricePay">Hasta <%= product.promotion %>!</h5>
             <h5 class="productPriceOff">
               <%= product.discount %> % OFF en 1 pago!
-              <button class="buttonBuy">LO QUIERO</button>
+                <button class="buttonBuy">LO QUIERO</button>
+                <a href="/products/edit/<%= product.id %>" class="button">EDITAR PRODUCTO</a>
+                <form action="/products/<%= product.id %>?_method=delete" method="POST" class="button">
+                  <button type="submit">ELIMINAR</button>
+                </form>
+
             </h5>
           </div>
+
         </article>
 
         <article class="productDescription-d">
           <div class="description">
             <h4>Descripción</h4>
-            <p class="textDescription"><%= product.description %></p>
+            <p class="textDescription">
+              <%= product.description %>
+            </p>
           </div>
           <div class="specifications">
             <h4>Especificaciones</h4>
-            <p class="textDescription"><%= product.specs %></p>
+            <p class="textDescription">
+              <%= product.specs %>
+            </p>
           </div>
         </article>
       </section>
@@ -50,4 +57,5 @@
 
     <%- include("partials/footer") %>
   </body>
+
 </html>

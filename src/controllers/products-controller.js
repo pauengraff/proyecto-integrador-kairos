@@ -47,11 +47,29 @@ const controller = {
       specs: req.body.specs,
       image: req.file ? req.file.filename : "default-image.jpeg",
     };
-    productServices.createProduct(product); // aca manda a la base de datos a travez del servicio
+    productServices.createProduct(product); // aca manda a la base de datos via servicio
     res.redirect("/products");
   },
 
-  // faltan restantes agregar
+  //Form to edit
+  edit: (req, res) => {
+    const id = req.params.id;
+    const product = productServices.getProduct(id);
+    res.render("productEdit", { product });
+  },
+  update: (req, res) => {
+    const product = req.body;
+    console.log(req.body);
+    const id = req.params.id;
+    productServices.updateProduct(id, product);
+    res.redirect("/products");
+  },
+  // Delete - Delete one product from DB
+  destroy: (req, res) => {
+    const id = req.params.id;
+    productServices.deleteProduct(id);
+    res.redirect("/products");
+  },
 };
 
 module.exports = controller;
