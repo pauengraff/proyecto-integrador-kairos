@@ -17,23 +17,6 @@
     "specs": "Carga Solar, 60 hs de bateria, 16 modos de deporte, Body de Aluminio"
   },
   {
-    "id": 2,
-    "stock": true,
-    "logo": "default-logo.jpg",
-    "image": "default-image.jpeg",
-    "name": "A",
-    "marca": "A",
-    "sku": "",
-    "color": "A",
-    "price": "1",
-    "delivery": "free",
-    "promotion": "2",
-    "discount": "3",
-    "description": "S",
-    "category": "sports",
-    "specs": "A"
-  },
-  {
     "id": "a6bc021f-b02f-4986-9444-a4e40561856f",
     "name": "Fenix 5",
     "marca": "Garmin",
