@@ -4,6 +4,10 @@ const path = require("path");
 const methodOverride = require("method-override");
 
 const mainRouter = require("./routes/main-router");
+
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
+
 app.use(mainRouter);
 
 app.use(express.static(path.join(__dirname, "../public")));
