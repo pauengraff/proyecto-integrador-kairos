@@ -12,6 +12,7 @@ const productServices = {
     db.products.create(product);
   },
   updateProduct: (id, product) => {
+    console.log(`Updating IN SERVICE product ${product.name}`);
     db.products.update(id, product);
   },
   deleteProduct: (id) => {

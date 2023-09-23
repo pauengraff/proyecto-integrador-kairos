@@ -59,6 +59,7 @@ const controller = {
   },
   update: (req, res) => {
     const product = req.body;
+    console.log(req.body);
     const id = req.params.id;
     productServices.updateProduct(id, product);
     res.redirect("/products");
