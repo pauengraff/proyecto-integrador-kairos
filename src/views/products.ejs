@@ -4,22 +4,157 @@
 <head>
   <%- include("partials/head", {title: 'Todos los productos' }) %>
 
-    <link rel="stylesheet" href="/css/styles-products.css" />
+    <link rel="stylesheet" href="/css/products.css" />
 
     <title>Kairos</title>
 
 </head>
 
-<%- include("partials/header") %>
-
-  <body>
-    <!-- todos los productos agregar forEach-->
-    <% products.forEach(product=> { %>
-      <%- include("partials/product-card", {product}) %>
-        <% }) %>
 
 
-          <%- include("partials/footer") %>
-  </body>
+<body>
+
+  <%- include("partials/header") %>
+
+  <main>
+
+    <div class="banner-product">
+
+        <img src="/images\banner.jpeg" alt="">
+
+    </div>
+
+    <div class="title-products">
+
+        <h2>Relojes</h2>
+
+    </div>
+
+    <!-- Contenedor general -->
+    <div class="main-section">
+
+      
+
+        <!-- Contenedor de filtrados -->
+        <div class="main-filters">
+
+          <p>Categorias</p>
+          <ul>
+            <li>Clasicos</li>
+            <li>Deportivos</li>
+          </ul>
+
+          <p>Marcas</p>
+          <ul>
+            <li>Rolex</li>
+            <li>Garmin</li>
+          </ul>
+
+        </div>
+
+        <!-- Contenedor de productos -->
+        <div class="main-products">
+
+
+          <section>
+
+            <article>
+
+              <img src="\images\700_700-quatix7111.jpg">
+
+              <div>
+
+                <p class="nombre-producto">Quatix Ztop</p>
+                <p class="descripcion-producto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus provident praesentium, dignissimos a sapiente minima nobis deleniti assumenda aliquid harum eum sed culpa enim maiores iste quam molestiae sequi voluptatum.</p>
+                <p class="precio-producto">$ 140.000</p>
+
+              </div>
+
+            </article>
+
+            <article>
+
+              <img src="\images\imagen-1694800117106.jpg">
+
+              <div>
+
+                <p class="nombre-producto">Quatix Ztop</p>
+                <p class="descripcion-producto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus provident praesentium, dignissimos a sapiente minima nobis deleniti assumenda aliquid harum eum sed culpa enim maiores iste quam molestiae sequi voluptatum.</p>
+                <p class="precio-producto">$ 140.000</p>
+
+              </div>
+
+            </article>
+
+            <article>
+
+              <img src="\images\imagen-1694799753728.png">
+
+              <div>
+
+                <p class="nombre-producto">Quatix Ztop</p>
+                <p class="descripcion-producto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus provident praesentium, dignissimos a sapiente minima nobis deleniti assumenda aliquid harum eum sed culpa enim maiores iste quam molestiae sequi voluptatum.</p>
+                <p class="precio-producto">$ 140.000</p>
+
+              </div>
+
+            </article>
+
+            <article>
+
+              <img src="\images\700_700-quatix7111.jpg">
+
+              <div>
+
+                <p class="nombre-producto">Quatix Ztop</p>
+                <p class="descripcion-producto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus provident praesentium, dignissimos a sapiente minima nobis deleniti assumenda aliquid harum eum sed culpa enim maiores iste quam molestiae sequi voluptatum.</p>
+                <p class="precio-producto">$ 140.000</p>
+
+              </div>
+
+            </article>
+
+            <article>
+
+              <img src="\images\imagen-1694800117106.jpg">
+
+              <div>
+
+                <p class="nombre-producto">Quatix Ztop</p>
+                <p class="descripcion-producto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus provident praesentium, dignissimos a sapiente minima nobis deleniti assumenda aliquid harum eum sed culpa enim maiores iste quam molestiae sequi voluptatum.</p>
+                <p class="precio-producto">$ 140.000</p>
+
+              </div>
+
+            </article>
+
+            <article>
+
+              <img src="\images\imagen-1694799753728.png">
+
+              <div>
+
+                <p class="nombre-producto">Quatix Ztop</p>
+                <p class="descripcion-producto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus provident praesentium, dignissimos a sapiente minima nobis deleniti assumenda aliquid harum eum sed culpa enim maiores iste quam molestiae sequi voluptatum.</p>
+                <p class="precio-producto">$ 140.000</p>
+
+              </div>
+
+            </article>
+
+          </section>
+          
+
+        </div>
+
+    </div>
+
+  </main>
+
+
+
+  <%- include("partials/footer") %>
+
+</body>
 
 </html>
