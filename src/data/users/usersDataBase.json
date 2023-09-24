@@ -1,0 +1,26 @@
+[
+    {
+      "id": 1,
+      "firstName": "Moe",
+      "lastName": "Howard",
+      "email": "howardmoe@gmail.com",
+      "password": "password123",
+      "category": "Cliente"
+    },
+    {
+      "id": 2,
+      "firstName": "Larry",
+      "lastName": "Fine",
+      "email": "larryfine@gmail.com",
+      "password": "ILovePancakes",
+      "category": "Cliente"
+    },
+    {
+      "id": 3,
+      "firstName": "Curly",
+      "lastName": "Howard",
+      "email": "curlyhoward123@gmail.com",
+      "password": "pass1234",
+      "category": "Cliente"
+    }
+]
