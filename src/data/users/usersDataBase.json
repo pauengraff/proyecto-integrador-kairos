@@ -1,26 +1,29 @@
 [
     {
-      "id": 1,
-      "firstName": "Moe",
-      "lastName": "Howard",
+      "nombre": "Moe",
+      "apellido": "Howard",
       "email": "howardmoe@gmail.com",
-      "password": "password123",
-      "category": "Cliente"
+      "date": "05/06/1897",
+      "genero": "masc",
+      "contrasena": "password123",
+      "repcontrasena": "password123"
     },
     {
-      "id": 2,
-      "firstName": "Larry",
-      "lastName": "Fine",
+      "nombre": "Larry",
+      "apellido": "Fine",
       "email": "larryfine@gmail.com",
-      "password": "ILovePancakes",
-      "category": "Cliente"
+      "date":"05/10/1902",
+      "genero": "masc",
+      "contrasena": "ILovePancakes",
+      "repcontrasena": "ILovePancakes"
     },
     {
-      "id": 3,
-      "firstName": "Curly",
-      "lastName": "Howard",
+      "nombre": "Curly",
+      "apellido": "Howard",
       "email": "curlyhoward123@gmail.com",
-      "password": "pass1234",
-      "category": "Cliente"
+      "date":"22/10/1903",
+      "genero": "masc",
+      "contrasena": "pass1234",
+      "repcontrasena": "pass1234"
     }
 ]
