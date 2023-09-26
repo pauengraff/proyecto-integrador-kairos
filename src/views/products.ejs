@@ -58,89 +58,11 @@
 
           <section>
 
-            <article>
+            <% products.forEach(product=> { %>
 
-              <img src="\images\700_700-quatix7111.jpg">
+              <%- include("partials/productCard", {product}) %>
 
-              <div>
-
-                <p class="nombre-producto">Quatix Ztop</p>
-                <p class="descripcion-producto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus provident praesentium, dignissimos a sapiente minima nobis deleniti assumenda aliquid harum eum sed culpa enim maiores iste quam molestiae sequi voluptatum.</p>
-                <p class="precio-producto">$ 140.000</p>
-
-              </div>
-
-            </article>
-
-            <article>
-
-              <img src="\images\imagen-1694800117106.jpg">
-
-              <div>
-
-                <p class="nombre-producto">Quatix Ztop</p>
-                <p class="descripcion-producto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus provident praesentium, dignissimos a sapiente minima nobis deleniti assumenda aliquid harum eum sed culpa enim maiores iste quam molestiae sequi voluptatum.</p>
-                <p class="precio-producto">$ 140.000</p>
-
-              </div>
-
-            </article>
-
-            <article>
-
-              <img src="\images\imagen-1694799753728.png">
-
-              <div>
-
-                <p class="nombre-producto">Quatix Ztop</p>
-                <p class="descripcion-producto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus provident praesentium, dignissimos a sapiente minima nobis deleniti assumenda aliquid harum eum sed culpa enim maiores iste quam molestiae sequi voluptatum.</p>
-                <p class="precio-producto">$ 140.000</p>
-
-              </div>
-
-            </article>
-
-            <article>
-
-              <img src="\images\700_700-quatix7111.jpg">
-
-              <div>
-
-                <p class="nombre-producto">Quatix Ztop</p>
-                <p class="descripcion-producto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus provident praesentium, dignissimos a sapiente minima nobis deleniti assumenda aliquid harum eum sed culpa enim maiores iste quam molestiae sequi voluptatum.</p>
-                <p class="precio-producto">$ 140.000</p>
-
-              </div>
-
-            </article>
-
-            <article>
-
-              <img src="\images\imagen-1694800117106.jpg">
-
-              <div>
-
-                <p class="nombre-producto">Quatix Ztop</p>
-                <p class="descripcion-producto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus provident praesentium, dignissimos a sapiente minima nobis deleniti assumenda aliquid harum eum sed culpa enim maiores iste quam molestiae sequi voluptatum.</p>
-                <p class="precio-producto">$ 140.000</p>
-
-              </div>
-
-            </article>
-
-            <article>
-
-              <img src="\images\imagen-1694799753728.png">
-
-              <div>
-
-                <p class="nombre-producto">Quatix Ztop</p>
-                <p class="descripcion-producto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus provident praesentium, dignissimos a sapiente minima nobis deleniti assumenda aliquid harum eum sed culpa enim maiores iste quam molestiae sequi voluptatum.</p>
-                <p class="precio-producto">$ 140.000</p>
-
-              </div>
-
-            </article>
+            <% }) %>
 
           </section>
           
