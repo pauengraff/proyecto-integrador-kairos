@@ -1,0 +1,29 @@
+[
+    {
+      "nombre": "Moe",
+      "apellido": "Howard",
+      "email": "howardmoe@gmail.com",
+      "date": "05/06/1897",
+      "genero": "masc",
+      "contrasena": "password123",
+      "repcontrasena": "password123"
+    },
+    {
+      "nombre": "Larry",
+      "apellido": "Fine",
+      "email": "larryfine@gmail.com",
+      "date":"05/10/1902",
+      "genero": "masc",
+      "contrasena": "ILovePancakes",
+      "repcontrasena": "ILovePancakes"
+    },
+    {
+      "nombre": "Curly",
+      "apellido": "Howard",
+      "email": "curlyhoward123@gmail.com",
+      "date":"22/10/1903",
+      "genero": "masc",
+      "contrasena": "pass1234",
+      "repcontrasena": "pass1234"
+    }
+]
