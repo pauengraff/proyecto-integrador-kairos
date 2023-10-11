@@ -6,10 +6,6 @@ const controller = {
     const products = productServices.getAllProducts();
     res.render("products", { products });
   },
-
-  productDetail: (req, res) => {
-    res.render("products/productDetail");
-  },
   // DETAIL - Detail from one product ID
   detailById: (req, res) => {
     const id = req.params.id;

@@ -23,9 +23,6 @@ const productsController = require("../controllers/products-controller");
 //GET ALL PRODUCTS
 router.get("/", productsController.index);
 
-// ruta detail - analizar si la dejamos o reemplazamos por detailById
-router.get("/Detail", productsController.productDetail);
-
 // *** PRODUCT CART ***/
 router.get("/Cart", productsController.productCart);
 
