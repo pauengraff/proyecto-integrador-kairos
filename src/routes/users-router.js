@@ -1,5 +1,5 @@
-const express = require("express");
-const router = express.Router();
+const {Router , urlencoded} = require ("express");
+const router=Router();
 const path = require("path");
 const multer = require("multer");
 
@@ -18,9 +18,11 @@ const upload = multer({ storage: storage });
 
 // ************ Controller Require ************
 const usersController = require("../controllers/users-controller");
-
+const validation =require("../validation/validation-login")
+const validationErrorsLogin=require("../middlewares/login")
 // Routes Users
 router.get("/login", usersController.login);
+router.post("/login",urlencoded({extended:false}), validation ,validationErrorsLogin ,usersController.processlogin);
 
 /*** CREATE USER ***/
 // Register form

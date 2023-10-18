@@ -5,10 +5,16 @@ const controller = {
   login: (req, res) => {
     res.render("users/login");
   },
+  processlogin: (req,res)=>{    
+    const userLogin= req.body;
+    
+    res.render("index", {userLogin})
+  },
 
   register: (req, res) => {
     res.render("users/register");
   },
+
   processRegister: (req, res) => {
     const user = {
       first_name: req.body.first_name,
