@@ -4,7 +4,7 @@ const controller = {
   // Root - Show all products
   index: (req, res) => {
     const products = productServices.getAllProducts();
-    res.render("products", { products });
+    res.render("products/products", { products });
   },
   // DETAIL - Detail from one product ID
   detailById: (req, res) => {
