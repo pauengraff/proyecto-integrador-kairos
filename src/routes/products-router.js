@@ -5,7 +5,7 @@ const multer = require("multer");
 
 const storage = multer.diskStorage({
   // configuracion de guardado //
-  destination: path.join(__dirname, "../../public/images/"), // destino donde va a guardar el archivo
+  destination: path.join(__dirname, "../../public/images/products"), // destino donde va a guardar el archivo
   filename: function (req, file, cb) {
     cb(
       null,
@@ -22,9 +22,6 @@ const productsController = require("../controllers/products-controller");
 // Rutas products
 //GET ALL PRODUCTS
 router.get("/", productsController.index);
-
-// ruta detail - analizar si la dejamos o reemplazamos por detailById
-router.get("/Detail", productsController.productDetail);
 
 // *** PRODUCT CART ***/
 router.get("/Cart", productsController.productCart);

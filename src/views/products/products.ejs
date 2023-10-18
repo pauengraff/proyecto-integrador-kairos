@@ -2,7 +2,7 @@
 <html lang="es">
 
 <head>
-  <%- include("partials/head", {title: 'Todos los productos' }) %>
+  <%- include("../partials/head", {title: 'Todos los productos' }) %>
 
     <link rel="stylesheet" href="/css/products.css" />
 
@@ -14,13 +14,13 @@
 
 <body>
 
-  <%- include("partials/header") %>
+  <%- include("../partials/header") %>
 
   <main>
 
     <div class="banner-product">
 
-        <img src="/images\banner.jpeg" alt="">
+        <img src="/images/products/banner.jpeg" alt="">
 
     </div>
 
@@ -60,7 +60,7 @@
 
             <% products.forEach(product=> { %>
 
-              <%- include("partials/productCard", {product}) %>
+              <%- include("../partials/productCard", {product}) %>
 
             <% }) %>
 
@@ -75,7 +75,7 @@
 
 
 
-  <%- include("partials/footer") %>
+  <%- include("../partials/footer") %>
 
 </body>
 
