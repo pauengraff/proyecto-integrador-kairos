@@ -2,6 +2,8 @@ const express = require("express");
 const app = express();
 const path = require("path");
 const methodOverride = require("method-override");
+const cookies = require("cookie-parser");
+const session = require("express-session");
 
 // Middlewares
 app.use(express.static(path.join(__dirname, "../public")));
