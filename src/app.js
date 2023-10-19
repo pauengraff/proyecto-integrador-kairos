@@ -11,6 +11,16 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(methodOverride("_method"));
 
+app.use(
+  session({
+    secret: "secret",
+    resave: false,
+    saveUninitialized: false,
+  })
+);
+
+app.use(cookies());
+
 //Template Engine
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "/views")); // Set carpeta views ejs
@@ -18,8 +28,6 @@ app.set("views", path.join(__dirname, "/views")); // Set carpeta views ejs
 // Route System
 const mainRouter = require("./routes/main-router");
 app.use(mainRouter);
-app.use(express.urlencoded({ extended: false }));
-app.use(express.json());
 
 const PORT = 3008;
 app.listen(PORT, () => {
