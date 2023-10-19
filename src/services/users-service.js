@@ -7,6 +7,9 @@ const usersServices = {
   create: (user) => {
     db.users.create(user);
   },
+  getfindByEmail:(userLogin)=>{
+    db.users.findByEmail(userLogin);
+  }
 };
 
 module.exports = usersServices;

@@ -21,6 +21,13 @@ module.exports = {
     return this.getUsers();
   },
 
+  findByEmail: function (field, text) {
+    let allUsers=this.showAll(); // traigo todos los Usuarios
+    let userFound= allUsers.find(oneUser=>oneUser[field]=== text); // busco porEmail
+      return userFound;
+
+  },
+
   create: function (user) {
     // aca crea el producto
     console.log(`Creating user ${user.first_name}`);

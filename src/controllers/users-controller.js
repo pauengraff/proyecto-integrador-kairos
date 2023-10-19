@@ -6,10 +6,17 @@ const controller = {
     res.render("users/login");
   },
   processlogin: (req,res)=>{    
-    const userLogin= req.body;
+    const userLogin= usersServices.getfindByEmail("email",req.body.email);
     
-    res.render("index", {userLogin})
-  },
+    if(userLogin){
+      const correctPassword =bcrypt.compareSync(req.body.password, userLogin.password )
+      if(correctPassword){  
+              
+      res.redirect("index")
+      }
+      return res.render ("users/login")
+    }    
+  }, 
 
   register: (req, res) => {
     res.render("users/register");
