@@ -14,10 +14,9 @@ const usersServices = {
     db.users.create(user);
   },
 
-  findByfield:(userLogin)=>{
+  findByfield: (userLogin) => {
     db.users.findByfield(userLogin);
-  }
-
+  },
 
   updateUser: (id, user) => {
     db.users.update(id, user);
@@ -26,7 +25,6 @@ const usersServices = {
   deleteUser: (id) => {
     db.users.delete(id);
   },
-
 };
 
 module.exports = usersServices;
