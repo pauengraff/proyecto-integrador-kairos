@@ -29,6 +29,12 @@ const controller = {
       if (comparePassword) {
         delete userLogin.password;
         req.session.userLogged = userLogin;
+
+        //configuro cookie en log in
+        if (req.body.remember_user) {
+          res.cookie("userEmail", req.body.email, { maxAge: 1000 * 60 * 60 });
+        }
+
         res.render("users/profile", { userLogin });
       }
       return res.render("users/login");
@@ -80,6 +86,13 @@ const controller = {
     const id = req.params.id;
     usersServices.deleteUser(id);
     res.redirect("/users");
+  },
+
+  // lOGOUT FALTA CERRAR LA SESION DESDE PROFILE
+  logout: (req, res) => {
+    res.clearCookie("userEmail");
+    req.session.destroy();
+    return res.redirect("/");
   },
 };
 

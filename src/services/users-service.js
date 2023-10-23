@@ -15,7 +15,7 @@ const usersServices = {
   },
 
   findByfield: (userLogin) => {
-    db.users.findByfield(userLogin);
+    db.users.findByfield(userLogin); // Este servicio se usa para las cookies
   },
 
   updateUser: (id, user) => {

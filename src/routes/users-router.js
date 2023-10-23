@@ -21,7 +21,7 @@ const upload = multer({ storage: storage });
 const usersController = require("../controllers/users-controller");
 // user register validation
 const validationRegister = require("../validation/validation-register");
-// user login validationclear
+// user login validation
 const validation = require("../validation/validation-login");
 const validationErrorsLogin = require("../middlewares/login");
 
