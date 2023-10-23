@@ -30,13 +30,15 @@
     "avatar": "user-default-image.jpeg"
   },
   {
-    "id": "b7de0cf9-9455-428d-9ecb-d014a8b2778a",
-    "first_name": "Test1",
-    "last_name": "Test",
-    "email": "testmail@gmail.com",
-    "birth_date": "2021-01-01",
+    "id": "712ec702-9846-4a7c-9b73-2de0fdf3e1a8",
+    "first_name": "juan",
+    "last_name": "perez",
+    "email": "juan@gmail.com",
+    "birth_date": "2023-10-04",
     "gender": "male",
-    "password": "$2a$10$KKJqaETFlkmyIM3PN6TW3O4VMgXKuzCrc09MJOtTr9PN68VyEvYma",
-    "avatar": "avatar-1696333328659.png"
+    "password": "$2a$10$hJ.h9ABNj0w0BNAHWREmKO307SxZDI1NXyE71YzOoMAcIcrkCRQmu",
+    "avatar": "avatar-1696333328659.png",
+    "last_marca": "Test"
+
   }
 ]
