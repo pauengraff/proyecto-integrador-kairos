@@ -62,4 +62,7 @@ router.put("/:id", usersController.update);
 // Delete User
 router.delete("/:id", usersController.destroy);
 
+// Logout
+router.get("/logout/", usersController.logout);
+
 module.exports = router;
