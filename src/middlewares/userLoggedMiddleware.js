@@ -2,7 +2,7 @@ const usersServices = require("../services/users-service");
 
 // falta crear servicio de findByField en db.user
 
-/*function userLoggedMiddleware(req, res, next) {
+function userLoggedMiddleware(req, res, next) {
   res.locals.isLogged = false;
 
   let emailInCookie = req.cookies.userEmail;
@@ -20,4 +20,4 @@ const usersServices = require("../services/users-service");
   next();
 }
 
-module.exports = userLoggedMiddleware;*/
+module.exports = userLoggedMiddleware;

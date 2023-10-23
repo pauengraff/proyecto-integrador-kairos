@@ -19,7 +19,7 @@ const controller = {
     res.render("users/login");
   },
 
-  processLogin: (req, res) => {
+  processlogin: (req, res) => {
     const userLogin = usersServices.getfindByEmail("email", req.body.email);
     if (userLogin) {
       const comparePassword = bcrypt.compareSync(

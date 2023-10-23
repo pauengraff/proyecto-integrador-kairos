@@ -23,7 +23,6 @@ module.exports = {
     return this.getUsers();
   },
 
-
   findById: function (id) {
     const users = this.getUsers().find((users) => users.id == id);
     return users;
@@ -32,7 +31,6 @@ module.exports = {
   findByfield: function (field, text) {
     const user = this.getUsers().find((user) => user[field] === text);
     return user;
-
   },
 
   create: function (user) {
