@@ -17,14 +17,19 @@ const controller = {
   // Users Login
   login: (req, res) => {
     res.render("users/login");
+  },
 
+  processLogin: (req, res) => {
+    const userLogin = usersServices.getfindByEmail("email", req.body.email);
     if (userLogin) {
-      const correctPassword = bcrypt.compareSync(
+      const comparePassword = bcrypt.compareSync(
         req.body.password,
         userLogin.password
       );
-      if (correctPassword) {
-        res.redirect("index");
+      if (comparePassword) {
+        delete userLogin.password;
+        req.session.userLogged = userLogin;
+        res.render("users/profile", { userLogin });
       }
       return res.render("users/login");
     }
