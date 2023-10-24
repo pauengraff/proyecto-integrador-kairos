@@ -23,18 +23,14 @@ module.exports = {
     return this.getUsers();
   },
 
-
   findById: function (id) {
     const users = this.getUsers().find((users) => users.id == id);
     return users;
   },
 
-
   findByEmail: function (field, text) {
-    const allUsers = this.showAll();
-    const userFound  = allUsers.find( oneUser => oneUser[field] === text);
-    return userFound;
-
+    const user = this.getUsers().find((user) => user[field] === text);
+    return user;
   },
 
   create: function (user) {

@@ -21,7 +21,7 @@ const upload = multer({ storage: storage });
 const usersController = require("../controllers/users-controller");
 // user register validation
 const validationRegister = require("../validation/validation-register");
-// user login validationclear
+// user login validation
 const validation = require("../validation/validation-login");
 const validationErrorsLogin = require("../middlewares/login");
 
@@ -32,11 +32,11 @@ router.get("/", usersController.usersList);
 // Login
 router.get("/login", usersController.login);
 
-//Pendiente trabajo sobre la validation
 router.post(
   "/login",
   validation,
   validationErrorsLogin,
+
   usersController.processLogin
 );
 
@@ -65,5 +65,8 @@ router.put("/:id", usersController.update);
 
 // Delete User
 router.delete("/:id", usersController.destroy);
+
+// Logout
+router.get("/logout/", usersController.logout);
 
 module.exports = router;
