@@ -2,7 +2,7 @@
 <html lang="es">
 
 <head>
-  <%- include("partials/head", {title: 'Todos los productos' }) %>
+  <%- include("../partials/head", {title: 'Todos los productos' }) %>
 
     <link rel="stylesheet" href="/css/products.css" />
 
@@ -14,26 +14,26 @@
 
 <body>
 
-  <%- include("partials/header") %>
+  <%- include("../partials/header") %>
 
-  <main>
+    <main>
 
-    <div class="banner-product">
+      <div class="banner-product">
 
-        <img src="/images\banner.jpeg" alt="">
+        <img src="/images/products/banner.jpeg" alt="">
 
-    </div>
+      </div>
 
-    <div class="title-products">
+      <div class="title-products">
 
         <h2>Relojes</h2>
 
-    </div>
+      </div>
 
-    <!-- Contenedor general -->
-    <div class="main-section">
+      <!-- Contenedor general -->
+      <div class="main-section">
 
-      
+
 
         <!-- Contenedor de filtrados -->
         <div class="main-filters">
@@ -60,22 +60,22 @@
 
             <% products.forEach(product=> { %>
 
-              <%- include("partials/productCard", {product}) %>
+              <%- include("../partials/productCard", {product}) %>
 
-            <% }) %>
+                <% }) %>
 
           </section>
-          
+
 
         </div>
 
-    </div>
+      </div>
 
-  </main>
+    </main>
 
 
 
-  <%- include("partials/footer") %>
+    <%- include("../partials/footer") %>
 
 </body>
 

@@ -21,8 +21,18 @@ module.exports = {
     return this.getUsers();
   },
 
+  findById: function (id) {
+    const users = this.getUsers().find((users) => users.id == id);
+    return users;
+  },
+
+  findByEmail: function (field, text) {
+    const user = this.getUsers().find((user) => user[field] === text);
+    return user;
+  },
+
   create: function (user) {
-    // aca crea el producto
+    // crea el usuario
     console.log(`Creating user ${user.first_name}`);
     const users = this.getUsers(); // traigo todos los Usuarios
     const newUser = {
@@ -31,5 +41,28 @@ module.exports = {
     };
     users.push(newUser); // push con los nuevos datos
     this.saveUsers(users); // Graba Usuario nuevo
+  },
+
+  update: function (id, user) {
+    const users = this.getUsers();
+    const userToEdit = users.find((user) => user.id == id);
+    // piso las propiedades
+
+    //Object.assign(userToEdit, user); //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign
+
+    userToEdit.first_name = user.first_name;
+    userToEdit.last_marca = user.last_name;
+    userToEdit.email = user.email;
+    userToEdit.birth_date = user.birth_date;
+    userToEdit.gender = user.gender;
+    // guardo los usuarios
+    this.saveUsers(users);
+    return user;
+  },
+
+  delete: function (id) {
+    const users = this.getUsers();
+    const nonDeletedUsers = users.filter((user) => user.id != id);
+    this.saveUsers(nonDeletedUsers);
   },
 };

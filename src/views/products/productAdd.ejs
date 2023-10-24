@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <%- include("../partials/head") %>
+        <link rel="stylesheet" href="/css/styles-productAdd.css">
+
+
+        <title>Kairos Add Products</title>
+</head>
+
+<body>
+
+    <form action="/products" method="post" enctype="multipart/form-data">
+        <div class="form-body">
+            <img src="/images/logo/kairos-logo-un-color-azul.png" alt="kairos-logo-un-color-azul">
+            <p class="text">Cargar productos</p>
+
+            <div class="form-register">
+                <input type="text" name="name" id="name" placeholder="Modelo Reloj">
+            </div>
+            <div class="form-register">
+                <input type="text" name="marca" id="marca" placeholder="Marca">
+            </div>
+
+            <div class="form-register">
+                <input type="text" name="description" id="description" placeholder="Descripcion">
+            </div>
+
+            <div class="form-register">
+                <input type="number" name="price" id="price" placeholder="Precio">
+            </div>
+
+            <div class="form-register">
+                <label for="image">Imagen Producto:</label>
+                <input type="file" name="image" placeholder="Imagen del Producto">
+            </div>
+
+
+            <button type="submit">GUARDAR PRODUCTO</button>
+
+    </form>
+
+</body>
+
+</html>

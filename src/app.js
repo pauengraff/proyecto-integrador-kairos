@@ -2,12 +2,32 @@ const express = require("express");
 const app = express();
 const path = require("path");
 const methodOverride = require("method-override");
+const cookies = require("cookie-parser");
+const session = require("express-session");
+const userCookiesMiddleware = require("./middlewares/userCookiesMiddleware");
+
+
 
 // Middlewares
+app.use (session({
+  secret:"SECRET",
+  resave: false,
+  saveUninitialized:false
+}));
 app.use(express.static(path.join(__dirname, "../public")));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(methodOverride("_method"));
+
+app.use(
+  session({
+    secret: "secret",
+    resave: false,
+    saveUninitialized: false,
+  })
+);
+app.use(cookies());
+app.use(userCookiesMiddleware);
 
 //Template Engine
 app.set("view engine", "ejs");

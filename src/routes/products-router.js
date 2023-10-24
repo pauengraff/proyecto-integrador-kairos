@@ -5,7 +5,7 @@ const multer = require("multer");
 
 const storage = multer.diskStorage({
   // configuracion de guardado //
-  destination: path.join(__dirname, "../../public/images/"), // destino donde va a guardar el archivo
+  destination: path.join(__dirname, "../../public/images/products"), // destino donde va a guardar el archivo
   filename: function (req, file, cb) {
     cb(
       null,
@@ -23,9 +23,6 @@ const productsController = require("../controllers/products-controller");
 //GET ALL PRODUCTS
 router.get("/", productsController.index);
 
-// ruta detail - analizar si la dejamos o reemplazamos por detailById
-router.get("/Detail", productsController.productDetail);
-
 // *** PRODUCT CART ***/
 router.get("/Cart", productsController.productCart);
 
@@ -34,14 +31,14 @@ router.get("/add", productsController.add);
 router.post("/", upload.single("image"), productsController.store);
 // "image" viene del form // Falta ver como subir dos fotos para el logo del producto
 
-/*** GET ONE PRODUCT BY ID ***/
-router.get("/:id/", productsController.detailById);
-
 /*** EDIT ONE PRODUCT ***/
 //Formulario de edición de productos
 router.get("/edit/:id", productsController.edit);
 //Acción de edición (a donde se envía el formulario):
 router.put("/:id", productsController.update);
+
+/*** GET ONE PRODUCT BY ID ***/
+router.get("/:id/", productsController.detailById);
 
 /*** DELETE ONE PRODUCT***/
 router.delete("/:id", productsController.destroy);

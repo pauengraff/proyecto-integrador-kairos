@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <%- include("../partials/head") %>
+        <link rel="stylesheet" href="/css/styles-usersDetail.css" />
+
+        <title>Kairos</title>
+</head>
+
+<%- include("../partials/headerUsers") %>
+
+    <body>
+        <main>
+            <section class="productDetail">
+                <article class="productDetail-d">
+                    <img class="productPhoto" src="/images/users/<%= users.avatar %>" alt="avatar" />
+                    <div class="productText">
+
+
+                        <h1 class="productName">
+                            <%= users.first_name %>
+                                <%= users.last_name %>
+
+
+
+                                    <a href="/users/edit/<%= users.id %>" class="buttonBuy">EDITAR USUARIO</a>
+                                    <a href="/users/register/" class="buttonBuy">AGREGAR USUARIO</a>
+                                    <a href="/users/logout/" class="buttonBuy">LOGOUT </a>
+                                    <form action="/users/<%= users.id %>?_method=delete" method="POST">
+                                        <button type="submit" class="submit-button">ELIMINAR</button>
+                                    </form>
+
+                    </div>
+
+                </article>
+
+
+            </section>
+        </main>
+
+        <%- include("../partials/footer") %>
+    </body>
+
+</html>
