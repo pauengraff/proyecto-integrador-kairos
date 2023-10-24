@@ -33,7 +33,12 @@ router.get("/", usersController.usersList);
 router.get("/login", usersController.login);
 
 //Pendiente trabajo sobre la validation
-router.post("/login",  validation,  validationErrorsLogin, usersController.processLogin);
+router.post(
+  "/login",
+  validation,
+  validationErrorsLogin,
+  usersController.processLogin
+);
 
 /*** CREATE USER ***/
 // Register form

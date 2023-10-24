@@ -7,7 +7,7 @@
     "birth_date": "1897-06-05",
     "gender": "male",
     "password": "$2a$10$vi8wxe7IQ6AYbUtkCM1x0OqJsoR87I6socowZkaB8OncKYMox0ElO",
-    "avatar": "user-default-image.jpeg"
+    "avatar": "user-default-image.jpg"
   },
   {
     "id": "ad0343ee-7cb0-48b2-9bdb-7478876e8061",
@@ -17,7 +17,7 @@
     "birth_date": "1902-10-05",
     "gender": "female",
     "password": "$2a$10$JRsHMo/Pq9hOun2R2L4H8OQo0EMFeftMDj9IDgNOBDgCDIEG9QU4C",
-    "avatar": "user-default-image.jpeg"
+    "avatar": "user-default-image.jpg"
   },
   {
     "id": "c3cdbae3-d0e1-44cf-b307-56089ec2aa1d",
@@ -27,7 +27,7 @@
     "birth_date": "1903-10-22",
     "gender": "male",
     "password": "$2a$10$fCa0NcqgVRC0nohLuKXQe.Wy4D1HN7PYMBdv3RAhzUOg8hfvS/zC6",
-    "avatar": "user-default-image.jpeg"
+    "avatar": "user-default-image.jpg"
   },
   {
     "id": "712ec702-9846-4a7c-9b73-2de0fdf3e1a8",
@@ -39,6 +39,5 @@
     "password": "$2a$10$hJ.h9ABNj0w0BNAHWREmKO307SxZDI1NXyE71YzOoMAcIcrkCRQmu",
     "avatar": "user-default-image.jpg",
     "last_marca": "Test"
-
   }
 ]

@@ -14,14 +14,10 @@ const usersServices = {
     return db.users.create(user);
   },
 
-  getfindByEmail: (email,body) => {
+  getfindByEmail: (email, body) => {
     const users = db.users.findByEmail(email, body);
     return users;
   },
-
-  getFindProfile: (user) => {
-    return db.users.findById(user);
-  },  
 
   updateUser: (id, user) => {
     return db.users.update(id, user);
