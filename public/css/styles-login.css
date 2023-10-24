@@ -89,6 +89,11 @@ body{
     font-size: 12px;
 }
 
+.text-danger {
+    color: red;
+    text-align: center;
+}
+
 @media (max-width:481px){
     .form-body{
         border: none;

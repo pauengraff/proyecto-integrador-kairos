@@ -21,12 +21,7 @@ const usersServices = {
 
   getFindProfile: (user) => {
     return db.users.findById(user);
-  },
-
-  findByfield: (userLogin) => {
-    return db.users.findByfield(userLogin);
-  },
-  
+  },  
 
   updateUser: (id, user) => {
     return db.users.update(id, user);

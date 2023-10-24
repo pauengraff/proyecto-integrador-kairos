@@ -37,12 +37,6 @@ module.exports = {
 
   },
 
-  findByfield: function (field, text) {
-    const user = this.getUsers().find((user) => user[field] === text);
-    return user;
-
-  },
-
   create: function (user) {
     // crea el usuario
     console.log(`Creating user ${user.first_name}`);
