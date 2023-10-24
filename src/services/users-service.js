@@ -11,19 +11,24 @@ const usersServices = {
   },
 
   create: (user) => {
-    db.users.create(user);
+    return db.users.create(user);
   },
 
-  findByfield: (userLogin) => {
-    db.users.findByfield(userLogin);
+  getfindByEmail: (email,body) => {
+    const users = db.users.findByEmail(email, body);
+    return users;
   },
+
+  getFindProfile: (user) => {
+    return db.users.findById(user);
+  },  
 
   updateUser: (id, user) => {
-    db.users.update(id, user);
+    return db.users.update(id, user);
   },
 
   deleteUser: (id) => {
-    db.users.delete(id);
+    return db.users.delete(id);
   },
 };
 

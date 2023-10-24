@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <%- include("../partials/head") %>
+        <link rel="stylesheet" href="/css/styles-usersDetail.css" />
+
+        <title>Kairos Perfil</title>
+</head>
+
+<%- include("../partials/headerUsers") %>
+
+    <body>
+        <main>
+            <section class="productDetail">
+                <article class="productDetail-d">
+                    <img class="productPhoto" src="/images/users/<%= userLogin.avatar %>" alt="avatar" />
+                    <div class="productText">
+
+
+                        <h1 class="productName">
+                            <%= userLogin.first_name %> <%= userLogin.last_name %>
+                        </h1>
+
+                        <p class="productName"><%= userLogin.email %>
+                        </p>
+                        
+                        <p class="productName"><%= userLogin.birth_date %>
+                        </p>
+
+                        <p class="productName"><%= userLogin.gender %>
+                        </p>               
+                    </div>
+
+                </article>
+
+
+            </section>
+        </main>
+
+        <%- include("../partials/footer") %>
+    </body>
+
+</html>
