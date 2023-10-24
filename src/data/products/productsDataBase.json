@@ -5,7 +5,6 @@
     "marca": "Garmin",
     "description": "Lo mas de lo mas para correr",
     "price": 210000,
-    "logo": "logo-garmin.jpg",
     "image": "image-1694803791664.jpg"
   },
   {
@@ -14,7 +13,6 @@
     "marca": "Suunto",
     "description": "El mejor reloj para trail de larga duracion ",
     "price": 150000,
-    "logo": "logo-garmin.jpg",
     "image": "image-1694804289942.jpg"
   },
   {
@@ -23,7 +21,6 @@
     "marca": "COLMI",
     "price": 10500,
     "description": "Reloj economico ",
-    "logo": "logo-garmin.jpg",
     "image": "image-1694804448137.jpg"
   },
   {
@@ -32,7 +29,6 @@
     "marca": "IMILAB",
     "price": 250,
     "description": "El mejor reloj outdoor",
-    "logo": "logo-garmin.jpg",
     "image": "image-1694804801750.jpg"
   },
   {
@@ -40,7 +36,6 @@
     "name": "GARMIN 2",
     "marca": "GARMIN",
     "price": 0,
-    "logo": "logo-garmin.jpg",
     "description": "GARMIN1",
     "image": "default-image.jpeg"
   }
