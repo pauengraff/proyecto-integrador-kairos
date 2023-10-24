@@ -28,7 +28,7 @@ module.exports = {
     return users;
   },
 
-  findByfield: function (field, text) {
+  findByEmail: function (field, text) {
     const user = this.getUsers().find((user) => user[field] === text);
     return user;
   },

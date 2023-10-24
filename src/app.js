@@ -6,7 +6,14 @@ const cookies = require("cookie-parser");
 const session = require("express-session");
 const userCookiesMiddleware = require("./middlewares/userCookiesMiddleware");
 
+
+
 // Middlewares
+app.use (session({
+  secret:"SECRET",
+  resave: false,
+  saveUninitialized:false
+}));
 app.use(express.static(path.join(__dirname, "../public")));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());

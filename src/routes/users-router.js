@@ -36,7 +36,8 @@ router.post(
   "/login",
   validation,
   validationErrorsLogin,
-  usersController.processlogin
+
+  usersController.processLogin
 );
 
 /*** CREATE USER ***/
@@ -50,6 +51,9 @@ router.post(
   validationRegister,
   usersController.processRegister
 );
+
+// Get users Profile /
+router.get("/profile", usersController.profile);
 
 // Get users by ID /
 router.get("/:id/", usersController.detailById);

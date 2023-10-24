@@ -31,12 +31,13 @@
   },
   {
     "id": "712ec702-9846-4a7c-9b73-2de0fdf3e1a8",
-    "first_name": "juan",
+    "first_name": "Juan",
     "last_name": "perez",
     "email": "juan@gmail.com",
     "birth_date": "2023-10-04",
     "gender": "male",
     "password": "$2a$10$hJ.h9ABNj0w0BNAHWREmKO307SxZDI1NXyE71YzOoMAcIcrkCRQmu",
-    "avatar": "user-default-image.jpg"
+    "avatar": "user-default-image.jpg",
+ 
   }
 ]

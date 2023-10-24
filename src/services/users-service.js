@@ -11,19 +11,21 @@ const usersServices = {
   },
 
   create: (user) => {
-    db.users.create(user);
+    return db.users.create(user);
   },
 
-  findByfield: (userLogin) => {
-    db.users.findByfield(userLogin); // Este servicio se usa para las cookies
+  getfindByEmail: (email, body) => {
+    const users = db.users.findByEmail(email, body);
+    return users;
+
   },
 
   updateUser: (id, user) => {
-    db.users.update(id, user);
+    return db.users.update(id, user);
   },
 
   deleteUser: (id) => {
-    db.users.delete(id);
+    return db.users.delete(id);
   },
 };
 
