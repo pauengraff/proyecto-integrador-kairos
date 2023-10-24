@@ -14,8 +14,8 @@ const controller = {
     res.render("users/userDetailById", { users });
   },
 
-  profile:(req,res) => {
-    return res.render("users/profile")
+  profile: (req, res) => {
+    return res.render("users/profile");
   },
 
   // Users Login
@@ -23,9 +23,8 @@ const controller = {
     res.render("users/login");
   },
 
- 
   processLogin: (req, res) => {
-    const userLogin =usersServices.getfindByEmail("email", req.body.email);
+    const userLogin = usersServices.getfindByEmail("email", req.body.email);
 
     if (userLogin) {
       const comparePassword = bcrypt.compareSync(
@@ -41,10 +40,9 @@ const controller = {
           res.cookie("userEmail", req.body.email, { maxAge: 1000 * 60 * 10 });
         }
 
-        res.render("users/profile",{userLogin})
+        res.render("users/profile", { userLogin });
       }
-      return res.render("users/login")
-    }   
+    }
   },
 
   // Users Register
