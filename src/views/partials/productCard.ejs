@@ -2,12 +2,13 @@
 
 
 
-  <a href="/products/<%= product.id %>"><img src="\images\<%= product.image %>"></a>
+  <a href="/products/<%= product.id %>"><img src="/images/products/<%= product.image %>"></a>
 
   <div>
 
     <p class="nombre-producto">
-      <%= product.name %>
+      <%= product.marca %>
+        <%= product.name %>
     </p>
     <p class="descripcion-producto">
       <%= product.description %>

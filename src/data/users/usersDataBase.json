@@ -7,7 +7,7 @@
     "birth_date": "1897-06-05",
     "gender": "male",
     "password": "$2a$10$vi8wxe7IQ6AYbUtkCM1x0OqJsoR87I6socowZkaB8OncKYMox0ElO",
-    "avatar": "user-default-image.jpeg"
+    "avatar": "user-default-image.jpg"
   },
   {
     "id": "ad0343ee-7cb0-48b2-9bdb-7478876e8061",
@@ -17,7 +17,7 @@
     "birth_date": "1902-10-05",
     "gender": "female",
     "password": "$2a$10$JRsHMo/Pq9hOun2R2L4H8OQo0EMFeftMDj9IDgNOBDgCDIEG9QU4C",
-    "avatar": "user-default-image.jpeg"
+    "avatar": "user-default-image.jpg"
   },
   {
     "id": "c3cdbae3-d0e1-44cf-b307-56089ec2aa1d",
@@ -27,16 +27,56 @@
     "birth_date": "1903-10-22",
     "gender": "male",
     "password": "$2a$10$fCa0NcqgVRC0nohLuKXQe.Wy4D1HN7PYMBdv3RAhzUOg8hfvS/zC6",
-    "avatar": "user-default-image.jpeg"
+    "avatar": "user-default-image.jpg"
   },
   {
-    "id": "b7de0cf9-9455-428d-9ecb-d014a8b2778a",
-    "first_name": "Test1",
-    "last_name": "Test",
-    "email": "testmail@gmail.com",
-    "birth_date": "2021-01-01",
+    "id": "712ec702-9846-4a7c-9b73-2de0fdf3e1a8",
+    "first_name": "Juan",
+    "last_name": "perez",
+    "email": "juan@gmail.com",
+    "birth_date": "2023-10-04",
     "gender": "male",
     "password": "$2a$10$KKJqaETFlkmyIM3PN6TW3O4VMgXKuzCrc09MJOtTr9PN68VyEvYma",
     "avatar": "avatar-1696333328659.png"
+  },
+  {
+    "id": "ed21373f-7a9b-4ef2-94d7-788f6f9fe7c8",
+    "first_name": "Victoria",
+    "last_name": "Enriquez",
+    "email": "victoriaenriquez@gmail.com",
+    "birth_date": "1992-10-17",
+    "gender": "female",
+    "password": "$2a$10$rM2hmpAZzNo9atOzh5CSGOXFJD6QVSoU5uyXtTD2kZNLwfH6PyQmG",
+    "avatar": "avatar-1698155256210.jpg"
+  },
+  {
+    "id": "3966fb3c-2502-4730-99a9-018ea69f45b3",
+    "first_name": "Mateo",
+    "last_name": "Mendoza",
+    "email": "mateomendoza@gmail.com",
+    "birth_date": "2001-03-21",
+    "gender": "male",
+    "password": "$2a$10$vImEMWdmYFEpTwb/akU.kOEpbkQTSoZaxTx0/YaMfYKvX8C1A7QcC",
+    "avatar": "avatar-1698155436198.jpg"
+  },
+  {
+    "id": "669c76c3-65a2-48e2-90a1-78b91d8ba2e9",
+    "first_name": "Manuel",
+    "last_name": "Morales",
+    "email": "manuelmorales@gmail.com",
+    "birth_date": "1995-10-23",
+    "gender": "male",
+    "password": "$2a$10$h8.H.7uO4P.XhbyyiXpZkOxs/sY8M/yNpbSzELBWYXPddaJnKTMZ6",
+    "avatar": "avatar-1698155538638.jpg"
+  },
+  {
+    "id": "d2c64f30-d124-4b07-adf7-6abdbb8ec8de",
+    "first_name": "Guillermina",
+    "last_name": "Carrera",
+    "email": "guillerminacarrera@gmail.com",
+    "birth_date": "1997-02-14",
+    "gender": "female",
+    "password": "$2a$10$AiJJPDDf/B1mxisVDSoUM.mK.G6X4z/wWoGKtSfb/WYZBImyvGPUq",
+    "avatar": "avatar-1698155604128.jpg"
   }
 ]
