@@ -5,41 +5,30 @@
     <%- include("../partials/head") %>
         <link rel="stylesheet" href="/css/styles-usersDetail.css" />
 
-        <title>Kairos</title>
+        <title>Kairos Detalle de Usuario</title>
 </head>
 
 <%- include("../partials/headerUsers") %>
 
     <body>
-        <main>
-            <section class="productDetail">
-                <article class="productDetail-d">
-                    <img class="productPhoto" src="/images/users/<%= users.avatar %>" alt="avatar" />
-                    <div class="productText">
-
-
-                        <h1 class="productName">
-                            <%= users.first_name %>
-                                <%= users.last_name %>
-
-
-
-                                    <a href="/users/edit/<%= users.id %>" class="buttonBuy">EDITAR USUARIO</a>
-                                    <a href="/users/register/" class="buttonBuy">AGREGAR USUARIO</a>
-                                    <a href="/users/logout/" class="buttonBuy">LOGOUT </a>
-                                    <form action="/users/<%= users.id %>?_method=delete" method="POST">
-                                        <button type="submit" class="submit-button">ELIMINAR</button>
-                                    </form>
-
-                    </div>
-
-                </article>
-
-
-            </section>
-        </main>
-
-        <%- include("../partials/footer") %>
+        <section class="userDetail">
+            <div class="userPhoto">
+                <img class="userPhoto" src="/images/users/<%= users.avatar %>" alt="avatar" />
+            </div>
+                    
+            <div class="userText">
+                <h1 class="userName">Hola,
+                    <%= users.first_name %>
+                    <%= users.last_name %>!
+                
+                    <a href="/users/edit/<%= users.id %>" class="buttonBuy">Editar Usuario/a</a>
+                    <a href="/users/register/" class="buttonBuy">Agregar Usuario/a</a>
+                    <a href="/users/logout/" class="buttonBuy">Cerrar sesión</a>
+                    <form action="/users/<%= users.id %>?_method=delete" method="POST">
+                        <button type="submit" class="submit-button">Eliminar Usuario/a</button>
+                    </form>
+                </h1>
+            </div>
+        </section>   
     </body>
-
 </html>
