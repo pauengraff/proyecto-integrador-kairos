@@ -2,29 +2,49 @@
 
 <head>
     <%- include("../partials/head") %>
-        <link rel="stylesheet" href="/css/styles-register.css" />
+        <link rel="stylesheet" href="/css/styles-userEdit.css" />
 
-        <title>Kairos Registro</title>
+        <title>Kairos Edición de Usuario</title>
 </head>
+
+<%- include("../partials/header") %>
 
 <body>
     <form action="/users/<%= user.id %>?_method=put" method="post">
         <div class="form-body">
-            <img src="/images/logo/kairos-logo-un-color-azul.png" alt="kairos-logo-un-color-azul" />
-            <p class="text">Edicion de Usuario</p>
+
+            <div class="text-form">
+            <p class="text">Edición de Usuario/a</p>
+            <p class="text-medium">Por favor modificá los datos:</p>
+            </div>
 
             <div class="form-register">
+                <label>Nombre</label>
                 <input type="text" name="first_name" id="first_name" placeholder="Nombre"
                     value="<%= user.first_name %>" />
             </div>
             <div class="form-register">
+                <label>Apellido</label>
                 <input type="text" name="last_name" id="last_name" placeholder="Apellido"
                     value="<%= user.last_name %>" />
             </div>
+
             <div class="form-register">
+                <label>Email</label>
                 <input type="email" name="email" id="email" placeholder="Email" value="<%=user.email%>" />
             </div>
 
+            <div class="form-register">
+                <label>Contraseña</label>
+                <input type="password" name="password" id="password" placeholder="Contraseña"
+                    value="<%= user.password %>" />
+            </div>
+
+            <div class="form-register">
+                <label for="birth_date">Fecha de Nacimiento</label>
+                <input type="date" name="birth_date" id="birth_date" />
+            </div>
+            
             <div class="form-register">
                 <label for="gender">Género</label>
                 <select name="gender" id="gender">
@@ -33,16 +53,7 @@
                 </select>
             </div>
 
-            <div class="form-register">
-                <label for="birth_date">Fecha de Nacimiento</label>
-                <input type="date" name="birth_date" id="birth_date" />
-            </div>
-            <div class="form-register">
-                <input type="password" name="password" id="password" placeholder="Contraseña"
-                    value="<%= user.password %>" />
-            </div>
-
-            <button type="submit">EDITAR</button>
+            <button type="submit">Editar</button>
         </div>
     </form>
 </body>
