@@ -1,21 +1,16 @@
 <article>
-
-
-
-
-
-    <div>
-        <a href="/users/<%= users.id %>">
-            <p class="nombre-producto">
+<link rel="stylesheet" href="/css/styles-usersCard.css" />
+    <div class="user-card">
+        <a class="none-text-decoration" href="/users/<%= users.id %>">
+            <p class="nombre-usuario">
                 <%= users.first_name %>
                     <%= users.last_name%>
             </p>
         </a>
 
-        <p class="descripcion-producto">
+        <p class="email-usuario">
+            <i class="fa-solid fa-envelope"></i>
             <%= users.email %>
         </p>
-
     </div>
-
 </article>
