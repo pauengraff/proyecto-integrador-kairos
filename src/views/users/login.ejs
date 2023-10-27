@@ -10,14 +10,18 @@
         <title>Login</title>
 </head>
 
+<%- include("../partials/header") %>
+
 <body>
     <form action="/users/login" method="post">
         <div class="form-body">
-            <img src="/images/logo/kairos-logo-un-color-azul.png" alt="kairos-logo-un-color-azul">
-            <p class="text">Bienvenido/a</p>
+            <div>
+            <p class="text">¡Bienvenido/a!</p>
+            <p class="text-medium">Por favor ingresá con tus datos:</p>
+            </div>
             <div class="form-login">
                 <i class="fa-solid fa-user"></i>
-                <input type="text" name="email" id="email" placeholder="Usuario"
+                <input type="email" name="email" id="email" placeholder="Usuario/a"
                     value="<%= locals.errors ? oldData.email : null %>" />
 
                 <% if (locals.errors && errors.email) { %>
@@ -44,13 +48,16 @@
 
             <div class="form-login">
                 <div class="remember-user">
-                    <input type="checkbox" class="" name="remember_user">Recordar Usuario
-                    <label for="remember_user"></label>
+                    <input type="checkbox" class="" name="remember_user">
+                    <label for="remember_user" class="text-remember-user">Recordar Usuario/a</label>
                 </div>
             </div>
             <button>Ingresar</button>
-            <p><a href="#" class="link">Olvidaste tu contraseña?</a></p>
-            <p><a href="/users/register/" class="link">No tenes usuario? Registrate</a></p>
+            <div>
+                <p><a href="#" class="link">Olvidaste tu contraseña?</a></p>
+                <p><a href="/users/register/" class="link">No tenes usuario/a? Registrate</a></p>
+            </div>
+            
     </form>
 </body>
 

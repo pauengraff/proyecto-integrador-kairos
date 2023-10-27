@@ -1,36 +1,36 @@
-body {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  font-family: "Roboto";
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: 'Roboto';
+    flex-wrap: wrap;
 }
 
 .form-login {
   position: relative;
 }
 
-.form-body {
-  position: relative;
-  width: 400px;
-  border: solid 3px #001c3b;
-  margin: auto;
+.form-body{
+    position: relative;
+    width: 400px;
+    background-color: #d2d2d2;
+    border: none;
+    margin: auto;
+    padding-top: 50px;
+    padding-bottom: 20px;
 }
 
-.form-body img {
-  width: 200px;
-  display: block;
-  margin: 20px auto;
-  margin-bottom: 5px;
-  margin-top: 50px;
+.text{
+    text-align: center;
+    font-size: 28px;
+    font-weight: normal;
+    color: #001C3B;
 }
 
-.text {
-  text-align: center;
-  font-size: 20px;
-  font-weight: bold;
-  color: #001c3b;
-  margin-bottom: 25px;
+.text-medium { 
+    font-size: 16px;
+    margin-bottom: 25px;
 }
 
 .form-body p {
@@ -40,22 +40,22 @@ body {
   color: #001c3b;
 }
 
-.form-body input {
-  display: block;
-  margin: auto;
-  height: 40px;
-  width: 50;
-  padding: 12px 0px 12px 30px;
-  color: #001c3b;
-  border: 3px solid #001c3b;
-  font-size: 16px;
-  outline: none;
+.form-body input{
+    display: block;
+    margin: auto;
+    height: 40px;
+    width: 50;
+    padding: 12px 0px 12px 30px;
+    color: #001C3B;
+    border: none;
+    font-size: 16px;
+    outline:none;
 }
 
-.form-body i {
+.form-login i {
   position: absolute;
-  bottom: 13px;
-  margin-left: 100px;
+  top: 4%;
+  margin-left: 96px;
   color: #001c3b;
 }
 
@@ -90,7 +90,7 @@ body {
 .remember-user {
   display: inline-flex;
   align-items: center;
-  margin-left: 110px;
+  margin-left: 136px;
 }
 
 input[type="checkbox"] {
@@ -101,6 +101,10 @@ input[type="checkbox"] {
     
     color: red;
     text-align: center;
+}
+
+.text-remember-user {
+  font-size: 12px;
 }
 
 @media (max-width:481px){
