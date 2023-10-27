@@ -52,10 +52,10 @@ body{
     outline:none;
 }
 
-.form-body i {
+.form-login i {
   position: absolute;
-  bottom: 13px;
-  margin-left: 100px;
+  top: 4%;
+  margin-left: 96px;
   color: #001c3b;
 }
 
@@ -90,7 +90,7 @@ body{
 .remember-user {
   display: inline-flex;
   align-items: center;
-  margin-left: 138px;
+  margin-left: 136px;
 }
 
 input[type="checkbox"] {
@@ -98,6 +98,7 @@ input[type="checkbox"] {
 }
 
 .text-danger {
+    
     color: red;
     text-align: center;
 }
