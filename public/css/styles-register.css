@@ -90,6 +90,15 @@ body{
   text-align: center;
 }
 
+#avatar {
+  font-size: 10px;
+}
+
+.form-register{
+  margin: auto;
+  width: 100%;
+}
+
 @media (max-width: 481px){
   .form-body {
     border: none;
@@ -102,13 +111,15 @@ body{
         flex-wrap: wrap;
     }
     .form-body{
-        width: 200%;
-        position: relative;
+        width: 95vh;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
     }
     .form-register{
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: center;
-        width: 60%;
+        width: 48%;
+    }
+    .text-form{
+      margin: auto;
     }
 }

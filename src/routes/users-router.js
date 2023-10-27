@@ -21,6 +21,7 @@ const upload = multer({ storage: storage });
 const usersController = require("../controllers/users-controller");
 // user register validation
 const validationRegister = require("../validation/validation-register");
+const registerMiddleware = require("../middlewares/register");
 // user login validation
 const validation = require("../validation/validation-login");
 const validationErrorsLogin = require("../middlewares/login");
@@ -36,7 +37,6 @@ router.post(
   "/login",
   validation,
   validationErrorsLogin,
-
   usersController.processLogin
 );
 
@@ -49,6 +49,7 @@ router.post(
   "/register",
   upload.single("avatar"),
   validationRegister,
+  registerMiddleware,
   usersController.processRegister
 );
 
