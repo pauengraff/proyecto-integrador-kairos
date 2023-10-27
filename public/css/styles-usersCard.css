@@ -1,0 +1,27 @@
+.user-card{
+    background-color: #b2b2b2;
+    text-decoration: none;
+}
+
+.nombre-usuario{
+    color: #001C3B;
+    text-align: left;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    margin: 10px;
+    padding-top: 5px;
+}
+
+.email-usuario{
+    color: #001C3B;
+    text-align: left;
+    font-size: 16px;
+    margin: 10px;
+    margin-bottom: 25px;
+    padding-bottom: 5px;
+}
+
+.none-text-decoration{
+    text-decoration: none;
+}
