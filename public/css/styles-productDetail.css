@@ -39,8 +39,10 @@ main {
 }
 
 .productName {
-  font-size: 26px;
+  font-size: 30px;
   margin-bottom: 20px;
+  color: #001c3b;
+  font-weight: bold;
 }
 
 .productPrice {
@@ -48,6 +50,8 @@ main {
   font-size: 26px;
   margin-bottom: 5px;
   padding-top: 20px;
+  color: #001c3b;
+  font-weight: normal;
 }
 
 .productPricePay {
@@ -61,23 +65,26 @@ main {
 }
 
 .buttonBuy {
+  display: block;
+  margin: auto;
+  margin-top: 25px;
+  margin-bottom: 20px;
+  width: 50%;
   background-color: #001c3b;
   color: white;
-  padding: 8px 50px;
-  font-weight: bold;
-  font-family: "Roboto";
-  font-size: 16px;
   border: none;
-  display: flex;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
   text-align: center;
-  margin: auto;
-  margin-bottom: 40px;
-  width: 75%;
+  padding: 10px;
 }
 
 .submit-button {
-  background-color: #001c3b; /* Color de fondo */
-  color: white; /* Color del texto */
+  background-color: #b2b2b2; /* Color de fondo */
+  color: #001c3b;
+  font-size: 12px;
+  text-decoration: none; /* Color del texto */
   padding: 10px 20px; /* Relleno del botón */
   border: none; /* Elimina el borde del botón */
 }
@@ -86,10 +93,23 @@ main {
   font-size: 12px;
   margin-top: 5px;
   margin-bottom: 20px;
+  color: #001c3b;
 }
 
-@media (min-width: 728px) {
-  /* tablet */
+.description h4 {
+  color: #001c3b;
+}
+
+.buttonsProduct {
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+@media (min-width: 769px){
+  /* Laptop */
   .productPhoto {
     width: 40%;
   }
@@ -104,6 +124,7 @@ main {
     align-items: center;
   }
   .buttonBuy {
+    width: 60%;
     margin-left: 0;
   }
   .productDescription-d {
@@ -117,10 +138,9 @@ main {
     width: 45%;
     margin-bottom: 0;
   }
-  .specifications {
-    width: 45%;
-    margin-top: 0;
-  }
+ .buttonsProduct {
+  justify-content: space-between;
+ }
 }
 
 @media (min-width: 1280px) {
