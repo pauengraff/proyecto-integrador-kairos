@@ -1,16 +1,16 @@
 body{
-    display: flex;
-    align-items: center;
-    justify-content: center;
     height: 100vh;
-    font-family: 'Roboto';
-    flex-wrap: wrap;
+    font-family: 'Roboto';  
 }
 .form-register {
   position: relative;
 }
 
 .form-body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
     position: relative;
     width: 400px;
     border: none;
@@ -18,6 +18,7 @@ body{
     margin: auto;
     padding-top: 50px;
     padding-bottom: 20px;
+    margin-bottom: 50px;
 }
 
 .text{
