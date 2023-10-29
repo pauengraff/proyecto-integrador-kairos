@@ -1,16 +1,13 @@
 body{
-  display: flex;
-  align-items: center;
-  justify-content: center;
   height: 100vh;
   font-family: 'Roboto';
-  flex-wrap: wrap;
 }
 
 .userDetail {
   display: flex;
-  flex-direction: column;
   align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
   text-align: center;
 }
 
@@ -26,6 +23,7 @@ body{
 }
 
 .userText {
+  color: #001c3b;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -55,6 +53,7 @@ body{
   margin-top: 10px;
   width: 50%;
   font-size: 12px;
+  margin-bottom: 50px;
 }
 
 @media (min-width: 769px) {
