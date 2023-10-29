@@ -16,21 +16,21 @@
         <article class="productDetail-d">
           <img class="productPhoto" src="/images/products/<%= product.image %>" alt="Image" />
           <div class="productText">
-            <img class="productLogo" src="/images/products/<%= product.logo %>" alt="Logo" />
-
             <h1 class="productName">
               <%= product.marca %>
                 <%= product.name %>
             </h1>
-            <h1 class="productPrice">$<%= product.price %>
+            <h1 class="productPrice">$ <%= product.price %>
             </h1>
 
-            <a href="/products/cart" class="buttonBuy">LO QUIERO</a>
-            <a href="/products/edit/<%= product.id %>" class="buttonBuy">EDITAR</a>
-            <a href="/products/add/" class="buttonBuy">AGREGAR PRODUCTO</a>
+            <a href="/products/cart" class="buttonBuy">LO QUIERO!</a>
+            <div class="buttonsProduct">
+            <a href="/products/edit/<%= product.id %>" class="submit-button">Editar</a>
+            <a href="/products/add/" class="submit-button">Agregar</a>
             <form action="/products/<%= product.id %>?_method=delete" method="POST">
-              <button type="submit" class="submit-button">ELIMINAR</button>
+              <button type="submit" class="submit-button">Eliminar</button>
             </form>
+            </div>
 
           </div>
 
@@ -43,7 +43,6 @@
               <%= product.description %>
             </p>
           </div>
-
         </article>
       </section>
     </main>
