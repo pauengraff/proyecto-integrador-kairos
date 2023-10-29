@@ -10,38 +10,49 @@
         <title>Kairos Add Products</title>
 </head>
 
+<%- include("../partials/header") %>
+
 <body>
 
     <form action="/products" method="post" enctype="multipart/form-data">
         <div class="form-body">
-            <img src="/images/logo/kairos-logo-un-color-azul.png" alt="kairos-logo-un-color-azul">
-            <p class="text">Cargar productos</p>
 
-            <div class="form-register">
-                <input type="text" name="name" id="name" placeholder="Modelo Reloj">
-            </div>
-            <div class="form-register">
-                <input type="text" name="marca" id="marca" placeholder="Marca">
+            <div class="text-form">
+                <p class="text">¡Cargá un nuevo producto!</p>
+                <p class="text-medium">Por favor completá los datos:</p>
             </div>
 
             <div class="form-register">
-                <input type="text" name="description" id="description" placeholder="Descripcion">
+                <label>Modelo</label>
+                <input type="text" name="name" id="name">
+            </div>
+            <div class="form-register">
+                <label>Marca</label>
+                <input type="text" name="marca" id="marca">
             </div>
 
             <div class="form-register">
-                <input type="number" name="price" id="price" placeholder="Precio">
+                <label>Descripción</label>
+                <input type="text" name="description" id="description">
+            </div>
+
+            <div class="form-register">
+                <label>Precio</label>
+                <input type="number" name="price" id="price">
+            </div>
+
+            <div class="form-register">
+                <label>Stock</label>
+                <input type="number" name="stock" id="stock">
             </div>
 
             <div class="form-register">
                 <label for="image">Imagen Producto:</label>
-                <input type="file" name="image" placeholder="Imagen del Producto">
+                <input type="file" name="image" id="image">
             </div>
-
-
-            <button type="submit">GUARDAR PRODUCTO</button>
-
+            
+            <button type="submit">Guardar</button>
+        </div>
     </form>
-
 </body>
-
 </html>
