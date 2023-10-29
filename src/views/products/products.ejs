@@ -25,22 +25,18 @@
       </div>
 
       <div class="title-products">
-
-        <h2>Relojes</h2>
-
+        <p>Relojes</p>
       </div>
 
       <!-- Contenedor general -->
       <div class="main-section">
 
-
-
         <!-- Contenedor de filtrados -->
         <div class="main-filters">
 
-          <p>Categorias</p>
+          <p>Categorías</p>
           <ul>
-            <li>Clasicos</li>
+            <li>Clásicos</li>
             <li>Deportivos</li>
           </ul>
 
@@ -54,16 +50,12 @@
 
         <!-- Contenedor de productos -->
         <div class="main-products">
-
-
           <section>
-
             <% products.forEach(product=> { %>
 
               <%- include("../partials/productCard", {product}) %>
 
                 <% }) %>
-
           </section>
 
 
