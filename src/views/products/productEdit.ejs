@@ -10,40 +10,43 @@
         <title>Kairos Add Products</title>
 </head>
 
+<%- include("../partials/header") %>
+
 <body>
 
     <form action="/products/<%= product.id %>?_method=put" method="POST">
         <div class="form-body">
-            <img src="/images/logo/kairos-logo-un-color-azul.png" alt="kairos-logo-un-color-azul">
-            <p class="text">Editar producto</p>
-            <h4 class="text">Vas a modificar: <i>
+
+            <div class="text-form">
+                <p class="text">¿Querés editar un producto?</p>
+                <p class="text-medium">Vas a modificar el artículo: <i>
                     <%= product.name %>
-                </i></h4>
+                </i></p>
+            </div>
 
             <div class="form-register">
                 <label for="name">Modelo</label>
                 <input type="text" name="name" id="name" placeholder="Modelo Reloj" value="<%= product.name %>">
             </div>
+
             <div class="form-register">
                 <label for="marca">Marca</label>
                 <input type="text" name="marca" id="marca" placeholder="Marca" value="<%= product.marca %>">
             </div>
 
             <div class="form-register">
-                <label for="description">Descripcion</label>
+                <label for="description">Descripción</label>
                 <input type="text" name="description" id="description" placeholder="Descripcion"
                     value="<%= product.description %>">
+            </div>
 
+            <div class="form-register">
+                <label for="price">Precio</label>
+                <input type="number" name="price" id="price" placeholder="Precio" value="<%= product.price %>">
+            </div>
 
-                <div class="form-register">
-                    <label for="price">Precio</label>
-                    <input type="number" name="price" id="price" placeholder="Precio" value="<%= product.price %>">
-                </div>
-
-                <button type="submit">MODIFICAR PRODUCTO</button>
-
+            <button type="submit">Modificar</button>
+        </div>
     </form>
-
 </body>
-
 </html>
