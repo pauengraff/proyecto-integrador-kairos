@@ -1,3 +1,12 @@
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: 'Roboto';
+  flex-wrap: wrap;
+}
+
 main {
   padding-bottom: 150px;
 }
@@ -5,6 +14,8 @@ main {
 .title-cart {
   text-align: center;
   color: #001c3b;
+  font-size: 20px;
+  font-weight: normal;
   padding-top: 20px;
   padding-bottom: 20px;
   border-bottom: solid 2px #d9d9d9;
@@ -14,12 +25,14 @@ main {
 
 .cart-icon {
   padding-right: 8px;
+  color: #001c3b;
 }
 .article {
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 15px;
+  color: #001c3b;
   margin: auto;
 }
 .images {
@@ -28,11 +41,13 @@ main {
 }
 .button-discount {
   display: flex;
-  background-color: #001c3b;
-  color: white;
+  background-color: #b2b2b2;
+  color: #001c3b;
   padding: 10px;
   text-align: center;
   margin: auto;
+  border: none;
+  margin-bottom: 10px;
 }
 .ticket {
   display: flex;
@@ -42,10 +57,15 @@ main {
   padding-left: 100px;
 }
 .sub-ticket {
-  padding: 10px;
+  padding: 5px;
+  text-align: right;
+  margin-right: 8px;
+  color: #001c3b;
 }
 .total {
-  padding: 10px;
+  padding: 5px;
+  text-align: right;
+  color: #001c3b;
 }
 .add-product {
   display: flex;
@@ -63,11 +83,27 @@ main {
   padding: 10px 50px;
   text-align: center;
   margin: auto;
+  border: #001c3b solid 3px;
 }
 
-@media (min-width: 728px) {
+@media (min-width: 769px){
+  /* Laptop */
+  .cart-desktop {
+    display: flex;
+    flex-direction: row;
+  }
   .article {
-    flex-direction: column;
+    width: 48%;
+    font-size: 18px;
+    margin-top: 10px;
+  }
+  .buttons {
+    width: 48%;
+    margin-right: 5px;
+  }
+  .title-cart {
+    text-align: left;
+    font-size: 24px;
   }
 }
 
