@@ -10,9 +10,9 @@
         <title>Kairos Add Products</title>
 </head>
 
-<%- include("../partials/header") %>
 
 <body>
+    <%- include("../partials/header") %>
 
     <form action="/products/<%= product.id %>?_method=put" method="POST">
         <div class="form-body">
