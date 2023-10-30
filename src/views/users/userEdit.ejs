@@ -7,9 +7,9 @@
         <title>Kairos Edición de Usuario</title>
 </head>
 
-<%- include("../partials/header") %>
-
 <body>
+    <%- include("../partials/header") %>
+
     <form action="/users/<%= user.id %>?_method=put" method="post">
         <div class="form-body">
 
