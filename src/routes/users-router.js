@@ -26,12 +26,16 @@ const registerMiddleware = require("../middlewares/register");
 const validation = require("../validation/validation-login");
 const validationErrorsLogin = require("../middlewares/login");
 
+// Guest - User routes middleware
+const guestMiddleware = require("../middlewares/guestMiddleware");
+const authMiddleware = require("../middlewares/authMiddleware");
+
 // Routes Users
 //Get All USers /
 router.get("/", usersController.usersList);
 
 // Login
-router.get("/login", usersController.login);
+router.get("/login", guestMiddleware, usersController.login);
 
 router.post(
   "/login",
@@ -42,7 +46,7 @@ router.post(
 
 /*** CREATE USER ***/
 // Register form
-router.get("/register", usersController.register);
+router.get("/register", guestMiddleware, usersController.register);
 
 // register process
 router.post(
@@ -54,7 +58,7 @@ router.post(
 );
 
 // Get users Profile /
-router.get("/profile", usersController.profile);
+router.get("/profile", authMiddleware, usersController.profile);
 
 // Get users by ID /
 router.get("/:id/", usersController.detailById);
