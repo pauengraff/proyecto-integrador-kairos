@@ -1,6 +1,5 @@
 const usersServices = require("../services/users-service");
 const bcrypt = require("bcryptjs");
-const { validationResult } = require("express-validator");
 
 const controller = {
   usersList: (req, res) => {
@@ -12,10 +11,6 @@ const controller = {
     const id = req.params.id;
     const users = usersServices.getUser(id);
     res.render("users/userDetailById", { users });
-  },
-
-  profile: (req, res) => {
-    return res.render("users/profile");
   },
 
   // Users Login
@@ -41,9 +36,24 @@ const controller = {
         }
 
         res.render("users/profile", { userLogin });
-      } 
-      
+      }
+      return res.render("users/login", {
+        errors: {
+          email: {
+            msg: "La Contraseña es inválida",
+          },
+        },
+        oldData: req.body,
+      });
     }
+    return res.render("users/login", {
+      errors: {
+        email: {
+          msg: "El Email no esta regsitrado",
+        },
+      },
+      oldData: req.body,
+    });
   },
 
   // Users Register
@@ -57,7 +67,6 @@ const controller = {
       last_name: req.body.last_name,
       email: req.body.email,
       birth_date: req.body.birth_date,
-      gender: req.body.gender,
       password: bcrypt.hashSync(req.body.password, 10), //password encriptado
       avatar: req.file ? req.file.filename : "user-default-image.jpeg",
     };
@@ -76,6 +85,10 @@ const controller = {
     const id = req.params.id;
     usersServices.updateUser(id, user);
     res.redirect("/users");
+  },
+
+  profile: (req, res) => {
+    return res.render("users/profile");
   },
 
   destroy: (req, res) => {
