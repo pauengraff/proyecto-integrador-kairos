@@ -45,6 +45,9 @@ router.post(
   usersController.processLogin
 );
 
+// Logout
+router.get("/logout/", usersController.logout);
+
 /*** CREATE USER ***/
 // Register form
 router.get("/register", guestMiddleware, usersController.register);
@@ -71,8 +74,5 @@ router.put("/:id", usersController.update);
 
 // Delete User
 router.delete("/:id", usersController.destroy);
-
-// Logout
-router.get("/logout/", usersController.logout);
 
 module.exports = router;
