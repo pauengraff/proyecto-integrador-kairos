@@ -79,5 +79,14 @@
     "birth_date": "1998-10-21",
     "password": "$2a$10$gyhI2Sa0pl4/03t8nhDCRutMrzSdsSWMRd/GGHRB/AOv62jTrvhyW",
     "avatar": "avatar-1698948422310.jpg"
+  },
+  {
+    "id": "1d099b7e-e305-4a1c-af69-188ef975317a",
+    "first_name": "Gerardo",
+    "last_name": "Zorzoni",
+    "email": "gz@gmail.com",
+    "birth_date": "1982-12-31",
+    "password": "$2a$10$.fX6diHQSJn6k3qcWaeEeOsgq65xmUC3XvOMG6FUM8I.vDEIe/rRu",
+    "avatar": "avatar-1699013396768.jpg"
   }
 ]

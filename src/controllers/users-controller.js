@@ -35,7 +35,7 @@ const controller = {
           res.cookie("userEmail", req.body.email, { maxAge: 1000 * 60 * 10 });
         }
 
-        res.render("users/profile", { userLogin });
+        return res.redirect("/users/profile"); //, { userLogin }
       }
       return res.render("users/login", {
         errors: {
@@ -53,6 +53,12 @@ const controller = {
         },
       },
       oldData: req.body,
+    });
+  },
+
+  profile: (req, res) => {
+    return res.render("users/profile", {
+      user: req.session.userLogged,
     });
   },
 
@@ -85,10 +91,6 @@ const controller = {
     const id = req.params.id;
     usersServices.updateUser(id, user);
     res.redirect("/users");
-  },
-
-  profile: (req, res) => {
-    return res.render("users/profile");
   },
 
   destroy: (req, res) => {

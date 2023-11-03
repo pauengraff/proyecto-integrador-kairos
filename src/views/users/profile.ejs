@@ -14,21 +14,23 @@
         <main>
             <section class="productDetail">
                 <article class="productDetail-d">
-                    <img class="productPhoto" src="/images/users/<%= userLogin.avatar %>" alt="avatar" />
+                    <h3>Hola <%= user.first_name %>
+                    </h3>
+                    <img class="productPhoto" src="/images/users/<%= user.avatar %>" width="10%" alt="avatar" />
                     <div class="productText">
 
 
                         <h1 class="productName">
-                            <%= userLogin.first_name %>
-                                <%= userLogin.last_name %>
+                            <%= user.first_name %>
+                                <%= user.last_name %>
                         </h1>
 
                         <p class="productName">
-                            <%= userLogin.email %>
+                            <%= user.email %>
                         </p>
 
                         <p class="productName">
-                            <%= userLogin.birth_date %>
+                            <%= user.birth_date %>
                         </p>
 
                     </div>
