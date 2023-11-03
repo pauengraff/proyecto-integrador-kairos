@@ -8,30 +8,31 @@
         <title>Kairos Detalle de Usuario</title>
 </head>
 
-    <body>
-        <%- include("../partials/headerUsers") %>
-        
+<body>
+    <%- include("../partials/header") %>
+
         <section class="userDetail">
             <div class="userPhoto">
                 <img class="userPhoto" src="/images/users/<%= users.avatar %>" alt="avatar" />
             </div>
-                    
+
             <div class="userText">
                 <h1 class="userName">Hola,
                     <%= users.first_name %>
-                    <%= users.last_name %>!
-                
-                    <a href="/users/edit/<%= users.id %>" class="buttonBuy">Editar Usuario/a</a>
-                    <a href="/users/register/" class="buttonBuy">Agregar Usuario/a</a>
-                    <a href="/users/logout/" class="buttonBuy">Cerrar sesión</a>
-                    <form action="/users/<%= users.id %>?_method=delete" method="POST">
-                        <button type="submit" class="submit-button">Eliminar Usuario/a</button>
-                    </form>
+                        <%= users.last_name %>!
+
+                            <a href="/users/edit/<%= users.id %>" class="buttonBuy">Editar Usuario/a</a>
+                            <a href="/users/register/" class="buttonBuy">Agregar Usuario/a</a>
+                            <a href="/users/logout/" class="buttonBuy">Cerrar sesión</a>
+                            <form action="/users/<%= users.id %>?_method=delete" method="POST">
+                                <button type="submit" class="submit-button">Eliminar Usuario/a</button>
+                            </form>
                 </h1>
             </div>
-        </section> 
-        
+        </section>
+
         <%- include("../partials/footer") %>
 
-    </body>
+</body>
+
 </html>

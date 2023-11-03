@@ -35,7 +35,7 @@ const controller = {
           res.cookie("userEmail", req.body.email, { maxAge: 1000 * 60 * 10 });
         }
 
-        res.render("users/profile", { userLogin });
+        return res.redirect("/users/profile");
       }
       return res.render("users/login", {
         errors: {
@@ -56,6 +56,12 @@ const controller = {
     });
   },
 
+  profile: (req, res) => {
+    return res.render("users/profile", {
+      user: req.session.userLogged,
+    });
+  },
+
   // Users Register
   register: (req, res) => {
     res.render("users/register");
@@ -71,7 +77,7 @@ const controller = {
       avatar: req.file ? req.file.filename : "user-default-image.jpeg",
     };
     usersServices.create(user); // Via servicio graba en base de datos
-    res.redirect("/users"); //redirijo a users al finalizar
+    res.redirect("/users/login"); //redirijo a login al finalizar
   },
 
   edit: (req, res) => {
@@ -87,21 +93,16 @@ const controller = {
     res.redirect("/users");
   },
 
-  profile: (req, res) => {
-    return res.render("users/profile");
-  },
-
   destroy: (req, res) => {
     const id = req.params.id;
     usersServices.deleteUser(id);
     res.redirect("/users");
   },
 
-  // lOGOUT FALTA CERRAR LA SESION DESDE PROFILE
   logout: (req, res) => {
     res.clearCookie("userEmail");
     req.session.destroy();
-    return res.redirect("/");
+    return res.redirect("/users/login");
   },
 };
 

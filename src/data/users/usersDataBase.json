@@ -70,5 +70,23 @@
     "birth_date": "1997-02-14",
     "password": "$2a$10$AiJJPDDf/B1mxisVDSoUM.mK.G6X4z/wWoGKtSfb/WYZBImyvGPUq",
     "avatar": "avatar-1698155604128.jpg"
+  },
+  {
+    "id": "bc34bc82-3cf3-4594-a1ef-b4a57c818fa5",
+    "first_name": "Pedro",
+    "last_name": "Gomez",
+    "email": "pedrogomez@hotmail.com",
+    "birth_date": "1998-10-21",
+    "password": "$2a$10$gyhI2Sa0pl4/03t8nhDCRutMrzSdsSWMRd/GGHRB/AOv62jTrvhyW",
+    "avatar": "avatar-1698948422310.jpg"
+  },
+  {
+    "id": "03ae7657-b3e7-430b-aff2-457f5f7dbc54",
+    "first_name": "Gerardo",
+    "last_name": "Zorzoni",
+    "email": "gz@gmail.com",
+    "birth_date": "1982-12-31",
+    "password": "$2a$10$IKTaQv0kmt7RdXQvqrSEBOYa0rRDCjG4BsX/LU4T6gBu.RXg325nu",
+    "avatar": "user-default-image.jpg"
   }
 ]
