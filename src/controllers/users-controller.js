@@ -99,7 +99,6 @@ const controller = {
     res.redirect("/users");
   },
 
-  // lOGOUT FALTA CERRAR LA SESION DESDE PROFILE
   logout: (req, res) => {
     res.clearCookie("userEmail");
     req.session.destroy();
