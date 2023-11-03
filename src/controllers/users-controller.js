@@ -77,7 +77,7 @@ const controller = {
       avatar: req.file ? req.file.filename : "user-default-image.jpeg",
     };
     usersServices.create(user); // Via servicio graba en base de datos
-    res.redirect("/users"); //redirijo a users al finalizar
+    res.redirect("/users/login"); //redirijo a login al finalizar
   },
 
   edit: (req, res) => {
