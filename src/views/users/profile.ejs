@@ -12,33 +12,29 @@
 
     <body>
         <main>
-            <section class="productDetail">
-                <article class="productDetail-d">
-                    <h3>Hola <%= user.first_name %>
-                    </h3>
-                    <img class="productPhoto" src="/images/users/<%= user.avatar %>" width="10%" alt="avatar" />
-                    <div class="productText">
+            <section class="userDetail">
+                <article class=" userDetail-d">
 
+                    <img class="userPhoto" src="/images/users/<%= user.avatar %>" width="150" alt="avatar"/>
+                    
+                    <div class="userText">
+                        <p class="userName">Hola, <%= user.first_name %>!</p>
 
-                        <h1 class="productName">
-                            <%= user.first_name %>
-                                <%= user.last_name %>
-                        </h1>
+                        <label>Nombre</label>
+                        <input type="text" name="first_name" id="first_name"
+                        placeholder="<%= user.first_name %>"/>
 
-                        <p class="productName">
-                            <%= user.email %>
-                        </p>
+                        <label>Apellido</label>
+                        <input type="text" name="last_name" id="last_name"
+                        placeholder="<%= user.last_name %>"/>
 
-                        <p class="productName">
-                            <%= user.birth_date %>
-                        </p>
+                        <label>Email</label>
+                        <input type="text" name="email" id="email"
+                        placeholder="<%= user.email %>"/>
 
+                        <a href="/users/logout/" class="buttonBuy">Cerrar sesión</a>
                     </div>
-                    <a href="/users/logout/" class="buttonBuy">Cerrar sesión</a>
-
                 </article>
-
-
             </section>
         </main>
 
