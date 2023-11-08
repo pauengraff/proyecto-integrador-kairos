@@ -31,7 +31,7 @@
     "name": "T REX",
     "brand": "Imilab",
     "category": "Deportivo",
-    "price": 250,
+    "price": 25000,
     "description": "El mejor reloj outdoor",
     "image": "image-1694804801750.jpg"
   },
@@ -41,7 +41,7 @@
     "brand": "Tissot",
     "category": "Moda Alta Gama",
     "price": "185000",
-    "description": "Reloj Garmin Alta Gama",
+    "description": "Reloj Tissot Alta Gama",
     "image": "default-image.jpeg"
   },
   {
@@ -49,7 +49,7 @@
     "name": "FENIX 6",
     "brand": "Casio",
     "category": "Deporte Profesional",
-    "price": 256300,
+    "price": 256000,
     "description": "Reloj Cristal de Zafiro Carga Solar",
     "image": "image-1699377618847.jpg"
   }
