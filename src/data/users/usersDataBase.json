@@ -81,12 +81,12 @@
     "avatar": "avatar-1698948422310.jpg"
   },
   {
-    "id": "03ae7657-b3e7-430b-aff2-457f5f7dbc54",
-    "first_name": "Gerardo",
-    "last_name": "Zorzoni",
-    "email": "gz@gmail.com",
-    "birth_date": "1982-12-31",
-    "password": "$2a$10$IKTaQv0kmt7RdXQvqrSEBOYa0rRDCjG4BsX/LU4T6gBu.RXg325nu",
-    "avatar": "user-default-image.jpg"
+    "id": "295201ae-2e04-479d-846b-56263aff16ea",
+    "first_name": "ADMIN",
+    "last_name": "ADMIN",
+    "email": "admin@admin.com",
+    "birth_date": "2000-01-01",
+    "password": "$2a$10$HdE.Kl2.LB7o.kxq3kIYUOiGJxGCGb/Bp1k1PIUYSmOvwr2uah/eG",
+    "avatar": "avatar-1699466590710.jpg"
   }
 ]
