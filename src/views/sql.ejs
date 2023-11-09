@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Estoy mirando al SQL DATABASE</title>
+  </head>
+  <body>
+    <h3>Mirando la base SQL Kairos_DB</h3>
+    <h4>Todos los productos</h4>
+    <div>
+      <ul>
+        <% for( let i=0; i < products.length; i++ ) { %>
+        <li>
+          <div><%= products[i].name %></div>
+          <div><%= products[i].price %></div>
+          <div><%= products[i].description %></div>
+          <div>
+            <img
+              style="width: 10%"
+              src="/images/products/<%= products[i].image %>"
+              alt="<%= products[i].image %>"
+            />
+          </div>
+        </li>
+        <% } %>
+      </ul>
+    </div>
+  </body>
+</html>
