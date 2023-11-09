@@ -1,6 +1,6 @@
-body{
+body {
   height: 100vh;
-  font-family: 'Roboto';
+  font-family: "Roboto";
 }
 
 .userDetail {
@@ -57,7 +57,7 @@ body{
   margin: auto;
   width: 60%;
   padding: 5px;
-  color: #001C3B;
+  color: #001c3b;
   font-size: 12px;
 }
 

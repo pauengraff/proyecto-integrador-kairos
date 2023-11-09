@@ -1,4 +1,5 @@
 # grupo-08
+
 ## Kairos
 
 Kairos se enfocará en la venta de relojes de media y alta gama, dirigido a un segmento específico de usuarios con necesidades no satisfechas por la oferta general. Para lograrlo, se ofrecerá un producto de buena estética y calidad. Aparte, se desarrollará una página web visual y fácil de navegar, que destaque por satisfacer las necesidades y comodidad de los clientes.
@@ -11,8 +12,8 @@ Además, el sitio contará con un canal de conversación para ofrecer un trato p
 
 Nuestro público objetivo serán personas de 20 a 70 años interesadas en productos de última tecnología que les permitan mejorar su calidad de vida. Las mismas pueden practicar disciplinas deportivas o no.
 
-
 ### Referentes
+
 Páginas que nos inspiraron por los productos que ofrecen:
 
 https://garmin.com.ar/
@@ -26,7 +27,6 @@ Páginas que nos inspiraron por la estética que presentan:
 https://cerveceriadecolima.com/
 
 https://www.stickylemon.nl/
-
 
 ### Integrantes
 
@@ -45,19 +45,17 @@ Dado que tengo habilidad en lo que se refiere a lógica y a encontrar soluciones
 Busco nuevas experiencias que me permitan crecer profesionalmente, siendo consciente de la necesidad del mercado.
 Me gusta leer, aprender temas nuevos, disfrutar con mi familia y las vacaciones en la playa.
 
-
-
 ### Tablero de trabajo
+
 https://trello.com/b/faeByGML/grupo-8
 
-
 ### Elementos de diseño
+
 Colores
+
 - Azul: #001C3B // CMYK 86 75 58 77 // RGB 0 28 59
 - Beige: #B0A386 // CMYK 33 32 53 1 // RGB 176 163 134
 - Gris: #D9D9D9
 
 Tipografía
 https://www.dafont.com/es/augustus.font
-
-

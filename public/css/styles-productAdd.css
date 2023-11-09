@@ -1,13 +1,13 @@
-body{
+body {
   height: 100vh;
-  font-family: 'Roboto';
+  font-family: "Roboto";
 }
 
 .form-register {
-position: relative;
+  position: relative;
 }
 
-.form-body{
+.form-body {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -22,22 +22,22 @@ position: relative;
   margin-bottom: 50px;
 }
 
-.text{
+.text {
   text-align: center;
   font-size: 28px;
   font-weight: normal;
-  color: #001C3B;
+  color: #001c3b;
   margin-bottom: 5px;
 }
 
-.text-medium{
+.text-medium {
   text-align: center;
   font-size: 16px;
-  color: #001C3B;
+  color: #001c3b;
   margin-bottom: 25px;
 }
 
-.form-body input{
+.form-body input {
   display: block;
   margin: auto;
   margin-bottom: 8px;
@@ -50,16 +50,16 @@ position: relative;
 }
 
 .form-body button {
-display: block;
-margin: auto;
-margin-top: 65px;
-margin-bottom: 50px;
-height: 35px;
-width: 60%;
-background-color: #001c3b;
-color: white;
-border: none;
-font-size: 14px;
+  display: block;
+  margin: auto;
+  margin-top: 65px;
+  margin-bottom: 50px;
+  height: 35px;
+  width: 60%;
+  background-color: #001c3b;
+  color: white;
+  border: none;
+  font-size: 14px;
 }
 
 .form-body label {
@@ -67,7 +67,7 @@ font-size: 14px;
   margin: auto;
   width: 60%;
   padding: 5px;
-  color: #001C3B;
+  color: #001c3b;
   font-size: 12px;
 }
 
@@ -83,44 +83,44 @@ font-size: 14px;
 }
 
 .text-danger {
-color: red;
-text-align: center;
+  color: red;
+  text-align: center;
 }
 
 #image {
-font-size: 10px;
+  font-size: 10px;
 }
 
-.form-register{
-margin: auto;
-width: 100%;
+.form-register {
+  margin: auto;
+  width: 100%;
 }
 
-@media (max-width: 481px){
-.form-body {
-  border: none;
+@media (max-width: 481px) {
+  .form-body {
+    border: none;
+  }
 }
-}
-@media (min-width: 769px){
+@media (min-width: 769px) {
   /* Laptop */
-  form{
-      display: flex;
-      flex-wrap: wrap;
+  form {
+    display: flex;
+    flex-wrap: wrap;
   }
-  .form-body{
-      width: 95vh;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
+  .form-body {
+    width: 95vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
-  .form-register{
-      width: 50%;
+  .form-register {
+    width: 50%;
   }
-  .text-form{
+  .text-form {
     margin: auto;
     width: 100%;
   }
-  .form-body button{
+  .form-body button {
     align-self: flex-end;
   }
 }
