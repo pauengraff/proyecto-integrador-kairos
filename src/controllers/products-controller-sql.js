@@ -1,8 +1,9 @@
 const { Product } = require("../database/models");
+const productsServiceSql = require("../services/products-service-sql");
 
 module.exports = {
   list: (req, res) => {
-    Product.findAll().then((products) => {
+    productsServiceSql.getAllProducts().then((products) => {
       res.render("sql", { products });
     });
   },
