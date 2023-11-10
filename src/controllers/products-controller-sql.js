@@ -1,4 +1,3 @@
-const { Product } = require("../database/models");
 const productsServiceSql = require("../services/products-service-sql");
 
 module.exports = {

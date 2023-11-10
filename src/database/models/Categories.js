@@ -1,9 +1,9 @@
 module.exports = (sequelize, DataTypes) => {
   const Model = sequelize.define(
-    "Product",
+    "Category",
     {
       id: {
-        type: DataTypes.UUID,
+        type: DataTypes.INTEGER,
         primaryKey: true,
         allowNull: false,
       },
@@ -11,29 +11,19 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.STRING,
         allowNull: false,
       },
-      description: {
-        type: DataTypes.STRING,
-      },
-      price: {
-        type: DataTypes.FLOAT,
-      },
-      image: {
-        type: DataTypes.STRING,
-      },
     },
     {
-      tableName: "products",
+      tableName: "categories",
       timestamps: false,
       //createdAt: "created_at",
       //updatedAt: "updated_at",
       //deletedAt: false,
     }
   );
-
   Model.associate = (db) => {
-    Model.belongsTo(db.Category, {
-      as: "category",
-      foreignKey: "id_category",
+    Model.hasMany(db.Product, {
+      as: "products",
+      foreignKey: "genre_id",
     });
   };
   return Model;
