@@ -24,9 +24,6 @@ module.exports = (sequelize, DataTypes) => {
     {
       tableName: "products",
       timestamps: false,
-      //createdAt: "created_at",
-      //updatedAt: "updated_at",
-      //deletedAt: false,
     }
   );
 
@@ -34,6 +31,11 @@ module.exports = (sequelize, DataTypes) => {
     Model.belongsTo(db.Category, {
       as: "category",
       foreignKey: "id_category",
+    });
+
+    Model.belongsTo(db.Brand, {
+      as: "brand",
+      foreignKey: "id_brand",
     });
   };
   return Model;

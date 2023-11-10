@@ -12,10 +12,15 @@
       <ul>
         <% for( let i=0; i < products.length; i++ ) { %>
         <li>
+          <h4>Leyendo Datos productos</h4>
           <div><%= products[i].name %></div>
           <div><%= products[i].price %></div>
           <div><%= products[i].description %></div>
+          <h4>Leyendo Datos Categoria</h4>
           <div><%= products[i].category.name %></div>
+          <h4>Leyendo Datos Marcas</h4>
+          <div><%= products[i].brand.name %></div>
+          <h4>Leyendo Imagen productos</h4>
           <div>
             <img
               style="width: 10%"

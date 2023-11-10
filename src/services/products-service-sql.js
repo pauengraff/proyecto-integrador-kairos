@@ -1,8 +1,7 @@
-const { Product, Category } = require("../database/models");
-const Sequelize = require("sequelize");
+const { Product } = require("../database/models");
 
 module.exports = {
   getAllProducts: () => {
-    return Product.findAll({ include: ["category"] });
+    return Product.findAll({ include: ["category", "brand"] });
   },
 };
