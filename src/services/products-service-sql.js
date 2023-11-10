@@ -5,11 +5,11 @@ module.exports = {
     return Product.findAll({ include: ["category", "brand"] });
   },
 
-  /* servicios a crear viendo modelo SQL
+  // servicios a crear viendo modelo SQL
   getProduct: (id) => {
-    const product = db.products.findById(id);
-    return product;
+    return Product.findByPK(id, { include: ["category", "brand"] });
   },
+  /*
   createProduct: (product) => {
     db.products.create(product);
   },
