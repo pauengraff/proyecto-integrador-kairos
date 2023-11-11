@@ -29,22 +29,17 @@ module.exports = {
       res.render("products/productAdd", { category, brand });
     });
   },
+
+  // Method to store data from form
+  store: (req, res) => {
+    productsServiceSql.createProduct(req.body).then((product) => {
+      res.redirect("/products");
+    });
+  },
+  // recordar sumar procesos desde aqui
 };
 
 /*
-  // Method to store data from form
-  store: (req, res) => {
-    const product = {
-      name: req.body.name,
-      brand: req.body.brand,
-      price: Number(req.body.price),
-      description: req.body.description,
-      image: req.file ? req.file.filename : "default-image.jpeg",
-    };
-    productServices.createProduct(product); // aca manda a la base de datos via servicio
-    res.redirect("/products");
-  },
-
   //Form to edit
   edit: (req, res) => {
     const id = req.params.id;
