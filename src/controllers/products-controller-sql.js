@@ -19,14 +19,19 @@ module.exports = {
   productCart: (req, res) => {
     res.render("products/productCart");
   },
-};
-
-/*
   // ADD PRODUCT
   // form to create
   add: (req, res) => {
-    res.render("products/productAdd");
+    const category = categoriesServiceSql.getAllCategories();
+    const brand = brandServiceSql.getAllBrands();
+
+    Promise.all([category, brand]).then(([category, brand]) => {
+      res.render("products/productAdd", { category, brand });
+    });
   },
+};
+
+/*
   // Method to store data from form
   store: (req, res) => {
     const product = {
