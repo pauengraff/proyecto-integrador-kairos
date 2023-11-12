@@ -5,7 +5,7 @@ const brandServiceSql = require("../services/brand-service-sql");
 module.exports = {
   index: (req, res) => {
     productsServiceSql.getAllProducts().then((products) => {
-      res.render("sql", { products });
+      res.render("products/products", { products });
     });
   },
 
