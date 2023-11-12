@@ -8,7 +8,7 @@ module.exports = {
 
   // servicios a crear viendo modelo SQL
   getProduct: (id) => {
-    return Product.findByPK(id, { include: ["category", "brand"] });
+    return Product.findByPk(id, { include: ["category", "brand"] });
   },
 
   createProduct: (body) => {

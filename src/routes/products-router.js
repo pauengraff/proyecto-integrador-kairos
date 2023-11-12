@@ -23,9 +23,11 @@ const productsController = require("../controllers/products-controller-sql");
 
 // Rutas products
 //GET ALL PRODUCTS
+//INDEX OK
 router.get("/", productsController.index);
 
 // *** PRODUCT CART ***/
+// CART OK
 router.get("/Cart", productsController.productCart);
 
 /*** CREATE ONE PRODUCT ***/
