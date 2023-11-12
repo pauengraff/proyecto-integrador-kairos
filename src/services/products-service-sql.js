@@ -19,16 +19,29 @@ module.exports = {
       description: body.description,
       brand: body.brand,
       category: body.category,
-      image: req.file ? req.file.filename : "default-image.jpeg",
+      image: body.file ? body.file.filename : "default-image.jpeg",
     });
   },
-  /*
-  updateProduct: (id, product) => {
-    console.log(`Updating IN SERVICE product ${product.name}`);
-    db.products.update(id, product);
+
+  updateProduct: (id, body) => {
+    return Product.update(
+      {
+        name: body.name,
+        price: Number(body.price),
+        description: body.description,
+        brand: body.brand,
+        category: body.category,
+      },
+      {
+        where: { id: id },
+      }
+    );
   },
+  // En este proceso me falta probar si funciona sin retirar las FK
+  // el proceso esta en clase 39
   deleteProduct: (id) => {
-    db.products.delete(id);
+    return Product.destroy({
+      where: { id: id },
+    });
   },
-*/
 };

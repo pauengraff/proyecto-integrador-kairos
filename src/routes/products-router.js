@@ -18,7 +18,8 @@ const upload = multer({ storage: storage });
 
 // ************ Controller Require ************
 const productsController = require("../controllers/products-controller");
-// const productsControllerSql = aca voy a poner products-controller-sql
+// Arranco test de vistas con el controlador todo dirigido a SQL
+//const productsController = require("../controllers/products-controller-sql");
 
 // Rutas products
 //GET ALL PRODUCTS
@@ -30,9 +31,8 @@ router.get("/Cart", productsController.productCart);
 /*** CREATE ONE PRODUCT ***/
 router.get("/add", productsController.add);
 router.post("/", upload.single("image"), productsController.store);
-// "image" viene del form // Falta ver como subir dos fotos para el logo del producto
 
-/*** EDIT ONE PRODUCT ***/
+/*** EDIT PRODUCT ***/
 //Formulario de edición de productos
 router.get("/edit/:id", productsController.edit);
 //Acción de edición (a donde se envía el formulario):

@@ -20,7 +20,7 @@ module.exports = {
     res.render("products/productCart");
   },
   // ADD PRODUCT
-  // form to create
+  // form to create product
   add: (req, res) => {
     const category = categoriesServiceSql.getAllCategories();
     const brand = brandServiceSql.getAllBrands();
@@ -30,34 +30,35 @@ module.exports = {
     });
   },
 
-  // Method to store data from form
+  // Process to store product on db
   store: (req, res) => {
     productsServiceSql.createProduct(req.body).then((product) => {
       res.redirect("/products");
     });
   },
-  // recordar sumar procesos desde aqui
-};
-
-/*
   //Form to edit
   edit: (req, res) => {
-    const id = req.params.id;
-    const product = productServices.getProduct(id);
-    res.render("products/productEdit", { product });
+    const category = categoriesServiceSql.getAllCategories();
+    const brand = brandServiceSql.getAllBrands();
+    const product = productsServiceSql.getProduct(req.params.id);
+    Promise.all([product, brand, category]).then(
+      ([product, brand, category]) => {
+        res.render("products/productEdit", { product, brand, category });
+      }
+    );
   },
+  // Edit Process
   update: (req, res) => {
-    const product = req.body;
-    const id = req.params.id;
-    productServices.updateProduct(id, product);
-    res.redirect("/products");
+    productsServiceSql
+      .updateProduct(req.params.id, req.body)
+      .then((product) => {
+        res.redirect("/products");
+      });
   },
   // Delete - Delete one product from DB
   destroy: (req, res) => {
-    const id = req.params.id;
-    productServices.deleteProduct(id);
-    res.redirect("/products");
+    productsServiceSql.deleteProduct(req.params.id).then(() => {
+      res.redirect("/products");
+    });
   },
 };
-
-*/
