@@ -38,9 +38,11 @@ module.exports = (sequelize, DataTypes) => {
       }
     );
 
-    Model.belongsTo(db.Rol, {
+    Model.associate = (db) => {
+        Model.belongsTo(db.Rol, {
         as: "rol",
         foreignKey: "id_rol",
       });
-      return Model;
+    };
+    return Model;
 }

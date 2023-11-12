@@ -11,4 +11,7 @@ router.use("/products", productsRouter);
 const usersRouter = require("./users-router");
 router.use("/users", usersRouter);
 
+const userSql = require("./users-router-sql");
+router.use("/usersList-sql", userSql);
+
 module.exports = router;

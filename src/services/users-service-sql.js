@@ -2,11 +2,11 @@ const { User } = require("../database/models");
 
 const usersServices = {
   getAllUsers: () => {
-    return Users.findAll({ include: ["rol"] });
+    return User.findAll({ include: ["rol"] });
   },
 
   getUser: (id) => {
-    const user = User.findById(id, { include: ["rol"] });
+    const user = User.findByPk(id, { include: ["rol"] });
     return user;
   },
 }
