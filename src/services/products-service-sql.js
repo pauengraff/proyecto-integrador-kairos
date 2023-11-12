@@ -6,7 +6,6 @@ module.exports = {
     return Product.findAll({ include: ["category", "brand"] });
   },
 
-  // servicios a crear viendo modelo SQL
   getProduct: (id) => {
     return Product.findByPk(id, { include: ["category", "brand"] });
   },

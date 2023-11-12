@@ -4,8 +4,11 @@ const brandServiceSql = require("../services/brand-service-sql");
 
 module.exports = {
   index: async (req, res) => {
-    const products = await productsServiceSql.getAllProducts();
-    res.render("products/products", { products });
+    const getProducts = productsServiceSql.getAllProducts();
+    const getBrand = brandServiceSql.getAllBrands();
+    const [products, brand] = await Promise.all([getProducts, getBrand]);
+
+    res.render("products/products", { products, brand });
   },
 
   // DETAIL - Detail from one product ID

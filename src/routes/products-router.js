@@ -37,6 +37,7 @@ router.post("/", upload.single("image"), productsController.store);
 
 /*** EDIT PRODUCT ***/
 //Formulario de edición de productos
+// GET OK - Put da error al guarda productos
 router.get("/edit/:id", productsController.edit);
 router.put("/:id", productsController.update);
 
