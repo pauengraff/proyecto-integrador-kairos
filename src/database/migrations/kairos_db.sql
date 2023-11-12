@@ -4,6 +4,9 @@
 -- ------------------------------------------------------
 -- Server version	10.4.28-MariaDB
 
+CREATE DATABASE IF NOT EXISTS `kairos_db`;
+USE `kairos_db`;
+
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
