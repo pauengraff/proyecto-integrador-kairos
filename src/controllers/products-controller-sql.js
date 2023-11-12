@@ -3,17 +3,15 @@ const categoriesServiceSql = require("../services/category-service-sql");
 const brandServiceSql = require("../services/brand-service-sql");
 
 module.exports = {
-  index: (req, res) => {
-    productsServiceSql.getAllProducts().then((products) => {
-      res.render("products/products", { products });
-    });
+  index: async (req, res) => {
+    const products = await productsServiceSql.getAllProducts();
+    res.render("products/products", { products });
   },
 
   // DETAIL - Detail from one product ID
-  detailById: (req, res) => {
-    productsServiceSql.getProduct(req.params.id).then((product) => {
-      res.render("products/detailById", { product });
-    });
+  detailById: async (req, res) => {
+    const product = await productsServiceSql.getProduct(req.params.id);
+    res.render("products/detailById", { product });
   },
   // CART
   productCart: (req, res) => {
@@ -22,10 +20,10 @@ module.exports = {
   // ADD PRODUCT
   // form to create product
   add: (req, res) => {
-    const category = categoriesServiceSql.getAllCategories();
-    const brand = brandServiceSql.getAllBrands();
+    const getCategory = categoriesServiceSql.getAllCategories();
+    const getBrand = brandServiceSql.getAllBrands();
 
-    Promise.all([category, brand]).then(([category, brand]) => {
+    Promise.all([getCategory, getBrand]).then(([category, brand]) => {
       res.render("products/productAdd", { category, brand });
     });
   },

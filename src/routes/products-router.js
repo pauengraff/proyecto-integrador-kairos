@@ -23,14 +23,15 @@ const productsController = require("../controllers/products-controller-sql");
 
 // Rutas products
 //GET ALL PRODUCTS
-//INDEX OK
+//INDEX OK SQL
 router.get("/", productsController.index);
 
 // *** PRODUCT CART ***/
-// CART OK
+// CART OK SQL
 router.get("/Cart", productsController.productCart);
 
 /*** CREATE ONE PRODUCT ***/
+// GET OK SQL - falta post
 router.get("/add", productsController.add);
 router.post("/", upload.single("image"), productsController.store);
 
@@ -40,6 +41,7 @@ router.get("/edit/:id", productsController.edit);
 router.put("/:id", productsController.update);
 
 /*** GET ONE PRODUCT BY ID ***/
+//detailById OK SQL
 router.get("/:id/", productsController.detailById);
 
 /*** DELETE ONE PRODUCT***/
