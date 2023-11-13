@@ -19,7 +19,7 @@ const upload = multer({ storage: storage });
 // ************ Controller Require ************
 //const productsController = require("../controllers/products-controller");
 // Arranco test de vistas con el controlador todo dirigido a SQL
-const productsController = require("../controllers/products-controller-sql");
+const productsController = require("../controllers/products-controller");
 
 // Rutas products
 //GET ALL PRODUCTS

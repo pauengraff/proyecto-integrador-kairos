@@ -10,8 +10,4 @@ router.use("/products", productsRouter);
 const usersRouter = require("./users-router");
 router.use("/users", usersRouter);
 
-// Test vista de migracion a SQL
-const sqlRouter = require("./products-router-sql");
-router.use("/sql", sqlRouter);
-
 module.exports = router;

@@ -1,58 +1,68 @@
-const productServices = require("../services/products-service");
+const productsServiceSql = require("../services/products-service-sql");
+const categoriesServiceSql = require("../services/category-service-sql");
+const brandServiceSql = require("../services/brand-service-sql");
 
-const controller = {
-  // Root - Show all products
-  index: (req, res) => {
-    const products = productServices.getAllProducts();
-    res.render("products/products", { products });
+module.exports = {
+  index: async (req, res) => {
+    const getProducts = productsServiceSql.getAllProducts();
+    const getBrand = brandServiceSql.getAllBrands();
+    const [products, brand] = await Promise.all([getProducts, getBrand]);
+
+    res.render("products/products", { products, brand });
   },
+
   // DETAIL - Detail from one product ID
-  detailById: (req, res) => {
-    const id = req.params.id;
-    const product = productServices.getProduct(id);
+  detailById: async (req, res) => {
+    const product = await productsServiceSql.getProduct(req.params.id);
     res.render("products/detailById", { product });
   },
+
   // CART
   productCart: (req, res) => {
     res.render("products/productCart");
   },
-
   // ADD PRODUCT
-  // form to create
+  // form to create product
   add: (req, res) => {
-    res.render("products/productAdd");
-  },
-  // Method to store data from form
-  store: (req, res) => {
-    const product = {
-      name: req.body.name,
-      brand: req.body.brand,
-      price: Number(req.body.price),
-      description: req.body.description,
-      image: req.file ? req.file.filename : "default-image.jpeg",
-    };
-    productServices.createProduct(product); // aca manda a la base de datos via servicio
-    res.redirect("/products");
+    const getCategory = categoriesServiceSql.getAllCategories();
+    const getBrand = brandServiceSql.getAllBrands();
+
+    Promise.all([getCategory, getBrand]).then(([category, brand]) => {
+      res.render("products/productAdd", { category, brand });
+    });
   },
 
+  // Process to store product on db
+  store: (req, res) => {
+    console.log(req.body);
+    productsServiceSql.createProduct(req.body, req.file).then((product) => {
+      res.redirect("/products");
+    });
+  },
   //Form to edit
   edit: (req, res) => {
-    const id = req.params.id;
-    const product = productServices.getProduct(id);
-    res.render("products/productEdit", { product });
+    const category = categoriesServiceSql.getAllCategories();
+    const brand = brandServiceSql.getAllBrands();
+    const product = productsServiceSql.getProduct(req.params.id);
+    Promise.all([product, brand, category]).then(
+      ([product, brand, category]) => {
+        res.render("products/productEdit", { product, brand, category });
+      }
+    );
   },
+  // Edit Process
   update: (req, res) => {
-    const product = req.body;
-    const id = req.params.id;
-    productServices.updateProduct(id, product);
-    res.redirect("/products");
+    productsServiceSql
+      .updateProduct(req.params.id, req.body)
+      .then((product) => {
+        res.redirect("/products");
+      });
   },
+
   // Delete - Delete one product from DB
   destroy: (req, res) => {
-    const id = req.params.id;
-    productServices.deleteProduct(id);
-    res.redirect("/products");
+    productsServiceSql.deleteProduct(req.params.id).then(() => {
+      res.redirect("/products");
+    });
   },
 };
-
-module.exports = controller;
