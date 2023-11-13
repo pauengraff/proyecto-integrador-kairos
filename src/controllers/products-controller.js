@@ -23,43 +23,36 @@ module.exports = {
   },
   // ADD PRODUCT
   // form to create product
-  add: (req, res) => {
-    const getCategory = categoriesService.getAllCategories();
-    const getBrand = brandService.getAllBrands();
-    Promise.all([getCategory, getBrand]).then(([category, brand]) => {
-      res.render("products/productAdd", { category, brand });
-    });
+  add: async (req, res) => {
+    const [category, brand] = await Promise.all([
+      categoriesService.getAllCategories(),
+      brandService.getAllBrands(),
+    ]);
+    res.render("products/productAdd", { category, brand });
   },
-
   // Process to store product on db
-  store: (req, res) => {
-    console.log(req.body);
-    productsService.createProduct(req.body, req.file).then((product) => {
-      res.redirect("/products");
-    });
+  store: async (req, res) => {
+    const product = await productsService.createProduct(req.body, req.file);
+    res.redirect("/products");
   },
   //Form to edit
-  edit: (req, res) => {
-    const category = categoriesService.getAllCategories();
-    const brand = brandService.getAllBrands();
-    const product = productsService.getProduct(req.params.id);
-    Promise.all([product, brand, category]).then(
-      ([product, brand, category]) => {
-        res.render("products/productEdit", { product, brand, category });
-      }
-    );
+  edit: async (req, res) => {
+    const [product, brand, category] = await Promise.all([
+      productsService.getProduct(req.params.id),
+      brandService.getAllBrands(),
+      categoriesService.getAllCategories(),
+    ]);
+    res.render("products/productEdit", { product, brand, category });
   },
   // Edit Process
-  update: (req, res) => {
-    productsService.updateProduct(req.params.id, req.body).then((product) => {
-      res.redirect("/products");
-    });
+  update: async (req, res) => {
+    await productsService.updateProduct(req.params.id, req.body);
+    res.redirect("/products");
   },
 
   // Delete - Delete one product from DB
-  destroy: (req, res) => {
-    productsService.deleteProduct(req.params.id).then(() => {
-      res.redirect("/products");
-    });
+  destroy: async (req, res) => {
+    await productsService.deleteProduct(req.params.id);
+    res.redirect("/products");
   },
 };
