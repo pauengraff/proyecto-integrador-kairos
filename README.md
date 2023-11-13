@@ -59,3 +59,8 @@ Colores
 
 Tipografía
 https://www.dafont.com/es/augustus.font
+
+### Diagrama relacional
+https://drive.google.com/file/d/15CJUUL38fwFZffzFKRkU8_5NYl3jlVsv/view?usp=sharing
+
+
