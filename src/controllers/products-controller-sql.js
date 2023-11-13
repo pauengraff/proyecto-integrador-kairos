@@ -35,7 +35,7 @@ module.exports = {
   // Process to store product on db
   store: (req, res) => {
     console.log(req.body);
-    productsServiceSql.createProduct(req.body).then((product) => {
+    productsServiceSql.createProduct(req.body, req.file).then((product) => {
       res.redirect("/products");
     });
   },

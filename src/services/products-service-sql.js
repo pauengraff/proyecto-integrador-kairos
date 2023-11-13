@@ -10,7 +10,7 @@ module.exports = {
     return Product.findByPk(id, { include: ["category", "brand"] });
   },
 
-  createProduct: (body) => {
+  createProduct: (body, file) => {
     return Product.create({
       id: uuidv4(),
       name: body.name,
@@ -18,7 +18,7 @@ module.exports = {
       description: body.description,
       id_brand: body.id_brand,
       id_category: body.id_category,
-      image: body.file ? body.file.filename : "default-image.jpeg", // bo|dy.image
+      image: file ? file.filename : "default-image.jpeg",
     });
   },
 
@@ -28,8 +28,8 @@ module.exports = {
         name: body.name,
         price: Number(body.price),
         description: body.description,
-        brand: body.brand,
-        category: body.category,
+        id_brand: body.id_brand,
+        id_category: body.id_category,
       },
       {
         where: { id: id },
