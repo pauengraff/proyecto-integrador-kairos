@@ -16,6 +16,7 @@ module.exports = {
     const product = await productsServiceSql.getProduct(req.params.id);
     res.render("products/detailById", { product });
   },
+
   // CART
   productCart: (req, res) => {
     res.render("products/productCart");
@@ -33,6 +34,7 @@ module.exports = {
 
   // Process to store product on db
   store: (req, res) => {
+    console.log(req.body);
     productsServiceSql.createProduct(req.body).then((product) => {
       res.redirect("/products");
     });
@@ -56,6 +58,7 @@ module.exports = {
         res.redirect("/products");
       });
   },
+
   // Delete - Delete one product from DB
   destroy: (req, res) => {
     productsServiceSql.deleteProduct(req.params.id).then(() => {

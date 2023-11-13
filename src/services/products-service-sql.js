@@ -16,9 +16,9 @@ module.exports = {
       name: body.name,
       price: Number(body.price),
       description: body.description,
-      brand: body.brand,
-      category: body.category,
-      image: body.file ? body.file.filename : "default-image.jpeg",
+      id_brand: body.id_brand,
+      id_category: body.id_category,
+      image: body.file ? body.file.filename : "default-image.jpeg", // bo|dy.image
     });
   },
 
