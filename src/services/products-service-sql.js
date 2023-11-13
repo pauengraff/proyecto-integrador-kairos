@@ -36,8 +36,7 @@ module.exports = {
       }
     );
   },
-  // En este proceso me falta probar si funciona sin retirar las FK
-  // el proceso esta en clase 39
+
   deleteProduct: (id) => {
     return Product.destroy({
       where: { id: id },
