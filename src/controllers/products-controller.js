@@ -1,11 +1,11 @@
-const productsServiceSql = require("../services/products-service-sql");
-const categoriesServiceSql = require("../services/category-service-sql");
-const brandServiceSql = require("../services/brand-service-sql");
+const productsService = require("../services/products-service");
+const categoriesService = require("../services/category-service");
+const brandService = require("../services/brand-service");
 
 module.exports = {
   index: async (req, res) => {
-    const getProducts = productsServiceSql.getAllProducts();
-    const getBrand = brandServiceSql.getAllBrands();
+    const getProducts = productsService.getAllProducts();
+    const getBrand = brandService.getAllBrands();
     const [products, brand] = await Promise.all([getProducts, getBrand]);
 
     res.render("products/products", { products, brand });
@@ -13,7 +13,7 @@ module.exports = {
 
   // DETAIL - Detail from one product ID
   detailById: async (req, res) => {
-    const product = await productsServiceSql.getProduct(req.params.id);
+    const product = await productsService.getProduct(req.params.id);
     res.render("products/detailById", { product });
   },
 
@@ -24,9 +24,8 @@ module.exports = {
   // ADD PRODUCT
   // form to create product
   add: (req, res) => {
-    const getCategory = categoriesServiceSql.getAllCategories();
-    const getBrand = brandServiceSql.getAllBrands();
-
+    const getCategory = categoriesService.getAllCategories();
+    const getBrand = brandService.getAllBrands();
     Promise.all([getCategory, getBrand]).then(([category, brand]) => {
       res.render("products/productAdd", { category, brand });
     });
@@ -35,15 +34,15 @@ module.exports = {
   // Process to store product on db
   store: (req, res) => {
     console.log(req.body);
-    productsServiceSql.createProduct(req.body, req.file).then((product) => {
+    productsService.createProduct(req.body, req.file).then((product) => {
       res.redirect("/products");
     });
   },
   //Form to edit
   edit: (req, res) => {
-    const category = categoriesServiceSql.getAllCategories();
-    const brand = brandServiceSql.getAllBrands();
-    const product = productsServiceSql.getProduct(req.params.id);
+    const category = categoriesService.getAllCategories();
+    const brand = brandService.getAllBrands();
+    const product = productsService.getProduct(req.params.id);
     Promise.all([product, brand, category]).then(
       ([product, brand, category]) => {
         res.render("products/productEdit", { product, brand, category });
@@ -52,16 +51,14 @@ module.exports = {
   },
   // Edit Process
   update: (req, res) => {
-    productsServiceSql
-      .updateProduct(req.params.id, req.body)
-      .then((product) => {
-        res.redirect("/products");
-      });
+    productsService.updateProduct(req.params.id, req.body).then((product) => {
+      res.redirect("/products");
+    });
   },
 
   // Delete - Delete one product from DB
   destroy: (req, res) => {
-    productsServiceSql.deleteProduct(req.params.id).then(() => {
+    productsService.deleteProduct(req.params.id).then(() => {
       res.redirect("/products");
     });
   },
