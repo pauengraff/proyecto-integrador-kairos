@@ -1,27 +1,19 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-
-<head>
-  <%- include("../partials/head", {title: 'Todos los productos' }) %>
+  <head>
+    <%- include("../partials/head", {title: 'Todos los productos' }) %>
 
     <link rel="stylesheet" href="/css/products.css" />
 
     <title>Kairos</title>
+  </head>
 
-</head>
-
-
-
-<body>
-
-  <%- include("../partials/header") %>
+  <body>
+    <%- include("../partials/header") %>
 
     <main>
-
       <div class="banner-product">
-
-        <img src="/images/products/banner.jpeg" alt="">
-
+        <img src="/images/products/banner.jpeg" alt="" />
       </div>
 
       <div class="title-products">
@@ -30,10 +22,8 @@
 
       <!-- Contenedor general -->
       <div class="main-section">
-
         <!-- Contenedor de filtrados -->
         <div class="main-filters">
-
           <p>Categorías</p>
           <ul>
             <li>Clásicos</li>
@@ -45,30 +35,18 @@
             <li>Rolex</li>
             <li>Garmin</li>
           </ul>
-
         </div>
 
         <!-- Contenedor de productos -->
         <div class="main-products">
           <section>
-            <% products.forEach(product=> { %>
-
-              <%- include("../partials/productCard", {product}) %>
-
-                <% }) %>
+            <% products.forEach(product=> { %> <%-
+            include("../partials/productCard", {product}) %> <% }) %>
           </section>
-
-
         </div>
-
       </div>
-
     </main>
 
-
-
     <%- include("../partials/footer") %>
-
-</body>
-
+  </body>
 </html>

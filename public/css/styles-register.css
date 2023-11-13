@@ -1,51 +1,51 @@
-body{
-    height: 100vh;
-    font-family: 'Roboto';  
+body {
+  height: 100vh;
+  font-family: "Roboto";
 }
 .form-register {
   position: relative;
 }
 
-.form-body{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    position: relative;
-    width: 400px;
-    border: none;
-    background-color: #d2d2d2;
-    margin: auto;
-    padding-top: 50px;
-    padding-bottom: 20px;
-    margin-bottom: 50px;
+.form-body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: relative;
+  width: 400px;
+  border: none;
+  background-color: #d2d2d2;
+  margin: auto;
+  padding-top: 50px;
+  padding-bottom: 20px;
+  margin-bottom: 50px;
 }
 
-.text{
-    text-align: center;
-    font-size: 28px;
-    font-weight: normal;
-    color: #001C3B;
-    margin-bottom: 5px;
+.text {
+  text-align: center;
+  font-size: 28px;
+  font-weight: normal;
+  color: #001c3b;
+  margin-bottom: 5px;
 }
 
-.text-medium{
-    text-align: center;
-    font-size: 16px;
-    color: #001C3B;
-    margin-bottom: 25px;
+.text-medium {
+  text-align: center;
+  font-size: 16px;
+  color: #001c3b;
+  margin-bottom: 25px;
 }
 
-.form-body input{
-    display: block;
-    margin: auto;
-    margin-bottom: 8px;
-    width: 60%;
-    padding: 8px;
-    color: gray;
-    border: none;
-    background-color: white;
-    font-size: 16px;
+.form-body input {
+  display: block;
+  margin: auto;
+  margin-bottom: 8px;
+  width: 60%;
+  padding: 8px;
+  color: gray;
+  border: none;
+  background-color: white;
+  font-size: 16px;
 }
 
 ::placeholder {
@@ -67,23 +67,23 @@ body{
 }
 
 .form-body label {
-    display: block;
-    margin: auto;
-    width: 60%;
-    padding: 5px;
-    color: #001C3B;
-    font-size: 12px;
+  display: block;
+  margin: auto;
+  width: 60%;
+  padding: 5px;
+  color: #001c3b;
+  font-size: 12px;
 }
 
 .form-body select {
-    display: block;
-    margin: auto;
-    width: 60%;
-    padding: 8px;
-    color: gray;
-    font-size: 14px;
-    border: none;
-    margin-bottom: 8px;
+  display: block;
+  margin: auto;
+  width: 60%;
+  padding: 8px;
+  color: gray;
+  font-size: 14px;
+  border: none;
+  margin-bottom: 8px;
 }
 
 .text-danger {
@@ -95,33 +95,33 @@ body{
   font-size: 10px;
 }
 
-.form-register{
+.form-register {
   margin: auto;
   width: 100%;
 }
 
-@media (max-width: 481px){
+@media (max-width: 481px) {
   .form-body {
     border: none;
   }
 }
-@media (min-width: 769px){
-    /* Laptop */
-    form{
-        display: flex;
-        flex-wrap: wrap;
-    }
-    .form-body{
-        width: 95vh;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
-    .form-register{
-        width: 48%;
-    }
-    .text-form{
-      margin: auto;
-      width: 100%;
-    }
+@media (min-width: 769px) {
+  /* Laptop */
+  form {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .form-body {
+    width: 95vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .form-register {
+    width: 48%;
+  }
+  .text-form {
+    margin: auto;
+    width: 100%;
+  }
 }

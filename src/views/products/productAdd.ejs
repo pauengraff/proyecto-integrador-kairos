@@ -1,69 +1,63 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-
-<head>
-
+  <head>
     <%- include("../partials/head") %>
-        <link rel="stylesheet" href="/css/styles-productAdd.css">
+    <link rel="stylesheet" href="/css/styles-productAdd.css" />
 
+    <title>Kairos Add Products</title>
+  </head>
 
-        <title>Kairos Add Products</title>
-</head>
-
-<body>
+  <body>
     <%- include("../partials/header") %>
 
     <form action="/products" method="post" enctype="multipart/form-data">
-        <div class="form-body">
-
-            <div class="text-form">
-                <p class="text">¡Cargá un nuevo producto!</p>
-                <p class="text-medium">Por favor completá los datos:</p>
-            </div>
-
-            <div class="form-register">
-                <label>Modelo</label>
-                <input type="text" name="name" id="name">
-            </div>
-
-            <select name="marca" class="form-register">
-                <% const brands = ["Garmin","Colmi","Suunto","Rolex","Tag Heuer","Omega","Casio","Seiko","Tissot","Imilab"]; %>
-                <option value="">Selecciona una marca</option> <!-- Opción vacía o predeterminada -->
-                <% brands.forEach(brand => { %>
-                  <option value="<%= brand %>"><%= brand %></option>
-                <% }); %>
-              </select>
-
-              <select name="category" class="form-register">
-                <% const categories = ["Clasico", "Deportivo", "Moda Alta Gama", "Deporte Profesional"]; %>
-                <option value="">Selecciona una Categoria</option> <!-- Opción vacía o predeterminada -->
-                <% categories.forEach(category => { %>
-                  <option value="<%= category %>"><%= category %></option>
-                <% }); %>
-              </select>
-
-            <div class="form-register">
-                <label>Descripción</label>
-                <input type="text" name="description" id="description">
-            </div>
-
-            <div class="form-register">
-                <label>Precio</label>
-                <input type="number" name="price" id="price">
-            </div>
-
-            <div class="form-register">
-                <label for="image">Imagen Producto:</label>
-                <input type="file" name="image" id="image">
-            </div>
-            <div class="form-register">
-                <button type="submit">Guardar</button>
-            </div>
-            
+      <div class="form-body">
+        <div class="text-form">
+          <p class="text">¡Cargá un nuevo producto!</p>
+          <p class="text-medium">Por favor completá los datos:</p>
         </div>
+
+        <div class="form-register">
+          <label>Modelo</label>
+          <input type="text" name="name" id="name" />
+        </div>
+
+        <select name="id_brand" class="form-register">
+          <option value="">Selecciona una marca</option>
+          <!-- Opción vacía o predeterminada -->
+          <% brand.forEach(brand => { %>
+          <option value="<%= brand.id %>"><%= brand.name %></option>
+          <% }); %>
+        </select>
+
+        <select name="id_category" class="form-register">
+          <option value="">Selecciona una Categoria</option>
+          <!-- Opción vacía o predeterminada -->
+          <% category.forEach(category => { %>
+          <option value="<%= category.id %>"><%= category.name %></option>
+          <% }); %>
+        </select>
+
+        <div class="form-register">
+          <label>Descripción</label>
+          <input type="text" name="description" id="description" />
+        </div>
+
+        <div class="form-register">
+          <label>Precio</label>
+          <input type="number" name="price" id="price" />
+        </div>
+
+        <div class="form-register">
+          <label for="image">Imagen Producto:</label>
+          <input type="file" name="image" id="image" />
+        </div>
+        <div class="form-register">
+          <button type="submit">Guardar</button>
+        </div>
+      </div>
     </form>
 
     <%- include("../partials/footer") %>
-
-</body>
+  </body>
 </html>

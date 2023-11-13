@@ -1,36 +1,36 @@
-main{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    font-family: 'Roboto';
-    flex-wrap: wrap;
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: "Roboto";
+  flex-wrap: wrap;
 }
 
 .form-login {
   position: relative;
 }
 
-.form-body{
-    position: relative;
-    width: 400px;
-    background-color: #d2d2d2;
-    border: none;
-    margin: auto;
-    padding-top: 50px;
-    padding-bottom: 20px;
+.form-body {
+  position: relative;
+  width: 400px;
+  background-color: #d2d2d2;
+  border: none;
+  margin: auto;
+  padding-top: 50px;
+  padding-bottom: 20px;
 }
 
-.text{
-    text-align: center;
-    font-size: 28px;
-    font-weight: normal;
-    color: #001C3B;
+.text {
+  text-align: center;
+  font-size: 28px;
+  font-weight: normal;
+  color: #001c3b;
 }
 
-.text-medium { 
-    font-size: 16px;
-    margin-bottom: 25px;
+.text-medium {
+  font-size: 16px;
+  margin-bottom: 25px;
 }
 
 .form-body p {
@@ -40,16 +40,16 @@ main{
   color: #001c3b;
 }
 
-.form-body input{
-    display: block;
-    margin: auto;
-    height: 40px;
-    width: 50;
-    padding: 12px 0px 12px 30px;
-    color: #001C3B;
-    border: none;
-    font-size: 16px;
-    outline:none;
+.form-body input {
+  display: block;
+  margin: auto;
+  height: 40px;
+  width: 50;
+  padding: 12px 0px 12px 30px;
+  color: #001c3b;
+  border: none;
+  font-size: 16px;
+  outline: none;
 }
 
 .form-login i {
@@ -98,18 +98,16 @@ input[type="checkbox"] {
 }
 
 .text-danger {
-    
-    color: red;
-    text-align: center;
+  color: red;
+  text-align: center;
 }
 
 .text-remember-user {
   font-size: 12px;
 }
 
-@media (max-width:481px){
-    .form-body{
-        border: none;
-    }
+@media (max-width: 481px) {
+  .form-body {
+    border: none;
+  }
 }
-

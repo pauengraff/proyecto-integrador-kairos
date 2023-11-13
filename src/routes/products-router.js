@@ -17,6 +17,7 @@ const storage = multer.diskStorage({
 const upload = multer({ storage: storage });
 
 // ************ Controller Require ************
+
 const productsController = require("../controllers/products-controller");
 
 // Rutas products
@@ -29,12 +30,9 @@ router.get("/Cart", productsController.productCart);
 /*** CREATE ONE PRODUCT ***/
 router.get("/add", productsController.add);
 router.post("/", upload.single("image"), productsController.store);
-// "image" viene del form // Falta ver como subir dos fotos para el logo del producto
 
-/*** EDIT ONE PRODUCT ***/
-//Formulario de edición de productos
+/*** EDIT PRODUCT ***/
 router.get("/edit/:id", productsController.edit);
-//Acción de edición (a donde se envía el formulario):
 router.put("/:id", productsController.update);
 
 /*** GET ONE PRODUCT BY ID ***/

@@ -1,58 +1,58 @@
-const productServices = require("../services/products-service");
+const productsService = require("../services/products-service");
+const categoriesService = require("../services/category-service");
+const brandService = require("../services/brand-service");
 
-const controller = {
-  // Root - Show all products
-  index: (req, res) => {
-    const products = productServices.getAllProducts();
-    res.render("products/products", { products });
+module.exports = {
+  index: async (req, res) => {
+    const getProducts = productsService.getAllProducts();
+    const getBrand = brandService.getAllBrands();
+    const [products, brand] = await Promise.all([getProducts, getBrand]);
+
+    res.render("products/products", { products, brand });
   },
+
   // DETAIL - Detail from one product ID
-  detailById: (req, res) => {
-    const id = req.params.id;
-    const product = productServices.getProduct(id);
+  detailById: async (req, res) => {
+    const product = await productsService.getProduct(req.params.id);
     res.render("products/detailById", { product });
   },
+
   // CART
   productCart: (req, res) => {
     res.render("products/productCart");
   },
-
   // ADD PRODUCT
-  // form to create
-  add: (req, res) => {
-    res.render("products/productAdd");
+  // form to create product
+  add: async (req, res) => {
+    const [category, brand] = await Promise.all([
+      categoriesService.getAllCategories(),
+      brandService.getAllBrands(),
+    ]);
+    res.render("products/productAdd", { category, brand });
   },
-  // Method to store data from form
-  store: (req, res) => {
-    const product = {
-      name: req.body.name,
-      brand: req.body.brand,
-      price: Number(req.body.price),
-      description: req.body.description,
-      image: req.file ? req.file.filename : "default-image.jpeg",
-    };
-    productServices.createProduct(product); // aca manda a la base de datos via servicio
+  // Process to store product on db
+  store: async (req, res) => {
+    const product = await productsService.createProduct(req.body, req.file);
+    res.redirect("/products");
+  },
+  //Form to edit
+  edit: async (req, res) => {
+    const [product, brand, category] = await Promise.all([
+      productsService.getProduct(req.params.id),
+      brandService.getAllBrands(),
+      categoriesService.getAllCategories(),
+    ]);
+    res.render("products/productEdit", { product, brand, category });
+  },
+  // Edit Process
+  update: async (req, res) => {
+    await productsService.updateProduct(req.params.id, req.body);
     res.redirect("/products");
   },
 
-  //Form to edit
-  edit: (req, res) => {
-    const id = req.params.id;
-    const product = productServices.getProduct(id);
-    res.render("products/productEdit", { product });
-  },
-  update: (req, res) => {
-    const product = req.body;
-    const id = req.params.id;
-    productServices.updateProduct(id, product);
-    res.redirect("/products");
-  },
   // Delete - Delete one product from DB
-  destroy: (req, res) => {
-    const id = req.params.id;
-    productServices.deleteProduct(id);
+  destroy: async (req, res) => {
+    await productsService.deleteProduct(req.params.id);
     res.redirect("/products");
   },
 };
-
-module.exports = controller;

@@ -17,7 +17,6 @@ const usersServices = {
   getfindByEmail: (email, body) => {
     const users = db.users.findByEmail(email, body);
     return users;
-
   },
 
   updateUser: (id, user) => {

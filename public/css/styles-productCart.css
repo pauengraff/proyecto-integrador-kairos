@@ -1,5 +1,5 @@
-body{
-  font-family: 'Roboto';
+body {
+  font-family: "Roboto";
   background-color: white;
 }
 
@@ -82,7 +82,7 @@ main {
   border: #001c3b solid 3px;
 }
 
-@media (min-width: 769px){
+@media (min-width: 769px) {
   /* Laptop */
   .cart-desktop {
     display: flex;
