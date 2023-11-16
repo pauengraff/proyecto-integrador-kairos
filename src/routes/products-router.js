@@ -21,6 +21,7 @@ const upload = multer({ storage: storage });
 const productsController = require("../controllers/products-controller");
 // Products creation validation
 const validateForm = require("../validation/validation-addproduct");
+const addProductMiddleware = require("../middlewares/addProductMiddleware");
 
 // Rutas products
 //GET ALL PRODUCTS
@@ -31,7 +32,12 @@ router.get("/Cart", productsController.productCart);
 
 /*** CREATE ONE PRODUCT ***/
 router.get("/add", productsController.add);
-router.post("/", upload.single("image"), productsController.store);
+router.post(
+  "/",
+  upload.single("image"),
+
+  productsController.store
+);
 
 /*** EDIT PRODUCT ***/
 router.get("/edit/:id", productsController.edit);

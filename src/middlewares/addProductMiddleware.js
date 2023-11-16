@@ -5,7 +5,7 @@ module.exports = (req, res, next) => {
   const resultValidation = validationResult(req);
 
   if (resultValidation.errors.length > 0) {
-    return res.render("products/add", {
+    return res.render("products/productAdd", {
       errors: resultValidation.mapped(),
       oldData: req.body,
     });
