@@ -19,6 +19,8 @@ const upload = multer({ storage: storage });
 // ************ Controller Require ************
 
 const productsController = require("../controllers/products-controller");
+// Products creation validation
+const validateForm = require("../validation/validation-addproduct");
 
 // Rutas products
 //GET ALL PRODUCTS

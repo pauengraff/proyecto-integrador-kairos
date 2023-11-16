@@ -3,17 +3,11 @@ const path = require("path");
 // archivos para validacion de formulario de creacion de producto
 
 module.exports = [
-  /*
-  body("first_name").notEmpty().withMessage("Completa tu Nombre"),
-  body("last_name").notEmpty().withMessage("Completa tu Apellido"),
-  body("email")
-    .notEmpty()
-    .withMessage("Completa tu Email")
-    .bail()
-    .isEmail()
-    .withMessage("Formato de correo invalido"),
-  body("birth_date").notEmpty().withMessage("Completa la Fecha"),
-  body("password").notEmpty().withMessage("Completa el password"),
+  body("name").notEmpty().withMessage("Completa el Modelo"),
+  body("id_brand").notEmpty().withMessage("Completa la Marca"),
+  body("id_category").notEmpty().withMessage("Completa la Categoria"),
+  body("description").notEmpty().withMessage("Agrega una descripcion"),
+  body("price").notEmpty().withMessage("Falta el precio"),
   body("avatar").custom((value, { req }) => {
     let file = req.file;
     let acceptedExtensions = [".jpg", ".png", ".gif", ".jpeg"];
@@ -33,5 +27,4 @@ module.exports = [
 
     return true;
   }),
-  */
 ];
