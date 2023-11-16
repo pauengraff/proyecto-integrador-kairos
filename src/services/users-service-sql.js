@@ -1,12 +1,10 @@
 const { User } = require("../database/models");
 
-const usersServices = {
+module.exports = {
   getAllUsers: () => {
-    return User.findAll({ include: ["rol"] });
+    return User.findAll();
   },
 
-  getUser: (id) => {
-    const user = User.findByPk(id, { include: ["rol"] });
-    return user;
-  },
+
+
 }
