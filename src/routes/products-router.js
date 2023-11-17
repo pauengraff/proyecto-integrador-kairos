@@ -19,6 +19,7 @@ const upload = multer({ storage: storage });
 // ************ Controller Require ************
 
 const productsController = require("../controllers/products-controller");
+
 // Products creation validation
 const validateForm = require("../validation/validation-addproduct");
 const addProductMiddleware = require("../middlewares/addProductMiddleware");
@@ -35,7 +36,8 @@ router.get("/add", productsController.add);
 router.post(
   "/",
   upload.single("image"),
-
+  validateForm,
+  addProductMiddleware,
   productsController.store
 );
 

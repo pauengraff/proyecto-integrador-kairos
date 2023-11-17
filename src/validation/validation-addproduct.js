@@ -4,18 +4,16 @@ const path = require("path");
 
 module.exports = [
   body("name").notEmpty().withMessage("Completa el Modelo"),
-  body("id_brand").notEmpty().withMessage("Completa la Marca"),
-  body("id_category").notEmpty().withMessage("Completa la Categoria"),
+  body("brand").notEmpty().withMessage("Completa la Marca"),
+  body("category").notEmpty().withMessage("Completa la Categoria"),
   body("description").notEmpty().withMessage("Agrega una descripcion"),
   body("price").notEmpty().withMessage("Falta el precio"),
   body("image").custom((value, { req }) => {
     let file = req.file;
-    let acceptedExtensions = [".jpg", ".png", ".gif", ".jpeg"];
 
-    if (!file) {
-      throw new Error("Subi una imagen");
-    } else {
+    if (file) {
       let fileExtension = path.extname(file.originalname);
+      let acceptedExtensions = [".jpg", ".png", ".gif", ".jpeg"];
       if (!acceptedExtensions.includes(fileExtension)) {
         throw new Error(
           `Las extensiones de archivo permitidas son ${acceptedExtensions.join(
@@ -23,6 +21,8 @@ module.exports = [
           )}`
         );
       }
+    } else {
+      throw new Error("Sube una imagen");
     }
 
     return true;

@@ -30,25 +30,29 @@
           <% } %>
         </div>
 
-        <select name="id_brand" class="form-register">
+        <select name="brand" class="form-register">
           <option value="">Selecciona una marca</option>
           <!-- Opción vacía o predeterminada -->
           <% brand.forEach(brand => { %>
           <option value="<%= brand.id %>"><%= brand.name %></option>
-          <% }); %> <% if (locals.errors && errors.id_brand) { %>
-          <div class="text-danger"><%= errors.id_brand.msg %></div>
-          <% } %>
+          <% }); %>
         </select>
 
-        <select name="id_category" class="form-register">
+        <% if (locals.errors && errors.brand) { %>
+        <div class="text-danger"><%= errors.brand.msg %></div>
+        <% } %>
+
+        <select name="category" class="form-register">
           <option value="">Selecciona una Categoria</option>
           <!-- Opción vacía o predeterminada -->
           <% category.forEach(category => { %>
           <option value="<%= category.id %>"><%= category.name %></option>
-          <% }); %> <% if (locals.errors && errors.id_category) { %>
-          <div class="text-danger"><%= errors.id_category.msg %></div>
-          <% } %>
+          <% }); %>
         </select>
+
+        <% if (locals.errors && errors.category) { %>
+        <div class="text-danger"><%= errors.category.msg %></div>
+        <% } %>
 
         <div class="form-register">
           <label>Descripción</label>
