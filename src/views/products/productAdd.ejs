@@ -3,6 +3,18 @@
   <head>
     <%- include("../partials/head") %>
     <link rel="stylesheet" href="/css/styles-productAdd.css" />
+    <script src="https://unpkg.com/validator@latest/validator.min.js"></script>
+    <script src="/js/moviesAddValidator.js" defer></script>
+    <style>
+      .errorMsg {
+        display: none;
+        color: red;
+      }
+
+      .display {
+        display: block;
+      }
+    </style>
 
     <title>Kairos Add Products</title>
   </head>
