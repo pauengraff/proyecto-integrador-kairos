@@ -20,7 +20,7 @@ const upload = multer({ storage: storage });
 
 const productsController = require("../controllers/products-controller");
 
-// Products creation validation
+// Products create validation
 const validateForm = require("../validation/validation-addproduct");
 const addProductMiddleware = require("../middlewares/addProductMiddleware");
 
