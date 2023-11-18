@@ -44,7 +44,12 @@
 
         <div class="form-register">
           <label>Precio</label>
-          <input type="number" name="price" id="price" />
+          <input
+            type="number"
+            name="price"
+            id="price"
+            value="<%= locals.errors ? oldData.price : null %>"
+          />
           <% if (locals.errors && errors.price) { %>
           <div class="text-danger"><%= errors.price.msg %></div>
           <% } %>
@@ -54,9 +59,12 @@
           <label>Marca</label>
           <select name="brand">
             <option value="">Selecciona una marca</option>
-            <!-- Opción vacía o predeterminada -->
+
             <% brand.forEach(brand => { %>
-            <option value="<%= brand.id %>"><%= brand.name %></option>
+            <option value="<%= brand.id %>" 
+              <%= locals.errors && (oldData.brand == brand.id) ? 'selected' : '' %>>
+              <%= brand.name %>
+            </option>
             <% }) %>
           </select>
 
@@ -64,13 +72,17 @@
           <div class="text-danger"><%= errors.brand.msg %></div>
           <% } %>
         </div>
+
         <div class="form-register">
           <label>Categoria</label>
           <select name="category">
             <option value="">Selecciona una Categoria</option>
             <!-- Opción vacía o predeterminada -->
             <% category.forEach(category => { %>
-            <option value="<%= category.id %>"><%= category.name %></option>
+            <option value="<%= category.id %>" 
+              <%= locals.errors && (oldData.category == category.id) ? 'selected' : '' %>>
+              <%= category.name %>
+            </option>
             <% }); %>
           </select>
 
@@ -81,7 +93,12 @@
 
         <div class="form-register">
           <label>Descripción</label>
-          <input type="text" name="description" id="description" />
+          <input
+            type="text"
+            name="description"
+            id="description"
+            value="<%= locals.errors ? oldData.description : null %>"
+          />
           <% if (locals.errors && errors.description) { %>
           <div class="text-danger"><%= errors.description.msg %></div>
           <% } %>

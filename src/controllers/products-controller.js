@@ -4,11 +4,9 @@ const brandService = require("../services/brand-service");
 
 module.exports = {
   index: async (req, res) => {
-    const getProducts = productsService.getAllProducts();
-    const getBrand = brandService.getAllBrands();
-    const [products, brand] = await Promise.all([getProducts, getBrand]);
+    const products = await productsService.getAllProducts();
 
-    res.render("products/products", { products, brand });
+    res.render("products/products", { products });
   },
 
   // DETAIL - Detail from one product ID
