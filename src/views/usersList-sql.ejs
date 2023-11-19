@@ -8,24 +8,15 @@
   <body>
     <h3>Mirando la base SQL Kairos_DB</h3>
     <h4>Todos los usuarios</h4>
-    <div>
-      <ul>
-        <% for( let i=0; i < user.length; i++ ) { %>
-        <li>
-          <h4>Leyendo Datos Usuarios</h4>
-          <div><%= user[i].first_name %></div>
-          <div><%= user[i].last_name %></div>
-          <div><%= user[i].email %></div>
-          <div><%= user[i].birth_day %></div>
-          <div><%= user[i].password %></div>
-        
-          <h4>Leyendo Datos Roles</h4>
-          <div><%= user[i].rol.name %></div>
-         
-          
-        </li>
-        <% } %>
-      </ul>
-    </div>
+    <ul>
+      <% for( let i = 0; i < user.length; i++ ) { %>
+      <li>
+          <a href="<%= user[i].id %>"><%= user[i].first_name %></a>
+      </li>
+      <% } %>
+
+  </ul>
+    <h4>Lee abajo del div</h4>
   </body>
 </html>
+

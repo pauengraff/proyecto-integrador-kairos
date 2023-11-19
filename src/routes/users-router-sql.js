@@ -17,6 +17,9 @@ const storage = multer.diskStorage({
 const upload = multer({ storage: storage });
 
 const usersControllerSql = require("../controllers/users-controller-sql");
+
 router.get("/", usersControllerSql.index);
+router.get("/register", usersControllerSql.register);
+router.post("/register", usersControllerSql.create);
 
 module.exports = router;
