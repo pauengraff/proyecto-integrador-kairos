@@ -19,7 +19,7 @@ module.exports = (sequelize, DataTypes) => {
           type: DataTypes.STRING,
           allowNull: false,
         },
-        birth_day: {
+        birth_date: {
           type: DataTypes.DATE,
           allowNull: false,
         },
@@ -33,7 +33,7 @@ module.exports = (sequelize, DataTypes) => {
           },
       },
       {
-        tableName: "users",
+        tableName: "user",
         timestamps: false,
       }
     );
