@@ -88,5 +88,14 @@
     "birth_date": "2000-01-01",
     "password": "$2a$10$HdE.Kl2.LB7o.kxq3kIYUOiGJxGCGb/Bp1k1PIUYSmOvwr2uah/eG",
     "avatar": "avatar-1699466590710.jpg"
+  },
+  {
+    "id": "6869cbb7-8492-467b-8a78-2bedb29ac6df",
+    "first_name": "tahiel",
+    "last_name": "perez",
+    "email": "tahiperez@gmail.com",
+    "birth_date": "2003-09-17",
+    "password": "$2a$10$wNCJqQcOa7QL9MlFfNFe9eyrpPJ.Shl2s6jrcAsI2Wj.WDESgHH/O",
+    "avatar": "avatar-1700484231692.jpg"
   }
 ]
