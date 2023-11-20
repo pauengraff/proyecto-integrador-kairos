@@ -26,7 +26,7 @@ const validations = [
   },
   {
     field: "image",
-    check: (input) => input.value.length >= 10,
+    check: (input) => input.value.length >= 1,
     message: "Sube una Imagen",
   },
 ];
