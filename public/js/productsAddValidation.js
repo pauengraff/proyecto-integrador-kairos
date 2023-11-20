@@ -6,17 +6,17 @@ const validations = [
   },
   {
     field: "price",
-    check: (input) => input.value.length >= 3,
-    message: "Debe contener al menos 3 caracteres",
+    check: (input) => !isNaN(Number(input.value)) && input.value.length >= 3,
+    message: "Debes ingresar al menos 3 Numeros",
   },
   {
     field: "brand",
-    check: (input) => input.value.length >= 3,
+    check: (input) => input.value.length >= 1,
     message: "Selecciona una Marca",
   },
   {
     field: "category",
-    check: (input) => input.value.length >= 3,
+    check: (input) => input.value.length >= 1,
     message: "Selecciona una categoria",
   },
   {
@@ -26,7 +26,7 @@ const validations = [
   },
   {
     field: "image",
-    check: (input) => input.value.length >= 1,
+    check: (input) => input.files && input.files.length > 0,
     message: "Sube una Imagen",
   },
 ];
@@ -66,7 +66,7 @@ form.addEventListener("submit", (event) => {
 
 function inputValidation(validation, input, inputErrorMsg) {
   if (!input.value) {
-    inputErrorMsg.innerText = "El campo no debe estar vacío";
+    inputErrorMsg.innerText = "Completa los datos";
     inputErrorMsg.classList.add("display");
     return false;
   }
