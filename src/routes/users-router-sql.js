@@ -23,10 +23,9 @@ const usersControllerSql = require("../controllers/users-controller-sql");
 //GET ALL USERS
 router.get("/", usersControllerSql.index);
 
-
 /*** CREATE USER ***/
 router.get("/register", usersControllerSql.register);
-router.post("/", upload.single ("image"), usersControllerSql.create);
+router.post("/register", upload.single ("image"), usersControllerSql.create);
 /*router.post("/", upload.single("image"), productsController.store);*/
 
 /*** EDIT USER ***/
