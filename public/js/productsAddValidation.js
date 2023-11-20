@@ -36,8 +36,6 @@ validations.forEach((validation) => {
   const input = document.getElementById(inputId);
   const inputErrorMsg = document.getElementById(inputId + "Error");
 
-  console.log("input", input);
-
   function validate() {
     inputValidation(validation, input, inputErrorMsg);
   }
