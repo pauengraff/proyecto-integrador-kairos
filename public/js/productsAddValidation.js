@@ -6,18 +6,18 @@ const validations = [
   },
   {
     field: "price",
-    check: (input) => input.value.length >= 1,
-    message: "Debe contener al menos 1 caracter",
+    check: (input) => input.value.length >= 3,
+    message: "Debe contener al menos 3 caracteres",
   },
   {
     field: "brand",
     check: (input) => input.value.length >= 3,
-    message: "Debe contener al menos 3 caracteres",
+    message: "Selecciona una Marca",
   },
   {
     field: "category",
     check: (input) => input.value.length >= 3,
-    message: "Debe contener al menos 3 caracteres",
+    message: "Selecciona una categoria",
   },
   {
     field: "description",
@@ -27,7 +27,7 @@ const validations = [
   {
     field: "image",
     check: (input) => input.value.length >= 10,
-    message: "Debe contener al menos 10 caracteres",
+    message: "Sube una Imagen",
   },
 ];
 
