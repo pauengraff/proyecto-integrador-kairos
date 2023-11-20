@@ -52,7 +52,7 @@
           <label>Marca</label>
           <select name="brand" id="brand">
             <option value="">Selecciona una marca</option>
-
+            
             <% brand.forEach(brand => { %>
             <option value="<%= brand.id %>" 
               <%= locals.errors && (oldData.brand == brand.id) ? 'selected' : '' %>>
@@ -61,6 +61,7 @@
             <% }) %>
           </select>
           <span class="errorMsg" id="brandError"></span>
+          
 
           <% if (locals.errors && errors.brand) { %>
           <div class="text-danger"><%= errors.brand.msg %></div>
