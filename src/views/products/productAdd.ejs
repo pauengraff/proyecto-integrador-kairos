@@ -4,17 +4,8 @@
     <%- include("../partials/head") %>
     <link rel="stylesheet" href="/css/styles-productAdd.css" />
     <script src="https://unpkg.com/validator@latest/validator.min.js"></script>
-    <script src="/js/moviesAddValidator.js" defer></script>
-    <style>
-      .errorMsg {
-        display: none;
-        color: red;
-      }
-
-      .display {
-        display: block;
-      }
-    </style>
+    <script src="/js/productsAddValidation.js" defer></script>
+  
 
     <title>Kairos Add Products</title>
   </head>
@@ -37,6 +28,7 @@
             id="name"
             value="<%= locals.errors ? oldData.name : null %>"
           />
+          <span class="errorMsg" id="nameError"></span>
           <% if (locals.errors && errors.name) { %>
           <div class="text-danger"><%= errors.name.msg %></div>
           <% } %>
@@ -50,6 +42,7 @@
             id="price"
             value="<%= locals.errors ? oldData.price : null %>"
           />
+          <span class="errorMsg" id="priceError"></span>
           <% if (locals.errors && errors.price) { %>
           <div class="text-danger"><%= errors.price.msg %></div>
           <% } %>
@@ -57,7 +50,7 @@
 
         <div class="form-register">
           <label>Marca</label>
-          <select name="brand">
+          <select name="brand" id="brand">
             <option value="">Selecciona una marca</option>
 
             <% brand.forEach(brand => { %>
@@ -67,6 +60,7 @@
             </option>
             <% }) %>
           </select>
+          <span class="errorMsg" id="brandError"></span>
 
           <% if (locals.errors && errors.brand) { %>
           <div class="text-danger"><%= errors.brand.msg %></div>
@@ -75,7 +69,7 @@
 
         <div class="form-register">
           <label>Categoria</label>
-          <select name="category">
+          <select name="category" id="category">
             <option value="">Selecciona una Categoria</option>
             <!-- Opción vacía o predeterminada -->
             <% category.forEach(category => { %>
@@ -85,6 +79,7 @@
             </option>
             <% }); %>
           </select>
+          <span class="errorMsg" id="categoryError"></span>
 
           <% if (locals.errors && errors.category) { %>
           <div class="text-danger"><%= errors.category.msg %></div>
@@ -99,6 +94,7 @@
             id="description"
             value="<%= locals.errors ? oldData.description : null %>"
           />
+          <span class="errorMsg" id="descriptionError"></span>
           <% if (locals.errors && errors.description) { %>
           <div class="text-danger"><%= errors.description.msg %></div>
           <% } %>
@@ -107,6 +103,8 @@
         <div class="form-register">
           <label for="image">Imagen Producto:</label>
           <input type="file" name="image" id="image" />
+          <span class="errorMsg" id="imageError"></span>
+          
           <% if (locals.errors && errors.image) { %>
           <div class="text-danger"><%= errors.image.msg %></div>
           <% } %>

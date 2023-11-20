@@ -20,15 +20,15 @@ const validations = [
     message: "Debe contener al menos 3 caracteres",
   },
   {
-    field: "Descripción",
+    field: "description",
     check: (input) => input.value.length >= 10,
     message: "Debe contener al menos 10 caracteres",
   },
-  /*{
+  {
     field: "image",
     check: (input) => input.value.length >= 10,
     message: "Debe contener al menos 10 caracteres",
-  },*/
+  },
 ];
 
 validations.forEach((validation) => {
@@ -36,8 +36,9 @@ validations.forEach((validation) => {
   const input = document.getElementById(inputId);
   const inputErrorMsg = document.getElementById(inputId + "Error");
 
+  console.log("input", input);
+
   function validate() {
-    console.log("input.value", input.value);
     inputValidation(validation, input, inputErrorMsg);
   }
 
