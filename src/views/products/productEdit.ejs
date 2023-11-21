@@ -3,6 +3,7 @@
   <head>
     <%- include("../partials/head") %>
     <link rel="stylesheet" href="/css/styles-productAdd.css" />
+    <script src="/js/productsEditValidation.js" defer></script>
 
     <title>Kairos Add Products</title>
   </head>
@@ -32,6 +33,7 @@
             placeholder="Modelo Reloj"
             value="<%= product.name %>"
           />
+          <span class="errorMsg" id="nameError"></span>
         </div>
 
         <select name="brand" class="form-register" id="brand">
@@ -40,6 +42,7 @@
           <option value="<%= brand.id %>"><%= brand.name %></option>
           <% }); %>
         </select>
+        <span class="errorMsg" id="brandError"></span>
 
         <select name="category" class="form-register" id="category">
           <option value="">Selecciona una Categoria</option>
@@ -47,6 +50,7 @@
           <option value="<%= category.id %>"><%= category.name %></option>
           <% }); %>
         </select>
+        <span class="errorMsg" id="categoryError"></span>
 
         <div class="form-register">
           <label for="description">Descripción</label>
@@ -57,6 +61,7 @@
             placeholder="Descripcion"
             value="<%= product.description %>"
           />
+          <span class="errorMsg" id="descriptionError"></span>
         </div>
 
         <div class="form-register">
@@ -68,6 +73,7 @@
             placeholder="Precio"
             value="<%= product.price %>"
           />
+          <span class="errorMsg" id="priceError"></span>
         </div>
 
         <button type="submit">Modificar</button>
