@@ -1,7 +1,6 @@
 // middleware para validacion de creacion de productos
 const categoriesService = require("../services/category-service");
 const brandService = require("../services/brand-service");
-const path = require("path");
 
 const { validationResult } = require("express-validator");
 

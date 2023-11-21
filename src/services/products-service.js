@@ -11,13 +11,14 @@ module.exports = {
   },
 
   createProduct: (body, file) => {
+    console.log(body);
     return Product.create({
       id: uuidv4(),
       name: body.name,
       price: Number(body.price),
       description: body.description,
-      id_brand: body.id_brand,
-      id_category: body.id_category,
+      id_brand: body.brand,
+      id_category: body.category,
       image: file ? file.filename : "default-image.jpeg",
     });
   },
@@ -28,8 +29,8 @@ module.exports = {
         name: body.name,
         price: Number(body.price),
         description: body.description,
-        id_brand: body.id_brand,
-        id_category: body.id_category,
+        id_brand: body.brand,
+        id_category: body.category,
       },
       {
         where: { id: id },

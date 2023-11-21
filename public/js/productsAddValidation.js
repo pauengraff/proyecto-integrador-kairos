@@ -6,7 +6,7 @@ const validations = [
   },
   {
     field: "price",
-    check: (input) => !isNaN(Number(input.value)) && input.value.length >= 3,
+    check: (input) => input.value.length >= 3,
     message: "Debes ingresar al menos 3 Numeros",
   },
   {
@@ -27,7 +27,7 @@ const validations = [
   {
     field: "image",
     check: (input) => input.files && input.files.length > 0,
-    message: "Sube una Imagen",
+    message: "Falta cargar una Imagen",
   },
 ];
 

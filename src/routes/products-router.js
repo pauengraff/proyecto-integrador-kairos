@@ -5,13 +5,12 @@ const path = require("path");
 const multer = require("multer");
 
 const storage = multer.diskStorage({
-  // configuracion de guardado //
-  destination: path.join(__dirname, "../../public/images/products"), // destino donde va a guardar el archivo
+  destination: path.join(__dirname, "../../public/images/products"),
   filename: function (req, file, cb) {
     cb(
       null,
       file.fieldname + "-" + Date.now() + path.extname(file.originalname)
-    ); // original name, deja extension del archivo
+    );
   },
 });
 
@@ -37,8 +36,8 @@ router.get("/add", productsController.add);
 router.post(
   "/",
   upload.single("image"),
-  validateForm,
-  addProductMiddleware,
+  //validateForm,
+  //addProductMiddleware,
   productsController.store
 );
 

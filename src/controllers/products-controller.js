@@ -30,6 +30,8 @@ module.exports = {
   },
   // Process to store product on db
   store: async (req, res) => {
+    console.log("store", req.body);
+    console.log("file store", req.file);
     const product = await productsService.createProduct(req.body, req.file);
     res.redirect("/products");
   },

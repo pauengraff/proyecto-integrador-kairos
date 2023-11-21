@@ -19,11 +19,6 @@ const validations = [
     check: (input) => input.value.length >= 1,
     message: "Selecciona una categoria",
   },
-  {
-    field: "description",
-    check: (input) => input.value.length >= 10,
-    message: "Debe contener al menos 10 caracteres",
-  },
 ];
 
 validations.forEach((validation) => {
