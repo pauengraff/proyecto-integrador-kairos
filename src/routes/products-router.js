@@ -39,7 +39,6 @@ router.post(
   upload.single("image"),
   validateForm,
   addProductMiddleware,
-
   productsController.store
 );
 

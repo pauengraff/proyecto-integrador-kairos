@@ -3,6 +3,7 @@
   <head>
     <%- include("../partials/head") %>
     <link rel="stylesheet" href="/css/styles-productAdd.css" />
+    <script src="/js/productsEditValidation.js" defer></script>
 
     <title>Kairos Add Products</title>
   </head>
@@ -10,7 +11,11 @@
   <body>
     <%- include("../partials/header") %>
 
-    <form action="/products/<%= product.id %>?_method=put" method="POST">
+    <form
+      action="/products/<%= product.id %>?_method=put"
+      method="POST"
+      id="form"
+    >
       <div class="form-body">
         <div class="text-form">
           <p class="text">¿Querés editar un producto?</p>
@@ -30,14 +35,14 @@
           />
         </div>
 
-        <select name="id_brand" class="form-register">
+        <select name="id_brand" class="form-register" id="brand">
           <option value="">Selecciona una marca</option>
           <% brand.forEach(brand => { %>
           <option value="<%= brand.id %>"><%= brand.name %></option>
           <% }); %>
         </select>
 
-        <select name="id_category" class="form-register">
+        <select name="id_category" class="form-register" id="category">
           <option value="">Selecciona una Categoria</option>
           <% category.forEach(category => { %>
           <option value="<%= category.id %>"><%= category.name %></option>
@@ -58,7 +63,7 @@
         <div class="form-register">
           <label for="price">Precio</label>
           <input
-            type="number"
+            type="text"
             name="price"
             id="price"
             placeholder="Precio"
