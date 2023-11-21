@@ -36,8 +36,8 @@ router.get("/add", productsController.add);
 router.post(
   "/",
   upload.single("image"),
-  //validateForm,
-  //addProductMiddleware,
+  validateForm,
+  addProductMiddleware,
   productsController.store
 );
 
