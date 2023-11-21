@@ -88,6 +88,16 @@ body {
   text-align: center;
 }
 
+.errorMsg {
+  display: none;
+  color: red;
+  text-align: center;
+}
+
+.display {
+  display: block;
+}
+
 #image {
   font-size: 10px;
 }

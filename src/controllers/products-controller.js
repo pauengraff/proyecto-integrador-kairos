@@ -4,11 +4,9 @@ const brandService = require("../services/brand-service");
 
 module.exports = {
   index: async (req, res) => {
-    const getProducts = productsService.getAllProducts();
-    const getBrand = brandService.getAllBrands();
-    const [products, brand] = await Promise.all([getProducts, getBrand]);
+    const products = await productsService.getAllProducts();
 
-    res.render("products/products", { products, brand });
+    res.render("products/products", { products });
   },
 
   // DETAIL - Detail from one product ID
@@ -32,7 +30,9 @@ module.exports = {
   },
   // Process to store product on db
   store: async (req, res) => {
-    const product = await productsService.createProduct(req.body, req.file);
+    console.log("store", req.body);
+    console.log("file store", req.file);
+    await productsService.createProduct(req.body, req.file);
     res.redirect("/products");
   },
   //Form to edit

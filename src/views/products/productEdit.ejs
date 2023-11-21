@@ -3,6 +3,7 @@
   <head>
     <%- include("../partials/head") %>
     <link rel="stylesheet" href="/css/styles-productAdd.css" />
+    <script src="/js/productsEditValidation.js" defer></script>
 
     <title>Kairos Add Products</title>
   </head>
@@ -10,7 +11,11 @@
   <body>
     <%- include("../partials/header") %>
 
-    <form action="/products/<%= product.id %>?_method=put" method="POST">
+    <form
+      action="/products/<%= product.id %>?_method=put"
+      method="POST"
+      id="form"
+    >
       <div class="form-body">
         <div class="text-form">
           <p class="text">¿Querés editar un producto?</p>
@@ -28,21 +33,24 @@
             placeholder="Modelo Reloj"
             value="<%= product.name %>"
           />
+          <span class="errorMsg" id="nameError"></span>
         </div>
 
-        <select name="id_brand" class="form-register">
+        <select name="brand" class="form-register" id="brand">
           <option value="">Selecciona una marca</option>
           <% brand.forEach(brand => { %>
           <option value="<%= brand.id %>"><%= brand.name %></option>
           <% }); %>
         </select>
+        <span class="errorMsg" id="brandError"></span>
 
-        <select name="id_category" class="form-register">
+        <select name="category" class="form-register" id="category">
           <option value="">Selecciona una Categoria</option>
           <% category.forEach(category => { %>
           <option value="<%= category.id %>"><%= category.name %></option>
           <% }); %>
         </select>
+        <span class="errorMsg" id="categoryError"></span>
 
         <div class="form-register">
           <label for="description">Descripción</label>
@@ -53,17 +61,19 @@
             placeholder="Descripcion"
             value="<%= product.description %>"
           />
+          <span class="errorMsg" id="descriptionError"></span>
         </div>
 
         <div class="form-register">
           <label for="price">Precio</label>
           <input
-            type="number"
+            type="text"
             name="price"
             id="price"
             placeholder="Precio"
             value="<%= product.price %>"
           />
+          <span class="errorMsg" id="priceError"></span>
         </div>
 
         <button type="submit">Modificar</button>
