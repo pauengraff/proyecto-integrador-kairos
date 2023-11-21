@@ -1,32 +1,51 @@
-const db = require("../data/db");
+const { User } = require("../database/models");
+const { v4: uuidv4 } = require("uuid");
+const bcrypt = require("bcryptjs");
 
-const usersServices = {
+module.exports = {
   getAllUsers: () => {
-    return db.users.showAll();
+    return User.findAll();
   },
 
-  getUser: (id) => {
-    const users = db.users.findById(id);
-    return users;
+  getCreated: (registro) => {
+    return User.create (registro);
   },
-
-  create: (user) => {
-    return db.users.create(user);
+  getUserByEmail: (email) => {
+    return User.findByPk(email);
   },
-
-  getfindByEmail: (email, body) => {
-    const users = db.users.findByEmail(email, body);
-    return users;
-
+  getUserById: (id) => {
+    return User.findByPk(id)
   },
-
-  updateUser: (id, user) => {
-    return db.users.update(id, user);
+  createUser: (body, file) => {
+    return User.create({
+      id: uuidv4(),
+      first_name: body.first_name,
+      last_name: body.last_name,
+      email: body.email,
+      birth_date: body.birth_date,
+      password: bcrypt.hashSync(body.password, 10), //password encriptado
+      id_rol: body.rol,
+      avatar: file ? file.filename : "user-default-image.jpeg",
+    });
   },
-
+  updateUser: (id, body) => {
+    return User.update(
+      {
+        first_name: body.first_name,
+        last_name: body.last_name,
+        email: body.email,
+        birth_date: body.birth_date,
+        id_rol: body.rol,
+      },
+      {
+        where: { id: id },
+      }
+    );
+  },
   deleteUser: (id) => {
-    return db.users.delete(id);
-  },
-};
+      return User.destroy({
+        where: { id: id },
+      });
+    },
+  }
 
-module.exports = usersServices;

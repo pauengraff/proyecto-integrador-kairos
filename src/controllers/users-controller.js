@@ -1,5 +1,5 @@
-const usersServices = require("../services/users-service-sql");
-const rolServiceSql = require("../services/rol-service-sql");
+const usersServices = require("../services/users-service");
+const rolServiceSql = require("../services/rol-service");
 const bcrypt = require("bcryptjs");
 
 module.exports = {
