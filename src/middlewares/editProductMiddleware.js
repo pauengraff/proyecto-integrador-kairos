@@ -20,4 +20,5 @@ module.exports = async (req, res, next) => {
       oldData: req.body,
     });
   }
+  next();
 };
