@@ -59,6 +59,15 @@
             <% } %>
         </div>
 
+        <div class="form-register">
+          <label>Rol</label>
+          <select name="rol" id="rol">
+            <option value=" ">Seleccioná tu rol</option>
+            <% rol.forEach(rol => { %>
+             <option value="<%= rol.id %>"><%= rol.name %></option>
+            <% }) %>
+          </select>
+        </div>
 
         <div class="form-register">
           <label>Contraseña</label>

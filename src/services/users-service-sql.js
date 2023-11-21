@@ -1,14 +1,20 @@
 const { User } = require("../database/models");
 const { v4: uuidv4 } = require("uuid");
+const bcrypt = require("bcryptjs");
 
 module.exports = {
   getAllUsers: () => {
     return User.findAll();
-    
   },
+
   getCreated: (registro) => {
     return User.create (registro);
-    
+  },
+  getUserByEmail: (email) => {
+    return User.findByPk(email);
+  },
+  getUserById: (id) => {
+    return User.findByPk(id)
   },
   createUser: (body, file) => {
     return User.create({
@@ -18,26 +24,28 @@ module.exports = {
       email: body.email,
       birth_date: body.birth_date,
       password: bcrypt.hashSync(body.password, 10), //password encriptado
+      id_rol: body.rol,
       avatar: file ? file.filename : "user-default-image.jpeg",
     });
   },
-  /*updateUser: (id, body) => {
-    return Product.update(
+  updateUser: (id, body) => {
+    return User.update(
       {
-        name: body.name,
-        price: Number(body.price),
-        description: body.description,
-        id_brand: body.id_brand,
-        id_category: body.id_category,
+        first_name: body.first_name,
+        last_name: body.last_name,
+        email: body.email,
+        birth_date: body.birth_date,
+        id_rol: body.rol,
       },
       {
         where: { id: id },
       }
-    );*/
-    /* deleteProduct: (id) => {
-      return Product.destroy({
+    );
+  },
+  deleteUser: (id) => {
+      return User.destroy({
         where: { id: id },
       });
-    },*/
-  };
+    },
+  }
 

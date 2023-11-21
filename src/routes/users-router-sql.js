@@ -1,4 +1,4 @@
-const express = require("express");
+/*const express = require("express");
 const router = express.Router();
 const path = require("path");
 const multer = require("multer");
@@ -24,12 +24,11 @@ const usersControllerSql = require("../controllers/users-controller-sql");
 router.get("/", usersControllerSql.index);
 
 /*** CREATE USER ***/
-router.get("/register", usersControllerSql.register);
-router.post("/register", upload.single ("image"), usersControllerSql.create);
-/*router.post("/", upload.single("image"), productsController.store);*/
+//router.get("/register", usersControllerSql.register);
+//router.post("/register-sql", upload.single ("avatar"), usersControllerSql.create);
 
 /*** EDIT USER ***/
-//router.get("/edit/:id", productsController.edit);
+//router.get("/edit/:id", userController.edit);
 //router.put("/:id", productsController.update);
 
 /*** GET USER BY ID ***/
@@ -38,4 +37,4 @@ router.post("/register", upload.single ("image"), usersControllerSql.create);
 /*** DELETE USER ***/
 //router.delete("/:id", productsController.destroy);
 
-module.exports = router;
+//module.exports = router;*/
