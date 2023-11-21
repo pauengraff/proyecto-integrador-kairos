@@ -23,6 +23,9 @@ const productsController = require("../controllers/products-controller");
 // Products create validation
 const validateForm = require("../validation/validationAddProduct");
 const addProductMiddleware = require("../middlewares/addProductMiddleware");
+// Products Edit validation
+const validateEditForm = require("../validation/validationEditProduct");
+const editProductMiddleware = require("../middlewares/editProductMiddleware");
 
 // Rutas products
 //GET ALL PRODUCTS
@@ -43,7 +46,12 @@ router.post(
 
 /*** EDIT PRODUCT ***/
 router.get("/edit/:id", productsController.edit);
-router.put("/:id", productsController.update);
+router.put(
+  "/:id",
+  validateEditForm,
+  editProductMiddleware,
+  productsController.update
+);
 
 /*** GET ONE PRODUCT BY ID ***/
 router.get("/:id/", productsController.detailById);
