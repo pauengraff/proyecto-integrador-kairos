@@ -1,25 +1,21 @@
-const usersServices = require("../services/users-service");
+const usersServices = require("../services/users-service-sql");
+const rolServiceSql = require("../services/rol-service-sql");
 const bcrypt = require("bcryptjs");
 
-const controller = {
-  usersList: (req, res) => {
-    const users = usersServices.getAllUsers();
-    res.render("users/usersList", { users });
+module.exports = {
+  userList: async (req, res) => {
+    const users = await usersServices.getAllUsers();
+      res.render("users/usersList", { users });
   },
-
-  detailById: (req, res) => {
-    const id = req.params.id;
-    const users = usersServices.getUser(id);
+  detailById: async (req, res) => {
+    const users = await usersServices.getUserById(req.params.id);
     res.render("users/userDetailById", { users });
   },
-
-  // Users Login
   login: (req, res) => {
     res.render("users/login");
   },
-
-  processLogin: (req, res) => {
-    const userLogin = usersServices.getfindByEmail("email", req.body.email);
+  processLogin: async (req, res) => {
+    const userLogin = await usersServices.getUserByEmail("email", req.body.email);
 
     if (userLogin) {
       const comparePassword = bcrypt.compareSync(
@@ -46,76 +42,69 @@ const controller = {
         oldData: req.body,
       });
     }
-    return res.render("users/login", {
+    /*return res.render("users/login", {
       errors: {
         email: {
-          msg: "El Email no esta regsitrado",
+          msg: "El email no está registrado",
+        },
+      },
+      oldData: req.body,
+    });*/
+  },
+// REGISTER USER
+// form to register user
+  register: async (req, res) => {
+    const rol = await rolServiceSql.getAllRoles();
+    res.render("users/register", { rol });
+  },
+ // Process to create user on db
+ // falta configurar roles en la lista
+ create: async (req, res) => {
+  const user = await usersServices.createUser(req.body, req.file);
+  res.redirect("/sql");
+},
+processRegister: async (req, res) => {
+  const userInDb = await usersServices.getUserByEmail("email", req.body.email);
+  if (userInDb) {
+    return res.render("users/register", {
+      errors: {
+        email: {
+          msg: "Este email ya está registrado",
         },
       },
       oldData: req.body,
     });
-  },
-
-  profile: (req, res) => {
-    return res.render("users/profile", {
-      user: req.session.userLogged,
-    });
-  },
-
-  // Users Register
-  register: (req, res) => {
-    res.render("users/register");
-  },
-
-  processRegister: (req, res) => {
-    const userInDb = usersServices.getfindByEmail("email", req.body.email);
-    if (userInDb) {
-      return res.render("users/register", {
-        errors: {
-          email: {
-            msg: "Este email ya está registrado",
-          },
-        },
-        oldData: req.body,
-      });
-    }
-
-    const user = {
-      first_name: req.body.first_name,
-      last_name: req.body.last_name,
-      email: req.body.email,
-      birth_date: req.body.birth_date,
-      password: bcrypt.hashSync(req.body.password, 10), //password encriptado
-      avatar: req.file ? req.file.filename : "user-default-image.jpeg",
-    };
-    usersServices.create(user); // Via servicio graba en base de datos
-    res.redirect("/users/login"); //redirijo a login al finalizar
-  },
-
-  edit: (req, res) => {
-    const id = req.params.id;
-    const user = usersServices.getUser(id);
-    res.render("users/userEdit", { user });
-  },
-
-  update: (req, res) => {
-    const user = req.body;
-    const id = req.params.id;
-    usersServices.updateUser(id, user);
-    res.redirect("/users");
-  },
-
-  destroy: (req, res) => {
-    const id = req.params.id;
-    usersServices.deleteUser(id);
-    res.redirect("/users");
-  },
-
-  logout: (req, res) => {
-    res.clearCookie("userEmail");
-    req.session.destroy();
-    return res.redirect("/users/login");
-  },
+  }
+  const user = await usersServices.createUser(req.body, req.file); // Via servicio graba en base de datos
+  res.redirect("/users/login"); //redirijo a login al finalizar
+},
+profile: (req, res) => {
+  return res.render("users/profile", {
+    user: req.session.userLogged,
+  });
+},
+edit: async (req, res) => {
+  const user = await usersServices.getUserById(req.params.id);
+  res.render("users/userEdit", { user });
+},
+update: async (req, res) => {
+  await usersServices.updateUser(req.params.id, req.body);
+  res.redirect("/users");
+},
+destroy: async (req, res) => {
+  await usersServices.deleteUser(req.params.id);
+  res.redirect("/users");
+},
+logout: (req, res) => {
+  res.clearCookie("userEmail");
+  req.session.destroy();
+  return res.redirect("/users/login");
+},
 };
 
-module.exports = controller;
+  
+
+
+
+
+

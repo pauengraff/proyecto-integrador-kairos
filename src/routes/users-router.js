@@ -18,7 +18,7 @@ const upload = multer({ storage: storage });
 
 // ************ Controller Require ************
 //requier users controllers
-const usersController = require("../controllers/users-controller-sql");
+const usersController = require("../controllers/users-controller");
 // user register validation
 const validationRegister = require("../validation/validation-register");
 const registerMiddleware = require("../middlewares/register");
