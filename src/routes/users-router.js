@@ -30,19 +30,26 @@ const validationErrorsLogin = require("../middlewares/login");
 // Guest - User routes middleware
 const guestMiddleware = require("../middlewares/guestMiddleware");
 const authMiddleware = require("../middlewares/authMiddleware");
+//guestMiddleware, ver este middleware para el login
 
 // Routes Users
 //Get All USers /
 router.get("/", usersController.userList);
 
 // Login
-router.get("/login", guestMiddleware, usersController.login);
+router.get("/login", usersController.login);
 
 router.post(
   "/login",
   validation,
   validationErrorsLogin,
   usersController.processLogin
+);
+// Get users Profile /
+router.get(
+  "/profile",
+  //authMiddleware,
+  usersController.profile
 );
 
 // Logout
@@ -60,9 +67,6 @@ router.post(
   registerMiddleware,
   usersController.processRegister
 );
-
-// Get users Profile /
-router.get("/profile", authMiddleware, usersController.profile);
 
 // Get users by ID /
 router.get("/:id/", usersController.detailById);

@@ -5,7 +5,7 @@ const bcrypt = require("bcryptjs");
 module.exports = {
   userList: async (req, res) => {
     const users = await usersServices.getAllUsers();
-      res.render("users/usersList", { users });
+    res.render("users/usersList", { users });
   },
   detailById: async (req, res) => {
     const users = await usersServices.getUserById(req.params.id);
@@ -15,7 +15,7 @@ module.exports = {
     res.render("users/login");
   },
   processLogin: async (req, res) => {
-    const userLogin = await usersServices.getUserByEmail("email", req.body.email);
+    const userLogin = await usersServices.getUserByEmail(req.body.email);
 
     if (userLogin) {
       const comparePassword = bcrypt.compareSync(
@@ -30,7 +30,7 @@ module.exports = {
         if (req.body.remember_user) {
           res.cookie("userEmail", req.body.email, { maxAge: 1000 * 60 * 10 });
         }
-
+        console.log("userLogged data after login:", req.session.userLogged);
         return res.redirect("/users/profile");
       }
       return res.render("users/login", {
@@ -42,69 +42,73 @@ module.exports = {
         oldData: req.body,
       });
     }
-    /*return res.render("users/login", {
+    return res.render("users/login", {
       errors: {
         email: {
           msg: "El email no está registrado",
         },
       },
       oldData: req.body,
-    });*/
+    });
   },
-// REGISTER USER
-// form to register user
+  profile: (req, res) => {
+    console.log("Tipo de dato de userLogged:", typeof req.session.userLogged);
+    console.log("dato de userLogged", req.session.userLogged);
+
+    const user = req.session.userLogged;
+
+    console.log("despues de await dato de userLogged", req.session.userLogged);
+    return res.render("users/profile", {
+      user,
+    });
+  },
+
+  // REGISTER USER
+  // form to register user
   register: async (req, res) => {
     const rol = await rolServiceSql.getAllRoles();
     res.render("users/register", { rol });
   },
- // Process to create user on db
- // falta configurar roles en la lista
- create: async (req, res) => {
-  const user = await usersServices.createUser(req.body, req.file);
-  res.redirect("/sql");
-},
-processRegister: async (req, res) => {
-  const userInDb = await usersServices.getUserByEmail("email", req.body.email);
-  if (userInDb) {
-    return res.render("users/register", {
-      errors: {
-        email: {
-          msg: "Este email ya está registrado",
+  // Process to create user on db
+  // falta configurar roles en la lista
+  create: async (req, res) => {
+    const user = await usersServices.createUser(req.body, req.file);
+    res.redirect("/sql");
+  },
+  processRegister: async (req, res) => {
+    const userInDb = await usersServices.getUserByEmail(
+      "email",
+      req.body.email
+    );
+    if (userInDb) {
+      return res.render("users/register", {
+        errors: {
+          email: {
+            msg: "Este email ya está registrado",
+          },
         },
-      },
-      oldData: req.body,
-    });
-  }
-  const user = await usersServices.createUser(req.body, req.file); // Via servicio graba en base de datos
-  res.redirect("/users/login"); //redirijo a login al finalizar
-},
-profile: (req, res) => {
-  return res.render("users/profile", {
-    user: req.session.userLogged,
-  });
-},
-edit: async (req, res) => {
-  const user = await usersServices.getUserById(req.params.id);
-  res.render("users/userEdit", { user });
-},
-update: async (req, res) => {
-  await usersServices.updateUser(req.params.id, req.body);
-  res.redirect("/users");
-},
-destroy: async (req, res) => {
-  await usersServices.deleteUser(req.params.id);
-  res.redirect("/users");
-},
-logout: (req, res) => {
-  res.clearCookie("userEmail");
-  req.session.destroy();
-  return res.redirect("/users/login");
-},
+        oldData: req.body,
+      });
+    }
+    const user = await usersServices.createUser(req.body, req.file); // Via servicio graba en base de datos
+    res.redirect("/users/login"); //redirijo a login al finalizar
+  },
+
+  edit: async (req, res) => {
+    const user = await usersServices.getUserById(req.params.id);
+    res.render("users/userEdit", { user });
+  },
+  update: async (req, res) => {
+    await usersServices.updateUser(req.params.id, req.body);
+    res.redirect("/users");
+  },
+  destroy: async (req, res) => {
+    await usersServices.deleteUser(req.params.id);
+    res.redirect("/users");
+  },
+  logout: (req, res) => {
+    res.clearCookie("userEmail");
+    req.session.destroy();
+    return res.redirect("/users/login");
+  },
 };
-
-  
-
-
-
-
-

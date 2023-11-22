@@ -8,13 +8,14 @@ module.exports = {
   },
 
   getCreated: (registro) => {
-    return User.create (registro);
+    return User.create(registro);
   },
   getUserByEmail: (email) => {
-    return User.findByPk(email);
+    return User.findOne({ where: { email } });
   },
-  getUserById: (id) => {
-    return User.findByPk(id)
+  getUserById: async (id) => {
+    const user = await User.findOne({ where: { id } });
+    return user;
   },
   createUser: (body, file) => {
     return User.create({
@@ -43,9 +44,8 @@ module.exports = {
     );
   },
   deleteUser: (id) => {
-      return User.destroy({
-        where: { id: id },
-      });
-    },
-  }
-
+    return User.destroy({
+      where: { id: id },
+    });
+  },
+};
