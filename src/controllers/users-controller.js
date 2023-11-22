@@ -30,7 +30,7 @@ module.exports = {
         if (req.body.remember_user) {
           res.cookie("userEmail", req.body.email, { maxAge: 1000 * 60 * 10 });
         }
-        console.log("userLogged data after login:", req.session.userLogged);
+        console.log("userLogged data:", req.session.userLogged);
         return res.redirect("/users/profile");
       }
       return res.render("users/login", {
@@ -51,11 +51,11 @@ module.exports = {
       oldData: req.body,
     });
   },
-  profile: (req, res) => {
+  profile: async (req, res) => {
     console.log("Tipo de dato de userLogged:", typeof req.session.userLogged);
     console.log("dato de userLogged", req.session.userLogged);
 
-    const user = req.session.userLogged;
+    const user = await req.session.userLogged;
 
     console.log("despues de await dato de userLogged", req.session.userLogged);
     return res.render("users/profile", {
