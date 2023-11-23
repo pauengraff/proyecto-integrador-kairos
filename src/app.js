@@ -21,7 +21,7 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, "../public")));
 app.use(methodOverride("_method"));
 app.use(cookies());
-app.use(userCookiesMiddleware);
+//app.use(userCookiesMiddleware);
 
 //Template Engine
 app.set("view engine", "ejs");

@@ -1,10 +1,13 @@
 const usersServices = require("../services/users-service");
 
-function userCookiesMiddleware(req, res, next) {
+async function userCookiesMiddleware(req, res, next) {
   res.locals.isLogged = false;
 
-  let emailInCookie = req.cookies.userEmail;
-  let userFromCookie = usersServices.getUserByEmail("email", emailInCookie);
+  const emailInCookie = req.cookies.userEmail;
+
+  if (emailInCookie) {
+    const userFromCookie = await usersServices.getUserByEmail(emailInCookie);
+  }
 
   if (userFromCookie) {
     req.session.userLogged = userFromCookie;

@@ -10,8 +10,9 @@ module.exports = {
   getCreated: (registro) => {
     return User.create(registro);
   },
-  getUserByEmail: (email) => {
-    return User.findOne({ where: { email } });
+  getUserByEmail: async (email) => {
+    const user = await User.findOne({ where: { email } });
+    return user;
   },
   getUserById: async (id) => {
     const user = await User.findOne({ where: { id } });

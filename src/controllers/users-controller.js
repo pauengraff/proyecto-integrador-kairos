@@ -24,7 +24,7 @@ module.exports = {
       );
       if (comparePassword) {
         delete userLogin.password;
-        req.session.userLogged = userLogin;
+        req.session.userLogged = userLogin.toJSON();
 
         //configuro cookie en log in
         if (req.body.remember_user) {
@@ -51,13 +51,9 @@ module.exports = {
       oldData: req.body,
     });
   },
-  profile: async (req, res) => {
-    console.log("Tipo de dato de userLogged:", typeof req.session.userLogged);
-    console.log("dato de userLogged", req.session.userLogged);
+  profile: (req, res) => {
+    const user = req.session.userLogged;
 
-    const user = await req.session.userLogged;
-
-    console.log("despues de await dato de userLogged", req.session.userLogged);
     return res.render("users/profile", {
       user,
     });
