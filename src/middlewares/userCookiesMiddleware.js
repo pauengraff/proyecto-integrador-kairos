@@ -4,10 +4,10 @@ async function userCookiesMiddleware(req, res, next) {
   res.locals.isLogged = false;
 
   const emailInCookie = req.cookies.userEmail;
+  console.log("Valor de userEmail antes:", emailInCookie);
 
-  if (emailInCookie) {
-    const userFromCookie = await usersServices.getUserByEmail(emailInCookie);
-  }
+  const userFromCookie = await usersServices.getUserByEmail(emailInCookie);
+  console.log("Valor de userEmail después:", emailInCookie);
 
   if (userFromCookie) {
     req.session.userLogged = userFromCookie;
