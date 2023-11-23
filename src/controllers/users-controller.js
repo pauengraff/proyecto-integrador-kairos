@@ -26,7 +26,7 @@ module.exports = {
         delete userLogin.password;
         req.session.userLogged = userLogin.toJSON();
 
-        //configuro cookie en log in
+        //configuro cookie en login
         if (req.body.remember_user) {
           res.cookie("userEmail", req.body.email, { maxAge: 1000 * 60 * 10 });
         }
