@@ -37,7 +37,7 @@ const authMiddleware = require("../middlewares/authMiddleware");
 router.get("/", usersController.userList);
 
 // Login
-router.get("/login", usersController.login);
+router.get("/login", guestMiddleware, usersController.login);
 
 router.post(
   "/login",
@@ -46,11 +46,7 @@ router.post(
   usersController.processLogin
 );
 // Get users Profile /
-router.get(
-  "/profile",
-  //authMiddleware,
-  usersController.profile
-);
+router.get("/profile", authMiddleware, usersController.profile);
 
 // Logout
 router.get("/logout/", usersController.logout);

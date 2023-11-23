@@ -28,7 +28,7 @@ module.exports = {
 
         //configuro cookie en log in
         if (req.body.remember_user) {
-          res.cookie("userEmail", req.body.email, { maxAge: 1000 * 60 * 10 });
+          res.cookie(req.body.email, { maxAge: 1000 * 60 * 10 });
         }
         console.log("userLogged data:", req.session.userLogged);
         return res.redirect("/users/profile");
