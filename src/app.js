@@ -25,11 +25,7 @@ app.use(cookies());
 
 //Template Engine
 app.set("view engine", "ejs");
-<<<<<<< HEAD
-app.set("views", path.join(__dirname, "/views"));
-=======
 app.set("views", path.join(__dirname, "/views")); // Set views ejs
->>>>>>> main
 
 // Route System
 const mainRouter = require("./routes/main-router");
