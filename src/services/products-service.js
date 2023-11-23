@@ -1,23 +1,46 @@
-const db = require("../data/db");
+const { Product } = require("../database/models");
+const { v4: uuidv4 } = require("uuid");
 
-const productServices = {
+module.exports = {
   getAllProducts: () => {
-    return db.products.showAll();
+    return Product.findAll({ include: ["category", "brand"] });
   },
+
   getProduct: (id) => {
-    const product = db.products.findById(id);
-    return product;
+    return Product.findByPk(id, { include: ["category", "brand"] });
   },
-  createProduct: (product) => {
-    db.products.create(product);
+
+  createProduct: (body, file) => {
+    console.log(body);
+    return Product.create({
+      id: uuidv4(),
+      name: body.name,
+      price: Number(body.price),
+      description: body.description,
+      id_brand: body.brand,
+      id_category: body.category,
+      image: file ? file.filename : "default-image.jpeg",
+    });
   },
-  updateProduct: (id, product) => {
-    console.log(`Updating IN SERVICE product ${product.name}`);
-    db.products.update(id, product);
+
+  updateProduct: (id, body) => {
+    return Product.update(
+      {
+        name: body.name,
+        price: Number(body.price),
+        description: body.description,
+        id_brand: body.brand,
+        id_category: body.category,
+      },
+      {
+        where: { id: id },
+      }
+    );
   },
+
   deleteProduct: (id) => {
-    db.products.delete(id);
+    return Product.destroy({
+      where: { id: id },
+    });
   },
 };
-
-module.exports = productServices;

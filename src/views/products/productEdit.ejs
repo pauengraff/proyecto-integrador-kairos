@@ -1,66 +1,85 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-
-<head>
-
+  <head>
     <%- include("../partials/head") %>
-        <link rel="stylesheet" href="/css/styles-productAdd.css">
+    <link rel="stylesheet" href="/css/styles-productAdd.css" />
+    <script src="/js/productsEditValidation.js" defer></script>
 
+    <title>Kairos Add Products</title>
+  </head>
 
-        <title>Kairos Add Products</title>
-</head>
-
-
-<body>
+  <body>
     <%- include("../partials/header") %>
 
-    <form action="/products/<%= product.id %>?_method=put" method="POST">
-        <div class="form-body">
-
-            <div class="text-form">
-                <p class="text">¿Querés editar un producto?</p>
-                <p class="text-medium">Vas a modificar el artículo: <i>
-                    <%= product.name %>
-                </i></p>
-            </div>
-
-            <div class="form-register">
-                <label for="name">Modelo</label>
-                <input type="text" name="name" id="name" placeholder="Modelo Reloj" value="<%= product.name %>">
-            </div>
-
-            <select name="marca" class="form-register">
-                <% const brands = ["Garmin","Colmi","Suunto","Rolex","Tag Heuer","Omega","Casio","Seiko","Tissot","Imilab"]; %>
-                <option value="<%= product.brand %>"><%= product.brand %></option>
-                <% brands.forEach(brand => { %>
-                  <option value="<%= brand %>"><%= brand %></option>
-                <% }); %>
-              </select>
-
-              <select name="category" class="form-register">
-                <% const categories = ["Clasico", "Deportivo", "Moda Alta Gama", "Deporte Profesional"]; %>
-                <option value="<%= product.category %>"><%= product.category %></option>
-                <% categories.forEach(category => { %>
-                  <option value="<%= category %>"><%= category %></option>
-                <% }); %>
-              </select>
-
-            <div class="form-register">
-                <label for="description">Descripción</label>
-                <input type="text" name="description" id="description" placeholder="Descripcion"
-                    value="<%= product.description %>">
-            </div>
-
-            <div class="form-register">
-                <label for="price">Precio</label>
-                <input type="number" name="price" id="price" placeholder="Precio" value="<%= product.price %>">
-            </div>
-
-            <button type="submit">Modificar</button>
+    <form
+      action="/products/<%= product.id %>?_method=put"
+      method="POST"
+      id="form"
+    >
+      <div class="form-body">
+        <div class="text-form">
+          <p class="text">¿Querés editar un producto?</p>
+          <p class="text-medium">
+            Vas a modificar el artículo: <i> <%= product.name %> </i>
+          </p>
         </div>
+
+        <div class="form-register">
+          <label for="name">Modelo</label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            placeholder="Modelo Reloj"
+            value="<%= product.name %>"
+          />
+          <span class="errorMsg" id="nameError"></span>
+        </div>
+
+        <select name="brand" class="form-register" id="brand">
+          <option value="">Selecciona una marca</option>
+          <% brand.forEach(brand => { %>
+          <option value="<%= brand.id %>"><%= brand.name %></option>
+          <% }); %>
+        </select>
+        <span class="errorMsg" id="brandError"></span>
+
+        <select name="category" class="form-register" id="category">
+          <option value="">Selecciona una Categoria</option>
+          <% category.forEach(category => { %>
+          <option value="<%= category.id %>"><%= category.name %></option>
+          <% }); %>
+        </select>
+        <span class="errorMsg" id="categoryError"></span>
+
+        <div class="form-register">
+          <label for="description">Descripción</label>
+          <input
+            type="text"
+            name="description"
+            id="description"
+            placeholder="Descripcion"
+            value="<%= product.description %>"
+          />
+          <span class="errorMsg" id="descriptionError"></span>
+        </div>
+
+        <div class="form-register">
+          <label for="price">Precio</label>
+          <input
+            type="text"
+            name="price"
+            id="price"
+            placeholder="Precio"
+            value="<%= product.price %>"
+          />
+          <span class="errorMsg" id="priceError"></span>
+        </div>
+
+        <button type="submit">Modificar</button>
+      </div>
     </form>
 
     <%- include("../partials/footer") %>
-
-</body>
+  </body>
 </html>

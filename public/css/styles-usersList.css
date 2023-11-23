@@ -10,22 +10,21 @@ main {
   margin-right: auto;
 }
 
-.title-users{
+.title-users {
   font-size: 22px;
   font-weight: normal;
-  color: #001C3B;
+  color: #001c3b;
 }
 
-.main-users{
+.main-users {
   text-align: left;
   font-size: 16px;
-  color: #001C3B;
+  color: #001c3b;
   margin-bottom: 25px;
 }
 
 @media (min-width: 728px) {
   /* tablet */
-
 }
 
 @media (min-width: 1280px) {

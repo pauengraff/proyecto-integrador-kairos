@@ -108,7 +108,7 @@ main {
   margin-bottom: 20px;
 }
 
-@media (min-width: 769px){
+@media (min-width: 769px) {
   /* Laptop */
   .productPhoto {
     width: 40%;
@@ -138,9 +138,9 @@ main {
     width: 45%;
     margin-bottom: 0;
   }
- .buttonsProduct {
-  justify-content: space-between;
- }
+  .buttonsProduct {
+    justify-content: space-between;
+  }
 }
 
 @media (min-width: 1280px) {

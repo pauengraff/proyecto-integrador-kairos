@@ -14,9 +14,16 @@ module.exports = {
     const user = await User.findOne({ where: { email } });
     return user;
   },
+<<<<<<< HEAD
   getUserById: async (id) => {
     const user = await User.findOne({ where: { id } });
     return user;
+=======
+
+  getfindByEmail: (email, body) => {
+    const users = db.users.findByEmail(email, body);
+    return users;
+>>>>>>> main
   },
   createUser: (body, file) => {
     return User.create({
