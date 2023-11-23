@@ -1,38 +1,42 @@
 <!doctype html>
 <html lang="es">
-
-<head>
+  <head>
     <%- include("../partials/head") %>
-        <link rel="stylesheet" href="/css/styles-usersDetail.css" />
+    <link rel="stylesheet" href="/css/styles-usersDetail.css" />
 
-        <title>Kairos Detalle de Usuario</title>
-</head>
+    <title>Kairos Detalle de Usuario</title>
+  </head>
 
-<body>
+  <body>
     <%- include("../partials/header") %>
 
-        <section class="userDetail">
-            <div class="userPhoto">
-                <img class="userPhoto" src="/images/users/<%= users.avatar %>" alt="avatar" />
-            </div>
+    <section class="userDetail">
+      <div class="userPhoto">
+        <img class="userPhoto" src="/images/users/<%= users.avatar %>" alt="" />
+      </div>
 
-            <div class="userText">
-                <h1 class="userName">Hola,
-                    <%= users.first_name %>
-                        <%= users.last_name %>!
+      <div class="userText">
+        <h1 class="userName">
+          Hola, <%= users.first_name %> <%= users.last_name %>!
 
-                            <a href="/users/edit/<%= users.id %>" class="buttonBuy">Editar Usuario/a</a>
-                            <a href="/users/register/" class="buttonBuy">Agregar Usuario/a</a>
-                            <a href="/users/logout/" class="buttonBuy">Cerrar sesión</a>
-                            <form action="/users/<%= users.id %>?_method=delete" method="POST">
-                                <button type="submit" class="submit-button">Eliminar Usuario/a</button>
-                            </form>
-                </h1>
-            </div>
-        </section>
+          <a href="/users/edit/<%= users.id %>" class="buttonBuy"
+            >Editar Usuario/a</a
+          >
+          <a href="/users/register/" class="buttonBuy">Agregar Usuario/a</a>
+          <a href="/users/logout/" class="buttonBuy">Cerrar sesión</a>
+          <form
+            action="/users/<%= users.id %>?_method=delete"
+            method="POST"
+            class="buttonBuy"
+          >
+            <button type="submit" class="submit-button">
+              Eliminar Usuario/a
+            </button>
+          </form>
+        </h1>
+      </div>
+    </section>
 
-        <%- include("../partials/footer") %>
-
-</body>
-
+    <%- include("../partials/footer") %>
+  </body>
 </html>
