@@ -5,6 +5,7 @@
 
     <%- include("../partials/head") %>
         <link rel="stylesheet" href="/css/styles-login.css">
+        <script src="/js/loginValidation.js" defer></script>
 
 
         <title>Login</title>
@@ -16,7 +17,7 @@
 
     <main>
 
-        <form action="/users/login" method="post">
+        <form action="/users/login" method="post" id="form">
             <div class="form-body">
                 <div>
                     <p class="text">¡Bienvenido/a!</p>
