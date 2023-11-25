@@ -21,11 +21,11 @@ app.use(express.static(path.join(__dirname, "../public")));
 app.use(express.urlencoded({ extended: false }));
 app.use(methodOverride("_method"));
 app.use(cookies());
-//app.use(userCookiesMiddleware);
+app.use(userCookiesMiddleware);
 
 //Template Engine
 app.set("view engine", "ejs");
-app.set("views", path.join(__dirname, "/views")); // Set views ejs
+app.set("views", path.join(__dirname, "/views"));
 
 // Route System
 const mainRouter = require("./routes/main-router");
