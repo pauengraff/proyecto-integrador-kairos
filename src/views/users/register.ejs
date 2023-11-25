@@ -2,6 +2,8 @@
   <head>
     <%- include("../partials/head") %>
     <link rel="stylesheet" href="/css/styles-register.css" />
+    <script src="/js/registerValidation.js" defer></script>
+
 
     <title>Kairos Registro Usuario</title>
   </head>
@@ -9,7 +11,7 @@
   <body>
     <%- include("../partials/header") %>
 
-    <form action="/users/register" method="POST" enctype="multipart/form-data">
+    <form action="/users/register" method="POST" enctype="multipart/form-data" id="form">
       <div class="form-body">
         <div class="text-form">
           <p class="text">¡Creá una nueva cuenta!</p>
