@@ -56,15 +56,13 @@
         </div>
 
         <div class="form-register">
-<<<<<<< HEAD
           <label>Rol</label>
           <select name="rol" id="rol">
             <option value=" ">Seleccioná tu rol</option>
             <% rol.forEach(rol => { %>
-             <option value="<%= rol.id %>"><%= rol.name %></option>
+            <option value="<%= rol.id %>"><%= rol.name %></option>
             <% }) %>
           </select>
-=======
           <label>Fecha Nacimiento</label>
           <input
             type="date"
@@ -75,7 +73,6 @@
           <% if (locals.errors && errors.birth_date) { %>
           <div class="text-danger"><%= errors.birth_date.msg %></div>
           <% } %>
->>>>>>> main
         </div>
 
         <div class="form-register">
