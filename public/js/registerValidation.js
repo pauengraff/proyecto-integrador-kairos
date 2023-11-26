@@ -11,7 +11,7 @@ const validations = [
     },
     {
       field: "email",
-      check: (input) => input.value.length >= 1,
+      check: (input) => input.value.length >= 2,
       message: "Completa tu email",
     },
     {

@@ -27,7 +27,7 @@
                     <i class="fa-solid fa-user"></i>
                     <input type="text" name="email" id="email" placeholder="Usuario/a"
                         value="<%= locals.errors ? oldData.email : null %>" />
-
+                    <span class="errorMsg" id="emailError"></span>
                     <% if (locals.errors && errors.email) { %>
                 </div>
                 <div class="text-danger">
@@ -38,6 +38,7 @@
                     <div class="form-login">
                         <i class="fa-solid fa-lock"></i>
                         <input type="password" name="password" id="password" placeholder="Contraseña">
+                        <span class="errorMsg" id="passwordError"></span>
                         <% if (locals.errors && errors.password) { %>
                     </div>
 
