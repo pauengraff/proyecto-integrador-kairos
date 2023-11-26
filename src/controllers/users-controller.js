@@ -25,6 +25,8 @@ module.exports = {
       if (comparePassword) {
         delete userLogin.password;
         req.session.userLogged = userLogin.toJSON();
+        res.locals.isLogged = true;
+        res.locals.userLogged = req.session.userLogged;
 
         //configuro cookie en login
         if (req.body.remember_user) {
