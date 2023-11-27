@@ -27,6 +27,7 @@ module.exports = {
         req.session.userLogged = userLogin.toJSON();
         res.locals.isLogged = true;
         res.locals.userLogged = req.session.userLogged;
+        console.log("userLogged", res.locals.userLogged);
 
         //configuro cookie en login
         if (req.body.remember_user) {
@@ -67,12 +68,8 @@ module.exports = {
     const rol = await rolServiceSql.getAllRoles();
     res.render("users/register", { rol });
   },
+
   // Process to create user on db
-  // falta configurar roles en la lista
-  create: async (req, res) => {
-    const user = await usersServices.createUser(req.body, req.file);
-    res.redirect("/sql");
-  },
   processRegister: async (req, res) => {
     const userInDb = await usersServices.getUserByEmail(
       "email",
@@ -88,13 +85,17 @@ module.exports = {
         oldData: req.body,
       });
     }
-    const user = await usersServices.createUser(req.body, req.file); // Via servicio graba en base de datos
-    res.redirect("/users/login"); //redirijo a login al finalizar
+    const user = await usersServices.createUser(req.body, req.file);
+    res.redirect("/users/login");
   },
 
   edit: async (req, res) => {
-    const user = await usersServices.getUserById(req.params.id);
-    res.render("users/userEdit", { user });
+    const [user, rol] = await Promise.all([
+      usersServices.getUserById(req.params.id),
+      rolServiceSql.getAllRoles(),
+    ]);
+
+    res.render("users/userEdit", { user, rol });
   },
   update: async (req, res) => {
     await usersServices.updateUser(req.params.id, req.body);

@@ -4,14 +4,18 @@
     <link rel="stylesheet" href="/css/styles-register.css" />
     <script src="/js/registerValidation.js" defer></script>
 
-
     <title>Kairos Registro Usuario</title>
   </head>
 
   <body>
     <%- include("../partials/header") %>
 
-    <form action="/users/register" method="POST" enctype="multipart/form-data" id="form">
+    <form
+      action="/users/register"
+      method="POST"
+      enctype="multipart/form-data"
+      id="form"
+    >
       <div class="form-body">
         <div class="text-form">
           <p class="text">¡Creá una nueva cuenta!</p>
@@ -60,6 +64,8 @@
           <% } %>
         </div>
 
+        <% if (locals.isLogged && userLogged.id_rol === '1') { %>
+
         <div class="form-register">
           <label>Rol</label>
           <select name="rol" id="rol">
@@ -68,7 +74,11 @@
             <option value="<%= rol.id %>"><%= rol.name %></option>
             <% }) %>
           </select>
+        </div>
 
+        <% } %>
+
+        <div class="form-register">
           <label>Fecha Nacimiento</label>
           <input
             type="date"
