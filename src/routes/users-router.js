@@ -5,12 +5,12 @@ const multer = require("multer");
 
 const storage = multer.diskStorage({
   // configuracion de guardado //
-  destination: path.join(__dirname, "../../public/images/users/"), // destino donde va a guardar el archivo
+  destination: path.join(__dirname, "../../public/images/users/"),
   filename: function (req, file, cb) {
     cb(
       null,
       file.fieldname + "-" + Date.now() + path.extname(file.originalname)
-    ); // original name, deja extension del archivo
+    );
   },
 });
 

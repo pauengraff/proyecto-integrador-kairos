@@ -26,6 +26,8 @@
             <h1 class="productPrice">$ <%= product.price %></h1>
 
             <a href="/products/cart" class="buttonBuy">LO QUIERO!</a>
+
+            <% if (locals.isLogged && userLogged.id_rol === '1') { %>
             <div class="buttonsProduct">
               <a href="/products/edit/<%= product.id %>" class="submit-button"
                 >Editar</a
@@ -38,6 +40,7 @@
                 <button type="submit" class="submit-button">Eliminar</button>
               </form>
             </div>
+            <% } %>
           </div>
         </article>
 

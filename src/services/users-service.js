@@ -27,8 +27,8 @@ module.exports = {
       last_name: body.last_name,
       email: body.email,
       birth_date: body.birth_date,
-      password: bcrypt.hashSync(body.password, 10), //password encriptado
-      id_rol: body.rol,
+      password: bcrypt.hashSync(body.password, 10),
+      id_rol: body.rol ? body.rol : "2",
       avatar: file ? file.filename : "user-default-image.jpeg",
     });
   },
@@ -39,7 +39,7 @@ module.exports = {
         last_name: body.last_name,
         email: body.email,
         birth_date: body.birth_date,
-        id_rol: body.rol,
+        id_rol: body.rol ? body.rol : "2",
       },
       {
         where: { id: id },
