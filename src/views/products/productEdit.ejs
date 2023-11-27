@@ -39,7 +39,7 @@
         <select name="brand" class="form-register" id="brand">
           <option value="">Selecciona una marca</option>
           <% brand.forEach(brand => { %>
-          <option value="<%= brand.id %>"><%= brand.name %></option>
+          <option value="<%= brand.id %>" <%= brand.id === product.id_brand ? 'selected' : '' %>><%= brand.name %></option>
           <% }); %>
         </select>
         <span class="errorMsg" id="brandError"></span>
@@ -47,7 +47,7 @@
         <select name="category" class="form-register" id="category">
           <option value="">Selecciona una Categoria</option>
           <% category.forEach(category => { %>
-          <option value="<%= category.id %>"><%= category.name %></option>
+          <option value="<%= category.id %>" <%= category.id === product.id_category ? 'selected' : '' %>><%= category.name %></option>
           <% }); %>
         </select>
         <span class="errorMsg" id="categoryError"></span>
