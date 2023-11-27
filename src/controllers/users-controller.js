@@ -68,8 +68,8 @@ module.exports = {
     const rol = await rolServiceSql.getAllRoles();
     res.render("users/register", { rol });
   },
-  // Process to create user on db
 
+  // Process to create user on db
   processRegister: async (req, res) => {
     const userInDb = await usersServices.getUserByEmail(
       "email",
@@ -85,8 +85,8 @@ module.exports = {
         oldData: req.body,
       });
     }
-    const user = await usersServices.createUser(req.body, req.file); // Via servicio graba en base de datos
-    res.redirect("/users/login"); //redirijo a login al finalizar
+    const user = await usersServices.createUser(req.body, req.file);
+    res.redirect("/users/login");
   },
 
   edit: async (req, res) => {
