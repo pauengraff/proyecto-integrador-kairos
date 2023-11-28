@@ -1,5 +1,4 @@
 const productsService = require("../../services/products-service");
-const pageSize = 5;
 
 module.exports = {
   list: async (req, res) => {
