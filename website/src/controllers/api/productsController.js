@@ -5,7 +5,7 @@ module.exports = {
     const product = await productsService.getAllProducts();
     res.json({
       meta: {
-        status: 201,
+        status: 200,
         url: req.originalUrl,
       },
       data: product,
