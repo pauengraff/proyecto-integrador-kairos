@@ -1,6 +1,9 @@
 const { Router } = require("express");
 const router = Router();
 
+const apiRouter = require("./api/index");
+router.use("/api", apiRouter);
+
 const mainController = require("../controllers/main-controller");
 router.get("/", mainController.index);
 
@@ -9,8 +12,5 @@ router.use("/products", productsRouter);
 
 const usersRouter = require("./users-router");
 router.use("/users", usersRouter);
-
-const apiRouter = require("./api/index");
-router.use("/api", apiRouter);
 
 module.exports = router;

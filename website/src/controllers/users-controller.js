@@ -27,7 +27,6 @@ module.exports = {
         req.session.userLogged = userLogin.toJSON();
         res.locals.isLogged = true;
         res.locals.userLogged = req.session.userLogged;
-        console.log("userLogged", res.locals.userLogged);
 
         //configuro cookie en login
         if (req.body.remember_user) {
