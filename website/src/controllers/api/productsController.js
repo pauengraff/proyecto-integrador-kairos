@@ -50,7 +50,7 @@ module.exports = {
       data: product,
     });
   },
-
+  // Eliminar producto
   destroy: async (req, res) => {
     await productsService.deleteProduct(req.params.id);
     res.json({
