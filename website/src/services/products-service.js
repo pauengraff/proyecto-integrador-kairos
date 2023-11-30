@@ -11,7 +11,6 @@ module.exports = {
   },
 
   createProduct: (body, file) => {
-    console.log(body);
     return Product.create({
       id: uuidv4(),
       name: body.name,
