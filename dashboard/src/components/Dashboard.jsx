@@ -1,11 +1,11 @@
-import logo from "../assets/images/logo/kairos-logo-color.png"
+import logo from "../assets/images/logo/kairos-logo-color.png";
 
-function Dashboard (){
-    return (
-        <div>
-            <img src={logo}></img>
-        </div>
-    )
+function Dashboard() {
+  return (
+    <div>
+      <img src={logo}></img>
+    </div>
+  );
 }
 
-export default Dashboard
+export default Dashboard;
