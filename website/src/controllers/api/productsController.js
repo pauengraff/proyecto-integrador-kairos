@@ -6,6 +6,7 @@ module.exports = {
     res.json({
       meta: {
         status: 200,
+        total: product.length,
         url: req.originalUrl,
       },
       data: product,
@@ -17,6 +18,7 @@ module.exports = {
     res.json({
       meta: {
         status: 201,
+        total: product.length,
         url: req.originalUrl,
       },
       data: product,
