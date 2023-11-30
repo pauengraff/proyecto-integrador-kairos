@@ -6,7 +6,7 @@ class Products extends Component {
     super(props);
 
     this.state = {
-      products: [],
+      product: [],
     };
   }
 
@@ -16,10 +16,10 @@ class Products extends Component {
         return response.json();
       })
       .then((json) => {
-        const products = json.data;
-        console.log("products", products);
+        const product = json.data;
+        console.log("product", product);
         this.setState({
-          products: products,
+          product: product,
         });
       });
   }
@@ -29,10 +29,10 @@ class Products extends Component {
       <section className="">
         <h2 className="">Productos</h2>
         <div className="">
-          {this.state.products.length === 0
+          {this.state.product.length === 0
             ? "Cargando..."
-            : this.state.products.map((products) => (
-                <ProductItem key={products.id} name={products.name} />
+            : this.state.product.map((product) => (
+                <ProductItem key={product.id} name={product.name} />
               ))}
         </div>
       </section>
