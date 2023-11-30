@@ -50,4 +50,15 @@ module.exports = {
       data: product,
     });
   },
+
+  destroy: async (req, res) => {
+    await productsService.deleteProduct(req.params.id);
+    res.json({
+      meta: {
+        status: 200,
+        total: product.length,
+        url: req.originalUrl,
+      },
+    });
+  },
 };
