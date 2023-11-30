@@ -13,8 +13,21 @@ module.exports = {
     });
   },
 
+  detailById: async (req, res) => {
+    const product = await productsService.getProduct(req.params.id);
+    res.json({
+      meta: {
+        status: 200,
+        total: product.length,
+        url: req.originalUrl,
+      },
+      data: product,
+    });
+  },
+
+  //Solo creo Api para crear producto no para la vista de formulario
   create: async (req, res) => {
-    product = await productsService.createProduct();
+    product = await productsService.createProduct(req.body, req.file);
     res.json({
       meta: {
         status: 201,
