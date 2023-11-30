@@ -7,16 +7,16 @@
 
   <nav class="main-navbar">
     <ul>
-      <li><a href="/products">Relojes</a></li>
-      <li><a href="">Deportivos</a></li>
-      <li><a href="">Clásicos</a></li>
-      <li><a href="">Alta Gama</a></li>
-      <li><a href="">Profesional</a></li>
+      <li><a href="/products">RELOJES</a></li>
+      <li><a href="">DEPORTIVOS</a></li>
+      <li><a href="">CLÁSICOS</a></li>
+      <li><a href="">ALTA GAMA</a></li>
+      <li><a href="">PROFESIONAL</a></li>
     </ul>
   </nav>
 
-  <div>
-    <% if (locals.isLogged) { %> Hola <%= locals.userLogged.first_name %>
+  <div class="welcome-user">
+    <% if (locals.isLogged) { %> Hola, <%= locals.userLogged.first_name %>!
     <a href="/users/login/"
       ><i class="fa-solid fa-user nav-icons user-icon"></i
     ></a>

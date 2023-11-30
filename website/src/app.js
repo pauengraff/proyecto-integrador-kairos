@@ -16,6 +16,14 @@ app.use(
   })
 );
 
+const cors = require("cors");
+app.use(
+  cors(
+    (corsOptions = {
+      origin: "*",
+    })
+  )
+);
 app.use(express.json());
 app.use(express.static(path.join(__dirname, "../public")));
 app.use(express.urlencoded({ extended: false }));
