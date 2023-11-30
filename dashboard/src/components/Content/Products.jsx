@@ -32,7 +32,13 @@ class Products extends Component {
           {this.state.product.length === 0
             ? "Cargando..."
             : this.state.product.map((product) => (
-                <ProductItem key={product.id} name={product.name} />
+                <ProductItem
+                  key={product.id}
+                  name={product.name}
+                  brand={product.brand.name}
+                  category={product.category.name}
+                  description={product.description}
+                />
               ))}
         </div>
       </section>
