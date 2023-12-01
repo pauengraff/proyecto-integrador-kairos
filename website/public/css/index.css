@@ -18,7 +18,7 @@
   display: flex;
   padding: 0;
   width: 400%;
-  animation: slide 10s infinite ease-in-out;
+  animation: slide 14s infinite ease-in-out;
 }
 .slider-frame li {
   list-style: none;
