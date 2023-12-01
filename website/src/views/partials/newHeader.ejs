@@ -1,0 +1,42 @@
+<header class="main-header">
+  <i class="fa-solid fa-bars hamburguer-menu"></i>
+
+  <a href="/" class="logo-link">
+    <img src="/images/logo/kairos-logo-color.png" alt="" class="logo-header" />
+  </a>
+
+  <nav class="main-navbar">
+    <ul>
+      <li><a href="/products">RELOJES</a></li>
+      <li><a href="">DEPORTIVOS</a></li>
+      <li><a href="">CLÁSICOS</a></li>
+      <li><a href="">ALTA GAMA</a></li>
+      <li><a href="">PROFESIONAL</a></li>
+    </ul>
+  </nav>
+
+  <div class="welcome-user">
+    <% if (locals.isLogged) { %> Hola, <%= locals.userLogged.first_name %>!
+    <a href="/users/login/"
+      ><i class="fa-solid fa-user nav-icons user-icon"></i
+    ></a>
+    <a href="/products"
+      ><i class="fa-solid fa-magnifying-glass nav-icons"></i
+    ></a>
+    <a href="/products/Cart/"
+      ><i class="fa-solid fa-cart-shopping nav-icons"></i
+    ></a>
+
+    <% } else { %>
+    <a href="/users/login/"
+      ><i class="fa-solid fa-user nav-icons user-icon"></i
+    ></a>
+    <a href="/products"
+      ><i class="fa-solid fa-magnifying-glass nav-icons"></i
+    ></a>
+    <a href="/products/Cart/"
+      ><i class="fa-solid fa-cart-shopping nav-icons"></i
+    ></a>
+    <% } %>
+  </div>
+</header>
