@@ -9,7 +9,7 @@
 }
 /* slider */
 .slider-frame {
-  width: 1280px;
+  width: 100%;
   height: auto;
   margin: 0 auto 0;
   overflow: hidden;
@@ -234,7 +234,7 @@
   font-size: 12px;
   margin-top: 7%;
   width: 100%;
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: "Roboto";
 }
 
 @media (min-width: 769px) {
