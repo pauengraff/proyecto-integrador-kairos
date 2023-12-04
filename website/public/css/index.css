@@ -18,7 +18,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 90%;
+  width: 100%;
   max-width: 1200px;
   height: 100%;
   margin: 0 auto;
@@ -40,14 +40,40 @@
   --clip: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
   --transform: rotate(0);
 }
+.menu_link {
+  color: #fff;
+  text-decoration: none;
+  padding: 0 30px;
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+.menu_link:hover {
+  background-color: #d1c5aa;
+}
 .menu_arrow {
   transform: var(--transform);
   transition: transform 0.3s;
+  display: block;
+  margin-left: 3px;
 }
 .menu_nesting {
+  list-style: none;
+  transition: clip-path 0.3s;
   clip-path: var(--clip);
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: max-content;
+  transform: translateY(100%);
+  background-color: #7c92bd;
 }
-
+.menu_link--inside {
+  padding: 10px 50px 30px 20px;
+}
+.menu_link--inside:hover {
+  background-color: #798499;
+}
 /*  NavBar  */
 
 /* slider */
@@ -107,10 +133,25 @@
   width: 150px !important;
 }
 
+.menu_hamburguer {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+  cursor: pointer;
+  display: none;
+}
+.menu_img {
+  display: block;
+  width: 36px;
+}
+
+/*revisar para eliminar este css de menu hamburquesa*/
 .hamburguer-menu {
   font-size: 20px;
   color: #001c3b;
 }
+/*********************************************/
 
 .main-navbar {
   display: none;
