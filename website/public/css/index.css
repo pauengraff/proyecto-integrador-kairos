@@ -8,6 +8,48 @@
   font-family: "Roboto";
 }
 
+/*  NavBar  */
+.menu {
+  background-color: grey;
+  color: #fff;
+  height: 70px;
+}
+.menu_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  max-width: 1200px;
+  height: 100%;
+  margin: 0 auto;
+}
+.menu_links {
+  height: 100%;
+  transition: transform 0.5s;
+  display: flex;
+}
+.menu_item {
+  list-style: none;
+  position: relative;
+  height: 100%;
+  --clip: polygon(0 0, 100% 0%, 100% 0, 0 0);
+  --transform: rotate(-90deg);
+}
+/*https://bennettfeely.com/clippy/ poligonos para construir custom properties*/
+.menu_item:hover {
+  --clip: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+  --transform: rotate(0);
+}
+.menu_arrow {
+  transform: var(--transform);
+  transition: transform 0.3s;
+}
+.menu_nesting {
+  clip-path: var(--clip);
+}
+
+/*  NavBar  */
+
 /* slider */
 .slider-frame {
   width: 100%;
