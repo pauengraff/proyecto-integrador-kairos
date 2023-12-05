@@ -13,6 +13,7 @@
   background-color: grey;
   color: #fff;
   height: 70px;
+  margin: auto;
 }
 .menu_container {
   display: flex;
