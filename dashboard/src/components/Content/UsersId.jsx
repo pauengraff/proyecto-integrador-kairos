@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import "./ProductItem.css";
 
 function UsersId({ first_name, last_name, email }) {
   return (
