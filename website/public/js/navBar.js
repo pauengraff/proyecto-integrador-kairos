@@ -15,7 +15,6 @@
         if (subMenu.clientHeight === 0) {
           height = subMenu.scrollHeight;
         }
-
         subMenu.style.height = `${height}px`;
       });
     });
@@ -33,6 +32,7 @@
   window.addEventListener("resize", () => {
     if (window.innerWidth > 800) {
       deleteStyleheight();
+      if (list.classList.contains("menu_links--show")) list.classList.remove("menu_links--show");
     } else {
       addClick;
     }
@@ -41,4 +41,6 @@
   if (window.innerWidth <= 800) {
     addClick();
   }
+
+  menu.addEventListener("click", () => list.classList.toggle("menu_links--show"));
 })();
