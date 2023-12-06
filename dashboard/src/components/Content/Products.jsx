@@ -26,9 +26,9 @@ class Products extends Component {
 
   render() {
     return (
-      <section className="">
-        <h2 className="">Productos</h2>
-        <div className="">
+      <section className=''>
+        <h2 className=''>Productos</h2>
+        <div className=''>
           {this.state.product.length === 0
             ? "Cargando..."
             : this.state.product.map((product) => (

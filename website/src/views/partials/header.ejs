@@ -30,6 +30,7 @@
 </header> -->
 
 <header>
+  <script src="js/navBar.js" defer></script>
   <nav class="menu">
     <section class="menu_container">
       <a href="/" class="logo-link">
@@ -59,20 +60,29 @@
           </ul>
         </li>
 
-        <li class="menu_item menu_item--show">
-          <a href="#" class="menu_link">Login <img src="images/assets/arrow.svg" class="menu_arrow" /></a>
-          <ul class="menu_nesting">
-            <li class="menu_inside">
-              <a href="#" class="menu_link menu_link--inside">Inicia Sesion!</a>
+
+        <% if (locals.isLogged) { %> 
+          <li class="menu_item menu_item--show">
+            <a href="#" class="menu_link">Hola <%= locals.userLogged.first_name %> <img src="images/assets/arrow.svg" class="menu_arrow" /></a>
+            <ul class="menu_nesting">
+              <li class="menu_inside">
+                <a href="#" class="menu_link menu_link--inside">Tus datos</a>
+              </li>
+              <li class="menu_inside">
+                <a href="/products/Cart/" class="menu_link menu_link--inside">Tu carrito</a>
+              </li>
+              <li class="menu_inside">
+                <a href="#" class="menu_link menu_link--inside">Cerrar Sesion</a>
+              </li>
+            </ul>
+          </li>
+      
+          <% } else { %>
+            <li class="menu_item menu_item--show">
+              <a href="/users/login/" class="menu_link">Login <img src="images/assets/arrow.svg" class="menu_arrow" /></a>
             </li>
-            <li class="menu_inside">
-              <a href="#" class="menu_link menu_link--inside">Tus datos</a>
-            </li>
-            <li class="menu_inside">
-              <a href="#" class="menu_link menu_link--inside">Tu carrito</a>
-            </li>
-          </ul>
-        </li>
+          <% } %>
+        </div>
 
         <li class="menu_item">
           <a href="#" class="menu_link">Contactanos</a>
@@ -83,5 +93,6 @@
       </div>
     </section>
   </nav>
-  <script src="js/navBar.js"></script>
+  <!-- falta configurar con defer -->
+  <!-- <script src="js/navBar.js"></script> -->
 </header>

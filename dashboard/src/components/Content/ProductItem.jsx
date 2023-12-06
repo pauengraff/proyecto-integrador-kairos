@@ -3,7 +3,7 @@ import "./ProductItem.css";
 
 function ProductItem({ name, brand, description, category }) {
   return (
-    <article className="productitem">
+    <article className='productitem'>
       <div>{name}</div>
       <div>{brand}</div>
       <div>{category}</div>
