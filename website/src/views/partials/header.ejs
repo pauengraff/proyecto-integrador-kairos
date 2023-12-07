@@ -1,36 +1,7 @@
-<!-- <header class="main-header">
-  <i class="fa-solid fa-bars hamburguer-menu"></i>
 
-  <a href="/" class="logo-link">
-    <img src="/images/logo/kairos-logo-color.png" alt="" class="logo-header" />
-  </a>
-
-  <nav class="main-navbar">
-    <ul>
-      <li><a href="/products">RELOJES</a></li>
-      <li><a href="">DEPORTIVOS</a></li>
-      <li><a href="">CLÁSICOS</a></li>
-      <li><a href="">ALTA GAMA</a></li>
-      <li><a href="">PROFESIONAL</a></li>
-    </ul>
-  </nav>
-
-  <div class="welcome-user">
-    <% if (locals.isLogged) { %> Hola, <%= locals.userLogged.first_name %>!
-    <a href="/users/login/"><i class="fa-solid fa-user nav-icons user-icon"></i></a>
-    <a href="/products"><i class="fa-solid fa-magnifying-glass nav-icons"></i></a>
-    <a href="/products/Cart/"><i class="fa-solid fa-cart-shopping nav-icons"></i></a>
-
-    <% } else { %>
-    <a href="/users/login/"><i class="fa-solid fa-user nav-icons user-icon"></i></a>
-    <a href="/products"><i class="fa-solid fa-magnifying-glass nav-icons"></i></a>
-    <a href="/products/Cart/"><i class="fa-solid fa-cart-shopping nav-icons"></i></a>
-    <% } %>
-  </div>
-</header> -->
 
 <header>
-  <script src="js/navBar.js" defer></script>
+  <!-- <script src="/js/navBar.js" defer></script> -->
   <nav class="menu">
     <section class="menu_container">
       <a href="/" class="logo-link">
@@ -43,10 +14,14 @@
         </li>
 
         <li class="menu_item menu_item--show">
-          <a href="#" class="menu_link">Relojes <img src="images/assets/arrow.svg" class="menu_arrow" /></a>
+          <a href="#" class="menu_link">Relojes <img src="/images/assets/arrow.svg" class="menu_arrow" /></a>
+          
           <ul class="menu_nesting">
             <li class="menu_inside">
-              <a href="#" class="menu_link menu_link--inside">Clasico</a>
+              <a href="/products" class="menu_link menu_link--inside">Todos los productos </a>
+            </li>
+            <li class="menu_inside">
+              <a href="#" class="menu_link menu_link--inside">Clasico </a>
             </li>
             <li class="menu_inside">
               <a href="#" class="menu_link menu_link--inside">Moda Alta Gama</a>
@@ -63,7 +38,7 @@
 
         <% if (locals.isLogged) { %> 
           <li class="menu_item menu_item--show">
-            <a href="#" class="menu_link">Hola <%= locals.userLogged.first_name %> <img src="images/assets/arrow.svg" class="menu_arrow" /></a>
+            <a href="#" class="menu_link">Hola <%= locals.userLogged.first_name %> <img src="/images/assets/arrow.svg" class="menu_arrow" /></a>
             <ul class="menu_nesting">
               <li class="menu_inside">
                 <a href="#" class="menu_link menu_link--inside">Tus datos</a>
@@ -72,14 +47,14 @@
                 <a href="/products/Cart/" class="menu_link menu_link--inside">Tu carrito</a>
               </li>
               <li class="menu_inside">
-                <a href="#" class="menu_link menu_link--inside">Cerrar Sesion</a>
+                <a href="/users/logout/" class="menu_link menu_link--inside">Cerrar Sesion</a>
               </li>
             </ul>
           </li>
       
           <% } else { %>
             <li class="menu_item menu_item--show">
-              <a href="/users/login/" class="menu_link">Login <img src="images/assets/arrow.svg" class="menu_arrow" /></a>
+              <a href="/users/login/" class="menu_link">Login</a>
             </li>
           <% } %>
         </div>
@@ -89,10 +64,10 @@
         </li>
       </ul>
       <div class="menu_hamburguer">
-        <img src="images/assets/menu.svg" class="menu_img" />
+        <img src="/images/assets/menu.svg" class="menu_img" />
       </div>
     </section>
   </nav>
-  <!-- falta configurar con defer -->
-  <!-- <script src="js/navBar.js"></script> -->
+  
+  <script src="/js/navBar.js"></script>
 </header>
