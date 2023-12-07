@@ -76,6 +76,10 @@
 .menu_link--inside:hover {
   background-color: #798499;
 }
+.menu_image_avatar {
+  width: 50px;
+  margin: 10px;
+}
 /*  NavBar  */
 
 /* slider */

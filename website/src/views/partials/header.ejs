@@ -38,7 +38,7 @@
 
         <% if (locals.isLogged) { %> 
           <li class="menu_item menu_item--show">
-            <a href="#" class="menu_link">Hola <%= locals.userLogged.first_name %> <img src="/images/assets/arrow.svg" class="menu_arrow" /></a>
+            <a href="#" class="menu_link"><img src="/images/users/<%= locals.userLogged.avatar %>" alt="avatar" class="menu_image_avatar">Hola <%= locals.userLogged.first_name %> <img src="/images/assets/arrow.svg" class="menu_arrow" /></a>
             <ul class="menu_nesting">
               <li class="menu_inside">
                 <a href="#" class="menu_link menu_link--inside">Tus datos</a>
