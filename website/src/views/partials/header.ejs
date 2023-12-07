@@ -40,6 +40,12 @@
           <li class="menu_item menu_item--show">
             <a href="#" class="menu_link"><img src="/images/users/<%= locals.userLogged.avatar %>" alt="avatar" class="menu_image_avatar">Hola <%= locals.userLogged.first_name %> <img src="/images/assets/arrow.svg" class="menu_arrow" /></a>
             <ul class="menu_nesting">
+              <% if (locals.isLogged && userLogged.id_rol === '1') { %>
+                <li class="menu_inside">
+                  <a href="/users" class="menu_link menu_link--inside">Ver Todos los usuarios</a>
+                </li>
+                <% } %>
+
               <li class="menu_inside">
                 <a href="/users/profile" class="menu_link menu_link--inside">Tus datos</a>
               </li>
