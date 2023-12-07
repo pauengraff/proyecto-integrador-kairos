@@ -18,17 +18,12 @@ module.exports = {
     const userLogin = await usersServices.getUserByEmail(req.body.email);
 
     if (userLogin) {
-      const comparePassword = bcrypt.compareSync(
-        req.body.password,
-        userLogin.password
-      );
+      const comparePassword = bcrypt.compareSync(req.body.password, userLogin.password);
       if (comparePassword) {
         delete userLogin.password;
         req.session.userLogged = userLogin.toJSON();
         res.locals.isLogged = true;
         res.locals.userLogged = req.session.userLogged;
-        console.log("EN LOGIN res.locals.isLogged", res.locals.isLogged);
-        console.log("res.locals.userLogged", res.locals.userLogged);
 
         //configuro cookie en login
         if (req.body.remember_user) {
@@ -72,10 +67,7 @@ module.exports = {
 
   // Process to create user on db
   processRegister: async (req, res) => {
-    const userInDb = await usersServices.getUserByEmail(
-      "email",
-      req.body.email
-    );
+    const userInDb = await usersServices.getUserByEmail("email", req.body.email);
     if (userInDb) {
       return res.render("users/register", {
         errors: {
@@ -91,10 +83,7 @@ module.exports = {
   },
 
   edit: async (req, res) => {
-    const [user, rol] = await Promise.all([
-      usersServices.getUserById(req.params.id),
-      rolServiceSql.getAllRoles(),
-    ]);
+    const [user, rol] = await Promise.all([usersServices.getUserById(req.params.id), rolServiceSql.getAllRoles()]);
 
     res.render("users/userEdit", { user, rol });
   },
