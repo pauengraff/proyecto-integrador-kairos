@@ -1,42 +1,79 @@
-<header class="main-header">
-  <i class="fa-solid fa-bars hamburguer-menu"></i>
 
-  <a href="/" class="logo-link">
-    <img src="/images/logo/kairos-logo-color.png" alt="" class="logo-header" />
-  </a>
 
-  <nav class="main-navbar">
-    <ul>
-      <li><a href="/products">RELOJES</a></li>
-      <li><a href="">DEPORTIVOS</a></li>
-      <li><a href="">CLÁSICOS</a></li>
-      <li><a href="">ALTA GAMA</a></li>
-      <li><a href="">PROFESIONAL</a></li>
-    </ul>
+<header>
+  
+  <nav class="menu">
+    <section class="menu_container">
+      <a href="/" class="logo-link">
+        <img src="\images\logo\kairos-logo-un-color-beige.png" alt="logo_beige" class="logo-header" />
+      </a>
+
+      <ul class="menu_links">
+        <li class="menu_item">
+          <a href="/" class="menu_link">Inicio</a>
+        </li>
+
+        <li class="menu_item menu_item--show">
+          <a href="#" class="menu_link">Relojes <img src="/images/assets/arrow.svg" class="menu_arrow" /></a>
+          
+          <ul class="menu_nesting">
+            <li class="menu_inside">
+              <a href="/products" class="menu_link menu_link--inside">Todos los productos </a>
+            </li>
+            <li class="menu_inside">
+              <a href="#" class="menu_link menu_link--inside">Clasico </a>
+            </li>
+            <li class="menu_inside">
+              <a href="#" class="menu_link menu_link--inside">Moda Alta Gama</a>
+            </li>
+            <li class="menu_inside">
+              <a href="#" class="menu_link menu_link--inside">Deportivo</a>
+            </li>
+            <li class="menu_inside">
+              <a href="#" class="menu_link menu_link--inside">Deporte Profesional</a>
+            </li>
+          </ul>
+        </li>
+
+
+        <% if (locals.isLogged) { %> 
+          <li class="menu_item menu_item--show">
+            <a href="#" class="menu_link"><img src="/images/users/<%= locals.userLogged.avatar %>" alt="avatar" class="menu_image_avatar">Hola <%= locals.userLogged.first_name %> <img src="/images/assets/arrow.svg" class="menu_arrow" /></a>
+            <ul class="menu_nesting">
+              <% if (locals.isLogged && userLogged.id_rol === '1') { %>
+                <li class="menu_inside">
+                  <a href="/users" class="menu_link menu_link--inside">Ver Todos los usuarios</a>
+                </li>
+                <% } %>
+
+              <li class="menu_inside">
+                <a href="/users/profile" class="menu_link menu_link--inside">Tus datos</a>
+              </li>
+              <li class="menu_inside">
+                <a href="/products/Cart/" class="menu_link menu_link--inside">Tu carrito</a>
+              </li>
+              <li class="menu_inside">
+                <a href="/users/logout/" class="menu_link menu_link--inside">Cerrar Sesion</a>
+              </li>
+            </ul>
+          </li>
+      
+          <% } else { %>
+            <li class="menu_item menu_item--show">
+              <a href="/users/login/" class="menu_link">Login</a>
+            </li>
+          <% } %>
+        </div>
+
+        <li class="menu_item">
+          <a href="#" class="menu_link">Contactanos</a>
+        </li>
+      </ul>
+      <div class="menu_hamburguer">
+        <img src="/images/assets/menu.svg" class="menu_img" />
+      </div>
+    </section>
   </nav>
-
-  <div class="welcome-user">
-    <% if (locals.isLogged) { %> Hola, <%= locals.userLogged.first_name %>!
-    <a href="/users/login/"
-      ><i class="fa-solid fa-user nav-icons user-icon"></i
-    ></a>
-    <a href="/products"
-      ><i class="fa-solid fa-magnifying-glass nav-icons"></i
-    ></a>
-    <a href="/products/Cart/"
-      ><i class="fa-solid fa-cart-shopping nav-icons"></i
-    ></a>
-
-    <% } else { %>
-    <a href="/users/login/"
-      ><i class="fa-solid fa-user nav-icons user-icon"></i
-    ></a>
-    <a href="/products"
-      ><i class="fa-solid fa-magnifying-glass nav-icons"></i
-    ></a>
-    <a href="/products/Cart/"
-      ><i class="fa-solid fa-cart-shopping nav-icons"></i
-    ></a>
-    <% } %>
-  </div>
+  
+  <script src="/js/navBar.js"></script>
 </header>

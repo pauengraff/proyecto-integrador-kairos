@@ -1,12 +1,5 @@
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
 body {
   height: 100vh;
-  font-family: "Roboto";
 }
 
 .banner-product img {
@@ -17,7 +10,6 @@ body {
 }
 
 .title-products {
-  font-family: Georgia, "Times New Roman", Times, serif;
   text-align: left;
   font-weight: normal;
   color: #001c3b;

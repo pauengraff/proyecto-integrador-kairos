@@ -10,12 +10,7 @@
   <body>
     <%- include("../partials/header") %>
 
-    <form
-      action="/users/register"
-      method="POST"
-      enctype="multipart/form-data"
-      id="form"
-    >
+    <form action="/users/register" method="POST" enctype="multipart/form-data" id="form">
       <div class="form-body">
         <div class="text-form">
           <p class="text">¡Creá una nueva cuenta!</p>
@@ -38,12 +33,7 @@
 
         <div class="form-register">
           <label>Apellido</label>
-          <input
-            type="text"
-            name="last_name"
-            id="last_name"
-            value="<%= locals.errors ? oldData.last_name : null %>"
-          />
+          <input type="text" name="last_name" id="last_name" value="<%= locals.errors ? oldData.last_name : null %>" />
           <span class="errorMsg" id="last_nameError"></span>
           <% if (locals.errors && errors.last_name) { %>
           <div class="text-danger"><%= errors.last_name.msg %></div>
@@ -52,12 +42,7 @@
 
         <div class="form-register">
           <label>Email</label>
-          <input
-            type="text"
-            name="email"
-            id="email"
-            value="<%= locals.errors ? oldData.email : null %>"
-          />
+          <input type="text" name="email" id="email" value="<%= locals.errors ? oldData.email : null %>" />
           <span class="errorMsg" id="emailError"></span>
           <% if (locals.errors && errors.email) { %>
           <div class="text-danger"><%= errors.email.msg %></div>

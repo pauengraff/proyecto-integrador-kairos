@@ -23,10 +23,7 @@
 
         <!-- Contenedor de usuarios -->
         <div class="main-users">
-          <section>
-            <% users.forEach(users=> { %> <%- include("../partials/userCard",
-            {users}) %> <% }) %>
-          </section>
+          <section><% users.forEach(users=> { %> <%- include("../partials/userCard", {users}) %> <% }) %></section>
         </div>
       </div>
     </main>
