@@ -8,7 +8,7 @@ function Dashboard() {
     <div>
       <Products />
       <Users />
-      <img className="width-20" src={logo}></img>
+      <img className='width-20' src={logo}></img>
     </div>
   );
 }

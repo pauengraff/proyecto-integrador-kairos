@@ -19,25 +19,20 @@ class Users extends Component {
         const user = json.data;
         console.log("user", user);
         this.setState({
-            user: user,
+          user: user,
         });
       });
   }
 
   render() {
     return (
-      <section className="">
-        <h2 className="">Usuarios</h2>
-        <div className="">
+      <section className=''>
+        <h2 className=''>Usuarios</h2>
+        <div className=''>
           {this.state.user.length === 0
             ? "Cargando..."
             : this.state.user.map((user) => (
-                <UsersId
-                  key={user.id}
-                  first_name={user.first_name}
-                  last_name={user.last_name}
-                  email={user.email}
-                />
+                <UsersId key={user.id} first_name={user.first_name} last_name={user.last_name} email={user.email} />
               ))}
         </div>
       </section>
