@@ -38,6 +38,7 @@ class Products extends Component {
                   brand={product.brand.name}
                   category={product.category.name}
                   description={product.description}
+                  image={product.image}
                 />
               ))}
         </div>
