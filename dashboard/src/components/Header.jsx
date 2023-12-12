@@ -3,9 +3,9 @@ import logo from "../assets/images/logo/kairos-logo-color.png";
 
 export default function Header() {
   return (
-    <div>
+    <div className='header'>
       Soy el Header
-      <img className='width-20' src={logo}></img>
+      <img className='logo' src={logo}></img>
     </div>
   );
 }

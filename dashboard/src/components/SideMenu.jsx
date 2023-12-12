@@ -1,5 +1,5 @@
 import "./SideMenu.css";
 
 export default function SideMenu() {
-  return <div>Soy el SideMenu</div>;
+  return <div className='sideMenu'>Soy el SideMenu</div>;
 }

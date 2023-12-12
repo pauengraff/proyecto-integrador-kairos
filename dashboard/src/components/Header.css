@@ -1,0 +1,19 @@
+.header {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 50%; /* Centrar horizontalmente */
+  transform: translateX(-50%); /* Centrar horizontalmente */
+  width: 100%;
+  color: #333;
+  padding: 10px;
+  box-sizing: border-box;
+  max-height: 200px;
+  overflow: hidden;
+  text-align: center; /* Centrar el contenido dentro del Header */
+}
+.logo {
+  align-items: start;
+  margin-right: 10px;
+}
