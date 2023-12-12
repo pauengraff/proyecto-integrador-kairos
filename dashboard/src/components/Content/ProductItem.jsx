@@ -2,13 +2,17 @@ import PropTypes from "prop-types";
 import "./ProductItem.css";
 
 function ProductItem({ name, brand, description, category, image }) {
+  const imageRoute = "http://localhost:3008/images/products/";
+  // const { image } = image;
+  console.log("fileImage", image);
+
   return (
     <article className='productitem'>
       <div>{name}</div>
       <div>{brand}</div>
       <div>{category}</div>
       <div>{description}</div>
-      <div>{image}</div>
+      <img src={imageRoute + image} alt='imagenReloj' />
     </article>
   );
 }
