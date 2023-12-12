@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import "./ProductItem.css";
+import "./UsersId.css";
 
 function UsersId({ first_name, last_name, email, avatar }) {
   const imageRoute = "http://localhost:3008/images/users/";
