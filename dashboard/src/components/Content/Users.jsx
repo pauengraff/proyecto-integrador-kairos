@@ -32,7 +32,13 @@ class Users extends Component {
           {this.state.user.length === 0
             ? "Cargando..."
             : this.state.user.map((user) => (
-                <UsersId key={user.id} first_name={user.first_name} last_name={user.last_name} email={user.email} />
+                <UsersId
+                  key={user.id}
+                  first_name={user.first_name}
+                  last_name={user.last_name}
+                  email={user.email}
+                  avatar={user.avatar}
+                />
               ))}
         </div>
       </section>
