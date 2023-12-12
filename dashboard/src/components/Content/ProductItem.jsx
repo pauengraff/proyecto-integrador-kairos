@@ -3,8 +3,6 @@ import "./ProductItem.css";
 
 function ProductItem({ name, brand, description, category, image }) {
   const imageRoute = "http://localhost:3008/images/products/";
-  // const { image } = image;
-  console.log("fileImage", image);
 
   return (
     <article className='productitem'>
@@ -12,7 +10,7 @@ function ProductItem({ name, brand, description, category, image }) {
       <div>{brand}</div>
       <div>{category}</div>
       <div>{description}</div>
-      <img src={imageRoute + image} alt='imagenReloj' />
+      <img src={imageRoute + image} alt='imagenReloj' className='imgProduct' />
     </article>
   );
 }
