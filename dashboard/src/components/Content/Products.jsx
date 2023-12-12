@@ -1,49 +1,37 @@
 import ProductItem from "./ProductItem";
-import { Component } from "react";
+import { useEffect, useState } from "react";
 
-class Products extends Component {
-  constructor(props) {
-    super(props);
+function Products() {
+  const [products, setProducts] = useState([]);
 
-    this.state = {
-      product: [],
+  useEffect(() => {
+    const fetchData = async () => {
+      const response = await fetch("http://localhost:3008/api/products");
+      const result = await response.json();
+      setProducts(result.data);
     };
-  }
+    fetchData();
+  }, []);
 
-  componentDidMount() {
-    fetch("http://localhost:3008/api/products")
-      .then((response) => {
-        return response.json();
-      })
-      .then((json) => {
-        const product = json.data;
-        console.log("product", product);
-        this.setState({
-          product: product,
-        });
-      });
-  }
-
-  render() {
-    return (
-      <section className=''>
-        <h2 className=''>Productos</h2>
-        <div className=''>
-          {this.state.product.length === 0
-            ? "Cargando..."
-            : this.state.product.map((product) => (
-                <ProductItem
-                  key={product.id}
-                  name={product.name}
-                  brand={product.brand.name}
-                  category={product.category.name}
-                  description={product.description}
-                />
-              ))}
-        </div>
-      </section>
-    );
-  }
+  return (
+    <section className=''>
+      <h2 className=''>Productos</h2>
+      <div className=''>
+        {products.length === 0
+          ? "Cargando..."
+          : products.map((product) => (
+              <ProductItem
+                key={product.id}
+                name={product.name}
+                brand={product.brand.name}
+                category={product.category.name}
+                description={product.description}
+                image={product.image}
+              />
+            ))}
+      </div>
+    </section>
+  );
 }
 
 export default Products;
