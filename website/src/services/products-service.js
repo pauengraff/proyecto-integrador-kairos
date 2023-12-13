@@ -10,6 +10,13 @@ module.exports = {
     return Product.findByPk(id, { include: ["category", "brand"] });
   },
 
+  getAllProductsAndCount: ({ pageSize, offset }) => {
+    return Product.findAndCountAll({
+      limit: pageSize,
+      offset: offset,
+    });
+  },
+
   createProduct: (body, file) => {
     return Product.create({
       id: uuidv4(),

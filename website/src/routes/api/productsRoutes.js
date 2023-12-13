@@ -5,6 +5,8 @@ const apiProductsController = require("../../controllers/api/productsController"
 
 router.get("/", apiProductsController.list);
 
+router.get("/count", apiProductsController.count);
+
 router.get("/:id/", apiProductsController.detailById);
 
 router.post("create/", apiProductsController.create);
