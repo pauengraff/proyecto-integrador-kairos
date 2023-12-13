@@ -13,7 +13,7 @@
   background-color: brown;
 }
 .header p {
-  margin: 0 auto; /* Esto centrará el texto dentro del párrafo */
+  margin: 0 auto; /* Centro el texto dentro del Header*/
 }
 .logo {
   width: 10%;
