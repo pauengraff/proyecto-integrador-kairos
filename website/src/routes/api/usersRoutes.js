@@ -5,6 +5,8 @@ const apiUsersController = require("../../controllers/api/usersController");
 
 router.get("/", apiUsersController.list);
 
+router.get("/count", apiUsersController.count);
+
 router.get("/:id/", apiUsersController.detailById);
 
 router.post("create/", apiUsersController.create);
