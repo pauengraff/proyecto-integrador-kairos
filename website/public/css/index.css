@@ -490,14 +490,19 @@
 
   .main-footer {
     display: flex;
-    
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: flex-start;
   }
 
   .left-section-footer {
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    margin-inline: auto;
+    text-align: left;
+    width: 50%;
+  }
+
+  .right-section-footer {
+    text-align: right;
+    width: 50%;
   }
 
   .copyright {
