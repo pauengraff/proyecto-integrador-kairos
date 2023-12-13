@@ -1,5 +1,6 @@
 const { Product } = require("../database/models");
 const { v4: uuidv4 } = require("uuid");
+const { Sequelize } = require("sequelize");
 
 module.exports = {
   getAllProducts: () => {
