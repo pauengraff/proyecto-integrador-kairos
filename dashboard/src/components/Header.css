@@ -1,19 +1,21 @@
 .header {
-  display: flex;
-  align-items: center;
+  box-sizing: border-box;
   position: fixed;
   top: 0;
-  left: 50%; /* Centrar horizontalmente */
-  transform: translateX(-50%); /* Centrar horizontalmente */
+  left: 0;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   width: 100%;
-  color: #333;
-  padding: 10px;
-  box-sizing: border-box;
-  max-height: 200px;
-  overflow: hidden;
-  text-align: center; /* Centrar el contenido dentro del Header */
+  text-align: center;
+  height: 135px;
+  background-color: brown;
+}
+.header p {
+  margin: 0 auto; /* Esto centrará el texto dentro del párrafo */
 }
 .logo {
-  align-items: start;
-  margin-right: 10px;
+  width: 10%;
+  height: auto;
 }

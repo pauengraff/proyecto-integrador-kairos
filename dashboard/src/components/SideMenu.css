@@ -1,6 +1,7 @@
 .sideMenu {
   position: fixed;
-  top: 200px;
+  top: 135px;
+
   left: 0; /* Colocar en el lado derecho */
   width: 100px; /* Ancho fijo de 100px */
   height: 100%; /* Ocupar toda la altura de la página */
