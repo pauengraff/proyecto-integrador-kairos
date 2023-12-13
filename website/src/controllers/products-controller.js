@@ -22,10 +22,7 @@ module.exports = {
   // ADD PRODUCT
   // form to create product
   add: async (req, res) => {
-    const [category, brand] = await Promise.all([
-      categoriesService.getAllCategories(),
-      brandService.getAllBrands(),
-    ]);
+    const [category, brand] = await Promise.all([categoriesService.getAllCategories(), brandService.getAllBrands()]);
     res.render("products/productAdd", { category, brand });
   },
   // Process to store product on db
