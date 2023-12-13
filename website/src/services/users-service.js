@@ -7,6 +7,13 @@ module.exports = {
     return User.findAll();
   },
 
+  getAllUsersAndCount: ({ pageSize, offset }) => {
+    return User.findAndCountAll({
+      limit: pageSize,
+      offset: offset,
+    });
+  },
+
   getCreated: (registro) => {
     return User.create(registro);
   },
