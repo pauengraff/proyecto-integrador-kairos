@@ -287,7 +287,6 @@
 
 .left-section-footer {
   color: #001c3b;
-  margin-top: 15px;
   text-align: center;
 }
 
@@ -312,7 +311,6 @@
   color: #001c3b;
   font-size: 20px;
   font-weight: bold;
-  margin-top: 20px;
   margin-bottom: 5px;
 }
 
@@ -496,6 +494,7 @@
   }
 
   .left-section-footer {
+    display: flex;
     text-align: left;
     width: 50%;
   }
@@ -503,6 +502,7 @@
   .right-section-footer {
     text-align: right;
     width: 50%;
+    margin-bottom: 20px;
   }
 
   .copyright {
