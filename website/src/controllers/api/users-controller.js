@@ -1,17 +1,17 @@
 const usersService = require("../../services/users-service");
 
 module.exports = {
-  list: async (req, res) => {
-    const user = await usersService.getAllUsers();
-    res.json({
-      meta: {
-        status: 200,
-        total: user.length,
-        url: req.originalUrl,
-      },
-      data: user,
-    });
-  },
+  // list: async (req, res) => {
+  //   const user = await usersService.getAllUsers();
+  //   res.json({
+  //     meta: {
+  //       status: 200,
+  //       total: user.length,
+  //       url: req.originalUrl,
+  //     },
+  //     data: user,
+  //   });
+  // },
 
   count: async (req, res) => {
     const pageSize = 5;

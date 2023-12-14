@@ -1,17 +1,17 @@
 const productsService = require("../../services/products-service");
 
 module.exports = {
-  list: async (req, res) => {
-    const product = await productsService.getAllProducts();
-    res.json({
-      meta: {
-        status: 200,
-        total: product.length,
-        url: req.originalUrl,
-      },
-      data: product,
-    });
-  },
+  // list: async (req, res) => {
+  //   const product = await productsService.getAllProducts();
+  //   res.json({
+  //     meta: {
+  //       status: 200,
+  //       total: product.length,
+  //       url: req.originalUrl,
+  //     },
+  //     data: product,
+  //   });
+  // },
 
   count: async (req, res) => {
     const pageSize = 5;
@@ -62,7 +62,7 @@ module.exports = {
     await productsService.updateProduct(req.params.id, req.body);
     res.json({
       meta: {
-        status: 201,
+        status: 200,
         total: product.length,
         url: req.originalUrl,
       },
