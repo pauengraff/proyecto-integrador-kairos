@@ -35,7 +35,7 @@ module.exports = {
       return res.render("users/login", {
         errors: {
           email: {
-            msg: "La Contraseña es inválida",
+            msg: "Los datos ingresados no son correctos",
           },
         },
         oldData: req.body,

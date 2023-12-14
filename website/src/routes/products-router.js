@@ -32,7 +32,7 @@ router.get("/edit/:id", productsController.edit);
 router.put("/:id", validateEditForm, editProductMiddleware, productsController.update);
 
 /*** GET ONE PRODUCT BY ID ***/
-router.get("/:id/", productsController.detailById);
+router.get("/:id", productsController.detailById);
 
 /*** DELETE ONE PRODUCT***/
 router.delete("/:id", productsController.destroy);

@@ -27,8 +27,8 @@ router.get("/", usersController.userList);
 
 // Login
 router.get("/login", guestMiddleware, usersController.login);
-
 router.post("/login", validation, validationErrorsLogin, usersController.processLogin);
+
 // Get users Profile /
 router.get("/profile", authMiddleware, usersController.profile);
 
