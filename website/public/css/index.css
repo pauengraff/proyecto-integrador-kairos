@@ -274,51 +274,62 @@
   transform: translate(-50%, -50%);
 }
 
-.footer {
-  background-color: #001c3b;
-}
-
 .main-footer {
-  background-color: #001c3b;
+  background-color: #d1c5aa;
   padding: 20px;
   padding-bottom: 10px;
-  font-family: "Roboto";
-  max-width: 1500px;
-  margin-inline: auto;
-}
-
-.logo-footer {
-  width: 30vw;
-  margin-inline: auto;
-}
-
-.logo-footer img {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.icons-footer {
-  width: 50%;
-  margin-inline: auto;
-  margin-top: 5px;
+.left-section-footer {
+  color: #001c3b;
   text-align: center;
 }
 
-.icons-footer i {
-  color: white;
-  margin: 0 1px;
+.left-section-footer ul {
+  list-style-type: none;
+  font-size: 14px;
+  margin: auto;
+  margin-bottom: 20px;
+
+}
+
+.footer-title {
+  font-weight: bold;
 }
 
 .right-section-footer {
-  display: none;
+  text-align: center;
+  color: #001c3b;
+}
+
+.right-section-footer p {
+  color: #001c3b;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.icons-footer {
+  margin-inline: auto;
+  margin-top: 5px;
+}
+
+.icons-footer i {
+  color: #001c3b;
+  margin: 5px;
+  font-size: 20px;
 }
 
 .copyright {
-  color: white;
-  text-align: center;
-  font-size: 12px;
-  margin-top: 7%;
-  width: 100%;
-  font-family: "Roboto";
+  color: #001c3b;
+  font-size: 10px;
+  margin: auto;
+  margin-top: 20px;
 }
 
 @media (max-width: 800px) {
@@ -478,35 +489,26 @@
   .main-footer {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    padding-inline: 5%;
+    flex-direction: row;
+    align-items: flex-start;
   }
 
   .left-section-footer {
-    width: 45%;
+    display: flex;
+    text-align: left;
+    width: 50%;
   }
 
   .right-section-footer {
-    display: block;
-    width: 45%;
-    color: white;
-  }
-
-  .logo-footer {
-    width: 100%;
-  }
-
-  .logo-footer img {
-    width: 60%;
-  }
-
-  .icons-footer {
-    width: 100%;
-    text-align: left;
+    text-align: right;
+    width: 50%;
+    margin-bottom: 20px;
   }
 
   .copyright {
-    font-size: 18px;
+    font-size: 10px;
+    margin: auto;
+    justify-content: center;
   }
 }
 
