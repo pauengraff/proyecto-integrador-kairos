@@ -11,10 +11,10 @@ const productsController = require("../controllers/products-controller");
 
 // Products create validation
 const validateForm = require("../validation/validationAddProduct");
-const addProductMiddleware = require("../middlewares/addProductMiddleware");
+const addProductMiddleware = require("../middlewares/add-product-middleware");
 // Products Edit validation
 const validateEditForm = require("../validation/validationEditProduct");
-const editProductMiddleware = require("../middlewares/editProductMiddleware");
+const editProductMiddleware = require("../middlewares/edit-product-middleware");
 
 // Rutas products
 //GET ALL PRODUCTS

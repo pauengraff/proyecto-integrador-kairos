@@ -17,8 +17,8 @@ const validation = require("../validation/validation-login");
 const validationErrorsLogin = require("../middlewares/login");
 
 // Guest - User routes middleware
-const guestMiddleware = require("../middlewares/guestMiddleware");
-const authMiddleware = require("../middlewares/authMiddleware");
+const guestMiddleware = require("../middlewares/guest-middleware");
+const authMiddleware = require("../middlewares/auth-middleware");
 //guestMiddleware, ver este middleware para el login
 
 // Routes Users
