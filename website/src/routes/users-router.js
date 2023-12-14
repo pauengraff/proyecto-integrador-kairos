@@ -1,17 +1,9 @@
 const express = require("express");
 const router = express.Router();
-const path = require("path");
-const multer = require("multer");
 
-const storage = multer.diskStorage({
-  // configuracion de guardado //
-  destination: path.join(__dirname, "../../public/images/users/"),
-  filename: function (req, file, cb) {
-    cb(null, file.fieldname + "-" + Date.now() + path.extname(file.originalname));
-  },
-});
-
-const upload = multer({ storage: storage });
+// ** Multer middleware **//
+const multerMiddleware = require("../middlewares/multer-middleware");
+const usersUpload = multerMiddleware("users");
 
 // ************ Controller Require ************
 //requier users controllers
@@ -50,7 +42,7 @@ router.get("/register", guestMiddleware, usersController.register);
 // register process
 router.post(
   "/register",
-  upload.single("avatar"),
+  usersUpload.single("avatar"),
   validationRegister,
   registerMiddleware,
   usersController.processRegister
