@@ -3,10 +3,10 @@
   top: 135px;
 
   left: 0; /* Colocar en el lado derecho */
-  width: 100px; /* Ancho fijo de 100px */
+  width: 20%; /* Ancho fijo de 100px */
   height: 100%; /* Ocupar toda la altura de la página */
-  background-color: #333; /* Color de fondo (puedes cambiarlo) */
-  color: #fff; /* Color del texto (puedes cambiarlo) */
+  background-color: #B0A386; /* Color de fondo (puedes cambiarlo) */
+  color: #001C3B; /* Color del texto (puedes cambiarlo) */
   padding: 10px; /* Añadir espacio interno (ajusta según sea necesario) */
   box-sizing: border-box; /* Incluir el padding en el ancho total */
   overflow: hidden; /* Ocultar cualquier contenido que exceda la altura */

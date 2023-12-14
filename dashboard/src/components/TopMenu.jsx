@@ -1,5 +1,10 @@
 import "./TopMenu.css";
+import "./ProductsTotal";
 
 export default function TopMenu() {
-  return <div>Soy el TopMenu</div>;
+  return <div className="topMenu">
+    <ProductsTotal />
+    <Users />
+    <Categories />
+  </div>;
 }
