@@ -7,10 +7,7 @@ const storage = multer.diskStorage({
   // configuracion de guardado //
   destination: path.join(__dirname, "../../public/images/users/"),
   filename: function (req, file, cb) {
-    cb(
-      null,
-      file.fieldname + "-" + Date.now() + path.extname(file.originalname)
-    );
+    cb(null, file.fieldname + "-" + Date.now() + path.extname(file.originalname));
   },
 });
 
@@ -39,12 +36,7 @@ router.get("/", usersController.userList);
 // Login
 router.get("/login", guestMiddleware, usersController.login);
 
-router.post(
-  "/login",
-  validation,
-  validationErrorsLogin,
-  usersController.processLogin
-);
+router.post("/login", validation, validationErrorsLogin, usersController.processLogin);
 // Get users Profile /
 router.get("/profile", authMiddleware, usersController.profile);
 

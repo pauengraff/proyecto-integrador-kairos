@@ -7,10 +7,7 @@ const multer = require("multer");
 const storage = multer.diskStorage({
   destination: path.join(__dirname, "../../public/images/products"),
   filename: function (req, file, cb) {
-    cb(
-      null,
-      file.fieldname + "-" + Date.now() + path.extname(file.originalname)
-    );
+    cb(null, file.fieldname + "-" + Date.now() + path.extname(file.originalname));
   },
 });
 
@@ -36,22 +33,11 @@ router.get("/Cart", productsController.productCart);
 
 /*** CREATE ONE PRODUCT ***/
 router.get("/add", productsController.add);
-router.post(
-  "/",
-  upload.single("image"),
-  validateForm,
-  addProductMiddleware,
-  productsController.store
-);
+router.post("/", upload.single("image"), validateForm, addProductMiddleware, productsController.store);
 
 /*** EDIT PRODUCT ***/
 router.get("/edit/:id", productsController.edit);
-router.put(
-  "/:id",
-  validateEditForm,
-  editProductMiddleware,
-  productsController.update
-);
+router.put("/:id", validateEditForm, editProductMiddleware, productsController.update);
 
 /*** GET ONE PRODUCT BY ID ***/
 router.get("/:id/", productsController.detailById);
