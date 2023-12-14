@@ -6,7 +6,7 @@ function Products() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await fetch("http://localhost:3008/api/products");
+      const response = await fetch("http://localhost:3008/api/products/count");
       const result = await response.json();
       setProducts(result.data);
     };

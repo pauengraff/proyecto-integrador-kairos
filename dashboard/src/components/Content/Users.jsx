@@ -6,7 +6,7 @@ function Users() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await fetch("http://localhost:3008/api/user");
+      const response = await fetch("http://localhost:3008/api/user/count");
       const result = await response.json();
       setProducts(result.data);
     };
