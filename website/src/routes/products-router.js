@@ -10,10 +10,10 @@ const productsUpload = multerMiddleware("products");
 const productsController = require("../controllers/products-controller");
 
 // Products create validation
-const validateForm = require("../validation/validationAddProduct");
+const validateForm = require("../validation/validation-add-product");
 const addProductMiddleware = require("../middlewares/add-product-middleware");
 // Products Edit validation
-const validateEditForm = require("../validation/validationEditProduct");
+const validateEditForm = require("../validation/validation-edit-product");
 const editProductMiddleware = require("../middlewares/edit-product-middleware");
 
 // Rutas products
