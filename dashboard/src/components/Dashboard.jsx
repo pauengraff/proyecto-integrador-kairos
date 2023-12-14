@@ -11,8 +11,6 @@ import Footer from "./Footer";
 function Dashboard() {
   return (
     <div>
-      {/* <Products />
-      <Users /> */}
       <Header />
       <TopMenu />
       <SideMenu />
