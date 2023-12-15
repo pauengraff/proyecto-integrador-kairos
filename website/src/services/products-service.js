@@ -1,6 +1,5 @@
 const { Product } = require("../database/models");
 const { v4: uuidv4 } = require("uuid");
-const { Sequelize } = require("sequelize");
 
 module.exports = {
   getAllProducts: () => {
@@ -12,10 +11,13 @@ module.exports = {
   },
 
   getAllProductsAndCount: ({ pageSize, offset }) => {
-    return Product.findAndCountAll({
-      limit: pageSize,
-      offset: offset,
-    });
+    return Product.findAndCountAll(
+      { include: ["category", "brand"] },
+      {
+        limit: pageSize,
+        offset: offset,
+      }
+    );
   },
 
   createProduct: (body, file) => {
