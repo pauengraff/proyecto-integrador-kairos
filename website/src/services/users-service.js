@@ -8,10 +8,13 @@ module.exports = {
   },
 
   getAllUsersAndCount: ({ pageSize, offset }) => {
-    return User.findAndCountAll({
-      limit: pageSize,
-      offset: offset,
-    });
+    return User.findAndCountAll(
+      { include: "rol" },
+      {
+        limit: pageSize,
+        offset: offset,
+      }
+    );
   },
 
   getCreated: (registro) => {
