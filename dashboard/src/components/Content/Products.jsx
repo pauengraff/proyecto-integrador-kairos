@@ -1,12 +1,13 @@
 import ProductItem from "./ProductItem";
 import { useEffect, useState } from "react";
+import { apiUrl } from "../../config";
 
 function Products() {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await fetch("http://localhost:3008/api/products/count");
+      const response = await fetch(`${apiUrl}/api/products/count`);
       const result = await response.json();
       setProducts(result.data);
     };
