@@ -18,8 +18,8 @@ module.exports = {
     const userLogin = await usersServices.getUserByEmail(req.body.email);
 
     if (userLogin) {
-      const comparePassword = bcrypt.compareSync(req.body.password, userLogin.password);
-      if (comparePassword) {
+      const isPasswordCorrect = bcrypt.compareSync(req.body.password, userLogin.password);
+      if (isPasswordCorrect) {
         delete userLogin.password;
         req.session.userLogged = userLogin.toJSON();
         res.locals.isLogged = true;
