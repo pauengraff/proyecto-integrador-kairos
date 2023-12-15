@@ -15,12 +15,12 @@
   padding: 20px;
   padding-bottom: 10px;
   font-family: "Roboto";
-  max-width: 1500px;
-  margin-inline: auto;
+  max-width: 1200px;
+  align-items: center;
 }
 
 .logo-footer {
-  width: 30vw;
+  width: 20vw;
   margin-inline: auto;
 }
 

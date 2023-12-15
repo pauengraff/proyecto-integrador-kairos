@@ -1,5 +1,10 @@
 import "./Main.css";
+import Products from "./Content/Products";
 
 export default function Main() {
-  return <div>Soy el Main</div>;
+  return (
+    <main className='main'>
+      <Products />
+    </main>
+  );
 }

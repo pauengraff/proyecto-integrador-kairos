@@ -1,5 +1,6 @@
 import ProductItem from "./ProductItem";
 import { useEffect, useState } from "react";
+import "./Products.css";
 
 function Products() {
   const [products, setProducts] = useState([]);
@@ -16,7 +17,7 @@ function Products() {
   return (
     <section className=''>
       <h2 className=''>Productos</h2>
-      <div className=''>
+      <div className='product'>
         {products.length === 0
           ? "Cargando..."
           : products.map((product) => (
