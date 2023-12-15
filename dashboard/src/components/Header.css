@@ -1,0 +1,21 @@
+.header {
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  text-align: center;
+  height: 135px;
+  background-color: brown;
+}
+.header p {
+  margin: 0 auto; /* Centro el texto dentro del Header*/
+}
+.logo {
+  width: 10%;
+  height: auto;
+}

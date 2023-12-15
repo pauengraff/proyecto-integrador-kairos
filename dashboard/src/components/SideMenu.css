@@ -1,0 +1,15 @@
+.sideMenu {
+  position: fixed;
+  top: 135px;
+  left: 0; /* Colocar en el lado derecho */
+  width: 20%; /* Ancho fijo de 100px */
+  height: 100%; /* Ocupar toda la altura de la página */
+  background-color: #b0a386; /* Color de fondo (puedes cambiarlo) */
+  color: #001c3b; /* Color del texto (puedes cambiarlo) */
+  padding: 10px; /* Añadir espacio interno (ajusta según sea necesario) */
+  box-sizing: border-box; /* Incluir el padding en el ancho total */
+  overflow: hidden; /* Ocultar cualquier contenido que exceda la altura */
+  display: flex; /* Utilizar flexbox para centrar verticalmente el contenido */
+  flex-direction: column; /* Apilar el contenido verticalmente */
+  align-items: center; /* Centrar horizontalmente el contenido */
+}

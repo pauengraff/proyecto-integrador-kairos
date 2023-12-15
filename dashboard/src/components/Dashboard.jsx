@@ -1,14 +1,21 @@
-import logo from "../assets/images/logo/kairos-logo-color.png";
 import "./Dashboard.css";
-import Products from "./Content/Products";
-import Users from "./Content/Users";
+import Header from "./Header";
+import TopMenu from "./TopMenu";
+import SideMenu from "./SideMenu";
+import Main from "./Main";
+import Footer from "./Footer";
+
+// import Products from "./Content/Products";
+// import Users from "./Content/Users";
 
 function Dashboard() {
   return (
     <div>
-      <Products />
-      <Users />
-      <img className='width-20' src={logo}></img>
+      <Header />
+      <TopMenu />
+      <SideMenu />
+      <Main />
+      <Footer />
     </div>
   );
 }
