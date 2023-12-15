@@ -1,8 +1,9 @@
 import PropTypes from "prop-types";
 import "./ProductItem.css";
+import { apiUrl } from "../../config";
 
 function ProductItem({ name, brand, description, category, image }) {
-  const imageRoute = "http://localhost:3008/images/products/";
+  const imageRoute = `${apiUrl}/images/products/`;
 
   return (
     <article className='productitem'>

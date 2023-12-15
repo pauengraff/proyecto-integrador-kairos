@@ -1,20 +1,9 @@
 const express = require("express");
 const router = express.Router();
-const path = require("path");
-const multer = require("multer");
 
-const storage = multer.diskStorage({
-  // configuracion de guardado //
-  destination: path.join(__dirname, "../../public/images/users/"),
-  filename: function (req, file, cb) {
-    cb(
-      null,
-      file.fieldname + "-" + Date.now() + path.extname(file.originalname)
-    );
-  },
-});
-
-const upload = multer({ storage: storage });
+// ** Multer middleware **//
+const multerMiddleware = require("../middlewares/multer-middleware");
+const usersUpload = multerMiddleware("users");
 
 // ************ Controller Require ************
 //requier users controllers
@@ -28,8 +17,8 @@ const validation = require("../validation/validation-login");
 const validationErrorsLogin = require("../middlewares/login");
 
 // Guest - User routes middleware
-const guestMiddleware = require("../middlewares/guestMiddleware");
-const authMiddleware = require("../middlewares/authMiddleware");
+const guestMiddleware = require("../middlewares/guest-middleware");
+const authMiddleware = require("../middlewares/auth-middleware");
 //guestMiddleware, ver este middleware para el login
 
 // Routes Users
@@ -38,13 +27,8 @@ router.get("/", usersController.userList);
 
 // Login
 router.get("/login", guestMiddleware, usersController.login);
+router.post("/login", validation, validationErrorsLogin, usersController.processLogin);
 
-router.post(
-  "/login",
-  validation,
-  validationErrorsLogin,
-  usersController.processLogin
-);
 // Get users Profile /
 router.get("/profile", authMiddleware, usersController.profile);
 
@@ -58,7 +42,7 @@ router.get("/register", guestMiddleware, usersController.register);
 // register process
 router.post(
   "/register",
-  upload.single("avatar"),
+  usersUpload.single("avatar"),
   validationRegister,
   registerMiddleware,
   usersController.processRegister

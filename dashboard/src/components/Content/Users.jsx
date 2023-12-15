@@ -1,12 +1,13 @@
 import UsersId from "./UsersId";
 import { useEffect, useState } from "react";
+import { apiUrl } from "../../config";
 
 function Users() {
   const [users, setProducts] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await fetch("http://localhost:3008/api/user");
+      const response = await fetch(`${apiUrl}/api/user/count`);
       const result = await response.json();
       setProducts(result.data);
     };

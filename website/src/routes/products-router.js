@@ -1,31 +1,20 @@
 const express = require("express");
 const router = express.Router();
-const path = require("path");
 
-const multer = require("multer");
-
-const storage = multer.diskStorage({
-  destination: path.join(__dirname, "../../public/images/products"),
-  filename: function (req, file, cb) {
-    cb(
-      null,
-      file.fieldname + "-" + Date.now() + path.extname(file.originalname)
-    );
-  },
-});
-
-const upload = multer({ storage: storage });
+// ** Multer middleware **//
+const multerMiddleware = require("../middlewares/multer-middleware");
+const productsUpload = multerMiddleware("products");
 
 // ************ Controller Require ************
 
 const productsController = require("../controllers/products-controller");
 
 // Products create validation
-const validateForm = require("../validation/validationAddProduct");
-const addProductMiddleware = require("../middlewares/addProductMiddleware");
+const validateForm = require("../validation/validation-add-product");
+const addProductMiddleware = require("../middlewares/add-product-middleware");
 // Products Edit validation
-const validateEditForm = require("../validation/validationEditProduct");
-const editProductMiddleware = require("../middlewares/editProductMiddleware");
+const validateEditForm = require("../validation/validation-edit-product");
+const editProductMiddleware = require("../middlewares/edit-product-middleware");
 
 // Rutas products
 //GET ALL PRODUCTS
@@ -36,25 +25,14 @@ router.get("/Cart", productsController.productCart);
 
 /*** CREATE ONE PRODUCT ***/
 router.get("/add", productsController.add);
-router.post(
-  "/",
-  upload.single("image"),
-  validateForm,
-  addProductMiddleware,
-  productsController.store
-);
+router.post("/", productsUpload.single("image"), validateForm, addProductMiddleware, productsController.store);
 
 /*** EDIT PRODUCT ***/
 router.get("/edit/:id", productsController.edit);
-router.put(
-  "/:id",
-  validateEditForm,
-  editProductMiddleware,
-  productsController.update
-);
+router.put("/:id", validateEditForm, editProductMiddleware, productsController.update);
 
 /*** GET ONE PRODUCT BY ID ***/
-router.get("/:id/", productsController.detailById);
+router.get("/:id", productsController.detailById);
 
 /*** DELETE ONE PRODUCT***/
 router.delete("/:id", productsController.destroy);
