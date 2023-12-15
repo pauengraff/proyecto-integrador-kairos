@@ -1,18 +1,6 @@
 const productsService = require("../../services/products-service");
 
 module.exports = {
-  // list: async (req, res) => {
-  //   const product = await productsService.getAllProducts();
-  //   res.json({
-  //     meta: {
-  //       status: 200,
-  //       total: product.length,
-  //       url: req.originalUrl,
-  //     },
-  //     data: product,
-  //   });
-  // },
-
   count: async (req, res) => {
     const pageSize = 5;
     const page = Number(req.query.page) || 1;
