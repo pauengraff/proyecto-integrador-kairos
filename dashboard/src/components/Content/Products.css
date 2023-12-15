@@ -1,7 +1,16 @@
-.product {
+.section {
   display: flex;
+  margin-left: 200px;
+  width: 100%;
+}
+
+.product-container {
   flex-wrap: wrap;
   justify-content: space-between;
-  width: 48%; /* Esto asegura que haya espacio suficiente para dos productos por línea */
+  width: 100%;
+}
+
+.product {
+  width: 30vw;
   margin-bottom: 10px;
 }
