@@ -3,10 +3,7 @@ import Header from "./Header";
 import TopMenu from "./TopMenu";
 import SideMenu from "./SideMenu";
 import Main from "./Main";
-import Footer from "./Footer";
-
-// import Products from "./Content/Products";
-// import Users from "./Content/Users";
+// import Footer from "./Footer";
 
 function Dashboard() {
   return (
@@ -15,7 +12,7 @@ function Dashboard() {
       <TopMenu />
       <SideMenu />
       <Main />
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }
