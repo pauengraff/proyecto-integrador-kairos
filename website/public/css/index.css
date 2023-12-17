@@ -232,6 +232,7 @@
 
 .new-product img {
   width: 80%;
+  margin-bottom: 10px;
 }
 
 .category-about {
@@ -243,19 +244,18 @@
 }
 
 .category-about p {
-  margin-top: 20px;
+  margin: 30px;
   text-align: justify;
   color: #001c3b;
 }
 
 .style-about {
-  margin: 20px 0;
+  margin: 20px;
 }
 
 .banner-bottom {
   width: 100%;
-  margin-top: 15%;
-  margin-bottom: 5%;
+  margin-bottom: 10px;
   position: relative;
   display: inline-block;
   text-align: center;
