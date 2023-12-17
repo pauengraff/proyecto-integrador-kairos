@@ -1,15 +1,22 @@
 .main {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 300px;
-  height: 100vh; /* O ajusta la altura según tus necesidades */
+  text-align: center;
+  margin-left: 200px;
+  margin-right: auto;
+  height: 100%;
+  width: auto;
+  box-sizing: border-box;
 }
 
 .main-container {
   text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+  flex-basis: calc(33.33% - 20px); /* Ajusta según sea necesario, el 20px es para el espacio entre los elementos */
+  margin: 10px; /* Ajusta según sea necesario, proporciona un espacio entre los elementos */
 }
 
 .title {
-  left: 0%;
+  text-align: center;
 }

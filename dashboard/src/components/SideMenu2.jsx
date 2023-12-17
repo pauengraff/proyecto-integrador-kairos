@@ -1,6 +1,8 @@
 import "./SideMenu2.css";
 import { SideMenu2Data } from "./SideMenu2Data";
 
+import { Link } from "react-router-dom";
+
 export default function SideBar2() {
   return (
     <div className='sidebar'>
@@ -8,15 +10,11 @@ export default function SideBar2() {
       <ul className='sidebarList'>
         {SideMenu2Data.map((val, key) => {
           return (
-            <li
-              key={key}
-              className='row'
-              onClick={() => {
-                window.location.pathname = val.link;
-              }}
-            >
-              <div className='icon'>{val.icon}</div>
-              <div className='item'>{val.title}</div>
+            <li key={key} className='row'>
+              <Link to={val.link}>
+                <div className='icon'>{val.icon}</div>
+                <div className='item'>{val.title}</div>
+              </Link>
             </li>
           );
         })}

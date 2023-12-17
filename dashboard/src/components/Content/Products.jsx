@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 
 import { apiUrl } from "../../config";
 
-
 function Products() {
   const [products, setProducts] = useState([]);
 
