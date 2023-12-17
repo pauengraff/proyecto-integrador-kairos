@@ -1,7 +1,8 @@
 import "./Dashboard.css";
 import Header from "./Header";
 import TopMenu from "./TopMenu";
-import SideMenu from "./SideMenu";
+import SideMenu2 from "./SideMenu2";
+// import SideMenu from "./SideMenu";
 import Main from "./Main";
 // import Footer from "./Footer";
 
@@ -10,9 +11,8 @@ function Dashboard() {
     <div>
       <Header />
       <TopMenu />
-      <SideMenu />
+      <SideMenu2 />
       <Main />
-      {/* <Footer /> */}
     </div>
   );
 }
