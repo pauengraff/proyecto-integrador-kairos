@@ -9,7 +9,7 @@ export const SideMenu2Data = [
   {
     title: "Home",
     icon: <HomeIcon />,
-    link: "/home",
+    link: "/",
   },
   {
     title: "Login",
@@ -32,7 +32,7 @@ export const SideMenu2Data = [
     link: "/contact",
   },
   {
-    title: "Dasboard Admin",
+    title: "Control Panel",
     icon: <PrivacyTipIcon />,
     link: "/panel",
   },

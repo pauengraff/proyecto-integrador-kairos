@@ -1,5 +1,8 @@
 .section {
-  margin-left: 200px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-left: 300px;
   width: 100%;
 }
 

@@ -1,4 +1,5 @@
 import ProductItem from "./ProductItem";
+import "./Products.css";
 import { useEffect, useState } from "react";
 
 import { apiUrl } from "../../config";

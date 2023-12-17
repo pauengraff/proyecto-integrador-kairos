@@ -1,4 +1,6 @@
 import UsersId from "./UsersId";
+import "./Users.css";
+
 import { useEffect, useState } from "react";
 import { apiUrl } from "../../config";
 
