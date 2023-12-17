@@ -3,6 +3,7 @@
   <head>
     <%- include("../partials/head") %>
     <link rel="stylesheet" href="/css/styles-usersDetail.css" />
+    <script src="../../../public/js/profile.js" defer></script>
 
     <title>Kairos Perfil</title>
   </head>
@@ -27,7 +28,7 @@
             <label>Email</label>
             <input type="text" name="email" id="email" placeholder="<%= user.email %>" />
 
-            <a href="/users/edit/<%= user.id %>" class="buttonBuy">Editar Usuario</a>
+            <a href="/users/edit/<%= user.id %>" class="buttonBuy margin-top-30">Editar Usuario</a>
 
             <a href="/users/logout/" class="buttonBuy">Cerrar sesión</a>
           </div>

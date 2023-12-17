@@ -9,7 +9,7 @@ body {
   justify-content: center;
   flex-wrap: wrap;
   text-align: center;
-  background: #d2d2d2;
+  background: #D1C5AA;
   width: 70%;
   margin-bottom: 50px;
   margin-top: 20px;
@@ -77,9 +77,12 @@ body {
   display: inline-block;
   text-align: center;
   margin: auto;
-  margin-top: 20px;
   width: 90%;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
+}
+
+.margin-top-30 {
+  margin-top: 30px;
 }
 
 @media (min-width: 769px) {
