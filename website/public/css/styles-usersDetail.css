@@ -93,23 +93,23 @@ body {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
-  }
-  .userPhoto {
-    width: 30%;
-    align-self: self-start;
-  }
-  .userText {
-    width: 40%;
-    text-align: left;
-    margin-right: 50px;
-  }
-  .userText label {
-    margin-left: 8px;
   }
   .userName {
-    margin-left: 12px;
-    align-self: self-start;
+   align-self: self-start;
+   margin-inline: 30px;
+  }
+  .userPhoto {
+    margin: 0;
+    margin-bottom: 10px;
+  }
+  .userText {
+    text-align: left;
+    margin-right: 50px;
+    margin-top: 15px;
+  }
+  .userText label {
+    width: 100px;
+    margin-left: 8px;
   }
 }
 

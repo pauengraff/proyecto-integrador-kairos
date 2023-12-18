@@ -14,11 +14,13 @@
     <main>
       <section class="userDetail">
         <article class="userDetail-d">
-          <img class="userPhoto" src="/images/users/<%= user.avatar %>" width="150" alt="avatar" />
+          
+          <div class="userName">
+            <img class="userPhoto" src="/images/users/<%= user.avatar %>" width="150" alt="avatar" />
+            <p>Hola, <%= user.first_name %>!</p>
+          </div>
 
           <div class="userText">
-            <p class="userName">Hola, <%= user.first_name %>!</p>
-
             <label>Nombre</label>
             <input type="text" name="first_name" id="first_name" placeholder="<%= user.first_name %>" />
 
