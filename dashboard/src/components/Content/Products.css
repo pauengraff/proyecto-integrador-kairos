@@ -1,19 +1,14 @@
-.section {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin-left: 300px;
-  width: 100%;
-}
-
 .product-container {
   width: 100%;
+  margin-left: 250px;
+  margin-top: 200px;
 }
 
 .product {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
-  width: 30vw;
+  flex-wrap: wrap;
+  margin-right: 200px;
+  width: 100%;
   margin-bottom: 10px;
 }
