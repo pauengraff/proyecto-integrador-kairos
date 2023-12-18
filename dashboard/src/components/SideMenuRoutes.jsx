@@ -23,6 +23,9 @@ export default function ContentWrap() {
       <Route path='/contact'>
         <Contact />
       </Route>
+      <Route path='*'>
+        <p>404 - página no encontrada</p>
+      </Route>
     </Switch>
   );
 }

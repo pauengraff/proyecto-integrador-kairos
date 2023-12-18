@@ -7,7 +7,6 @@ function Dashboard() {
   return (
     <div>
       <Header />
-
       <SideMenu />
       <SideMenuRoutes />
     </div>
