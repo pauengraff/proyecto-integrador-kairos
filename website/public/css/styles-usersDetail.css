@@ -9,7 +9,7 @@ body {
   justify-content: center;
   flex-wrap: wrap;
   text-align: center;
-  background: #D1C5AA;
+  background: #d1c5aa;
   width: 70%;
   margin-bottom: 50px;
   margin-top: 20px;
@@ -80,6 +80,9 @@ body {
   width: 90%;
   margin-bottom: 20px;
 }
+.buttonBuy:hover {
+  background-color: grey;
+}
 
 .margin-top-30 {
   margin-top: 30px;
@@ -95,8 +98,8 @@ body {
     align-items: center;
   }
   .userName {
-   align-self: self-start;
-   margin-inline: 30px;
+    align-self: self-start;
+    margin-inline: 30px;
   }
   .userPhoto {
     margin: 0;
