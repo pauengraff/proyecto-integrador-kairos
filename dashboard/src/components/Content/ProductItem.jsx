@@ -7,11 +7,17 @@ function ProductItem({ name, brand, description, category, image }) {
 
   return (
     <article className='productitem'>
-      <div>{name}</div>
-      <div>{brand}</div>
-      <div>{category}</div>
-      <div>{description}</div>
-      <img src={imageRoute + image} alt='imagenReloj' className='imgProduct' />
+      <div className='card'>
+        <figure>
+          <img src={imageRoute + image} alt='imagenReloj' className='imgProduct' />
+        </figure>
+        <div className='contenido'>
+          <p>Marca: {brand}</p>
+          <p>Modelo: {name}</p>
+          <p>Categoria: {category}</p>
+          <p>Descripcion: {description}</p>
+        </div>
+      </div>
     </article>
   );
 }

@@ -7,7 +7,7 @@ function UsersId({ first_name, last_name, email, avatar }) {
   const imageRoute = `${apiUrl}/images/users/`;
 
   return (
-    <article className='productitem'>
+    <article className='userCard'>
       <div>{first_name}</div>
       <div>{last_name}</div>
       <div>{email}</div>
