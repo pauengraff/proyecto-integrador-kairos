@@ -9,6 +9,12 @@ module.exports = {
     res.render("products/products", { products });
   },
 
+  productByCategory: async (req, res) => {
+    const categoryId = req.params.id;
+    const products = await productsService.getProductByCategory(categoryId);
+    res.render("products/products", { products });
+  },
+
   // DETAIL - Detail from one product ID
   detailById: async (req, res) => {
     const product = await productsService.getProduct(req.params.id);
