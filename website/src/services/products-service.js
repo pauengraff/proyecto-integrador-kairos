@@ -1,3 +1,4 @@
+const { where } = require("sequelize");
 const { Product } = require("../database/models");
 const { v4: uuidv4 } = require("uuid");
 
@@ -8,6 +9,13 @@ module.exports = {
 
   getProduct: (id) => {
     return Product.findByPk(id, { include: ["category", "brand"] });
+  },
+
+  getProductByCategory: (categoryId) => {
+    return Product.findAll({
+      include: ["category", "brand"],
+      where: { id_category: categoryId },
+    });
   },
 
   getAllProductsAndCount: ({ pageSize, offset }) => {

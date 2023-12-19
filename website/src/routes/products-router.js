@@ -34,6 +34,9 @@ router.put("/:id", validateEditForm, editProductMiddleware, productsController.u
 /*** GET ONE PRODUCT BY ID ***/
 router.get("/:id", productsController.detailById);
 
+/*** GET PRODUCTS BY CATEGORY ***/
+router.get("/category/:id", productsController.productByCategory);
+
 /*** DELETE ONE PRODUCT***/
 router.delete("/:id", productsController.destroy);
 
