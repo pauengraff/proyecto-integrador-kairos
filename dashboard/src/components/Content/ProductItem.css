@@ -1,7 +1,8 @@
 .productitem {
   background-color: grey;
   border-color: blue;
-  margin: 20px;
+  margin: 5px;
+  width: 30%;
 }
 .imgProduct {
   width: 150px;

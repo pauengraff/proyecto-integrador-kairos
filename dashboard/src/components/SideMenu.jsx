@@ -1,16 +1,24 @@
 import "./SideMenu.css";
-import SideBar from "./SideBar";
-import ContentBar from "./ContentBar";
+import { SideMenuData } from "./SideMenuData";
 
-export default function SideMenu() {
+import { Link } from "react-router-dom";
+
+export default function SideBar2() {
   return (
-    <div className='sideMenu'>
-      <div>
-        <p>Side Menu</p>
-        <p>Foto User</p>
-      </div>
-      <SideBar />
-      <ContentBar />
+    <div className='sidebar'>
+      <h3>Bienvenido</h3>
+      <ul className='sidebarList'>
+        {SideMenuData.map((val, key) => {
+          return (
+            <li key={key}>
+              <Link to={val.link} className='row'>
+                <div className='icon'>{val.icon}</div>
+                <div className='item'>{val.title}</div>
+              </Link>
+            </li>
+          );
+        })}
+      </ul>
     </div>
   );
 }

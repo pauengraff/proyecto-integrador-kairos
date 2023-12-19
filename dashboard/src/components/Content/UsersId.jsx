@@ -1,8 +1,7 @@
 import PropTypes from "prop-types";
 
-import "./ProductItem.css";
+import "./UsersId.css";
 import { apiUrl } from "../../config";
-
 
 function UsersId({ first_name, last_name, email, avatar }) {
   const imageRoute = `${apiUrl}/images/users/`;

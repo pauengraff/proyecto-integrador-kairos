@@ -1,4 +1,6 @@
 import UsersId from "./UsersId";
+import "./Users.css";
+
 import { useEffect, useState } from "react";
 import { apiUrl } from "../../config";
 
@@ -15,9 +17,8 @@ function Users() {
   }, []);
 
   return (
-    <section className=''>
-      <h2 className=''>Usuarios</h2>
-      <div className=''>
+    <section className='users-container'>
+      <div className='users'>
         {users.length === 0
           ? "Cargando..."
           : users.map((user) => (

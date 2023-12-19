@@ -1,10 +1,9 @@
-.product-container {
+.users-container {
   width: 80%;
-  margin-left: 250px;
-  margin-top: 200px;
+  margin-left: 100px;
+  margin-top: 100px;
 }
-
-.product {
+.users {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
