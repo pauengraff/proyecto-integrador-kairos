@@ -7,18 +7,13 @@ body {
 }
 
 .form-body {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  position: relative;
-  width: 400px;
-  border: none;
-  background-color: #d2d2d2;
   margin: auto;
-  padding-top: 50px;
-  padding-bottom: 20px;
+  background: #d1c5aa;
+  width: 70%;
   margin-bottom: 50px;
+  margin-top: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .text {
@@ -27,6 +22,7 @@ body {
   font-weight: normal;
   color: #001c3b;
   margin-bottom: 5px;
+  margin-top: 20px;
 }
 
 .text-medium {
@@ -45,7 +41,7 @@ body {
   color: gray;
   border: none;
   background-color: white;
-  font-size: 16px;
+  font-size: 12px;
 }
 
 ::placeholder {
@@ -55,15 +51,22 @@ body {
 
 .form-body button {
   display: block;
-  margin: auto;
-  margin-top: 25px;
-  margin-bottom: 50px;
-  height: 40px;
-  width: 30%;
   background-color: #001c3b;
   color: white;
+  padding: 8px 10px;
+  font-weight: normal;
+  font-size: 12px;
+  text-decoration: none;
+  text-align: center;
   border: none;
-  font-size: 14px;
+  margin: auto;
+  width: 30%;
+  margin-bottom: 20px;
+  margin-top: 30px;
+}
+
+.form-body button:hover {
+  background-color: #7c92bd;
 }
 
 .form-body label {
@@ -107,21 +110,21 @@ body {
 }
 @media (min-width: 769px) {
   /* Laptop */
-  form {
-    display: flex;
-    flex-wrap: wrap;
-  }
+
   .form-body {
-    width: 95vh;
     display: flex;
     flex-wrap: wrap;
+    flex-direction: row;
     justify-content: space-between;
+    width: 60%;
   }
   .form-register {
-    width: 48%;
+    width: 50%;
   }
   .text-form {
     margin: auto;
     width: 100%;
   }
+
+
 }

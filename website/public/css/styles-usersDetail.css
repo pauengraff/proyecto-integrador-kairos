@@ -3,12 +3,7 @@ body {
 }
 
 .userDetail {
-  display: flex;
   margin: auto;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  text-align: center;
   background: #d1c5aa;
   width: 70%;
   margin-bottom: 50px;
@@ -16,12 +11,13 @@ body {
 }
 
 .userPhoto {
-  margin: auto;
   margin-bottom: 10px;
   margin-top: 30px;
 }
 
 .userName {
+  text-align: center;
+  margin: auto;
   font-size: 22px;
   color: #001c3b;
   font-weight: bold;
@@ -37,13 +33,15 @@ body {
   align-items: center;
   font-size: 12px;
   font-weight: normal;
+  margin: auto;
+  width: 60%;
 }
 
 .userText input {
   display: block;
   margin: auto;
   margin-bottom: 8px;
-  width: 90%;
+  width: 80%;
   padding: 8px;
   color: gray;
   border: none;
@@ -54,7 +52,7 @@ body {
 .userText label {
   display: block;
   margin: auto;
-  width: 60%;
+  width: 80%;
   padding: 5px;
   color: #001c3b;
   font-size: 12px;
@@ -81,11 +79,13 @@ body {
   margin-bottom: 20px;
 }
 .buttonBuy:hover {
-  background-color: grey;
+  background-color: #7c92bd;
 }
-
 .margin-top-30 {
   margin-top: 30px;
+}
+.margin-bottom-30 {
+  margin-bottom: 30px;
 }
 
 @media (min-width: 769px) {
@@ -94,12 +94,14 @@ body {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    justify-content: space-between;
     align-items: center;
+    justify-content: center;
+    width: 60%;
   }
   .userName {
     align-self: self-start;
     margin-inline: 30px;
+    width: 40%;
   }
   .userPhoto {
     margin: 0;
@@ -109,10 +111,26 @@ body {
     text-align: left;
     margin-right: 50px;
     margin-top: 15px;
+    width: 40%;
+    margin-left: 0;
   }
   .userText label {
-    width: 100px;
-    margin-left: 8px;
+    margin-left: 30px;
+    text-align: left;
+  }
+  .buttonBuy-d {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 0px;
+  }
+  .buttonBuy {
+    width: 35%;
+    margin-inline: 20px;
+  }
+  .margin-b-desktop {
+    margin-bottom: 30px;
   }
 }
 

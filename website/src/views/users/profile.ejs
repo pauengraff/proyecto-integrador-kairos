@@ -11,9 +11,7 @@
 
   <body>
     <main>
-      <section class="userDetail">
-        <article class="userDetail-d">
-          
+      <section class="userDetail userDetail-d">
           <div class="userName">
             <img class="userPhoto" src="/images/users/<%= user.avatar %>" width="150" alt="avatar" />
             <p>Hola, <%= user.first_name %>!</p>
@@ -29,11 +27,12 @@
             <label>Email</label>
             <input type="text" name="email" id="email" placeholder="<%= user.email %>" />
 
-            <a href="/users/edit/<%= user.id %>" class="buttonBuy margin-top-30">Editar Usuario</a>
-
-            <a href="/users/logout/" class="buttonBuy">Cerrar sesión</a>
+            <div class="buttonBuy-d">
+              <a href="/users/edit/<%= user.id %>" class="buttonBuy margin-top-30 margin-b-desktop">Editar Usuario</a>
+              <a href="/users/logout/" class="buttonBuy margin-bottom-30">Cerrar sesión</a>
+            </div>
+           
           </div>
-        </article>
       </section>
     </main>
 
