@@ -1,3 +1,12 @@
-.section {
-  margin-left: 300px;
+.users-container {
+  width: 80%;
+  margin-left: 100px;
+  margin-top: 100px;
+}
+.users {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: auto;
+  margin-bottom: 10px;
 }

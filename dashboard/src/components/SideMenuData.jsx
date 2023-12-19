@@ -5,7 +5,7 @@ import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import ContactsIcon from "@mui/icons-material/Contacts";
 import PrivacyTipIcon from "@mui/icons-material/PrivacyTip";
 
-export const SideMenu2Data = [
+export const SideMenuData = [
   {
     title: "Home",
     icon: <HomeIcon />,

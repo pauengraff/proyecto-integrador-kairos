@@ -1,5 +1,5 @@
 import "./SideMenu.css";
-import { SideMenu2Data } from "./SideMenuData";
+import { SideMenuData } from "./SideMenuData";
 
 import { Link } from "react-router-dom";
 
@@ -8,7 +8,7 @@ export default function SideBar2() {
     <div className='sidebar'>
       <h3>Bienvenido</h3>
       <ul className='sidebarList'>
-        {SideMenu2Data.map((val, key) => {
+        {SideMenuData.map((val, key) => {
           return (
             <li key={key}>
               <Link to={val.link} className='row'>
