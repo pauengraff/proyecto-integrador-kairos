@@ -1,0 +1,63 @@
+<html lang="es">
+  <head>
+    <%- include("partials/head") %>
+    <link rel="stylesheet" href="/css/styles-contact.css" />
+
+    <title>Kairos Contacto</title>
+  </head>
+
+  <body>
+    <%- include("partials/header") %>
+
+    <form action="/contact" method="POST" enctype="multipart/form-data" id="form">
+      <div class="form-body">
+        <div class="text-form">
+          <p class="text">Dejanos tu consulta!</p>
+          <p class="text-medium">Por favor completá con tus datos:</p>
+        </div>
+
+        <div class="form-register">
+          <label>Nombre</label>
+          <input
+            type="text"
+            name="first_name"
+            id="first_name"
+            value="<%= locals.errors ? oldData.first_name : null %>"
+          />
+          <span class="errorMsg" id="first_nameError"></span>
+          <% if (locals.errors && errors.first_name) { %>
+          <div class="text-danger"><%= errors.first_name.msg %></div>
+          <% } %>
+        </div>
+
+        <div class="form-register">
+          <label>Apellido</label>
+          <input type="text" name="last_name" id="last_name" value="<%= locals.errors ? oldData.last_name : null %>" />
+          <span class="errorMsg" id="last_nameError"></span>
+          <% if (locals.errors && errors.last_name) { %>
+          <div class="text-danger"><%= errors.last_name.msg %></div>
+          <% } %>
+        </div>
+
+        <div class="form-register">
+          <label>Email</label>
+          <input type="text" name="email" id="email" value="<%= locals.errors ? oldData.email : null %>" />
+          <span class="errorMsg" id="emailError"></span>
+          <% if (locals.errors && errors.email) { %>
+          <div class="text-danger"><%= errors.email.msg %></div>
+          <% } %>
+        </div>
+
+
+        <div class="form-register">
+          <label>Mensaje:</label>
+          <textarea></textarea>
+        </div>
+
+        <button type="submit">Enviar</button>
+      </div>
+    </form>
+
+    <%- include("partials/footer") %>
+  </body>
+</html>
