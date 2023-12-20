@@ -1,7 +1,7 @@
 import { PropTypes } from "prop-types";
 import { Link } from "react-router-dom";
 
-function MenuCategoryLink({ name }) {
+function MenuCategoryLinks({ name }) {
   return (
     <Link to={`/products/${name}`}>
       <div>{name}</div>
@@ -9,8 +9,8 @@ function MenuCategoryLink({ name }) {
   );
 }
 
-MenuCategoryLink.propTypes = {
+MenuCategoryLinks.propTypes = {
   name: PropTypes.string.isRequired,
 };
 
-export default MenuCategoryLink;
+export default MenuCategoryLinks;

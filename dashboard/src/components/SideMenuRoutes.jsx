@@ -4,11 +4,13 @@ import Login from "./Login";
 import Cart from "./Cart";
 import ControlPanel from "./ControlPanel";
 import Contact from "./Contact";
+import MenuCategories from "./Content/MenuCategory";
 
 export default function ContentWrap() {
   return (
     <Switch>
       <Route path='/products'>
+        <MenuCategories />
         <Products />
       </Route>
       <Route path='/login'>

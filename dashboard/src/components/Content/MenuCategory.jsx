@@ -1,8 +1,9 @@
 import { Route } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { apiUrl } from "../../config";
-//import GenreDetail from "./Detalle-genero"; importar detalles de categorias
-//import CategoryLink from "./Link-genero"; importarde talles de links a categorias
+import MenuCategoryDetail from "./MenuCategoryDetail";
+import MenuCategoryLinks from "./MenuCategoryLinks";
+import "./MenuCategory.css";
 
 function MenuCategories() {
   const [categories, setCategories] = useState([]);
@@ -15,16 +16,20 @@ function MenuCategories() {
     };
     fetchData();
   }, []);
-}
-return (
-  <section>
-    <h2>Elegi tu Categoria</h2>
-    <div>
-      {categories.length === 0
-        ? "Cargando..."
-        : categories.map((category) => <MenuCategoryLink key={category.id} name={category.name} />)}
-    </div>
-  </section>
-);
 
+  return (
+    <section className='section'>
+      <h2>Elegi tu Categoria</h2>
+      <div>
+        {categories.length === 0
+          ? "Cargando..."
+          : categories.map((category) => <MenuCategoryLinks key={category.id} name={category.name} />)}
+      </div>
+      <div>
+        <h2>Rutas</h2>
+        <Route path='/products/:name' component={MenuCategoryDetail} />
+      </div>
+    </section>
+  );
+}
 export default MenuCategories;
