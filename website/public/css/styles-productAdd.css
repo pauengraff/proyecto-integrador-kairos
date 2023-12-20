@@ -61,6 +61,10 @@ body {
   font-size: 14px;
 }
 
+.form-body button:hover {
+  background-color: #7c92bd;
+}
+
 .form-body label {
   display: block;
   margin: auto;

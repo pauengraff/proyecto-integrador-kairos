@@ -74,7 +74,9 @@ main {
   margin: auto;
   margin-bottom: 40px;
 }
-
+.buttonBuy:hover {
+  background-color: #7c92bd;
+}
 .textDescription {
   font-size: 12px;
   margin-top: 5px;

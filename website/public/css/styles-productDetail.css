@@ -126,6 +126,9 @@ main {
     width: 60%;
     margin-left: 0;
   }
+  .buttonBuy:hover {
+    background-color: #7c92bd;
+  }
   .productDescription-d {
     display: flex;
     flex-wrap: wrap;
