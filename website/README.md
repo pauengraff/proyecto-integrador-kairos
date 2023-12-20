@@ -57,6 +57,7 @@ Colores
 - Beige: #B0A386 // CMYK 33 32 53 1 // RGB 176 163 134
 - Beige mas claro: #D1C5AA
 - Gris: #D9D9D9
+- Azulino: #7c92bd
 
 Tipografía
 https://www.dafont.com/es/augustus.font

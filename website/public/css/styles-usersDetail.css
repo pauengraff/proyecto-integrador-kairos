@@ -3,25 +3,21 @@ body {
 }
 
 .userDetail {
-  display: flex;
   margin: auto;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  text-align: center;
-  background: #d2d2d2;
+  background: #d1c5aa;
   width: 70%;
   margin-bottom: 50px;
   margin-top: 20px;
 }
 
 .userPhoto {
-  margin: auto;
   margin-bottom: 10px;
   margin-top: 30px;
 }
 
 .userName {
+  text-align: center;
+  margin: auto;
   font-size: 22px;
   color: #001c3b;
   font-weight: bold;
@@ -37,13 +33,15 @@ body {
   align-items: center;
   font-size: 12px;
   font-weight: normal;
+  margin: auto;
+  width: 60%;
 }
 
 .userText input {
   display: block;
   margin: auto;
   margin-bottom: 8px;
-  width: 90%;
+  width: 80%;
   padding: 8px;
   color: gray;
   border: none;
@@ -54,7 +52,7 @@ body {
 .userText label {
   display: block;
   margin: auto;
-  width: 60%;
+  width: 80%;
   padding: 5px;
   color: #001c3b;
   font-size: 12px;
@@ -77,9 +75,17 @@ body {
   display: inline-block;
   text-align: center;
   margin: auto;
-  margin-top: 20px;
   width: 90%;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
+}
+.buttonBuy:hover {
+  background-color: #7c92bd;
+}
+.margin-top-30 {
+  margin-top: 30px;
+}
+.margin-bottom-30 {
+  margin-bottom: 30px;
 }
 
 @media (min-width: 769px) {
@@ -88,25 +94,43 @@ body {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    justify-content: space-between;
     align-items: center;
-    padding: 10px;
-  }
-  .userPhoto {
-    width: 30%;
-    align-self: self-start;
-  }
-  .userText {
-    width: 40%;
-    text-align: left;
-    margin-right: 50px;
-  }
-  .userText label {
-    margin-left: 8px;
+    justify-content: center;
+    width: 60%;
   }
   .userName {
-    margin-left: 12px;
     align-self: self-start;
+    margin-inline: 30px;
+    width: 40%;
+  }
+  .userPhoto {
+    margin: 0;
+    margin-bottom: 10px;
+  }
+  .userText {
+    text-align: left;
+    margin-right: 50px;
+    margin-top: 15px;
+    width: 40%;
+    margin-left: 0;
+  }
+  .userText label {
+    margin-left: 30px;
+    text-align: left;
+  }
+  .buttonBuy-d {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 0px;
+  }
+  .buttonBuy {
+    width: 35%;
+    margin-inline: 20px;
+  }
+  .margin-b-desktop {
+    margin-bottom: 30px;
   }
 }
 

@@ -1,6 +1,12 @@
 .user-card {
-  background-color: #b2b2b2;
+  background-color: #D1C5AA;
   text-decoration: none;
+  width: 80%;
+  margin: auto;
+}
+
+.user-card:hover {
+  background-color: #7c92bd;
 }
 
 .nombre-usuario {
@@ -24,4 +30,11 @@
 
 .none-text-decoration {
   text-decoration: none;
+}
+@media (min-width: 769px){
+  /* Laptop */
+.user-card {
+  width: 60%;
+  margin: auto;
+  } 
 }
