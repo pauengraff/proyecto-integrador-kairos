@@ -5,7 +5,7 @@ const apiProductsController = require("../../controllers/api/products-controller
 
 router.get("/count", apiProductsController.count);
 
-router.get("/category", apiProductsController.productByCategory);
+router.get("/category/:id", apiProductsController.productByCategory);
 
 router.get("/:id/", apiProductsController.detailById);
 

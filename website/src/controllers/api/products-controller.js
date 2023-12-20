@@ -23,7 +23,14 @@ module.exports = {
   productByCategory: async (req, res) => {
     const categoryId = req.params.id;
     const products = await productsService.getProductByCategory(categoryId);
-    res.render("products/products", { products });
+    res.json({
+      meta: {
+        status: 200,
+        total: products.length,
+        url: req.originalUrl,
+      },
+      data: products,
+    });
   },
 
   detailById: async (req, res) => {
