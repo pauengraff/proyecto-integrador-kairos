@@ -146,7 +146,7 @@ body {
     margin: auto;
     width: 100%;
   }
-  .form-body button {
-  align-self: self-end;
+  .text-area{
+    width: 100%;
   }
 }
