@@ -20,6 +20,12 @@ module.exports = {
     });
   },
 
+  productByCategory: async (req, res) => {
+    const categoryId = req.params.id;
+    const products = await productsService.getProductByCategory(categoryId);
+    res.render("products/products", { products });
+  },
+
   detailById: async (req, res) => {
     const product = await productsService.getProduct(req.params.id);
     res.json({

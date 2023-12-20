@@ -23,7 +23,7 @@ function MenuCategories() {
       <div>
         {categories.length === 0
           ? "Cargando..."
-          : categories.map((category) => <MenuCategoryLinks key={category.id} name={category.name} />)}
+          : categories.map((category) => <MenuCategoryLinks key={category.id} name={category.category.name} />)}
       </div>
       <div>
         <h2>Rutas</h2>
