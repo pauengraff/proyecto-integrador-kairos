@@ -7,6 +7,7 @@ router.use("/api", apiRouter);
 const mainController = require("../controllers/main-controller");
 router.get("/", mainController.index);
 router.get("/contact", mainController.contact);
+router.post("/contact", mainController.contactMsg);
 
 const productsRouter = require("./products-router");
 router.use("/products", productsRouter);

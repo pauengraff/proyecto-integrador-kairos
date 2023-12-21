@@ -5,4 +5,7 @@ module.exports = {
   contact: (req, res) => {
     res.render("contact");
   },
+  contactMsg: (req, res) => {
+    res.render("contact-msg")
+  }
 };
