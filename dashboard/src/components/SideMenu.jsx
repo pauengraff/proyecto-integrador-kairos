@@ -3,7 +3,7 @@ import { SideMenuData } from "./SideMenuData";
 
 import { Link } from "react-router-dom";
 
-export default function SideBar2() {
+export default function SideBar() {
   return (
     <div className='sidebar'>
       <h3>Bienvenido</h3>

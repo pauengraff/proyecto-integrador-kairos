@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { apiUrl } from "../../config";
 import MenuCategoryDetail from "./MenuCategoryDetail";
 import MenuCategoryLinks from "./MenuCategoryLinks";
+import Products from "./Products";
 import "./MenuCategory.css";
 
 function MenuCategories() {
@@ -25,11 +26,13 @@ function MenuCategories() {
           ? "Cargando..."
           : categories.map((category) => <MenuCategoryLinks key={category.id} id={category.id} name={category.name} />)}
       </div>
-
       <div>
-        <h2>Rutas</h2>
-
         <Route path='/products/:id' component={MenuCategoryDetail} />
+        {/* <Route path='/products' exact>
+          <h2>Todos los Productos</h2>
+          <Products />
+          <Link to='/products'>Ver todos los productos</Link>
+        </Route> */}
       </div>
     </section>
   );
