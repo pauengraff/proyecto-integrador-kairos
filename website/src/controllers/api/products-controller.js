@@ -1,4 +1,5 @@
 const productsService = require("../../services/products-service");
+const categoryService = require("../../services/category-service");
 
 module.exports = {
   count: async (req, res) => {
@@ -17,6 +18,30 @@ module.exports = {
         nextPage: `${req.originalUrl.split("?")[0]}?page=${page + 1}`,
       },
       data: rows,
+    });
+  },
+  productsAllCategories: async (req, res) => {
+    const category = await categoryService.getAllCategories();
+    res.json({
+      meta: {
+        status: 200,
+        total: category.length,
+        url: req.originalUrl,
+      },
+      data: category,
+    });
+  },
+
+  productByCategory: async (req, res) => {
+    const categoryId = req.params.id;
+    const products = await productsService.getProductByCategory(categoryId);
+    res.json({
+      meta: {
+        status: 200,
+        total: products.length,
+        url: req.originalUrl,
+      },
+      data: products,
     });
   },
 

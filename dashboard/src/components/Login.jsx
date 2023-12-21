@@ -5,7 +5,7 @@ export default function Login() {
     <main>
       <div className='form-body'>
         <div>
-          <p className='text'>¡Bienvenido/a!</p>
+          <p className='text'>Bienvenido/a</p>
           <p className='text-medium'>Por favor ingresá con tus datos:</p>
         </div>
         <div className='form-login'>

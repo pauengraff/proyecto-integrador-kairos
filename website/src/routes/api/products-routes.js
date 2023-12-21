@@ -3,9 +3,11 @@ const router = express.Router();
 
 const apiProductsController = require("../../controllers/api/products-controller");
 
-// router.get("/", apiProductsController.list);
-
 router.get("/count", apiProductsController.count);
+
+router.get("/category", apiProductsController.productsAllCategories);
+
+router.get("/category/:id", apiProductsController.productByCategory);
 
 router.get("/:id/", apiProductsController.detailById);
 
