@@ -10,7 +10,7 @@ function MenuCategories() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await fetch(`${apiUrl}/api/products/count`);
+      const response = await fetch(`${apiUrl}/api/products/category`);
       const result = await response.json();
       setCategories(result.data);
     };
@@ -23,7 +23,7 @@ function MenuCategories() {
       <div>
         {categories.length === 0
           ? "Cargando..."
-          : categories.map((category) => <MenuCategoryLinks key={category.id} name={category.category.name} />)}
+          : categories.map((category) => <MenuCategoryLinks key={category.id} name={category.name} />)}
       </div>
       <div>
         <h2>Rutas</h2>
