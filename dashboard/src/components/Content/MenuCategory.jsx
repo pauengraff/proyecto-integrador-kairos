@@ -23,11 +23,11 @@ function MenuCategories() {
       <div>
         {categories.length === 0
           ? "Cargando..."
-          : categories.map((category) => <MenuCategoryLinks key={category.id} name={category.name} />)}
+          : categories.map((category) => <MenuCategoryLinks key={category.id} id={category.id} name={category.name} />)}
       </div>
       <div>
         <h2>Rutas</h2>
-        <Route path='/products/:name' component={MenuCategoryDetail} />
+        <Route path='/products/:id' component={MenuCategoryDetail} />
       </div>
     </section>
   );
