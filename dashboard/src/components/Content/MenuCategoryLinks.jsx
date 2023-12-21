@@ -3,9 +3,11 @@ import { Link } from "react-router-dom";
 
 function MenuCategoryLinks({ id, name }) {
   return (
-    <Link to={`/products/${id}`}>
-      <div>{name}</div>
-    </Link>
+    <div>
+      <Link to={`/products/${id}`}>
+        <div>{name}</div>
+      </Link>
+    </div>
   );
 }
 
