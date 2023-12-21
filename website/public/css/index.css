@@ -150,6 +150,7 @@
 .menu_img {
   display: block;
   width: 36px;
+  color: #d1c5aa;
 }
 
 /*revisar para eliminar este css de menu hamburquesa*/
@@ -338,6 +339,7 @@
   .menu_item {
     --clip: 0;
     overflow: hidden;
+
   }
   .menu_item--active {
     --transform: rotate(0);
