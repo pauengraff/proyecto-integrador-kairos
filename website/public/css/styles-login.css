@@ -80,6 +80,10 @@ main {
   font-size: 14px;
 }
 
+.form-body button:hover {
+  background-color: #7c92bd;
+}
+
 .link {
   text-decoration: none;
   color: #001c3b;

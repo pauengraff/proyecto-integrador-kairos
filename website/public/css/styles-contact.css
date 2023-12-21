@@ -2,6 +2,10 @@ body {
   height: 100vh;
 }
 
+.form {
+  margin-bottom: 250px;
+}
+
 .form-register {
   position: relative;
 }
@@ -14,8 +18,9 @@ body {
   position: relative;
   width: 400px;
   border: none;
-  background-color: #d2d2d2;
+  background-color: #D1C5AA;
   margin: auto;
+  margin-top: 45px;
   padding-top: 50px;
   padding-bottom: 20px;
   margin-bottom: 50px;
@@ -48,13 +53,30 @@ body {
   font-size: 16px;
 }
 
+.form-body textarea {
+  display: block;
+  margin: auto;
+  margin-bottom: 8px;
+  width: 60%;
+  padding: 8px;
+  color: gray;
+  border: none;
+  background-color: white;
+  font-size: 16px;
+}
+
+::placeholder {
+  font-size: 16px;
+  color: gray;
+}
+
 .form-body button {
   display: block;
   margin: auto;
-  margin-top: 65px;
+  margin-top: 25px;
   margin-bottom: 50px;
-  height: 35px;
-  width: 60%;
+  height: 40px;
+  width: 30%;
   background-color: #001c3b;
   color: white;
   border: none;
@@ -86,9 +108,17 @@ body {
 }
 
 .text-danger {
-  display: block;
   color: red;
   text-align: center;
+}
+
+#avatar {
+  font-size: 10px;
+}
+
+.form-register {
+  margin: auto;
+  width: 100%;
 }
 
 .errorMsg {
@@ -99,15 +129,6 @@ body {
 
 .display {
   display: block;
-}
-
-#image {
-  font-size: 10px;
-}
-
-.form-register {
-  margin: auto;
-  width: 100%;
 }
 
 @media (max-width: 481px) {
@@ -128,13 +149,13 @@ body {
     justify-content: space-between;
   }
   .form-register {
-    width: 50%;
+    width: 48%;
   }
   .text-form {
     margin: auto;
     width: 100%;
   }
-  .form-body button {
-    align-self: flex-end;
+  .text-area{
+    width: 100%;
   }
 }
