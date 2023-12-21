@@ -1,6 +1,11 @@
 body {
   height: 100vh;
 }
+
+.form {
+  margin-bottom: 250px;
+}
+
 .form-register {
   position: relative;
 }
