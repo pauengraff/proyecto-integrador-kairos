@@ -51,6 +51,9 @@ const MenuCategoryDetail = ({ match }) => {
       <ul>
         {products.map((product) => (
           <li key={product.id}>
+            <p>id: {product.id}</p>
+            <p>Category: {product.category.name}</p>
+            <p>precio: {product.price}</p>
             <p>Marca: {product.brand.name}</p>
             <p>Modelo:{product.name}</p>
           </li>

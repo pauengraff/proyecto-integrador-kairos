@@ -27,6 +27,7 @@ function Products() {
                 name={product.name}
                 brand={product.brand.name}
                 category={product.category.name}
+                price={product.price}
                 description={product.description}
                 image={product.image}
               />

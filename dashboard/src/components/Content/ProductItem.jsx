@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import "./ProductItem.css";
 import { apiUrl } from "../../config";
 
-function ProductItem({ name, brand, description, category, image }) {
+function ProductItem({ name, brand, price, description, category, image }) {
   const imageRoute = `${apiUrl}/images/products/`;
 
   return (
@@ -15,6 +15,7 @@ function ProductItem({ name, brand, description, category, image }) {
           <p>Marca: {brand}</p>
           <p>Modelo: {name}</p>
           <p>Categoria: {category}</p>
+          <p>Precio:{price}</p>
           <p>Descripcion: {description}</p>
         </div>
       </div>
