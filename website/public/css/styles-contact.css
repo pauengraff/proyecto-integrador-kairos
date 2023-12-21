@@ -1,0 +1,161 @@
+body {
+  height: 100vh;
+}
+
+.form {
+  margin-bottom: 250px;
+}
+
+.form-register {
+  position: relative;
+}
+
+.form-body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: relative;
+  width: 400px;
+  border: none;
+  background-color: #D1C5AA;
+  margin: auto;
+  margin-top: 45px;
+  padding-top: 50px;
+  padding-bottom: 20px;
+  margin-bottom: 50px;
+}
+
+.text {
+  text-align: center;
+  font-size: 28px;
+  font-weight: normal;
+  color: #001c3b;
+  margin-bottom: 5px;
+}
+
+.text-medium {
+  text-align: center;
+  font-size: 16px;
+  color: #001c3b;
+  margin-bottom: 25px;
+}
+
+.form-body input {
+  display: block;
+  margin: auto;
+  margin-bottom: 8px;
+  width: 60%;
+  padding: 8px;
+  color: gray;
+  border: none;
+  background-color: white;
+  font-size: 16px;
+}
+
+.form-body textarea {
+  display: block;
+  margin: auto;
+  margin-bottom: 8px;
+  width: 60%;
+  padding: 8px;
+  color: gray;
+  border: none;
+  background-color: white;
+  font-size: 16px;
+}
+
+::placeholder {
+  font-size: 16px;
+  color: gray;
+}
+
+.form-body button {
+  display: block;
+  margin: auto;
+  margin-top: 25px;
+  margin-bottom: 50px;
+  height: 40px;
+  width: 30%;
+  background-color: #001c3b;
+  color: white;
+  border: none;
+  font-size: 14px;
+}
+
+.form-body button:hover {
+  background-color: #7c92bd;
+}
+
+.form-body label {
+  display: block;
+  margin: auto;
+  width: 60%;
+  padding: 5px;
+  color: #001c3b;
+  font-size: 12px;
+}
+
+.form-body select {
+  display: block;
+  margin: auto;
+  width: 60%;
+  padding: 8px;
+  color: gray;
+  font-size: 14px;
+  border: none;
+  margin-bottom: 8px;
+}
+
+.text-danger {
+  color: red;
+  text-align: center;
+}
+
+#avatar {
+  font-size: 10px;
+}
+
+.form-register {
+  margin: auto;
+  width: 100%;
+}
+
+.errorMsg {
+  display: none;
+  color: red;
+  text-align: center;
+}
+
+.display {
+  display: block;
+}
+
+@media (max-width: 481px) {
+  .form-body {
+    border: none;
+  }
+}
+@media (min-width: 769px) {
+  /* Laptop */
+  form {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .form-body {
+    width: 95vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .form-register {
+    width: 48%;
+  }
+  .text-form {
+    margin: auto;
+    width: 100%;
+  }
+  .text-area{
+    width: 100%;
+  }
+}
