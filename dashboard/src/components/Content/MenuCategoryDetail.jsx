@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import { apiUrl } from "../../config";
 import ProductItem from "./ProductItem";
+import "./MenuCategoryDetail.css";
 
 const MenuCategoryDetail = ({ match }) => {
   const [products, setProducts] = useState([]);
@@ -22,10 +23,8 @@ const MenuCategoryDetail = ({ match }) => {
   }, [match.params.id, match.url]);
 
   return (
-    <div>
-      <h2>Productos en la Categoria</h2>
-
-      <ul>
+    <div className='product-container'>
+      <article className='product'>
         {products.length === 0
           ? "Cargando..."
           : products.map((product) => (
@@ -39,7 +38,7 @@ const MenuCategoryDetail = ({ match }) => {
                 image={product.image}
               />
             ))}
-      </ul>
+      </article>
     </div>
   );
 };

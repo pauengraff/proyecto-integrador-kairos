@@ -29,16 +29,14 @@ function MenuCategories() {
             {categories.map((category) => (
               <MenuCategoryLinks key={category.id} id={category.id} name={category.name} />
             ))}
-            <Link to='/products/list'>Mostrar Todos los Productos</Link>
+            <Link to='/products/list'>Todos los Productos</Link>
           </div>
         )}
       </div>
 
       <div>
         <Route path='/products/:id' component={MenuCategoryDetail} />
-        <Route path='/products/list'>
-          <h2>Todos los Productos</h2>
-        </Route>
+        <Route path='/products/list'></Route>
       </div>
     </section>
   );
