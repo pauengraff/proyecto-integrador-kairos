@@ -1,5 +1,4 @@
 import { Route, Switch } from "react-router-dom";
-import Products from "./Content/Products";
 import Login from "./Login";
 import Cart from "./Cart";
 import ControlPanel from "./ControlPanel";
@@ -11,7 +10,6 @@ export default function ContentWrap() {
     <Switch>
       <Route path='/products'>
         <MenuCategories />
-        <Products />
       </Route>
       <Route path='/login'>
         <Login />

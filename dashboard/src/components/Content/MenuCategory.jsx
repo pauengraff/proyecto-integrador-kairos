@@ -1,9 +1,9 @@
-import { Route } from "react-router-dom";
+import { Route, Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { apiUrl } from "../../config";
 import MenuCategoryDetail from "./MenuCategoryDetail";
 import MenuCategoryLinks from "./MenuCategoryLinks";
-import Products from "./Products";
+
 import "./MenuCategory.css";
 
 function MenuCategories() {
@@ -22,17 +22,23 @@ function MenuCategories() {
     <section className='section'>
       <h2>Elegi tu Categoria</h2>
       <div>
-        {categories.length === 0
-          ? "Cargando..."
-          : categories.map((category) => <MenuCategoryLinks key={category.id} id={category.id} name={category.name} />)}
+        {categories.length === 0 ? (
+          "Cargando..."
+        ) : (
+          <div>
+            {categories.map((category) => (
+              <MenuCategoryLinks key={category.id} id={category.id} name={category.name} />
+            ))}
+            <Link to='/products/list'>Mostrar Todos los Productos</Link>
+          </div>
+        )}
       </div>
+
       <div>
         <Route path='/products/:id' component={MenuCategoryDetail} />
-        {/* <Route path='/products' exact>
+        <Route path='/products/list'>
           <h2>Todos los Productos</h2>
-          <Products />
-          <Link to='/products'>Ver todos los productos</Link>
-        </Route> */}
+        </Route>
       </div>
     </section>
   );

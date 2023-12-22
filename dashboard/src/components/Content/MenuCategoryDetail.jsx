@@ -8,16 +8,22 @@ const MenuCategoryDetail = ({ match }) => {
 
   useEffect(() => {
     const fetchProducts = async () => {
-      const response = await fetch(`${apiUrl}/api/products/category/${match.params.id}`);
+      let apiUrlToFetch = `${apiUrl}/api/products/category/${match.params.id}`;
+
+      if (match.url === "/products/list") {
+        apiUrlToFetch = `${apiUrl}/api/products/count`;
+      }
+
+      const response = await fetch(apiUrlToFetch);
       const result = await response.json();
       setProducts(result.data);
     };
     fetchProducts();
-  }, [match.params.id]);
+  }, [match.params.id, match.url]);
 
   return (
     <div>
-      <h2>Productos en la Categoria {match.params.name}</h2>
+      <h2>Productos en la Categoria</h2>
 
       <ul>
         {products.length === 0
@@ -41,8 +47,9 @@ const MenuCategoryDetail = ({ match }) => {
 MenuCategoryDetail.propTypes = {
   match: PropTypes.shape({
     params: PropTypes.shape({
-      name: PropTypes.string.isRequired,
+      id: PropTypes.string.isRequired,
     }),
+    url: PropTypes.string.isRequired,
   }).isRequired,
 };
 
