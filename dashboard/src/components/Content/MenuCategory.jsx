@@ -20,7 +20,6 @@ function MenuCategories() {
 
   return (
     <section className='section'>
-      <h2>Elegi tu Categoria</h2>
       <nav>
         {categories.length === 0 ? (
           "Cargando..."
