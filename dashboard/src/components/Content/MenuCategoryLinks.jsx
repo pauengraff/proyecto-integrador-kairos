@@ -1,15 +1,16 @@
 import { PropTypes } from "prop-types";
 import { Link } from "react-router-dom";
+import "./MenuCategoryLink.css";
 import imageCategory1 from "../../assets/images/categories/dash-cat-1.png";
 import imageCategory2 from "../../assets/images/categories/dash-cat-2.png";
 import imageCategory3 from "../../assets/images/categories/dash-cat-3.png";
 import imageCategory4 from "../../assets/images/categories/dash-cat-4.png";
 
 const categoryImages = {
-  Category1: imageCategory1,
-  Category2: imageCategory2,
-  Category3: imageCategory3,
-  Category4: imageCategory4,
+  Clasico: imageCategory1,
+  Deportivo: imageCategory2,
+  "Moda Alta Gama": imageCategory3,
+  "Deporte Profesional": imageCategory4,
 };
 
 function MenuCategoryLinks({ id, name }) {
@@ -17,8 +18,7 @@ function MenuCategoryLinks({ id, name }) {
   return (
     <div>
       <Link to={`/products/${id}`}>
-        <img src={imageOnLink} alt={name} />
-        <div>{name}</div>
+        <img src={imageOnLink} className='imgLink' />
       </Link>
     </div>
   );
