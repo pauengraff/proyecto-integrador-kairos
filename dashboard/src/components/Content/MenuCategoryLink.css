@@ -1,5 +1,5 @@
 .imgLink {
   width: 300px;
   height: auto;
-  margin: 5px;
+  margin: 5px; /* Añade un margen entre elementos */
 }

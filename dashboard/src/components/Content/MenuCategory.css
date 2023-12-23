@@ -8,3 +8,9 @@
 .link-container:last-child {
   width: 100%; /* Hace que el último elemento ocupe toda la línea */
 }
+
+.all-products-image {
+  margin-right: 0%;
+  width: 800px;
+  height: auto;
+}

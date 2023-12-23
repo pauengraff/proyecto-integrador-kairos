@@ -4,6 +4,7 @@ import { apiUrl } from "../../config";
 import MenuCategoryDetail from "./MenuCategoryDetail";
 import MenuCategoryLinks from "./MenuCategoryLinks";
 import "./MenuCategory.css";
+import allProductsImage from "../../assets/images/categories/all-products.png";
 
 function MenuCategories() {
   const [categories, setCategories] = useState([]);
@@ -28,7 +29,11 @@ function MenuCategories() {
             {categories.map((category) => (
               <MenuCategoryLinks key={category.id} id={category.id} name={category.name} />
             ))}
-            <Link to='/products/list'>Todos los Productos</Link>
+
+            <Link to='/products/list'>
+              <h3>Todos los productos</h3>
+              <img src={allProductsImage} className='all-products-image' alt='allProductsImage' />
+            </Link>
           </div>
         )}
       </nav>
