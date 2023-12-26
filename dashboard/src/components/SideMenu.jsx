@@ -1,6 +1,5 @@
 import "./SideMenu.css";
 import { SideMenuData } from "./SideMenuData";
-
 import { Link } from "react-router-dom";
 
 export default function SideBar() {

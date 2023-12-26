@@ -5,12 +5,13 @@ import ControlPanel from "./ControlPanel";
 import Contact from "./Contact";
 import MenuCategories from "./Content/MenuCategory";
 
-export default function ContentWrap() {
+export default function SideMenuRoutes() {
   return (
     <Switch>
       <Route path='/products'>
         <MenuCategories />
       </Route>
+
       <Route path='/login'>
         <Login />
       </Route>

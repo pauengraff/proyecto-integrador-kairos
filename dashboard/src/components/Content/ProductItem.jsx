@@ -1,16 +1,20 @@
 import PropTypes from "prop-types";
-import "./ProductItem.css";
+import { Link } from "react-router-dom";
 import { apiUrl } from "../../config";
+import "./ProductItem.css";
 
-function ProductItem({ name, brand, price, description, category, image }) {
+function ProductItem({ id, name, brand, price, description, category, image }) {
   const imageRoute = `${apiUrl}/images/products/`;
 
   return (
     <article className='productitem'>
       <div className='card'>
-        <figure>
-          <img src={imageRoute + image} alt='imagenReloj' className='imgProduct' />
-        </figure>
+        <Link to={`/productdetail/${id}`}>
+          <figure>
+            <img src={imageRoute + image} alt='imagenReloj' className='imgProduct' />
+          </figure>
+        </Link>
+
         <div className='contenido'>
           <p>Marca: {brand}</p>
           <p>Modelo: {name}</p>
@@ -24,6 +28,7 @@ function ProductItem({ name, brand, price, description, category, image }) {
 }
 
 ProductItem.propTypes = {
+  id: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
 };
 
