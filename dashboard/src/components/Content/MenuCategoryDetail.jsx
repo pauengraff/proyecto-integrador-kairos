@@ -1,9 +1,7 @@
 import { useEffect, useState } from "react";
 import PropTypes from "prop-types";
-import { Route } from "react-router-dom";
 import { apiUrl } from "../../config";
 import ProductItem from "./ProductItem";
-import ProductDetail from "./ProductDetail";
 
 import "./MenuCategoryDetail.css";
 
@@ -43,9 +41,6 @@ const MenuCategoryDetail = ({ match }) => {
               />
             ))}
       </article>
-      <div>
-        <Route path='productdetail/:id' component={ProductDetail} />
-      </div>
     </div>
   );
 };

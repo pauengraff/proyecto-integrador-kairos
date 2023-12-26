@@ -11,7 +11,6 @@ export default function SideMenuRoutes() {
       <Route path='/products'>
         <MenuCategories />
       </Route>
-
       <Route path='/login'>
         <Login />
       </Route>
@@ -25,7 +24,7 @@ export default function SideMenuRoutes() {
         <Contact />
       </Route>
       <Route path='*'>
-        <p>404 - página no encontrada</p>
+        <p>404 - Not Fount</p>
       </Route>
     </Switch>
   );

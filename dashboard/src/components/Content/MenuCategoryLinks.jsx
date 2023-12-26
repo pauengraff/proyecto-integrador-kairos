@@ -17,7 +17,7 @@ function MenuCategoryLinks({ id, name }) {
   const imageOnLink = categoryImages[name];
   return (
     <div>
-      <Link to={`/products/${id}`}>
+      <Link to={`/products/category/${id}`}>
         <img src={imageOnLink} className='imgLink' />
       </Link>
     </div>
