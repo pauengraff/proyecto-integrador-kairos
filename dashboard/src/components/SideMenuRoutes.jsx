@@ -3,13 +3,13 @@ import Login from "./Login";
 import Cart from "./Cart";
 import ControlPanel from "./ControlPanel";
 import Contact from "./Contact";
-import MenuCategories from "./Content/MenuCategory";
+import MenuCategory from "./Content/MenuCategory";
 
 export default function SideMenuRoutes() {
   return (
     <Switch>
       <Route path='/products'>
-        <MenuCategories />
+        <MenuCategory />
       </Route>
       <Route path='/login'>
         <Login />
@@ -24,7 +24,7 @@ export default function SideMenuRoutes() {
         <Contact />
       </Route>
       <Route path='*'>
-        <p>404 - Not Fount</p>
+        <p>404 - Not Found</p>
       </Route>
     </Switch>
   );

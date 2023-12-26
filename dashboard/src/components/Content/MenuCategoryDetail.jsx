@@ -48,7 +48,7 @@ const MenuCategoryDetail = ({ match }) => {
 MenuCategoryDetail.propTypes = {
   match: PropTypes.shape({
     params: PropTypes.shape({
-      id: PropTypes.string.isRequired,
+      id: PropTypes.string,
     }),
     url: PropTypes.string.isRequired,
   }).isRequired,

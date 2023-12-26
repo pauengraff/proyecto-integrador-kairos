@@ -1,6 +1,7 @@
 import PropTypes from "prop-types";
-import { Link } from "react-router-dom";
+import { Link, Route } from "react-router-dom";
 import { apiUrl } from "../../config";
+import ProductDetail from "./ProductDetail";
 import "./ProductItem.css";
 
 function ProductItem({ id, name, brand, price, description, category, image }) {
@@ -13,16 +14,18 @@ function ProductItem({ id, name, brand, price, description, category, image }) {
           <figure>
             <img src={imageRoute + image} alt='imagenReloj' className='imgProduct' />
           </figure>
-        </Link>
 
-        <div className='contenido'>
-          <p>Marca: {brand}</p>
-          <p>Modelo: {name}</p>
-          <p>Categoria: {category}</p>
-          <p>Precio:{price}</p>
-          <p>Descripcion: {description}</p>
-        </div>
+          <div className='contenido'>
+            <p>ID: {id}</p>
+            <p>Marca: {brand}</p>
+            <p>Modelo: {name}</p>
+            <p>Categoria: {category}</p>
+            <p>Precio:{price}</p>
+            <p>Descripcion: {description}</p>
+          </div>
+        </Link>
       </div>
+      <Route path='/productdetail/:id' component={ProductDetail} />
     </article>
   );
 }

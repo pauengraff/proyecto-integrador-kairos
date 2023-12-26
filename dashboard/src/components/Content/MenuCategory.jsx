@@ -6,7 +6,7 @@ import MenuCategoryLinks from "./MenuCategoryLinks";
 import "./MenuCategory.css";
 import allProductsImage from "../../assets/images/categories/all-products.png";
 
-function MenuCategories() {
+function MenuCategory() {
   const [categories, setCategories] = useState([]);
 
   useEffect(() => {
@@ -39,9 +39,9 @@ function MenuCategories() {
 
       <div>
         <Route path='/products/category/:id' component={MenuCategoryDetail} />
-        <Route path='/products/list' />
+        <Route path='/products/list' component={MenuCategoryDetail} />
       </div>
     </section>
   );
 }
-export default MenuCategories;
+export default MenuCategory;
