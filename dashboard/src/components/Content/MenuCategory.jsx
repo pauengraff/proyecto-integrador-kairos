@@ -37,10 +37,8 @@ function MenuCategory() {
         )}
       </nav>
 
-      <div>
-        <Route path='/products/category/:id' component={MenuCategoryDetail} />
-        <Route path='/products/list' component={MenuCategoryDetail} />
-      </div>
+      <Route path='/products/category/:id' component={MenuCategoryDetail} />
+      <Route path='/products/list' component={MenuCategoryDetail} />
     </section>
   );
 }

@@ -14,7 +14,9 @@ function ProductDetail({ match }) {
       setProduct(result.data);
     };
     fetchData();
-  }, [match.params.id, match.url]);
+  }, [match.params.id]);
+
+  console.log("ProductDetail Rendered!", match.params.id, product);
 
   return (
     <div className='product-container'>

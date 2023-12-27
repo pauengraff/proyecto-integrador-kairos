@@ -4,6 +4,7 @@
 .link-container {
   display: flex;
   flex-wrap: wrap;
+  margin: auto;
 }
 .link-container:last-child {
   width: 100%; /* Hace que el último elemento ocupe toda la línea */
