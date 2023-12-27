@@ -1,4 +1,5 @@
 import { Route, Switch } from "react-router-dom";
+import "./SideMenu.css";
 import Login from "./Login";
 import Cart from "./Cart";
 import ControlPanel from "./ControlPanel";
@@ -26,7 +27,7 @@ export default function SideMenuRoutes() {
         <Contact />
       </Route>
       <Route path='*'>
-        <p>404 - Not Found</p>
+        <p className='not-found'>404 - Not Found</p>
       </Route>
     </Switch>
   );

@@ -44,3 +44,6 @@
 .row .item {
   flex: 70%;
 }
+.not-found {
+  margin-left: 500px;
+}
