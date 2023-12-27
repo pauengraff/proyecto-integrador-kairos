@@ -4,16 +4,15 @@ import "./ProductDetail.css";
 import { apiUrl } from "../../config";
 
 function ProductDetail({ match }) {
-  const [product, setProduct] = useState({});
-  //useState utiliza {} porque se epsera un solo producto
+  const [product, setProduct] = useState([]);
 
   useEffect(() => {
-    const fetchData = async () => {
+    const fetchProduct = async () => {
       const response = await fetch(`${apiUrl}/api/products/${match.params.id}`);
       const result = await response.json();
       setProduct(result.data);
     };
-    fetchData();
+    fetchProduct();
   }, [match.params.id]);
 
   console.log("ProductDetail Rendered!", match.params.id, product);
@@ -21,18 +20,18 @@ function ProductDetail({ match }) {
   return (
     <div className='product-container'>
       <article className='product'>
-        {Object.keys(product).length === 0 ? (
-          "Cargando..."
-        ) : (
-          <div>
-            <p>Modelo={product.name},</p>
-            <p>Marca={product.brand.name}</p>
-            <p>Categoria={product.category.name}</p>
-            <p>Precio={product.price}</p>
-            <p>Descripcion={product.description}</p>
-            <p>image={product.image}</p>
-          </div>
-        )}
+        {product.length === 0
+          ? "Cargando..."
+          : product.map((product) => (
+              <div>
+                <p>Modelo={product.name},</p>
+                <p>Marca={product.brand.name}</p>
+                <p>Categoria={product.category.name}</p>
+                <p>Precio={product.price}</p>
+                <p>Descripcion={product.description}</p>
+                <p>image={product.image}</p>
+              </div>
+            ))}
       </article>
     </div>
   );
