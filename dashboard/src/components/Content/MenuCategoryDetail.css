@@ -5,6 +5,7 @@
 
 .product {
   width: 100%;
+  margin-left: 150px;
   max-height: 500px;
   height: 100vh;
   display: flex;

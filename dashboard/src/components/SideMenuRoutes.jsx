@@ -7,6 +7,7 @@ import ControlPanel from "./ControlPanel";
 import Contact from "./Contact";
 import MenuCategory from "./Content/MenuCategory";
 import ProductDetail from "./Content/ProductDetail";
+import MenuCategoryDetail from "./Content/MenuCategoryDetail";
 
 export default function SideMenuRoutes() {
   return (
@@ -14,9 +15,11 @@ export default function SideMenuRoutes() {
       <Route path='/' exact>
         <Home />
       </Route>
-      <Route path='/products'>
+      <Route path='/products' exact>
         <MenuCategory />
       </Route>
+      <Route path='/products/category/:id' component={MenuCategoryDetail} />
+      <Route path='/products/list' component={MenuCategoryDetail} />
       <Route path='/productdetail/:id'>
         <ProductDetail />
       </Route>

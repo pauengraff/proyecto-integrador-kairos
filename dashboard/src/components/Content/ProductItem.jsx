@@ -19,7 +19,6 @@ function ProductItem({ id, name, brand, price, description, category, image }) {
           </figure>
 
           <div className='contenido'>
-            <p>ID: {id}</p>
             <p>Marca: {brand}</p>
             <p>Modelo: {name}</p>
             <p>Categoria: {category}</p>
