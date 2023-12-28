@@ -6,12 +6,12 @@ function Product({ name, brand, price, description, category, image }) {
   const imageRoute = `${apiUrl}/images/products/`;
 
   return (
-    <article className=''>
-      <figure>
+    <article className='article-container'>
+      <figure className='image-container '>
         <img src={imageRoute + image} alt='imagenReloj' className='image' />
       </figure>
 
-      <div className=''>
+      <div className='text-container'>
         <p>Marca: {brand}</p>
         <p>Modelo: {name}</p>
         <p>Categoria: {category}</p>
