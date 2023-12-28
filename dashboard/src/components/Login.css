@@ -1,3 +1,28 @@
 .form-body {
   margin-left: 500px;
+  background-color: #001C3B;
+  padding: 20px 40px;
+  text-align: center;
+  border-radius: 5px;
+  margin-top: 40px;
+}
+.text {
+  padding: 10px;
+  color: #D1C5AA;
+  font-size: 20px;
+  margin-bottom: 0;
+}
+.text-medium {
+  color: #D1C5AA;
+  font-size: 12px;
+  margin-bottom: 30px;
+  margin-top: 0;
+}
+.form-login input {
+  border-radius: 5px;
+  margin-top: 10px;
+  background-color: #D1C5AA;
+  border: none;
+  padding: 5px;
+  margin-bottom: 10px;
 }

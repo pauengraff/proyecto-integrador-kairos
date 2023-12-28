@@ -18,7 +18,7 @@ function ProductsButton() {
       return (
           <div className='button-home'>
           <article className='button-item'>
-              <Link to={`/products`}>
+              <Link to={`/products/list`}>
                   <p className="title">Productos</p>
                   <p className="number">{products.length}</p>
               </Link>
