@@ -18,7 +18,7 @@ function CategoriesButton() {
       return (
           <div className='button-home'> 
           <article className='button-item'>
-              <Link to={`/products/category`}>
+              <Link to={`/products`}>
                   <p className="title">Categorías</p>
                   <p className="number">{categories.length}</p>
               </Link>
