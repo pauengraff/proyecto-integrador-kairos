@@ -1,15 +1,20 @@
 .home {
-
-    display: flex;
-    margin-left: 300px;
+    margin-top: 200px;
+    margin-left: 260px;
 }
 
 .button-home {
+    display: grid;
     background-color: #001329;
     color: white;
     width: 200px;
     height: 200px;
     margin-top: 400px;
     margin-left: 400px;
+}
+
+.banner-home {
+    width: 80%;
+    height: 30%;
 }
 
