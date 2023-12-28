@@ -1,23 +1,57 @@
 import { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 
+import { apiUrl } from "../../config";
+import ProductItem from "./ProductItem";
+
+import "./MenuCategoryDetail.css";
+
 const MenuCategoryDetail = ({ match }) => {
-  const [name, setName] = useState(match.params.name);
+  const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    const { name: newName } = match.params;
-    if (name !== newName) {
-      setName(newName);
-    }
-  }, [match.params, name]);
-  return <h3>{name}</h3>;
+    const fetchProducts = async () => {
+      let apiUrlToFetch = `${apiUrl}/api/products/category/${match.params.id}`;
+
+      if (match.url === "/products/list") {
+        apiUrlToFetch = `${apiUrl}/api/products/count`;
+      }
+
+      const response = await fetch(apiUrlToFetch);
+      const result = await response.json();
+      setProducts(result.data);
+    };
+    fetchProducts();
+  }, [match.params.id, match.url]);
+
+  return (
+    <div className='product-container'>
+      <article className='product'>
+        {products.length === 0
+          ? "Cargando..."
+          : products.map((product) => (
+              <ProductItem
+                key={product.id}
+                id={product.id}
+                name={product.name}
+                brand={product.brand.name}
+                category={product.category.name}
+                price={product.price}
+                description={product.description}
+                image={product.image}
+              />
+            ))}
+      </article>
+    </div>
+  );
 };
 
 MenuCategoryDetail.propTypes = {
   match: PropTypes.shape({
     params: PropTypes.shape({
-      name: PropTypes.string.isRequired,
+      id: PropTypes.string,
     }),
+    url: PropTypes.string.isRequired,
   }).isRequired,
 };
 

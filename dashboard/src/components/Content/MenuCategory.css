@@ -1,3 +1,18 @@
 .section {
-  margin-top: 200px;
+  margin-top: 150px;
+}
+.link-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+}
+.link-container:last-child {
+  width: 100%; /* Hace que el último elemento ocupe toda la línea */
+}
+
+.all-products-image {
+  text-align: center;
+  margin-left: 100px;
+  width: 1000px;
+  height: auto;
 }

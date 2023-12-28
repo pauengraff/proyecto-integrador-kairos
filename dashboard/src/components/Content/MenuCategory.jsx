@@ -1,11 +1,12 @@
-import { Route } from "react-router-dom";
+import { Route, Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { apiUrl } from "../../config";
 import MenuCategoryDetail from "./MenuCategoryDetail";
 import MenuCategoryLinks from "./MenuCategoryLinks";
 import "./MenuCategory.css";
+import allProductsImage from "../../assets/images/categories/all-products.png";
 
-function MenuCategories() {
+function MenuCategory() {
   const [categories, setCategories] = useState([]);
 
   useEffect(() => {
@@ -19,17 +20,23 @@ function MenuCategories() {
 
   return (
     <section className='section'>
-      <h2>Elegi tu Categoria</h2>
-      <div>
-        {categories.length === 0
-          ? "Cargando..."
-          : categories.map((category) => <MenuCategoryLinks key={category.id} name={category.name} />)}
-      </div>
-      <div>
-        <h2>Rutas</h2>
-        <Route path='/products/:name' component={MenuCategoryDetail} />
-      </div>
+      <nav>
+        {categories.length === 0 ? (
+          "Cargando..."
+        ) : (
+          <div className='link-container'>
+            {categories.map((category) => (
+              <MenuCategoryLinks key={category.id} id={category.id} name={category.name} />
+            ))}
+
+            <Link to='/products/list'>
+              <h3>Todos los productos</h3>
+              <img src={allProductsImage} className='all-products-image' alt='allProductsImage' />
+            </Link>
+          </div>
+        )}
+      </nav>
     </section>
   );
 }
-export default MenuCategories;
+export default MenuCategory;
