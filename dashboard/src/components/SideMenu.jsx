@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 export default function SideBar2() {
   return (
     <div className='sidebar'>
-      <h3>Bienvenido</h3>
+      <h3>Bienvenido!</h3>
       <ul className='sidebarList'>
         {SideMenuData.map((val, key) => {
           return (

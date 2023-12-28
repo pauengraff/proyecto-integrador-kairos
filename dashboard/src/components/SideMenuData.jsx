@@ -1,6 +1,6 @@
 import HomeIcon from "@mui/icons-material/Home";
 import LoginIcon from "@mui/icons-material/Login";
-import FeaturedPlayListIcon from "@mui/icons-material/FeaturedPlayList";
+import FeaturedPlayListIcon from "@mui/icons-material/Watch";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import ContactsIcon from "@mui/icons-material/Contacts";
 import PrivacyTipIcon from "@mui/icons-material/PrivacyTip";
@@ -9,7 +9,7 @@ export const SideMenuData = [
   {
     title: "Home",
     icon: <HomeIcon />,
-    link: "/",
+    link: "/home",
   },
   {
     title: "Login",

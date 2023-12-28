@@ -1,5 +1,5 @@
 import "./Header.css";
-import logo from "../assets/images/logo/kairos-logo-color.png";
+import logo from "../assets/images/logo/kairos-logo-un-color-beige.png";
 
 export default function Header() {
   return (
