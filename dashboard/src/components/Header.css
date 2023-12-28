@@ -10,12 +10,12 @@
   width: 100%;
   text-align: center;
   height: 135px;
-  background-color: brown;
+  background-color: #001C3B;
 }
 .header p {
   margin: 0 auto; /* Centro el texto dentro del Header*/
 }
 .logo {
-  width: 10%;
+  width: 15%;
   height: auto;
 }

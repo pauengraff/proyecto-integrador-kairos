@@ -5,10 +5,14 @@ import Cart from "./Cart";
 import ControlPanel from "./ControlPanel";
 import Contact from "./Contact";
 import MenuCategories from "./Content/MenuCategory";
+import Home from "./Home";
 
 export default function ContentWrap() {
   return (
     <Switch>
+       <Route path='/home'>
+        <Home />
+      </Route>
       <Route path='/products'>
         <MenuCategories />
         <Products />
