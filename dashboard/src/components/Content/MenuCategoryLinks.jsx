@@ -7,8 +7,8 @@ import imageCategory3 from "../../assets/images/categories/dash-cat-3.png";
 import imageCategory4 from "../../assets/images/categories/dash-cat-4.png";
 
 const categoryImages = {
-  Clasico: imageCategory1,
-  Deportivo: imageCategory2,
+  Deportivo: imageCategory1,
+  Clasico: imageCategory2,
   "Moda Alta Gama": imageCategory3,
   "Deporte Profesional": imageCategory4,
 };
