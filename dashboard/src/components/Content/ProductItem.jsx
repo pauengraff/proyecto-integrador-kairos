@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import { Link, Route } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { apiUrl } from "../../config";
 
 import "./ProductItem.css";
@@ -7,13 +7,10 @@ import "./ProductItem.css";
 function ProductItem({ id, name, brand, price, description, category, image }) {
   const imageRoute = `${apiUrl}/images/products/`;
 
-  const handleClick = () => {
-    console.log("Link clicked!", id);
-  };
   return (
     <article className='productitem'>
       <div className='card'>
-        <Link to={`/productdetail/${id}`} onClick={handleClick}>
+        <Link to={`/productdetail/${id}`}>
           <figure>
             <img src={imageRoute + image} alt='imagenReloj' className='imgProduct' />
           </figure>
