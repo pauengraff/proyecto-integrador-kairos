@@ -1,20 +1,40 @@
 .home {
-    margin-top: 200px;
-    margin-left: 260px;
-}
-
-.button-home {
-    display: grid;
-    background-color: #001329;
-    color: white;
-    width: 200px;
-    height: 200px;
-    margin-top: 400px;
-    margin-left: 400px;
+    margin-top: 40px;
+    margin-left: 280px;
+    display: flex;
+    gap: 67px;
 }
 
 .banner-home {
-    width: 80%;
+    margin-top: 200px;
+    margin-left: 300px;
+    width: 60%;
     height: 30%;
+    margin-bottom: 0;
 }
 
+.button-home {
+    display: flex;
+    margin-top: 0;
+}
+
+.button-item {
+    background-color: #001C3B;
+    width: 200px;
+    height: 100px;
+    margin: 20px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.title {
+    color: #D1C5AA;
+    font-size: 18px;
+    margin-bottom: 0;
+}
+
+.number {
+    color: #D1C5AA;
+    font-size: 30px;
+    margin-top: 0;
+}

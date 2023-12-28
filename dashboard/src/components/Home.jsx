@@ -7,12 +7,15 @@ import bannerHome from "../assets/images/banner-home.png";
 
 export default function Home (){
 return (
-    <div className="home">
+    <div>
         <img src={bannerHome} alt='bannerHome' className="banner-home"/>
+        <div className="home">
         <ProductsButton />
         <CategoriesButton />
         <UsersButton />
+        </div>
     </div>
+   
 )
 }
 
