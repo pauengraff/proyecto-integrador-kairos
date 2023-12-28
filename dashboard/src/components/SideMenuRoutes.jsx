@@ -6,6 +6,7 @@ import Cart from "./Cart";
 import ControlPanel from "./ControlPanel";
 import Contact from "./Contact";
 import MenuCategory from "./Content/MenuCategory";
+import ProductDetail from "./Content/ProductDetail";
 
 export default function SideMenuRoutes() {
   return (
@@ -15,6 +16,9 @@ export default function SideMenuRoutes() {
       </Route>
       <Route path='/products'>
         <MenuCategory />
+      </Route>
+      <Route path='/productdetail/:id'>
+        <ProductDetail />
       </Route>
       <Route path='/login'>
         <Login />

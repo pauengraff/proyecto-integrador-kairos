@@ -1,7 +1,6 @@
 import PropTypes from "prop-types";
 import { Link, Route } from "react-router-dom";
 import { apiUrl } from "../../config";
-import ProductDetail from "./ProductDetail";
 
 import "./ProductItem.css";
 
@@ -29,7 +28,6 @@ function ProductItem({ id, name, brand, price, description, category, image }) {
           </div>
         </Link>
       </div>
-      <Route path='/productdetail/:id' component={ProductDetail} />
     </article>
   );
 }
