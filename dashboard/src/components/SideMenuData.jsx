@@ -9,7 +9,7 @@ export const SideMenuData = [
   {
     title: "Home",
     icon: <HomeIcon />,
-    link: "/home",
+    link: "/",
   },
   {
     title: "Login",
