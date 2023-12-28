@@ -9,6 +9,7 @@ import MenuCategory from "./Content/MenuCategory";
 import ProductDetail from "./Content/ProductDetail";
 import MenuCategoryDetail from "./Content/MenuCategoryDetail";
 
+
 export default function SideMenuRoutes() {
   return (
     <Switch>
