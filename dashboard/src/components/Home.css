@@ -8,7 +8,7 @@
 .banner-home {
     margin-top: 100px;
     margin-left: 300px;
-    width: 60%;
+    width: 61%;
     height: 30%;
     margin-bottom: 0;
     border-radius: 5px;
@@ -17,7 +17,7 @@
 .button-home {
     display: flex;
     margin-top: 0;
-    width: 25%;
+    width: 24%;
     height: auto;
 }
 
