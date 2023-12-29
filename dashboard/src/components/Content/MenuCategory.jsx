@@ -1,9 +1,9 @@
 import { Route, Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { apiUrl } from "../../config";
-import MenuCategoryDetail from "./MenuCategoryDetail";
 import MenuCategoryLinks from "./MenuCategoryLinks";
 import "./MenuCategory.css";
+import ButtonAllProducts from "../../assets/images/button-all-products.png";
 
 
 function MenuCategory() {
@@ -30,7 +30,7 @@ function MenuCategory() {
             ))}
 
             <Link to='/products/list'>
-              <h3 className="all-products">Todos los productos</h3>
+            <img src={ButtonAllProducts} className='button-all-products' />
             </Link>
           </div>
         )}
