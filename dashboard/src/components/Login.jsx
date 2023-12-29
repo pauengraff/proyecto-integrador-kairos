@@ -2,7 +2,6 @@ import "./Login.css";
 
 export default function Login() {
   return (
-    <main>
       <div className='form-body'>
         <div>
           <p className='text'>Bienvenido/a</p>
@@ -15,11 +14,10 @@ export default function Login() {
         <div className='form-login'>
           <input type='password' name='password' id='password' placeholder='Contraseña' />
         </div>
-      </div>
 
-      <button className='buttons' type='submit'>
-        Ingresa
+        <button className='buttons' type='submit'>
+        Ingresar
       </button>
-    </main>
+      </div>
   );
 }

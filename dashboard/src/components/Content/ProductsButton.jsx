@@ -1,4 +1,4 @@
-import "./Buttons.css";
+import "../../components/Home.css";
 import { Link } from "react-router-dom";
 import { apiUrl } from "../../config";
 import { useEffect, useState } from "react";
@@ -16,11 +16,11 @@ function ProductsButton() {
     }, []);
   
       return (
-          <div>
-          <article className='button-home'>
-              <Link to={`/products`}>
-                  <p>Productos</p>
-                  {products.length}
+          <div className='button-home'>
+          <article className='button-item'>
+              <Link to={`/products/list`}>
+                  <p className="title">Productos</p>
+                  <p className="number">{products.length}</p>
               </Link>
           </article>
           </div>

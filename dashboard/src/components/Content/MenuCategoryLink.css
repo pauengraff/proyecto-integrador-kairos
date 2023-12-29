@@ -1,5 +1,12 @@
 .imgLink {
-  width: 300px;
+  width: 200px;
   height: auto;
-  margin: 5px; /* Añade un margen entre elementos */
+  margin: 40px; /* Añade un margen entre elementos */
+  margin-left: 0;
+  margin-top: 0;
+}
+
+.imgLink:hover {
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+  transform: translateY(-3%);
 }

@@ -16,3 +16,15 @@
   width: 1000px;
   height: auto;
 }
+
+.button-all-products {
+  width: 76%;
+  height: auto;
+  margin-left: 0;
+  margin-top: 0;
+  border-radius: 5px;
+}
+.button-all-products:hover {
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+  transform: translateY(-3%);
+}
