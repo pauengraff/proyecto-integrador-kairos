@@ -1,12 +1,8 @@
-.Dashboard {
-  width: 100vw;
-  height: 100vh;
-}
 body {
   margin: 0;
   padding: 0;
   font-family: Roboto;
-  background-color: #001C3B;
+
 }
 
 .width-20 {

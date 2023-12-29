@@ -1,3 +1,46 @@
-.section {
-  margin-left: 300px;
+.form-body {
+  margin-left: 500px;
+  background-color: #D1C5AA;
+  padding: 30px 40px;
+  text-align: center;
+  border-radius: 5px;
+  margin-top: 80px;
+  width: 40%;
+}
+.text {
+  padding: 10px;
+  color: #001C3B;
+  font-size: 20px;
+  margin-bottom: 0;
+}
+.text-medium {
+  color: #001C3B;
+  font-size: 12px;
+  margin-bottom: 30px;
+  margin-top: 0;
+}
+.form-contact input {
+  width: 60%;
+  border-radius: 5px;
+  margin-top: 10px;
+  background-color: white;
+  border: none;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+.form-contact textarea {
+  width: 60%;
+  border-radius: 5px;
+  margin-top: 10px;
+  background-color: white;
+  border: none;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+.buttons {
+  background-color: #001C3B;
+  color: #D1C5AA;
+  font-size: 14px;
+  margin-top: 10px;
+  margin-bottom: 20px;
 }
