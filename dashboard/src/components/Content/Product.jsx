@@ -12,11 +12,12 @@ function Product({ name, brand, price, description, category, image }) {
       </figure>
 
       <div className='text-container'>
-        <p>Marca: {brand}</p>
-        <p>Modelo: {name}</p>
-        <p>Categoria: {category}</p>
+        <h2>{brand}</h2>
+        <h4>Modelo: {name}</h4>
+
         <p>Precio:{price}</p>
-        <p>Descripcion: {description}</p>
+        <h4>Descripcion</h4>
+        <p>{description}</p>
       </div>
     </article>
   );
