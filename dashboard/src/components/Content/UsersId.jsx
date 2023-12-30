@@ -15,6 +15,7 @@ function UsersId({ first_name, last_name, email, avatar }) {
       <div className="userEmail">
         <EmailIcon fontSize="small"/>
         {email}</div>
+      <button className="buttonDeleteUser">Eliminar</button>
       </div>
     </article>
   );

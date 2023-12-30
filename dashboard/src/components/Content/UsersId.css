@@ -4,7 +4,7 @@
   border: none;
   margin: 10px 2px;
   width: 280px;
-  height: 100px;
+  height: 120px;
   padding: 20px;
   display: flex;
 }
@@ -34,4 +34,12 @@
   display: flex;
   justify-content: space-between;
   gap: 3px;
+}
+.buttonDeleteUser{
+  font-size: 10px;
+  background-color: #001C3B;
+  color: #D1C5AA;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-top: 14px;
 }
