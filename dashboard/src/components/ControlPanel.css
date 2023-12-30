@@ -1,3 +1,8 @@
 .section {
-  margin-left: 300px;
+  margin-left: 200px;
+}
+
+.section h3 {
+  color: #D1C5AA;
+  margin-left: 110px;
 }

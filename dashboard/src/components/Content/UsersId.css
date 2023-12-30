@@ -1,8 +1,37 @@
 .userCard {
-  background-color: grey;
-  border-color: blue;
-  margin: 20px;
+  background-color: #D1C5AA;
+  border-radius: 5px;
+  border: none;
+  margin: 10px 2px;
+  width: 280px;
+  height: 100px;
+  padding: 20px;
+  display: flex;
+}
+.userCard:hover {
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+  transform: translateY(-3%);
+}
+.userInfo {
+  flex-direction: column;
+  margin-top: 10px;
 }
 .imgProduct {
-  width: 150px;
+  width: 30%;
+  align-self: flex-start;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+.userName {
+  font-size: 18px;
+  font-weight: bold;
+}
+.userLastName {
+  font-size: 18px;
+}
+.userEmail {
+  font-size: 12px;
+  display: flex;
+  justify-content: space-between;
+  gap: 3px;
 }
