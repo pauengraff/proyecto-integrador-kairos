@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-
+import EmailIcon from '@mui/icons-material/Email';
 import "./UsersId.css";
 import { apiUrl } from "../../config";
 
@@ -9,11 +9,13 @@ function UsersId({ first_name, last_name, email, rol, avatar }) {
   return (
     <article className='userCard'>
       <img src={imageRoute + avatar} alt='avatar' className='imgProduct' />
-      <div>
-        <div>Nombre: {first_name}</div>
-        <div>Apellido: {last_name}</div>
-        <div>Email: {email}</div>
-        <div>Categoria: {rol}</div>
+      <div className="userInfo">
+      <div className="userName">{first_name}</div>
+      <div className="userLastName">{last_name}</div>
+      <div className="userEmail">
+        <EmailIcon fontSize="small"/>
+        {email}</div>
+      <button className="buttonDeleteUser">Eliminar</button>
       </div>
     </article>
   );

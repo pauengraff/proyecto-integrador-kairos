@@ -1,13 +1,45 @@
 .userCard {
+  background-color: #D1C5AA;
+  border-radius: 5px;
+  border: none;
+  margin: 10px 2px;
+  width: 280px;
+  height: 120px;
+  padding: 20px;
   display: flex;
-  background-color: grey;
-  border-color: blue;
-  margin: 20px;
+}
+.userCard:hover {
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+  transform: translateY(-3%);
+}
+.userInfo {
+  flex-direction: column;
+  margin-top: 10px;
 }
 .imgProduct {
+  width: 30%;
+  align-self: flex-start;
+  margin-top: 10px;
   margin-right: 10px;
-  width: 80px;
-  height: auto;
-  aspect-ratio: 3/2;
-  object-fit: contain;
+}
+.userName {
+  font-size: 18px;
+  font-weight: bold;
+}
+.userLastName {
+  font-size: 18px;
+}
+.userEmail {
+  font-size: 12px;
+  display: flex;
+  justify-content: space-between;
+  gap: 3px;
+}
+.buttonDeleteUser{
+  font-size: 10px;
+  background-color: #001C3B;
+  color: #D1C5AA;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-top: 14px;
 }

@@ -1,8 +1,9 @@
 .users-container {
   width: 80%;
   margin-left: 100px;
-  margin-top: 100px;
+  margin-top: 20px;
 }
+
 .users {
   display: flex;
   flex-direction: column;
