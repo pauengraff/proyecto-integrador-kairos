@@ -18,7 +18,7 @@ function Users() {
 
   return (
     <section className='users-container'>
-      <div className='users'>
+      <article className='users'>
         {users.length === 0
           ? "Cargando..."
           : users.map((user) => (
@@ -31,7 +31,7 @@ function Users() {
                 avatar={user.avatar}
               />
             ))}
-      </div>
+      </article>
     </section>
   );
 }

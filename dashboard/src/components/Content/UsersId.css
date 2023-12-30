@@ -2,11 +2,12 @@
   background-color: #D1C5AA;
   border-radius: 5px;
   border: none;
-  margin: 10px 2px;
+  margin: 5px;
   width: 280px;
   height: 120px;
   padding: 20px;
   display: flex;
+  margin-bottom: 30px;
 }
 .userCard:hover {
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
@@ -16,7 +17,7 @@
   flex-direction: column;
   margin-top: 10px;
 }
-.imgProduct {
+.imgUser {
   width: 30%;
   align-self: flex-start;
   margin-top: 10px;
