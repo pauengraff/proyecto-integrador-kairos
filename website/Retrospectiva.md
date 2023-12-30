@@ -12,4 +12,5 @@ RETROSPECTIVA SPRING 3
 
 ![image](https://github.com/0623CIFSNCN05LAED/grupo-08/assets/139823807/61eb9ea5-9f8a-4fbb-87c1-0a2dd1847bab)
 
+![image](https://github.com/0623CIFSNCN05LAED/grupo-08/assets/139823807/0b389005-0f9a-474a-a36d-46dac545ea62)
 
