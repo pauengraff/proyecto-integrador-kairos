@@ -1,14 +1,12 @@
 .users-container {
-  width: 80%;
+  width: 90%;
   margin-left: 100px;
-  margin-top: 20px;
 }
 
 .users {
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   flex-wrap: wrap;
-  width: auto;
-  margin-bottom: 10px;
+  justify-content: space-between;
+  margin: 0px 5px;
 }

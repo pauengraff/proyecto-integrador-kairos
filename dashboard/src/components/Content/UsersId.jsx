@@ -8,7 +8,7 @@ function UsersId({ first_name, last_name, email, rol, avatar }) {
 
   return (
     <article className='userCard'>
-      <img src={imageRoute + avatar} alt='avatar' className='imgProduct' />
+      <img src={imageRoute + avatar} alt='avatar' className='imgUser' />
       <div className="userInfo">
       <div className="userName">{first_name}</div>
       <div className="userLastName">{last_name}</div>
