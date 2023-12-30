@@ -4,7 +4,7 @@ import { apiUrl } from "../../config";
 
 import "./ProductItem.css";
 
-function ProductItem({ id, name, brand, price, description, category, image }) {
+function ProductItem({ id, name, brand, price, description, category, date, image }) {
   const imageRoute = `${apiUrl}/images/products/`;
 
   return (
@@ -20,6 +20,7 @@ function ProductItem({ id, name, brand, price, description, category, image }) {
             <p>Modelo: {name}</p>
             <p>Categoria: {category}</p>
             <p>Precio:{price}</p>
+            <p>date: {date}</p>
             <p>Descripcion: {description}</p>
           </div>
         </Link>

@@ -37,6 +37,7 @@ const MenuCategoryDetail = ({ match }) => {
                 brand={product.brand.name}
                 category={product.category.name}
                 price={product.price}
+                date={product.created_at}
                 description={product.description}
                 image={product.image}
               />
