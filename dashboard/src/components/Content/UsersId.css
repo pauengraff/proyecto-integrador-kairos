@@ -1,8 +1,13 @@
 .userCard {
+  display: flex;
   background-color: grey;
   border-color: blue;
   margin: 20px;
 }
 .imgProduct {
-  width: 150px;
+  margin-right: 10px;
+  width: 80px;
+  height: auto;
+  aspect-ratio: 3/2;
+  object-fit: contain;
 }
