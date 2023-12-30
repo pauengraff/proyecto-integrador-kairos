@@ -22,9 +22,13 @@ main {
 }
 
 .productPhoto {
-  width: 90%;
+  width: 80%;
   margin-left: auto;
   margin-right: auto;
+}
+
+.productText {
+  padding-left: 50px;
 }
 
 .productLogo {
@@ -89,7 +93,7 @@ main {
 }
 
 .textDescription {
-  font-size: 12px;
+  font-size: 20px;
   margin-top: 5px;
   margin-bottom: 20px;
   color: #001c3b;

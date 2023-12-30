@@ -153,13 +153,6 @@
   color: #d1c5aa;
 }
 
-/*revisar para eliminar este css de menu hamburquesa*/
-.hamburguer-menu {
-  font-size: 20px;
-  color: #001c3b;
-}
-/*********************************************/
-
 .main-navbar {
   display: none;
 }
@@ -330,7 +323,6 @@
   margin-top: 40px;
   margin-bottom: 20px;
   color: #001c3b;
-
 }
 
 @media (max-width: 800px) {
@@ -340,7 +332,6 @@
   .menu_item {
     --clip: 0;
     overflow: hidden;
-
   }
   .menu_item--active {
     --transform: rotate(0);
