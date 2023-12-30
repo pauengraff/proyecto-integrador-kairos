@@ -32,7 +32,6 @@ module.exports = {
     });
   },
 
-  //Solo creo Api para crear usuario no para la vista de formulario
   create: async (req, res) => {
     user = await usersService.createUser(req.body, req.file);
     res.json({
@@ -45,7 +44,6 @@ module.exports = {
     });
   },
 
-  //Solo creo Api para Editar usuario no para la vista de formulario
   update: async (req, res) => {
     await usersService.updateUser(req.params.id, req.body);
     res.json({
@@ -57,7 +55,7 @@ module.exports = {
       data: user,
     });
   },
-  // Eliminar usuario
+
   destroy: async (req, res) => {
     await usersService.deleteUser(req.params.id);
     res.json({
