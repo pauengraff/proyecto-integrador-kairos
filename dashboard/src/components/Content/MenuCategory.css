@@ -11,13 +11,6 @@
   width: 100%; /* Hace que el último elemento ocupe toda la línea */
 }
 
-.all-products-image {
-  text-align: center;
-  margin-left: 100px;
-  width: 1000px;
-  height: auto;
-}
-
 .button-all-products {
   width: 76%;
   height: auto;

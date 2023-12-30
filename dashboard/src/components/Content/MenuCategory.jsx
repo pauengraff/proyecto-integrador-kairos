@@ -1,10 +1,9 @@
-import { Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { apiUrl } from "../../config";
 import MenuCategoryLinks from "./MenuCategoryLinks";
 import "./MenuCategory.css";
 import ButtonAllProducts from "../../assets/images/button-all-products.png";
-
 
 function MenuCategory() {
   const [categories, setCategories] = useState([]);
@@ -30,7 +29,7 @@ function MenuCategory() {
             ))}
 
             <Link to='/products/list'>
-            <img src={ButtonAllProducts} className='button-all-products' />
+              <img src={ButtonAllProducts} className='button-all-products' />
             </Link>
           </div>
         )}

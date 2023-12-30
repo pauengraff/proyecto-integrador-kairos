@@ -3,7 +3,7 @@ import EmailIcon from '@mui/icons-material/Email';
 import "./UsersId.css";
 import { apiUrl } from "../../config";
 
-function UsersId({ first_name, last_name, email, avatar }) {
+function UsersId({ first_name, last_name, email, rol, avatar }) {
   const imageRoute = `${apiUrl}/images/users/`;
 
   return (
