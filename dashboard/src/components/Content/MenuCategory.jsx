@@ -19,7 +19,7 @@ function MenuCategory() {
   }, []);
 
   return (
-    <section className='section'>
+    <section className='sectionMenuCategory'>
       <nav>
         {categories.length === 0 ? (
           "Cargando..."
