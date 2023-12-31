@@ -18,7 +18,7 @@ export default function Header() {
             <li><img src={slider3} alt=""></img></li>
             <li><img src={slider4} alt=""></img></li>
           </ul>
-    </div>
+        </div>
     </div>
   );
 }
