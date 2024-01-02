@@ -16,8 +16,8 @@ function Product({ name, brand, price, description, category, image }) {
         <p>Modelo: {name}</p>
         <p>Precio: {price}</p>
         <p>Descripción: {description}</p>
-        <button className="button-productCard">Editar</button>
-        <button className="button-productCard">Eliminar</button>
+        <button className='button-productCard'>Editar</button>
+        <button className='button-productCard'>Eliminar</button>
       </div>
     </article>
   );
