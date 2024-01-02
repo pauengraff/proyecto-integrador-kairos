@@ -10,10 +10,12 @@ export default function Home() {
     <div>
       <img src={bannerHome} alt='bannerHome' className='banner-home' />
       <div className='home'>
-        <NewProducts />
         <ProductsButton />
         <CategoriesButton />
         <UsersButton />
+      </div>
+      <div>
+        <NewProducts />
       </div>
     </div>
   );

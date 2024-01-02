@@ -1,48 +1,52 @@
 .home {
-    margin-top: 40px;
-    margin-left: 280px;
-    display: flex;
-    gap: 67px;
+  margin-top: 40px;
+  margin-left: 280px;
+  display: flex;
+  gap: 67px;
 }
 
 .banner-home {
-    margin-top: 100px;
-    margin-left: 300px;
-    width: 61%;
-    height: 30%;
-    margin-bottom: 0;
-    border-radius: 5px;
+  margin-top: 100px;
+  margin-left: 300px;
+  width: 61%;
+  height: 30%;
+  margin-bottom: 0;
+  border-radius: 5px;
 }
 
 .button-home {
-    display: flex;
-    margin-top: 0;
-    width: 24%;
-    height: auto;
+  display: flex;
+  margin-top: 0;
+  width: 24%;
+  height: auto;
 }
 
 .button-item {
-    background-color: #001124;
-    width: 200px;
-    height: 100px;
-    margin: 20px;
-    text-align: center;
-    border-radius: 5px;
+  background-color: #001124;
+  width: 200px;
+  height: 100px;
+  margin: 20px;
+  text-align: center;
+  border-radius: 5px;
 }
 
 .button-item:hover {
-    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
-    transform: translateY(-3%);
-  }
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+  transform: translateY(-3%);
+}
 
 .title {
-    color: #D1C5AA;
-    font-size: 18px;
-    margin-bottom: 0;
+  color: #d1c5aa;
+  font-size: 18px;
+  margin-bottom: 0;
 }
 
 .number {
-    color: #D1C5AA;
-    font-size: 30px;
-    margin-top: 0;
+  color: #d1c5aa;
+  font-size: 30px;
+  margin-top: 0;
+}
+
+.ml {
+  margin-left: 200px;
 }
