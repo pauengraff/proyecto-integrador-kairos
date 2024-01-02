@@ -3,16 +3,16 @@ import "./Cart.css";
 export default function Cart() {
   return (
     <main className='cart'>
-      <h3 className='title-cart'></h3>
+      <h3 className='title-cart'>Tu Compra</h3>
       <div className='cart-desktop'>
         <article className='article'>
           <div>
-            <p>Reloj Rolex Barcelona</p>
+            <p className="title-product">Reloj Rolex Barcelona</p>
             <p>Precio: $129.000</p>
           </div>
         </article>
 
-        <div className='buttons'>
+        <div className='buttons-cart'>
           <button className='button-discount' type='submit'>
             AÑADIR CUPÓN DE DESCUENTO
           </button>
