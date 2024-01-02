@@ -14,4 +14,15 @@ module.exports = {
   contactMsg: (req, res) => {
     res.render("contact-msg");
   },
+  
+  howBuy: (req, res) => {
+    res.render("buy");
+  },
+  questions: (req, res) => {
+    res.render("questions");
+  },
+  changes: (req, res) => {
+    res.render("changes");
+  },
+
 };
