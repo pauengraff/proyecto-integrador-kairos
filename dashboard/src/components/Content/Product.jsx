@@ -13,11 +13,11 @@ function Product({ name, brand, price, description, category, image }) {
 
       <div className='text-container'>
         <h2>{brand}</h2>
-        <h4>Modelo: {name}</h4>
-
-        <p>Precio:{price}</p>
-        <h4>Descripcion</h4>
-        <p>{description}</p>
+        <p>Modelo: {name}</p>
+        <p>Precio: {price}</p>
+        <p>Descripción: {description}</p>
+        <button className="button-productCard">Editar</button>
+        <button className="button-productCard">Eliminar</button>
       </div>
     </article>
   );
