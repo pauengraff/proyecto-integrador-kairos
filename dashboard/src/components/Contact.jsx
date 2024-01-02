@@ -2,7 +2,7 @@ import "./Contact.css";
 
 export default function Contact() {
   return (
-      <div className="form-body">
+      <div className="form-body-contact">
         <div>
           <p className="text">Dejanos tu consulta</p>
           <p className="text-medium">Por favor completá con tus datos:</p>
