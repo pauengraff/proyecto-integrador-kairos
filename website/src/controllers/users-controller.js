@@ -89,7 +89,7 @@ module.exports = {
   },
   update: async (req, res) => {
     await usersServices.updateUser(req.params.id, req.body);
-    res.redirect("/users");
+    res.redirect("/users/profile");
   },
   destroy: async (req, res) => {
     await usersServices.deleteUser(req.params.id);
