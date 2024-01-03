@@ -20,6 +20,7 @@ function ProductItem({ id, name, brand, price, description, category, image }) {
             <p>Modelo: {name}</p>
             <p>Categoria: {category}</p>
             <p>Precio:{price}</p>
+
             <p>Descripcion: {description}</p>
           </div>
         </Link>

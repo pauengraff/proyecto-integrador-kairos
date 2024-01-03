@@ -1,0 +1,11 @@
+.new-product {
+  margin-left: 200px;
+}
+.new-title {
+  margin-left: 200px;
+  color: #d1c5aa;
+}
+.new-article {
+  display: flex;
+  flex-wrap: wrap;
+}
