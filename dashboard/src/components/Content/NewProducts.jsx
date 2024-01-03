@@ -24,7 +24,7 @@ function NewProducts() {
 
   return (
     <div className='new-product'>
-      <h2 className='new-title'>Ultimos Ingresos</h2>
+      <h3 className='new-title'>Últimos Ingresos</h3>
       <article className='new-article'>
         {NewProducts.length === 0
           ? "Cargando..."

@@ -10,15 +10,6 @@ export default function Header() {
   return (
     <div className='header'>
         <img src={logo} alt='logo' className='logo' />
-
-        <div className="slider-frame"> 
-          <ul>
-            <li><img src={slider1} alt=""></img></li>
-            <li><img src={slider2} alt=""></img></li>
-            <li><img src={slider3} alt=""></img></li>
-            <li><img src={slider4} alt=""></img></li>
-          </ul>
-        </div>
     </div>
   );
 }

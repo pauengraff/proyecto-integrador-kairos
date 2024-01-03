@@ -1,11 +1,14 @@
 .new-product {
   margin-left: 200px;
+  margin-top: 30px;
 }
 .new-title {
-  margin-left: 200px;
+  margin-left: 100px;
+  margin-top: 40px;
   color: #d1c5aa;
 }
 .new-article {
+  margin-left: 70px;
   display: flex;
   flex-wrap: wrap;
 }

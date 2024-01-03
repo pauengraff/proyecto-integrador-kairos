@@ -1,12 +1,12 @@
 .home {
-  margin-top: 40px;
+  margin-top: 20px;
   margin-left: 280px;
   display: flex;
   gap: 67px;
 }
 
 .banner-home {
-  margin-top: 100px;
+  margin-top: 200px;
   margin-left: 300px;
   width: 61%;
   height: 30%;

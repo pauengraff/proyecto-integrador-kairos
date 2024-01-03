@@ -1,11 +1,12 @@
 <article>
-  <a href="/products/<%= product.id %>"><img src="/images/products/<%= product.image %>" /></a>
+  <a href="/products/<%= product.id %>">
+    <img class="foto-producto" src="/images/products/<%= product.image %>" /></a>
 
-  <div>
+  <div class="info-producto">
     <p class="nombre-producto"><%= product.name %></p>
     <p class="descripcion-producto"><%= product.description %></p>
+    <p class="descripcion-producto">Marca: <%= product.brand.name %></p>
+    <p class="descripcion-producto">Categoría: <%= product.category.name %></p>
     <p class="precio-producto">$ <%= product.price %></p>
-    <p>Marca: <%= product.brand.name %></p>
-    <p>Categoria: <%= product.category.name %></p>
   </div>
 </article>
