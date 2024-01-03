@@ -5,13 +5,18 @@ body {
 .userDetail {
   margin: auto;
   background: #d1c5aa;
-  width: 70%;
-  margin-bottom: 50px;
-  margin-top: 20px;
+  width: 60%;
+  margin-bottom: 300px;
+  margin-top: 40px;
 }
 
 .userPhoto {
   margin-bottom: 10px;
+  text-align: center;
+}
+
+.userPhoto img {
+  width: 50%;
   margin-top: 30px;
 }
 
@@ -25,6 +30,10 @@ body {
   margin-bottom: 20px;
 }
 
+.userName p {
+  margin-bottom: 20px;
+}
+
 .userText {
   color: #001c3b;
   display: flex;
@@ -35,9 +44,10 @@ body {
   font-weight: normal;
   margin: auto;
   width: 60%;
+  margin-top: 20px;
 }
 
-.userText input {
+.userName input {
   display: block;
   margin: auto;
   margin-bottom: 8px;
@@ -49,7 +59,7 @@ body {
   font-size: 12px;
 }
 
-.userText label {
+.userName label {
   display: block;
   margin: auto;
   width: 80%;
@@ -71,6 +81,7 @@ body {
   font-family: "Roboto";
   font-size: 12px;
   text-decoration: none;
+  text-align: center;
   border: none;
   display: inline-block;
   text-align: center;
@@ -81,6 +92,19 @@ body {
 .buttonBuy:hover {
   background-color: #7c92bd;
 }
+.submit-button {
+  background-color: #001c3b;
+  color: white;
+  font-size: 12px;
+  text-decoration: none;
+  border: none;
+  margin: auto;
+}
+
+.submit-button:hover {
+  background-color: #7c92bd;
+}
+
 .margin-top-30 {
   margin-top: 30px;
 }
@@ -91,39 +115,29 @@ body {
 @media (min-width: 769px) {
   /* Laptop */
   .userDetail-d {
+    width: 50%;
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    width: 60%;
-  }
-  .userName {
-    align-self: self-start;
-    margin-inline: 30px;
-    width: 40%;
   }
   .userPhoto {
-    margin: 0;
-    margin-bottom: 10px;
+    flex: 1;
+  }
+  .userPhoto img {
+    width: 70%;
   }
   .userText {
-    text-align: left;
-    margin-right: 50px;
-    margin-top: 15px;
-    width: 40%;
-    margin-left: 0;
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
-  .userText label {
+  .userName label {
     margin-left: 30px;
     text-align: left;
   }
   .buttonBuy-d {
+    width: 95%;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    margin-top: 0px;
+    margin: auto;
   }
   .buttonBuy {
     width: 35%;

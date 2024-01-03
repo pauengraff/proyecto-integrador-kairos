@@ -1,11 +1,21 @@
 main {
-background-color: #D1C5AA;
 margin: 50px;
+color: #001C3B;
 }
+
 .options {
 padding-top: 10px;
 }
+
 h2 {
     margin: 10px;
     text-align: center;
+}
+
+.main-questions {
+    height: 60vh;
+}
+
+.main-changes {
+    height: 60vh;
 }

@@ -12,12 +12,13 @@
   <body>
     <main>
       <section class="userDetail userDetail-d">
-          <div class="userName">
-            <img class="userPhoto" src="/images/users/<%= user.avatar %>" width="150" alt="avatar" />
-            <p>Hola, <%= user.first_name %>!</p>
+          <div class="userPhoto">
+            <img src="/images/users/<%= user.avatar %>" width="150" alt="avatar" />
           </div>
 
           <div class="userText">
+            <div  class="userName">
+            <p>Hola, <%= user.first_name %>!</p>
             <label>Nombre</label>
             <input type="text" name="first_name" id="first_name" placeholder="<%= user.first_name %>" />
 
@@ -26,13 +27,15 @@
 
             <label>Email</label>
             <input type="text" name="email" id="email" placeholder="<%= user.email %>" />
+          
 
             <div class="buttonBuy-d">
               <a href="/users/edit/<%= user.id %>" class="buttonBuy margin-top-30 margin-b-desktop">Editar Usuario</a>
               <a href="/users/logout/" class="buttonBuy margin-bottom-30">Cerrar sesión</a>
             </div>
-           
           </div>
+          </div>
+          
       </section>
     </main>
 
