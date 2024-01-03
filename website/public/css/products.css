@@ -46,6 +46,19 @@ body {
   margin: 10px 0;
 }
 
+.main-filters a {
+  text-decoration: none;
+  color: #001c3b;
+  padding: 5px;
+  margin: 10px;
+}
+
+.main-filters a:hover {
+  text-decoration: none;
+  background-color: #7c92bd;
+
+}
+
 .main-filters p {
   margin: 4px 0;
   font-size: 18px;
