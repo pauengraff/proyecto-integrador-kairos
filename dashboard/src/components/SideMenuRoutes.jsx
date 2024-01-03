@@ -8,6 +8,7 @@ import Contact from "./Contact";
 import MenuCategory from "./Content/MenuCategory";
 import ProductDetail from "./Content/ProductDetail";
 import MenuCategoryDetail from "./Content/MenuCategoryDetail";
+import NewProducts from "./Content/NewProducts";
 
 export default function SideMenuRoutes() {
   return (
@@ -34,6 +35,9 @@ export default function SideMenuRoutes() {
       </Route>
       <Route path='/contact'>
         <Contact />
+      </Route>
+      <Route path='/news'>
+        <NewProducts />
       </Route>
       <Route path='*'>
         <p className='not-found'>404 - Not Found</p>

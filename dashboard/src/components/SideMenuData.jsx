@@ -4,6 +4,7 @@ import FeaturedPlayListIcon from "@mui/icons-material/Watch";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import ContactsIcon from "@mui/icons-material/Contacts";
 import PrivacyTipIcon from "@mui/icons-material/PrivacyTip";
+import NewReleasesIcon from '@mui/icons-material/NewReleases';
 
 export const SideMenuData = [
   {
@@ -12,14 +13,19 @@ export const SideMenuData = [
     link: "/",
   },
   {
-    title: "Login",
-    icon: <LoginIcon />,
-    link: "/login",
-  },
-  {
     title: "Relojes",
     icon: <FeaturedPlayListIcon />,
     link: "/products",
+  },
+  {
+    title: "Control Panel",
+    icon: <PrivacyTipIcon />,
+    link: "/panel",
+  },
+  {
+    title: "Login",
+    icon: <LoginIcon />,
+    link: "/login",
   },
   {
     title: "Tu Carrito",
@@ -30,10 +36,5 @@ export const SideMenuData = [
     title: "Contacto",
     icon: <ContactsIcon />,
     link: "/contact",
-  },
-  {
-    title: "Control Panel",
-    icon: <PrivacyTipIcon />,
-    link: "/panel",
   },
 ];
