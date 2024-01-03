@@ -10,7 +10,7 @@
   <body>
     <%- include("../partials/header") %>
 
-    <section class="userDetail userDetail-d ">
+    <section class="userDetail userDetail-d">
       <div class="userPhoto">
         <img src="/images/users/<%= users.avatar %>" alt="" />
       </div>
@@ -19,19 +19,11 @@
         <div class="userName">
           <p>Hola, <%= users.first_name %> <%= users.last_name %>!</p>
 
-          <a href="/users/edit/<%= users.id %>" class="buttonBuy buttonBuy-d"
-            >Editar Usuario/a</a
-          >
+          <a href="/users/edit/<%= users.id %>" class="buttonBuy buttonBuy-d">Editar Usuario/a</a>
           <a href="/users/register/" class="buttonBuy buttonBuy-d">Agregar Usuario/a</a>
           <a href="/users/logout/" class="buttonBuy buttonBuy-d">Cerrar sesión</a>
-          <form
-            action="/users/<%= users.id %>?_method=delete"
-            method="POST"
-            class="buttonBuy"
-          >
-            <button type="submit" class="submit-button buttonBuy-d">
-              Eliminar Usuario/a
-            </button>
+          <form action="/users/<%= users.id %>?_method=delete" method="POST" class="buttonBuy">
+            <button type="submit" class="submit-button buttonBuy-d">Eliminar Usuario/a</button>
           </form>
         </div>
       </div>
