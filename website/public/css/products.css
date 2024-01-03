@@ -56,7 +56,7 @@ body {
 .main-filters a:hover {
   text-decoration: none;
   background-color: #7c92bd;
-
+  color: white;
 }
 
 .main-filters p {

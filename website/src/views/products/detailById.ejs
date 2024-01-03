@@ -15,11 +15,11 @@
         <article class="productDetail-d">
           <img class="productPhoto" src="/images/products/<%= product.image %>" alt="Image" />
           <div class="productText">
-            <h1 class="productName">
-              <h1>Marca: <%= product.brand.name %></h1>
-              <h4>Modelo: <%= product.name %></h4>
-              <h4>Categoria: <%= product.category.name %></h4>
-            </h1>
+            <div class="productName">
+              <p>Marca: <%= product.brand.name %></p>
+              <p>Modelo: <%= product.name %></p>
+              <p>Categoria: <%= product.category.name %></p>
+            </div>
             <h1 class="productPrice">$ <%= product.price %></h1>
 
             <a href="/products/cart" class="buttonBuy">LO QUIERO!</a>
