@@ -5,13 +5,13 @@ import { useEffect, useState } from "react";
 import { apiUrl } from "../../config";
 
 function Users() {
-  const [users, setProducts] = useState([]);
+  const [users, setUsers] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
       const response = await fetch(`${apiUrl}/api/user/count`);
       const result = await response.json();
-      setProducts(result.data);
+      setUsers(result.data);
     };
     fetchData();
   }, []);
