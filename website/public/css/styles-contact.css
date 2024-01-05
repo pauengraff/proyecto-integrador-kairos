@@ -63,6 +63,7 @@ body {
   border: none;
   background-color: white;
   font-size: 16px;
+  text-align: left
 }
 
 ::placeholder {
@@ -130,7 +131,9 @@ body {
 .display {
   display: block;
 }
+.mensaje{
 
+}
 @media (max-width: 481px) {
   .form-body {
     border: none;
@@ -149,13 +152,13 @@ body {
     justify-content: space-between;
   }
   .form-register {
-    width: 48%;
+    width: 100%;
   }
   .text-form {
     margin: auto;
     width: 100%;
   }
-  .text-area{
-    width: 100%;
+  .form-body textarea {
+    width: 60%;
   }
 }

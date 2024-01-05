@@ -10,6 +10,10 @@ body {
   margin-top: 40px;
 }
 
+.userText{
+  width: 80%;
+}
+
 .userPhoto {
   margin-bottom: 10px;
   text-align: center;
@@ -84,7 +88,6 @@ body {
   text-align: center;
   border: none;
   display: inline-block;
-  text-align: center;
   margin: auto;
   width: 90%;
   margin-bottom: 20px;
@@ -92,19 +95,6 @@ body {
 .buttonBuy:hover {
   background-color: #7c92bd;
 }
-.submit-button {
-  background-color: #001c3b;
-  color: white;
-  font-size: 12px;
-  text-decoration: none;
-  border: none;
-  margin: auto;
-}
-
-.submit-button:hover {
-  background-color: #7c92bd;
-}
-
 .margin-top-30 {
   margin-top: 30px;
 }
@@ -122,9 +112,10 @@ body {
     flex: 1;
   }
   .userPhoto img {
-    width: 70%;
+    width: 50%;
   }
   .userText {
+    width: 80%;
     flex: 2;
     display: flex;
     flex-direction: column;
@@ -135,12 +126,10 @@ body {
     text-align: left;
   }
   .buttonBuy-d {
-    width: 95%;
+    width: 80%;
     display: flex;
-    margin: auto;
-  }
-  .buttonBuy {
-    width: 35%;
+    margin: 10px;
+    justify-content: center;
   }
   .margin-b-desktop {
     margin-bottom: 30px;
