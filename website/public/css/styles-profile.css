@@ -1,0 +1,156 @@
+body {
+    height: 100vh;
+  }
+  
+  .userDetail {
+    margin: auto;
+    background: #d1c5aa;
+    width: 60%;
+    margin-bottom: 300px;
+    margin-top: 40px;
+  }
+  
+  .userPhoto {
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  .userPhoto img {
+    width: 50%;
+    margin-top: 30px;
+  }
+  
+  .userName {
+    text-align: center;
+    margin: auto;
+    font-size: 22px;
+    color: #001c3b;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .userName p {
+    margin-bottom: 20px;
+  }
+  
+  .userText {
+    color: #001c3b;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    font-weight: normal;
+    margin: auto;
+    width: 60%;
+    margin-top: 20px;
+  }
+  
+  .userName input {
+    display: block;
+    margin: auto;
+    margin-bottom: 8px;
+    width: 80%;
+    padding: 8px;
+    color: gray;
+    border: none;
+    background-color: white;
+    font-size: 12px;
+  }
+  
+  .userName label {
+    display: block;
+    margin: auto;
+    width: 80%;
+    padding: 5px;
+    color: #001c3b;
+    font-size: 12px;
+  }
+  
+  ::placeholder {
+    font-size: 14px;
+    color: gray;
+  }
+  
+  .buttonBuy {
+    background-color: #001c3b;
+    color: white;
+    padding: 8px 10px;
+    font-weight: normal;
+    font-family: "Roboto";
+    font-size: 12px;
+    text-decoration: none;
+    text-align: center;
+    border: none;
+    display: inline-block;
+    text-align: center;
+    margin: auto;
+    width: 90%;
+    margin-bottom: 20px;
+  }
+  .buttonBuy:hover {
+    background-color: #7c92bd;
+  }
+  .submit-button {
+    background-color: #001c3b;
+    color: white;
+    font-size: 12px;
+    text-decoration: none;
+    border: none;
+    margin: auto;
+  }
+  
+  .submit-button:hover {
+    background-color: #7c92bd;
+  }
+  
+  .margin-top-30 {
+    margin-top: 30px;
+  }
+  .margin-bottom-30 {
+    margin-bottom: 30px;
+  }
+  
+  @media (min-width: 769px) {
+    /* Laptop */
+    .userDetail-d {
+      width: 50%;
+      display: flex;
+    }
+    .userPhoto {
+      flex: 1;
+    }
+    .userPhoto img {
+      width: 70%;
+    }
+    .userText {
+      flex: 2;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .userName{
+      width: 80%;
+    }
+    .userName label {
+      margin-left: 30px;
+      text-align: left;
+    }
+    .buttonBuy-d {
+      width: 95%;
+      display: flex;
+      margin: auto;
+    }
+    .buttonBuy {
+      width: 35%;
+    }
+    .margin-b-desktop {
+      margin-bottom: 30px;
+    }
+  }
+  
+  @media (min-width: 1280px) {
+    /* desktop */
+  }
+  

@@ -14,11 +14,12 @@ body {
   position: relative;
   width: 400px;
   border: none;
-  background-color: #d2d2d2;
+  background-color: #D1C5AA;
   margin: auto;
   padding-top: 50px;
   padding-bottom: 20px;
   margin-bottom: 50px;
+  margin-top: 30px;
 }
 
 .text {
@@ -124,11 +125,10 @@ body {
   .form-body {
     width: 95vh;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    flex-direction: column;
   }
   .form-register {
-    width: 50%;
+    width: 100%;
   }
   .text-form {
     margin: auto;
